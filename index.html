@@ -7,398 +7,2607 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Memoria del Mundo</title>
+
+<title>Memoria del Mundo | Civilizaciones, Historia y Patrimonio</title>
+
+
+<meta
+name="description"
+content="Explora la historia de la humanidad a través de sus primeras civilizaciones, culturas, escrituras, religiones, conocimientos y patrimonio."
+>
+
+
+<meta
+name="keywords"
+content="Memoria del Mundo, historia, civilizaciones, Mesopotamia, Egipto, Sumer, Babilonia, escritura, patrimonio, humanidad, antigüedad"
+>
+
+
+<meta
+name="author"
+content="Memoria del Mundo"
+>
+
+
+<link
+rel="icon"
+type="image/png"
+href="favicon.jpg"
+>
+
+
+<!-- =========================
+GOOGLE FONTS
+========================= -->
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+
+<link
+href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+rel="stylesheet"
+>
+
+
+<!-- =========================
+OPEN GRAPH
+========================= -->
+
+<meta
+property="og:title"
+content="Memoria del Mundo"
+>
+
+
+<meta
+property="og:description"
+content="Un recorrido por la historia de la humanidad, sus civilizaciones, culturas, conocimientos y patrimonio."
+>
+
+
+<meta
+property="og:type"
+content="website"
+>
+
+
+<meta
+property="og:url"
+content="https://gloriacitizen00-dev.github.io/Docs/"
+>
+
+
+<!--
+CAMBIAREMOS ESTA IMAGEN CUANDO
+TENGAMOS LA IMAGEN DEFINITIVA
+DE MEMORIA DEL MUNDO.
+-->
+
+<meta
+property="og:image"
+content="https://gloriacitizen00-dev.github.io/Docs/memoria-mundo.JPG"
+>
+
+
+<meta
+property="og:image:alt"
+content="Memoria del Mundo"
+>
+
+
+<meta
+property="og:image:type"
+content="image/jpeg"
+>
+
 
 <style>
 
-/* =========================
-   RESET
-========================= */
+
+/*=========================
+RESET
+=========================*/
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
 
-/* =========================
-   COLORS
-========================= */
+/*=========================
+COLOR PALETTE
+MEMORIA DEL MUNDO
+=========================*/
 
 :root{
 
-    --sand:#D8C29D;
-    --sand-light:#EFE2C3;
+--sand:#C6A66B;
 
-    --brown:#4A3423;
-    --brown-dark:#2B241D;
+--sand-dark:#8A6A3F;
 
-    --gold:#B58A3A;
-    --gold-light:#D6B45C;
+--sand-light:#E1C995;
 
-    --terracotta:#A65F3B;
+--sand-soft:#F7F0DF;
 
-    --white:#FFFFFF;
+
+--clay:#9A6842;
+
+--clay-dark:#70472C;
+
+
+--stone:#8B8172;
+
+--stone-light:#C9C0B0;
+
+
+--text:#2B241B;
+
+--text-light:#665D51;
+
+
+--white:#FFFDF7;
+
+--cream:#FBF6EA;
+
+
+--border:#E1D4B9;
+
+
+--shadow:
+0 20px 50px rgba(120,90,45,.12);
 
 }
 
 
-/* =========================
-   BODY
-========================= */
+/*=========================
+HTML
+=========================*/
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+/*=========================
+BODY
+=========================*/
 
 body{
 
-    font-family:Georgia, "Times New Roman", serif;
-    background:var(--white);
-    color:var(--brown-dark);
-    min-height:100vh;
+background:#FFFDF7;
+
+font-family:'Montserrat',sans-serif;
+
+color:var(--text);
+
+line-height:1.7;
 
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/*=========================
+TOP BAR
+=========================*/
 
-header{
+.topbar{
 
-    width:100%;
+position:fixed;
 
-    padding:22px 40px;
+top:50px;
 
-    background:var(--brown-dark);
+left:0;
 
-    display:flex;
+width:100%;
 
-    justify-content:space-between;
+height:80px;
 
-    align-items:center;
+background:var(--cream);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 40px;
+
+border-bottom:1px solid var(--border);
+
+z-index:9999;
+
+box-shadow:
+
+0 5px 20px rgba(80,55,30,.06);
 
 }
 
 
-/* LOGO TEXT */
+/*=========================
+TOP BAR LEFT
+=========================*/
+
+.topbar-left{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+
+/*=========================
+BRAND
+=========================*/
 
 .brand{
 
-    color:var(--gold-light);
+font-family:"Cinzel",serif;
 
-    font-size:22px;
+font-size:28px;
 
-    font-weight:bold;
+color:var(--sand-dark);
 
-    letter-spacing:2px;
+font-weight:bold;
 
-}
-
-
-/* NAVIGATION */
-
-nav{
-
-    display:flex;
-
-    gap:30px;
-
-}
-
-nav a{
-
-    color:var(--sand-light);
-
-    text-decoration:none;
-
-    font-size:15px;
-
-    transition:.3s;
-
-}
-
-nav a:hover{
-
-    color:var(--gold-light);
+letter-spacing:2px;
 
 }
 
 
-/* =========================
-   HERO
-========================= */
+/*=========================
+PROJECT HEADER
+=========================*/
+
+.projects-header{
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:var(--stone);
+
+text-transform:uppercase;
+
+}
+
+
+/*=========================
+MENU
+=========================*/
+
+.menu{
+
+display:flex;
+
+align-items:center;
+
+gap:24px;
+
+}
+
+
+.menu-item{
+
+position:relative;
+
+}
+
+
+/*=========================
+MENU BUTTON
+=========================*/
+
+.menu-button{
+
+background:none;
+
+border:none;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+color:var(--text);
+
+transition:.3s;
+
+}
+
+
+.menu-button:hover{
+
+color:var(--sand-dark);
+
+}
+
+
+/*=========================
+MENU LINK
+=========================*/
+
+.menu-link{
+
+text-decoration:none;
+
+font-weight:600;
+
+color:var(--text);
+
+transition:.3s;
+
+}
+
+
+.menu-link:hover{
+
+color:var(--sand-dark);
+
+}
+
+
+/*=========================
+DROPDOWN
+=========================*/
+
+.dropdown{
+
+position:absolute;
+
+top:100%;
+
+left:0;
+
+display:none;
+
+flex-direction:column;
+
+min-width:260px;
+
+background:var(--cream);
+
+border-radius:18px;
+
+padding:15px;
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+gap:12px;
+
+}
+
+
+/*=========================
+SHOW DROPDOWN
+=========================*/
+
+.menu-item:hover .dropdown{
+
+display:flex;
+
+}
+
+
+/*=========================
+DROPDOWN BUTTON
+=========================*/
+
+.dropdown-button{
+
+display:block;
+
+padding:14px;
+
+background:var(--sand-dark);
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:bold;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+.dropdown-button:hover{
+
+background:var(--clay-dark);
+
+transform:translateY(-2px);
+
+}
+
+
+/*=========================
+MAIN
+=========================*/
+
+.desktop{
+
+max-width:1300px;
+
+margin:auto;
+
+padding-top:130px;
+
+padding-left:20px;
+
+padding-right:20px;
+
+}
+
+
+/*=========================
+HERO
+=========================*/
 
 .hero{
 
-    min-height:calc(100vh - 75px);
+text-align:center;
 
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    padding:60px 20px;
+padding:90px 20px 100px;
 
 }
 
 
-/* =========================
-   HERO LOGO
-========================= */
+/*=========================
+HERO LOGO CONTAINER
+=========================*/
 
 .hero-logo-container{
 
-    width:340px;
+width:340px;
 
-    height:340px;
+height:340px;
 
-    margin:auto;
+margin:auto;
 
-    border-radius:50%;
+border-radius:50%;
 
-    background:var(--white);
+background:var(--cream);
 
-    border:5px solid var(--gold);
+border:5px solid var(--sand-dark);
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    overflow:hidden;
+overflow:hidden;
 
-    box-shadow:
+box-shadow:
 
-        0 0 0 10px rgba(181,138,58,.12),
+0 0 0 10px rgba(198,166,107,.14),
 
-        0 30px 60px rgba(74,52,35,.20);
+0 30px 60px rgba(120,90,45,.20);
 
 }
 
 
+/*=========================
+HERO LOGO
+=========================*/
+
 .hero-logo{
 
-    width:105%;
+width:85%;
 
-    transition:.4s;
+transition:.4s;
 
 }
 
 
 .hero-logo:hover{
 
-    transform:scale(1.05);
+transform:scale(1.05);
 
 }
 
-/* =========================
-   TITLE
-========================= */
+
+/*=========================
+HERO TITLE
+=========================*/
 
 .hero h1{
 
-    margin-top:35px;
+font-family:"Cinzel",serif;
 
-    font-size:48px;
+font-size:58px;
 
-    letter-spacing:4px;
+color:var(--sand-dark);
 
-    color:var(--brown-dark);
+margin-top:35px;
 
-}
-
-
-.hero h2{
-
-    margin-top:10px;
-
-    font-size:18px;
-
-    font-weight:normal;
-
-    letter-spacing:3px;
-
-    color:var(--gold);
-
-    text-transform:uppercase;
+margin-bottom:20px;
 
 }
 
 
-/* =========================
-   DESCRIPTION
-========================= */
+/*=========================
+HERO DESCRIPTION
+=========================*/
 
 .hero p{
 
-    max-width:650px;
+max-width:820px;
 
-    margin-top:25px;
+margin:auto;
 
-    font-size:18px;
+font-size:20px;
 
-    line-height:1.7;
-
-    color:var(--brown);
+color:var(--text-light);
 
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/*=========================
+HERO BUTTONS
+=========================*/
 
-.enter-button{
+.hero-buttons{
 
-    margin-top:35px;
+margin-top:40px;
 
-    padding:14px 35px;
+display:flex;
 
-    border:2px solid var(--gold);
+justify-content:center;
 
-    color:var(--brown-dark);
+gap:20px;
 
-    text-decoration:none;
-
-    letter-spacing:2px;
-
-    transition:.3s;
+flex-wrap:wrap;
 
 }
 
 
-.enter-button:hover{
+/*=========================
+BUTTON
+=========================*/
 
-    background:var(--gold);
+.btn{
 
-    color:var(--white);
+display:inline-block;
+
+padding:16px 34px;
+
+background:var(--sand-dark);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+
+.btn:hover{
+
+background:var(--clay-dark);
+
+transform:translateY(-3px);
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/*=========================
+SECONDARY BUTTON
+=========================*/
 
-@media(max-width:700px){
+.btn.secondary{
 
-    header{
+background:var(--cream);
 
-        padding:18px 20px;
+color:var(--sand-dark);
 
-        flex-direction:column;
-
-        gap:15px;
-
-    }
-
-    nav{
-
-        gap:18px;
-
-    }
-
-    .hero-logo-container{
-
-        width:270px;
-
-        height:270px;
-
-    }
-
-    .hero h1{
-
-        font-size:34px;
-
-        letter-spacing:2px;
-
-    }
-
-    .hero h2{
-
-        font-size:14px;
-
-    }
-
-    .hero p{
-
-        font-size:16px;
-
-    }
+border:2px solid var(--sand-dark);
 
 }
+
+
+.btn.secondary:hover{
+
+background:var(--sand-dark);
+
+color:#fff;
+
+}
+
+
+/*=========================
+SECTION TITLES
+=========================*/
+
+.section-title{
+
+font-family:"Cinzel",serif;
+
+font-size:42px;
+
+color:var(--sand-dark);
+
+margin-bottom:25px;
+
+text-align:center;
+
+}
+
+
+/*=========================
+SECTION SUBTITLE
+=========================*/
+
+.section-subtitle{
+
+max-width:850px;
+
+margin:auto;
+
+text-align:center;
+
+color:var(--text-light);
+
+margin-bottom:60px;
+
+}
+
+
+/*=========================
+CARDS
+=========================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+
+/*=========================
+CARD
+=========================*/
+
+.card{
+
+background:var(--cream);
+
+border-radius:20px;
+
+padding:35px;
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+border:1px solid var(--border);
+
+}
+
+
+/*=========================
+CARD HOVER
+=========================*/
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 25px 55px rgba(120,90,45,.18);
+
+}
+
+
+/*=========================
+CARD IMAGE
+=========================*/
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+margin-bottom:20px;
+
+}
+
+
+/*=========================
+CARD TITLE
+=========================*/
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+color:var(--sand-dark);
+
+font-family:"Cormorant Garamond",serif;
+
+}
+
+
+/*=========================
+CARD TEXT
+=========================*/
+
+.card p{
+
+color:var(--text-light);
+
+}
+
+
+/*=========================
+GALLERY
+=========================*/
+
+.gallery{
+
+margin-top:100px;
+
+padding:80px 40px;
+
+background:
+
+linear-gradient(
+
+to bottom,
+
+#FFFDF7,
+
+#F5EDDA
+
+);
+
+border-top:1px solid var(--border);
+
+border-bottom:1px solid var(--border);
+
+}
+
+
+/*=========================
+GALLERY TRACK
+=========================*/
+
+.gallery-track{
+
+display:flex;
+
+gap:25px;
+
+overflow-x:auto;
+
+padding-bottom:10px;
+
+scrollbar-width:none;
+
+}
+
+
+/*=========================
+HIDE SCROLLBAR
+=========================*/
+
+.gallery-track::-webkit-scrollbar{
+
+display:none;
+
+}
+
+
+/*=========================
+GALLERY IMAGES
+=========================*/
+
+.gallery-track img{
+
+width:320px;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:2px solid var(--sand-dark);
+
+box-shadow:var(--shadow);
+
+transition:.3s;
+
+}
+
+
+/*=========================
+GALLERY HOVER
+=========================*/
+
+.gallery-track img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+/*=========================
+ABOUT
+=========================*/
+
+.about{
+
+padding:100px 0;
+
+}
+
+
+/*=========================
+ABOUT CARD
+=========================*/
+
+.about-card{
+
+background:var(--cream);
+
+padding:45px;
+
+border-radius:20px;
+
+box-shadow:var(--shadow);
+
+border:1px solid var(--border);
+
+max-width:950px;
+
+margin:auto;
+
+}
+
+
+/*=========================
+ABOUT TEXT
+=========================*/
+
+.about-card p{
+
+font-size:18px;
+
+color:#51483C;
+
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+.site-footer{
+
+margin-top:100px;
+
+background:var(--clay-dark);
+
+padding:70px 20px;
+
+color:white;
+
+}
+
+
+/*=========================
+FOOTER INNER
+=========================*/
+
+.footer-inner{
+
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+
+/*=========================
+FOOTER BRAND
+=========================*/
+
+.footer-brand h3{
+
+font-family:"Cinzel",serif;
+
+font-size:30px;
+
+color:var(--sand-light);
+
+margin-bottom:15px;
+
+}
+
+
+/*=========================
+FOOTER LINKS
+=========================*/
+
+.footer-links a{
+
+display:block;
+
+color:#F8F1E2;
+
+text-decoration:none;
+
+margin-bottom:10px;
+
+transition:.3s;
+
+}
+
+
+.footer-links a:hover{
+
+color:var(--sand-light);
+
+}
+
+
+/*=========================
+FOOTER INFO
+=========================*/
+
+.footer-info p{
+
+margin-bottom:10px;
+
+}
+
+
+/*=========================
+DEVELOPMENT BANNER
+=========================*/
+
+.development-banner{
+
+background:#F2E7CF;
+
+color:#70472C;
+
+text-align:center;
+
+padding:14px 20px;
+
+font-size:14px;
+
+font-weight:600;
+
+letter-spacing:.3px;
+
+border-bottom:1px solid #DDCBA7;
+
+position:relative;
+
+z-index:10000;
+
+}
+
+
+/*=========================
+DEVELOPMENT BANNER ICON
+=========================*/
+
+.development-banner::before{
+
+content:"🏺";
+
+margin-right:8px;
+
+}
+
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:900px){
+
+
+/*=========================
+TOP BAR
+=========================*/
+
+.topbar{
+
+top:50px;
+
+flex-direction:column;
+
+height:auto;
+
+padding:20px;
+
+gap:20px;
+
+}
+
+
+/*=========================
+MENU
+=========================*/
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+/*=========================
+MAIN
+=========================*/
+
+.desktop{
+
+padding-top:260px;
+
+}
+
+
+/*=========================
+HERO TITLE
+=========================*/
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+
+/*=========================
+HERO LOGO
+=========================*/
+
+.hero-logo-container{
+
+width:250px;
+
+height:250px;
+
+}
+
+
+/*=========================
+SECTION TITLE
+=========================*/
+
+.section-title{
+
+font-size:34px;
+
+}
+
+
+/*=========================
+GALLERY
+=========================*/
+
+.gallery-track img{
+
+width:240px;
+
+height:320px;
+
+}
+
+
+/*=========================
+DEVELOPMENT BANNER
+=========================*/
+
+.development-banner{
+
+height:auto;
+
+min-height:50px;
+
+padding:12px 15px;
+
+font-size:12px;
+
+text-align:center;
+
+}
+
+
+/*=========================
+LAST DROPDOWN
+=========================*/
+
+.menu-item:last-child .dropdown{
+
+left:auto;
+
+right:0;
+
+}
+
+
+}
+
+
+/*=========================
+END STYLE
+=========================*/
 
 </style>
 
 </head>
 
-
 <body>
 
+<!-- =========================
+DEVELOPMENT BANNER
+========================= -->
 
-<header>
+<div class="development-banner">
 
-    <div class="brand">
-        MEMORIA
+🏺 Memoria del Mundo — sitio en desarrollo. Estamos construyendo y organizando la memoria histórica de la humanidad.
+
+</div>
+
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header class="topbar">
+
+    <div class="topbar-left">
+
+        <div class="brand">
+            Memoria del Mundo
+        </div>
+
+        <div class="projects-header">
+            DIGITAL HISTORY
+        </div>
+
     </div>
 
-    <nav>
 
-        <a href="#">Inicio</a>
+    <nav class="menu">
 
-        <a href="#">Historia</a>
 
-        <a href="#">Culturas</a>
+        <a href="#" class="menu-link">
+            Inicio
+        </a>
 
-        <a href="#">Personajes</a>
+
+        <!-- =========================
+        ORÍGENES
+        ========================= -->
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Orígenes ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Primeros seres humanos
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Revolución neolítica
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Primeras ciudades
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Escritura
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+        CIVILIZACIONES
+        ========================= -->
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Civilizaciones ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Mesopotamia
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Egipto
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Persia
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    India
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    China
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+        RELIGIONES
+        ========================= -->
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Religiones ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Religiones antiguas
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Judaísmo
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Cristianismo
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Islam
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+        CULTURA
+        ========================= -->
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Cultura ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Escritura
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Literatura
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Arte
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Ciencia
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+        HISTORIA
+        ========================= -->
+
+        <div class="menu-item">
+
+            <button class="menu-button">
+                Historia ▼
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#" class="dropdown-button">
+                    Antigüedad
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Edad Media
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Edad Moderna
+                </a>
+
+                <a href="#" class="dropdown-button">
+                    Mundo Contemporáneo
+                </a>
+
+            </div>
+
+        </div>
+
 
     </nav>
 
 </header>
 
 
-<main class="hero">
+<!-- =========================
+MAIN
+========================= -->
+
+<main class="desktop">
+
+
+<!-- =========================
+HERO
+========================= -->
+
+<section class="hero">
 
 
     <div class="hero-logo-container">
 
         <img
-            src="halcon-memorias.jpg"
+            src="memoria-mundo.JPG"
             class="hero-logo"
-            alt="Halcón dorado de Memoria del Mundo"
+            alt="Memoria del Mundo"
             loading="lazy">
 
     </div>
 
 
     <h1>
-        MEMORIA DEL MUNDO
+        Memoria del Mundo
     </h1>
 
 
-    <h2>
+    <p>
+        Explora la historia de la humanidad a través de sus primeras
+        sociedades, civilizaciones, culturas, conocimientos, creencias
+        y patrimonio.
+    </p>
+
+
+</section>
+
+
+<!-- =========================
+ABOUT THE WORLD
+========================= -->
+
+<section class="about">
+
+
+    <h2 class="section-title">
         La memoria de la humanidad
     </h2>
 
 
-    <p>
-        Un espacio para explorar los pueblos, las culturas,
-        las ideas y los acontecimientos que han dado forma
-        a nuestro mundo.
+    <p class="section-subtitle">
+
+        Desde las primeras comunidades humanas hasta las grandes
+        civilizaciones, la historia también es la historia de aquello
+        que los seres humanos decidieron conservar y transmitir.
+
     </p>
 
 
-    <a href="#" class="enter-button">
-        EXPLORAR
-    </a>
+    <div class="about-card">
+
+
+        <p>
+
+            Mucho antes de que existieran los libros, los archivos y las
+            bibliotecas, los seres humanos ya transmitían conocimientos
+            mediante palabras, imágenes, objetos, rituales y tradiciones.
+
+            Con el surgimiento de las primeras ciudades aparecieron nuevas
+            formas de organización social y, posteriormente, sistemas de
+            escritura capaces de registrar información y conservarla para
+            generaciones futuras.
+
+            Memoria del Mundo propone recorrer esa historia a través de
+            las sociedades, civilizaciones, textos, ideas, creencias,
+            descubrimientos y expresiones culturales que han formado
+            parte de la experiencia humana.
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+WORLD AT A GLANCE
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        El mundo en perspectiva
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Algunos elementos fundamentales para comprender el desarrollo
+        de las primeras sociedades humanas.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        CARD 1
+        ========================= -->
+
+        <div class="card">
+
+
+            <h3>
+                🏺 Primeras ciudades
+            </h3>
+
+
+            <p>
+
+                El desarrollo de comunidades urbanas transformó la
+                organización social y económica de diferentes regiones
+                del mundo antiguo.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        CARD 2
+        ========================= -->
+
+        <div class="card">
+
+
+            <h3>
+                ✍️ La escritura
+            </h3>
+
+
+            <p>
+
+                Los primeros sistemas de escritura permitieron registrar
+                información administrativa, económica, religiosa,
+                política y literaria.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        CARD 3
+        ========================= -->
+
+        <div class="card">
+
+
+            <h3>
+                🏛️ Los primeros Estados
+            </h3>
+
+
+            <p>
+
+                Las sociedades urbanas desarrollaron nuevas formas de
+                autoridad, administración, leyes y organización política.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        CARD 4
+        ========================= -->
+
+        <div class="card">
+
+
+            <h3>
+                📜 La memoria escrita
+            </h3>
+
+
+            <p>
+
+                Tablillas, inscripciones, manuscritos y otros documentos
+                permitieron conservar parte del conocimiento de sociedades
+                que existieron hace miles de años.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+EXPLORE THE MEMORY
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        Explorar la Memoria
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Un recorrido por algunos de los primeros grandes centros de
+        civilización y conocimiento de la historia humana.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        MESOPOTAMIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/mesopotamia.jpg"
+                alt="Mesopotamia antigua"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Mesopotamia
+            </h3>
+
+
+            <p>
+
+                Entre los ríos Tigris y Éufrates surgieron algunas de las
+                primeras ciudades, Estados y tradiciones escritas conocidas.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        EGIPTO
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/egipto-antiguo.jpg"
+                alt="Antiguo Egipto"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Egipto
+            </h3>
+
+
+            <p>
+
+                El valle del Nilo fue escenario de una de las grandes
+                civilizaciones del mundo antiguo, con una larga tradición
+                política, religiosa, artística y escrita.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        PERSIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/persia-antigua.jpg"
+                alt="Antigua Persia"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Persia
+            </h3>
+
+
+            <p>
+
+                Los pueblos iranios construyeron importantes Estados e
+                imperios que conectaron distintas regiones de Asia y
+                contribuyeron a una rica tradición cultural.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        INDIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/india-antigua.jpg"
+                alt="Antigua India"
+                loading="lazy"
+            >
+
+
+            <h3>
+                India
+            </h3>
+
+
+            <p>
+
+                Las sociedades del subcontinente indio desarrollaron
+                tradiciones urbanas, religiosas, filosóficas, científicas
+                y literarias de enorme importancia histórica.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- =========================
+FIRST CIVILIZATIONS
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        Primeras Civilizaciones
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Las primeras sociedades urbanas transformaron la organización
+        humana y dejaron algunas de las primeras grandes huellas
+        documentales de nuestra historia.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        SUMER
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/sumer.jpg"
+                alt="Antigua Sumeria"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Sumer
+            </h3>
+
+
+            <p>
+
+                En el sur de Mesopotamia surgieron ciudades como Uruk y Ur,
+                junto con una de las primeras tradiciones conocidas de
+                escritura.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        AKKAD
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/akkad.jpg"
+                alt="Imperio acadio"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Akkad
+            </h3>
+
+
+            <p>
+
+                El mundo acadio estuvo relacionado con la formación de uno
+                de los primeros grandes Estados territoriales conocidos
+                del Cercano Oriente.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        BABILONIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/babilonia.jpg"
+                alt="Antigua Babilonia"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Babilonia
+            </h3>
+
+
+            <p>
+
+                Babilonia se convirtió en uno de los grandes centros
+                políticos y culturales de Mesopotamia y dejó importantes
+                testimonios escritos.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        ASIRIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/asiria.jpg"
+                alt="Antigua Asiria"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Asiria
+            </h3>
+
+
+            <p>
+
+                Los asirios construyeron un poderoso Estado y desarrollaron
+                importantes tradiciones administrativas, militares y
+                literarias.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+MESOPOTAMIA
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        Mesopotamia
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Entre los ríos Tigris y Éufrates surgieron ciudades, sistemas de
+        escritura, instituciones políticas y algunas de las tradiciones
+        literarias más antiguas que conocemos.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        URUK
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/uruk.jpg"
+                alt="Antigua ciudad de Uruk"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Uruk
+            </h3>
+
+
+            <p>
+
+                Una de las ciudades más importantes de la antigua Sumeria
+                y un centro fundamental para el desarrollo de la vida
+                urbana y la escritura.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        CUNEIFORM
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/cuneiforme.jpg"
+                alt="Tableta de escritura cuneiforme"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Escritura cuneiforme
+            </h3>
+
+
+            <p>
+
+                La escritura cuneiforme fue utilizada para registrar
+                información económica, administrativa, religiosa y
+                literaria sobre tablillas de arcilla.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        GILGAMESH
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/gilgamesh.jpg"
+                alt="Tableta relacionada con la Epopeya de Gilgamesh"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Gilgamesh
+            </h3>
+
+
+            <p>
+
+                La Epopeya de Gilgamesh pertenece a una de las tradiciones
+                literarias más antiguas conservadas del mundo.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        HAMMURABI
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/hammurabi.jpg"
+                alt="Estela del Código de Hammurabi"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Hammurabi
+            </h3>
+
+
+            <p>
+
+                La estela de Hammurabi conserva una importante colección
+                de disposiciones legales de la Babilonia antigua y es uno
+                de los testimonios jurídicos más conocidos del mundo antiguo.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+GALLERY
+========================= -->
+
+<section class="gallery">
+
+
+    <h2 class="section-title">
+        Galería
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Una muestra visual de las primeras civilizaciones, sus ciudades,
+        monumentos, objetos y sistemas de escritura.
+
+    </p>
+
+
+    <div class="gallery-track">
+
+
+        <img
+            src="imagen/mesopotamia.jpg"
+            alt="Paisaje de la antigua Mesopotamia"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/uruk.jpg"
+            alt="Antigua ciudad de Uruk"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/cuneiforme.jpg"
+            alt="Escritura cuneiforme sobre arcilla"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/babilonia.jpg"
+            alt="Antigua Babilonia"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/egipto-antiguo.jpg"
+            alt="Antiguo Egipto"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/piramides-egipto.jpg"
+            alt="Pirámides de Egipto"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/jeroglificos.jpg"
+            alt="Jeroglíficos egipcios"
+            loading="lazy"
+        >
+
+
+        <img
+            src="imagen/antigua-ciudad.jpg"
+            alt="Antigua ciudad del mundo mediterráneo"
+            loading="lazy"
+        >
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+EGYPT
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        Egipto
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        A lo largo del valle del Nilo se desarrolló una de las
+        civilizaciones más duraderas e influyentes del mundo antiguo.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        NILE
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/nilo.jpg"
+                alt="Río Nilo"
+                loading="lazy"
+            >
+
+
+            <h3>
+                El Nilo
+            </h3>
+
+
+            <p>
+
+                El río Nilo fue fundamental para la agricultura,
+                la economía y el desarrollo de las sociedades del
+                antiguo Egipto.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        PYRAMIDS
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/piramides-egipto.jpg"
+                alt="Pirámides de Egipto"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Pirámides
+            </h3>
+
+
+            <p>
+
+                Las pirámides constituyen algunos de los monumentos
+                más reconocibles de la civilización egipcia antigua.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        HIEROGLYPHS
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/jeroglificos.jpg"
+                alt="Jeroglíficos egipcios"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Jeroglíficos
+            </h3>
+
+
+            <p>
+
+                Los sistemas de escritura egipcios permitieron conservar
+                nombres, acontecimientos, textos religiosos y otros
+                testimonios de la sociedad.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        PHARAOHS
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/faraon.jpg"
+                alt="Representación de un faraón egipcio"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Faraones
+            </h3>
+
+
+            <p>
+
+                La figura del faraón ocupó una posición central en la
+                organización política y religiosa del antiguo Egipto.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- =========================
+ANCIENT CIVILIZATIONS
+========================= -->
+
+<section>
+
+
+    <h2 class="section-title">
+        Civilizaciones Antiguas
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        El desarrollo de grandes sociedades no ocurrió en un solo lugar.
+        Diferentes regiones construyeron sus propias tradiciones,
+        conocimientos y formas de organización.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <!-- =========================
+        PERSIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/persia-antigua.jpg"
+                alt="Antigua Persia"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Persia
+            </h3>
+
+
+            <p>
+
+                Los antiguos pueblos iranios desarrollaron una importante
+                tradición política, cultural y religiosa que conectó
+                extensos territorios de Asia.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        INDIA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/india-antigua.jpg"
+                alt="Antigua India"
+                loading="lazy"
+            >
+
+
+            <h3>
+                India
+            </h3>
+
+
+            <p>
+
+                El subcontinente indio fue escenario de antiguas
+                sociedades urbanas y de importantes tradiciones
+                filosóficas, religiosas y científicas.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        CHINA
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/china-antigua.jpg"
+                alt="Antigua China"
+                loading="lazy"
+            >
+
+
+            <h3>
+                China
+            </h3>
+
+
+            <p>
+
+                Las sociedades antiguas de China desarrollaron
+                sistemas políticos, escritura, tecnología y tradiciones
+                culturales que tuvieron una larga continuidad histórica.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        GREECE
+        ========================= -->
+
+        <div class="card">
+
+
+            <img
+                src="imagen/grecia-antigua.jpg"
+                alt="Antigua Grecia"
+                loading="lazy"
+            >
+
+
+            <h3>
+                Grecia
+            </h3>
+
+
+            <p>
+
+                Las ciudades y comunidades del mundo griego dejaron
+                importantes aportes en filosofía, política, literatura,
+                arte y pensamiento.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
 
 
 </main>
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+
+    <div class="footer-inner">
+
+
+        <!-- =========================
+        FOOTER BRAND
+        ========================= -->
+
+        <div class="footer-brand">
+
+
+            <h3>
+                Memoria del Mundo
+            </h3>
+
+
+            <p>
+
+                Un proyecto digital dedicado a explorar, organizar
+                y preservar información sobre la historia y el patrimonio
+                de la humanidad.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =========================
+        FOOTER LINKS
+        ========================= -->
+
+        <div class="footer-links">
+
+
+            <a href="#">
+                Inicio
+            </a>
+
+
+            <a href="#">
+                Orígenes
+            </a>
+
+
+            <a href="#">
+                Civilizaciones
+            </a>
+
+
+            <a href="#">
+                Religiones
+            </a>
+
+
+            <a href="#">
+                Cultura
+            </a>
+
+
+            <a href="#">
+                Historia
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+    FACEBOOK SHARE
+    ========================= -->
+
+    <div
+        style="
+        text-align:center;
+        margin-top:50px;
+        "
+    >
+
+
+        <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://gloriacitizen00-dev.github.io/Docs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="
+            color:#F5E8CC;
+            text-decoration:none;
+            font-weight:600;
+            "
+        >
+
+            📘 Compartir en Facebook
+
+        </a>
+
+
+    </div>
+
+
+    <!-- =========================
+    COPYRIGHT
+    ========================= -->
+
+    <div
+        style="
+        text-align:center;
+        margin-top:60px;
+        border-top:1px solid rgba(255,255,255,.15);
+        padding-top:25px;
+        "
+    >
+
+
+        <p>
+
+            © 2026 Memoria del Mundo
+
+        </p>
+
+
+    </div>
+
+
+</footer>
 
 
 </body>
