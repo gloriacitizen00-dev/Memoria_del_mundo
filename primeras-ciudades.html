@@ -1,1 +1,1440 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Las primeras ciudades | Memoria del Mundo</title>
+
+  <meta
+    name="description"
+    content="Descubre cómo surgieron las primeras ciudades, el crecimiento de los asentamientos, la organización social y el desarrollo de los primeros centros urbanos de la humanidad."
+  >
+
+  <meta
+    name="keywords"
+    content="primeras ciudades, ciudades antiguas, urbanismo, Uruk, Mesopotamia, primeros asentamientos, historia de la humanidad, primeras civilizaciones"
+  >
+
+  <meta name="author" content="Memoria del Mundo">
+
+  <meta property="og:title" content="Las primeras ciudades | Memoria del Mundo">
+
+  <meta
+    property="og:description"
+    content="Descubre cómo surgieron las primeras ciudades y cómo los asentamientos humanos se transformaron en los primeros centros urbanos."
+  >
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:url"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/primeras-ciudades.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Memoria del Mundo"
+  >
+
+  <meta
+    property="og:image:type"
+    content="image/jpeg"
+  >
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background: var(--cream);
+
+      color: var(--text);
+
+      font-family: "Montserrat", sans-serif;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       TOPBAR
+       ========================= */
+
+    .topbar {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      background: rgba(255, 253, 247, .96);
+
+      border-bottom: 1px solid var(--border);
+
+      z-index: 1000;
+
+      backdrop-filter: blur(10px);
+    }
+
+
+    .topbar-inner {
+
+      max-width: 1200px;
+
+      margin: auto;
+
+      min-height: 72px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 0 30px;
+    }
+
+
+    .brand {
+
+      font-family: "Cinzel", serif;
+
+      font-size: 1.05rem;
+
+      font-weight: 700;
+
+      color: var(--clay-dark);
+
+      text-decoration: none;
+
+      letter-spacing: .08em;
+    }
+
+
+    .nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+    }
+
+
+    .nav > a,
+    .dropdown-button {
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .78rem;
+
+      font-weight: 600;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      text-transform: uppercase;
+
+      letter-spacing: .08em;
+
+      transition: color .3s ease;
+
+      cursor: pointer;
+    }
+
+
+    .nav > a:hover,
+    .dropdown-button:hover {
+
+      color: var(--clay);
+    }
+
+
+    .dropdown {
+
+      position: relative;
+    }
+
+
+    .dropdown-content {
+
+      position: absolute;
+
+      top: calc(100% + 15px);
+
+      left: 0;
+
+      min-width: 220px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      padding: 12px 0;
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform: translateY(-8px);
+
+      transition: all .25s ease;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+
+    .dropdown-content a {
+
+      display: block;
+
+      padding: 10px 20px;
+
+      font-size: .75rem;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      transition: background .25s ease, color .25s ease;
+    }
+
+
+    .dropdown-content a:hover {
+
+      background: var(--sand-soft);
+
+      color: var(--clay-dark);
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .history-hero {
+
+      min-height: 520px;
+
+      padding: 150px 30px 90px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+
+        linear-gradient(
+          rgba(43, 36, 27, .48),
+          rgba(43, 36, 27, .58)
+        ),
+
+        url("memoria-del-mundo.JPG")
+        center / cover no-repeat;
+
+      color: var(--white);
+
+      position: relative;
+    }
+
+
+    .hero-content {
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+
+    .hero-content .eyebrow {
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .8rem;
+
+      font-weight: 600;
+
+      text-transform: uppercase;
+
+      letter-spacing: .2em;
+
+      margin-bottom: 20px;
+
+      color: var(--sand-light);
+    }
+
+
+    .hero-content h1 {
+
+      font-family: "Cinzel", serif;
+
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+
+      line-height: 1.1;
+
+      margin-bottom: 25px;
+    }
+
+
+    .hero-content p {
+
+      max-width: 720px;
+
+      margin: auto;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(1.25rem, 2vw, 1.6rem);
+
+      line-height: 1.6;
+
+      color: var(--white);
+    }
+
+
+    /* =========================
+       HISTORY CONTENT
+       ========================= */
+
+    .history-container {
+
+      max-width: 1000px;
+
+      margin: auto;
+
+      padding: 90px 30px;
+    }
+
+
+    .history-intro {
+
+      max-width: 820px;
+
+      margin: 0 auto 80px;
+
+      text-align: center;
+    }
+
+
+    .history-intro h2 {
+
+      font-family: "Cinzel", serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+      color: var(--clay-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .history-intro p {
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.35rem;
+
+      line-height: 1.8;
+
+      color: var(--text-light);
+    }
+
+
+    /* =========================
+       HISTORY SECTIONS
+       ========================= */
+
+    .history-section {
+
+      padding: 70px 0;
+
+      border-top: 1px solid var(--border);
+    }
+
+
+    .section-number {
+
+      font-family: "Cinzel", serif;
+
+      font-size: .85rem;
+
+      font-weight: 700;
+
+      color: var(--sand-dark);
+
+      letter-spacing: .2em;
+
+      margin-bottom: 15px;
+    }
+
+
+    .history-section h2 {
+
+      font-family: "Cinzel", serif;
+
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+
+      line-height: 1.25;
+
+      color: var(--clay-dark);
+
+      margin-bottom: 28px;
+    }
+
+
+    .history-section p {
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.3rem;
+
+      line-height: 1.8;
+
+      color: var(--text);
+
+      margin-bottom: 22px;
+    }
+
+
+    /* =========================
+       IMAGE
+       ========================= */
+
+    .history-image {
+
+      margin-top: 45px;
+    }
+
+
+    .image-placeholder {
+
+      min-height: 360px;
+
+      border: 1px solid var(--border);
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--sand-soft),
+          var(--cream)
+        );
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      font-family: "Cinzel", serif;
+
+      font-size: 1rem;
+
+      color: var(--stone);
+
+      letter-spacing: .05em;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+
+      background: var(--clay-dark);
+
+      color: var(--white);
+
+      padding: 60px 30px;
+
+      text-align: center;
+    }
+
+
+    footer .footer-brand {
+
+      font-family: "Cinzel", serif;
+
+      font-size: 1.4rem;
+
+      margin-bottom: 15px;
+    }
+
+
+    footer p {
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.1rem;
+
+      color: var(--sand-soft);
+
+      margin-bottom: 20px;
+    }
+
+
+    footer a {
+
+      color: var(--sand-light);
+
+      text-decoration: none;
+
+      margin: 0 10px;
+
+      font-size: .85rem;
+    }
+
+
+    footer a:hover {
+
+      color: var(--white);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .topbar-inner {
+
+        padding: 0 20px;
+      }
+
+      .nav {
+
+        gap: 15px;
+      }
+
+      .history-hero {
+
+        min-height: 460px;
+
+        padding: 130px 20px 70px;
+      }
+
+      .history-container {
+
+        padding: 70px 22px;
+      }
+    }
+
+
+    @media (max-width: 700px) {
+
+      .topbar-inner {
+
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+        gap: 12px;
+      }
+
+
+      .nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+      }
+
+
+      .history-hero {
+
+        padding-top: 180px;
+      }
+
+
+      .history-section {
+
+        padding: 55px 0;
+      }
+
+
+      .image-placeholder {
+
+        min-height: 260px;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOPBAR
+       ========================= -->
+
+  <header class="topbar">
+
+    <div class="topbar-inner">
+
+      <a href="index.html" class="brand">
+        Memoria del Mundo
+      </a>
+
+
+      <nav class="nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+
+        <div class="dropdown">
+
+          <a href="index.html#origenes" class="dropdown-button">
+            Orígenes
+          </a>
+
+          <div class="dropdown-content">
+
+            <a href="primeros-homininos.html">
+              Primeros seres humanos
+            </a>
+
+            <a href="revolucion-neolitica.html">
+              Revolución neolítica
+            </a>
+
+            <a href="primeras-ciudades.html">
+              Primeras ciudades
+            </a>
+
+            <a href="#">
+              Escritura
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <a href="index.html#civilizaciones" class="dropdown-button">
+            Civilizaciones
+          </a>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Mesopotamia
+            </a>
+
+            <a href="#">
+              Egipto
+            </a>
+
+            <a href="#">
+              Persia
+            </a>
+
+            <a href="#">
+              India
+            </a>
+
+            <a href="#">
+              China
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <a href="index.html#religiones" class="dropdown-button">
+            Religiones
+          </a>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Religiones antiguas
+            </a>
+
+            <a href="#">
+              Judaísmo
+            </a>
+
+            <a href="#">
+              Cristianismo
+            </a>
+
+            <a href="#">
+              Islam
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <a href="index.html#cultura" class="dropdown-button">
+            Cultura
+          </a>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Escritura
+            </a>
+
+            <a href="#">
+              Literatura
+            </a>
+
+            <a href="#">
+              Arte
+            </a>
+
+            <a href="#">
+              Ciencia
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <a href="index.html#historia" class="dropdown-button">
+            Historia
+          </a>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Antigüedad
+            </a>
+
+            <a href="#">
+              Edad Media
+            </a>
+
+            <a href="#">
+              Edad Moderna
+            </a>
+
+            <a href="#">
+              Mundo Contemporáneo
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <section class="history-hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Orígenes de la humanidad
+      </div>
+
+      <h1>
+        Las primeras ciudades
+      </h1>
+
+      <p>
+        El surgimiento de los primeros centros urbanos y las nuevas formas de
+        organización que transformaron las sociedades humanas.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN
+       ========================= -->
+
+  <main class="history-container">
+
+
+    <section class="history-intro">
+
+      <h2>
+        El nacimiento de las ciudades
+      </h2>
+
+      <p>
+        Las primeras ciudades surgieron después de miles de años de cambios en
+        las formas de producir alimentos, habitar el territorio, intercambiar
+        recursos y organizar las comunidades humanas.
+      </p>
+
+    </section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    01
+  </div>
+
+  <h2>
+    El surgimiento de las primeras ciudades
+  </h2>
+
+  <p>
+    Las primeras ciudades aparecieron después de un largo proceso de
+    transformación de las comunidades humanas. La agricultura, la ganadería,
+    el crecimiento de los asentamientos y el desarrollo de nuevas redes de
+    intercambio habían creado condiciones que permitieron concentrar cada vez
+    más personas y actividades en determinados lugares.
+  </p>
+
+  <p>
+    Una ciudad no surgió simplemente porque un poblado aumentara de tamaño.
+    También fue necesario desarrollar nuevas formas de organización. La
+    distribución de alimentos, el almacenamiento de recursos, la construcción
+    de edificios y la coordinación de diferentes actividades hicieron que
+    algunas comunidades adquirieran estructuras más complejas.
+  </p>
+
+  <p>
+    Este proceso ocurrió de manera diferente según la región. Uno de los
+    primeros lugares donde se desarrollaron grandes centros urbanos fue el sur
+    de Mesopotamia, donde varias comunidades crecieron hasta convertirse en
+    asentamientos de gran tamaño. Entre ellos destacó Uruk, que alcanzó una
+    importancia excepcional durante el IV milenio a. C.
+  </p>
+
+  <p>
+    El crecimiento urbano también estuvo relacionado con el desarrollo de
+    instituciones, espacios ceremoniales, actividades económicas y sistemas
+    administrativos. La concentración de población hizo posible una división
+    del trabajo más amplia y aumentó la necesidad de gestionar recursos y
+    relaciones entre diferentes grupos.
+  </p>
+
+  <p>
+    Las primeras ciudades marcaron así una nueva etapa en la historia humana.
+    No fueron únicamente asentamientos más grandes, sino espacios donde la
+    población, la producción, el intercambio, la administración y las
+    actividades religiosas comenzaron a integrarse dentro de estructuras
+    sociales cada vez más complejas.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen del surgimiento de las primeras ciudades
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    02
+  </div>
+
+  <h2>
+    Uruk y el nacimiento del urbanismo
+  </h2>
+
+  <p>
+    Entre los primeros grandes centros urbanos de la humanidad destacó Uruk,
+    situado en el sur de Mesopotamia, en una región atravesada por los ríos
+    Tigris y Éufrates. Durante el IV milenio a. C., el asentamiento experimentó
+    un crecimiento extraordinario y se convirtió en uno de los principales
+    centros de la región.
+  </p>
+
+  <p>
+    El crecimiento de Uruk estuvo relacionado con la producción agrícola y con
+    la capacidad de las comunidades para gestionar los recursos de un territorio
+    fértil, pero también dependió de nuevas formas de organización. La ciudad
+    concentró viviendas, talleres, espacios ceremoniales y grandes edificios
+    asociados con las instituciones de la comunidad.
+  </p>
+
+  <p>
+    La construcción de edificios monumentales requirió grandes cantidades de
+    materiales, trabajadores y coordinación. Esto indica que la sociedad de
+    Uruk había desarrollado mecanismos capaces de organizar el trabajo y
+    movilizar recursos a una escala mucho mayor que la de los pequeños
+    asentamientos agrícolas anteriores.
+  </p>
+
+  <p>
+    Uruk también estuvo conectada con otras comunidades mediante redes de
+    intercambio. Algunos materiales utilizados en la ciudad no se encontraban
+    de manera natural en el sur de Mesopotamia y debían obtenerse mediante
+    contactos con otras regiones. Estas redes contribuyeron al crecimiento
+    económico y cultural del centro urbano.
+  </p>
+
+  <p>
+    El desarrollo de Uruk representa uno de los primeros ejemplos conocidos de
+    urbanización a gran escala. Su crecimiento muestra cómo la concentración
+    de población, la producción, el intercambio y las instituciones podía
+    transformar un asentamiento en un centro urbano con una organización mucho
+    más compleja.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de Uruk y los primeros centros urbanos
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    03
+  </div>
+
+  <h2>
+    El crecimiento de la población
+  </h2>
+
+  <p>
+    El desarrollo de las primeras ciudades estuvo acompañado por un aumento
+    progresivo de la población. La agricultura permitió producir y almacenar
+    mayores cantidades de alimentos en determinadas regiones, lo que favoreció
+    el crecimiento de comunidades cada vez más numerosas.
+  </p>
+
+  <p>
+    A medida que los asentamientos crecían, también aumentaba la cantidad de
+    actividades que debían organizarse. La producción de alimentos, la
+    construcción, la elaboración de herramientas, el almacenamiento y el
+    intercambio requerían la participación de diferentes grupos y trabajadores.
+  </p>
+
+  <p>
+    El crecimiento de la población también hizo que algunas comunidades
+    necesitaran obtener recursos que no podían producir localmente. Esto
+    fortaleció las relaciones de intercambio entre distintos asentamientos y
+    contribuyó a crear redes económicas cada vez más amplias.
+  </p>
+
+  <p>
+    La concentración de personas en un mismo lugar transformó además la forma
+    de habitar el territorio. Las viviendas comenzaron a formar espacios más
+    densos y organizados, mientras que determinados lugares se destinaban a
+    actividades productivas, administrativas o ceremoniales.
+  </p>
+
+  <p>
+    Sin embargo, el crecimiento urbano también generó nuevos desafíos. Una
+    población más numerosa necesitaba administrar los alimentos, el agua, los
+    residuos, el trabajo y otros recursos. La necesidad de resolver estos
+    problemas favoreció el desarrollo de nuevas instituciones y formas de
+    organización social.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen del crecimiento de las primeras poblaciones urbanas
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    04
+  </div>
+
+  <h2>
+    Templos y espacios monumentales
+  </h2>
+
+  <p>
+    El crecimiento de las primeras ciudades estuvo acompañado por la
+    construcción de edificios que tenían funciones religiosas, administrativas
+    y sociales. Estos espacios se diferenciaban de las viviendas comunes por
+    su tamaño, su ubicación y la cantidad de recursos necesarios para
+    construirlos.
+  </p>
+
+  <p>
+    En las ciudades de Mesopotamia, los templos ocuparon un lugar importante
+    dentro de la organización de las comunidades. Además de estar relacionados
+    con las prácticas religiosas, podían funcionar como centros donde se
+    almacenaban bienes, se organizaban actividades y se gestionaban recursos.
+  </p>
+
+  <p>
+    La construcción de grandes edificios requería materiales, trabajadores,
+    herramientas y conocimientos especializados. Su existencia demuestra que
+    algunas sociedades ya podían coordinar grandes cantidades de trabajo y
+    mantener actividades constructivas durante largos períodos.
+  </p>
+
+  <p>
+    Los espacios monumentales también transformaron físicamente las ciudades.
+    Grandes edificios, plataformas y recintos ceremoniales se convirtieron en
+    puntos de referencia dentro de los asentamientos y reflejaron la creciente
+    importancia de determinadas instituciones y grupos.
+  </p>
+
+  <p>
+    La arquitectura monumental fue, por tanto, una consecuencia y al mismo
+    tiempo una expresión de la creciente complejidad urbana. Las ciudades ya
+    no estaban formadas únicamente por viviendas y espacios de producción,
+    sino también por lugares destinados a actividades que involucraban a toda
+    la comunidad.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de templos y arquitectura monumental
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    05
+  </div>
+
+  <h2>
+    La organización del trabajo
+  </h2>
+
+  <p>
+    El crecimiento de las ciudades hizo necesario organizar el trabajo de una
+    manera más compleja. La producción de alimentos continuó siendo
+    fundamental, pero comenzaron a desarrollarse muchas otras actividades
+    relacionadas con la construcción, la fabricación de herramientas, la
+    elaboración de cerámica, el transporte y el intercambio de bienes.
+  </p>
+
+  <p>
+    Algunas personas pudieron dedicarse de manera más especializada a
+    determinadas tareas mientras otras continuaban trabajando en la
+    producción agrícola. Esta diferenciación permitió desarrollar habilidades
+    específicas y aumentó la variedad de bienes y servicios disponibles dentro
+    de las comunidades.
+  </p>
+
+  <p>
+    La construcción de edificios, canales y otras obras requería coordinar
+    grupos numerosos de trabajadores. También era necesario conseguir
+    materiales, distribuir alimentos y establecer sistemas para mantener las
+    actividades durante períodos prolongados.
+  </p>
+
+  <p>
+    La especialización del trabajo estuvo relacionada con la creciente
+    complejidad económica de las ciudades. Agricultores, artesanos,
+    constructores, comerciantes y otras personas podían participar en una
+    misma red de producción e intercambio, aunque sus actividades fueran muy
+    diferentes.
+  </p>
+
+  <p>
+    Esta organización creó nuevas relaciones de dependencia entre distintos
+    grupos de la población. La capacidad de coordinar el trabajo y administrar
+    los recursos se convirtió en una parte fundamental de las primeras
+    sociedades urbanas.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de la organización del trabajo en las primeras ciudades
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    06
+  </div>
+
+  <h2>
+    El intercambio y las redes comerciales
+  </h2>
+
+  <p>
+    El crecimiento de las primeras ciudades estuvo acompañado por el desarrollo
+    de redes de intercambio que conectaban comunidades de diferentes regiones.
+    Los asentamientos urbanos necesitaban obtener determinados materiales y
+    productos que no siempre estaban disponibles en su entorno inmediato.
+  </p>
+
+  <p>
+    En Mesopotamia, por ejemplo, algunas materias primas eran escasas en las
+    regiones donde se desarrollaron grandes centros urbanos. La madera, ciertas
+    piedras y algunos metales debían obtenerse mediante contactos con otras
+    zonas, lo que favoreció la creación de rutas de intercambio a larga
+    distancia.
+  </p>
+
+  <p>
+    Estos intercambios no se limitaban a productos terminados. También podían
+    involucrar materias primas, alimentos, herramientas y otros recursos
+    necesarios para mantener las actividades de las comunidades urbanas.
+  </p>
+
+  <p>
+    Las redes comerciales también permitieron la circulación de conocimientos,
+    técnicas y formas culturales. El contacto entre diferentes comunidades
+    facilitó la transmisión de objetos, prácticas y tecnologías entre regiones
+    que podían encontrarse a grandes distancias.
+  </p>
+
+  <p>
+    El intercambio se convirtió así en una parte importante del funcionamiento
+    de las primeras ciudades. Las comunidades urbanas no dependían únicamente
+    de los recursos de su territorio, sino también de las relaciones que podían
+    establecer con otros asentamientos y regiones.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de las primeras redes de intercambio
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    07
+  </div>
+
+  <h2>
+    La aparición de las primeras administraciones
+  </h2>
+
+  <p>
+    El crecimiento de las ciudades hizo necesario desarrollar nuevas formas de
+    administrar los recursos y las actividades de la comunidad. Cuando la
+    población aumentó y las redes de producción e intercambio se hicieron más
+    complejas, también aumentó la necesidad de registrar, distribuir y
+    controlar determinados bienes.
+  </p>
+
+  <p>
+    En algunas ciudades de Mesopotamia surgieron instituciones capaces de
+    gestionar grandes cantidades de productos agrícolas y otros recursos. Los
+    templos y otros centros institucionales participaron en estas actividades,
+    organizando trabajadores, almacenando bienes y supervisando diferentes
+    tareas.
+  </p>
+
+  <p>
+    La administración también requirió nuevos métodos para conservar
+    información. El registro de cantidades de alimentos, animales, trabajadores
+    y otros bienes favoreció el desarrollo de sistemas cada vez más precisos de
+    contabilidad.
+  </p>
+
+  <p>
+    Estos sistemas administrativos fueron uno de los antecedentes importantes
+    de la escritura. Antes de que la escritura se utilizara para registrar
+    acontecimientos, literatura o leyes, algunas de sus primeras aplicaciones
+    estuvieron relacionadas con la necesidad de controlar y documentar
+    actividades económicas.
+  </p>
+
+  <p>
+    La aparición de estas administraciones muestra que las primeras ciudades
+    necesitaban algo más que una población numerosa. También requerían
+    instituciones capaces de coordinar recursos, personas e información a una
+    escala que no era necesaria en las comunidades pequeñas.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de la administración en las primeras ciudades
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    08
+  </div>
+
+  <h2>
+    Ciudades, poder y desigualdad
+  </h2>
+
+  <p>
+    La aparición de las ciudades transformó las relaciones entre los diferentes
+    grupos que formaban las comunidades. La concentración de recursos, tierras,
+    alimentos y actividades económicas creó nuevas diferencias sociales que no
+    estaban presentes de la misma manera en los pequeños asentamientos
+    agrícolas.
+  </p>
+
+  <p>
+    Algunas personas y grupos comenzaron a ocupar posiciones relacionadas con
+    la administración, las actividades religiosas, el comercio o la
+    organización del trabajo. El acceso desigual a determinados recursos y
+    funciones pudo contribuir al surgimiento de diferencias de riqueza,
+    autoridad y prestigio.
+  </p>
+
+  <p>
+    La arquitectura también puede proporcionar evidencias de estas diferencias.
+    Mientras algunas personas habitaban viviendas relativamente sencillas,
+    determinados edificios requerían grandes cantidades de recursos y trabajo,
+    lo que refleja la existencia de instituciones o grupos con capacidad para
+    movilizarlos.
+  </p>
+
+  <p>
+    Estas transformaciones no ocurrieron de la misma manera en todas las
+    ciudades ni al mismo tiempo. Las primeras sociedades urbanas desarrollaron
+    diferentes formas de autoridad y organización, dependiendo de sus
+    instituciones, recursos y relaciones con otras comunidades.
+  </p>
+
+  <p>
+    Las ciudades introdujeron así nuevas posibilidades de organización, pero
+    también nuevas formas de diferencia social. La concentración de población y
+    recursos creó estructuras que posteriormente serían fundamentales para el
+    desarrollo de sociedades políticas cada vez más complejas.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de las diferencias sociales en las primeras ciudades
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    09
+  </div>
+
+  <h2>
+    De los primeros centros urbanos a los Estados
+  </h2>
+
+  <p>
+    El desarrollo de las primeras ciudades creó las condiciones para formas de
+    organización política cada vez más complejas. La concentración de población,
+    recursos, instituciones y actividades económicas permitió que algunos
+    centros urbanos adquirieran influencia sobre los territorios y comunidades
+    que los rodeaban.
+  </p>
+
+  <p>
+    En Mesopotamia, varias ciudades desarrollaron sus propias instituciones,
+    autoridades y sistemas de administración. Algunas llegaron a controlar
+    territorios agrícolas y redes de intercambio situadas más allá de sus
+    propios límites urbanos.
+  </p>
+
+  <p>
+    Con el tiempo, estas transformaciones contribuyeron al surgimiento de
+    estructuras políticas que podían administrar poblaciones y territorios cada
+    vez mayores. La autoridad dejó de estar limitada a la organización interna
+    de un asentamiento y comenzó a relacionarse también con el control de
+    territorios, recursos y otras comunidades.
+  </p>
+
+  <p>
+    Este proceso no fue lineal ni ocurrió de una sola manera. Algunas ciudades
+    conservaron una considerable autonomía, mientras que otras quedaron
+    integradas en estructuras políticas más amplias. Las relaciones entre
+    ciudades podían incluir comercio, alianzas, conflictos y disputas por los
+    recursos.
+  </p>
+
+  <p>
+    El paso de los primeros centros urbanos hacia los Estados marcó una nueva
+    etapa de la historia humana. Las ciudades habían comenzado como grandes
+    concentraciones de población y actividades, pero terminaron convirtiéndose
+    en centros de poder, administración, producción e intercambio que
+    transformarían profundamente las sociedades del mundo antiguo.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de las primeras ciudades y el surgimiento de los Estados
+    </div>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="footer-brand">
+      Memoria del Mundo
+    </div>
+
+    <p>
+      Historia, civilizaciones, cultura y patrimonio de la humanidad.
+    </p>
+
+    <div>
+
+      <a href="index.html">
+        Inicio
+      </a>
+
+      <a href="primeros-homininos.html">
+        Primeros seres humanos
+      </a>
+
+      <a href="revolucion-neolitica.html">
+        Revolución neolítica
+      </a>
+
+      <a href="primeras-ciudades.html">
+        Primeras ciudades
+      </a>
+
+    </div>
+
+    <p style="margin-top: 25px;">
+      © 2026 Memoria del Mundo
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
