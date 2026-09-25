@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Los primeros homininos | Evolución humana en África</title>
+
+  <meta
+    name="description"
+    content="Descubre quiénes fueron los primeros homininos y cómo comenzó la evolución humana en África. Conoce a los antiguos antepasados humanos y el origen de nuestra historia evolutiva."
+  >
+
+  <meta
+    name="keywords"
+    content="primeros homininos, evolución humana, origen del ser humano, África, antepasados humanos, evolución de la humanidad, primeros seres humanos, prehistoria"
+  >
+
+  <meta name="author" content="Memoria del Mundo">
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Los primeros homininos | Memoria del Mundo">
+
+  <meta
+    property="og:description"
+    content="Explora los primeros homininos y el origen de la evolución humana en África."
+  >
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:url"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/primeros-homininos.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Memoria del Mundo"
+  >
+
+  <meta property="og:image:type" content="image/jpeg">
+
+
+  <style>
+
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       TOPBAR
+    ========================= */
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(251, 246, 234, .96);
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(10px);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 15px 5%;
+    }
+
+
+    .brand {
+      text-decoration: none;
+      color: var(--text);
+
+      font-family: "Cinzel", serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+
+    .nav a {
+      color: var(--text);
+      text-decoration: none;
+
+      font-size: .78rem;
+      font-weight: 600;
+
+      letter-spacing: .08em;
+      text-transform: uppercase;
+
+      transition: color .3s ease;
+    }
+
+
+    .nav a:hover {
+      color: var(--sand-dark);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 75vh;
+
+      margin-top: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 100px 20px;
+
+      background:
+        linear-gradient(
+          rgba(251, 246, 234, .88),
+          rgba(247, 240, 223, .94)
+        );
+    }
+
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+
+    .eyebrow {
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .75rem;
+      font-weight: 600;
+
+      letter-spacing: .28em;
+      text-transform: uppercase;
+
+      color: var(--sand-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .hero h1 {
+      font-family: "Cinzel", serif;
+
+      font-size: clamp(2.5rem, 6vw, 5rem);
+
+      font-weight: 600;
+
+      line-height: 1.15;
+
+      color: var(--clay-dark);
+
+      margin-bottom: 28px;
+    }
+
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(1.25rem, 2vw, 1.55rem);
+
+      line-height: 1.6;
+
+      color: var(--text-light);
+    }
+
+
+    .hero-line {
+      width: 80px;
+      height: 2px;
+
+      background: var(--sand);
+
+      margin: 35px auto 0;
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .history-container {
+      max-width: 1000px;
+
+      margin: 0 auto;
+
+      padding: 80px 25px 120px;
+    }
+
+
+    .intro {
+      max-width: 800px;
+
+      margin: 0 auto 90px;
+
+      text-align: center;
+    }
+
+
+    .intro h2 {
+      font-family: "Cinzel", serif;
+
+      font-size: 2rem;
+
+      color: var(--clay-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .intro p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.35rem;
+
+      line-height: 1.7;
+
+      color: var(--text-light);
+    }
+
+
+    /* =========================
+       HISTORY SECTION
+    ========================= */
+
+    .history-section {
+      position: relative;
+
+      padding: 55px 0 70px;
+
+      border-top: 1px solid var(--border);
+    }
+
+
+    .history-section:first-of-type {
+      border-top: none;
+    }
+
+
+    .section-number {
+      font-family: "Cinzel", serif;
+
+      font-size: .8rem;
+
+      letter-spacing: .18em;
+
+      color: var(--sand-dark);
+
+      margin-bottom: 12px;
+    }
+
+
+    .history-section h2 {
+      font-family: "Cinzel", serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+      font-weight: 600;
+
+      color: var(--clay-dark);
+
+      line-height: 1.25;
+
+      margin-bottom: 25px;
+    }
+
+
+    .history-section p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.3rem;
+
+      line-height: 1.75;
+
+      color: var(--text);
+
+      margin-bottom: 22px;
+    }
+
+
+    .history-section p:last-of-type {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       IMAGE PLACEHOLDER
+    ========================= */
+
+    .history-image {
+      margin-top: 35px;
+
+      width: 100%;
+
+      min-height: 350px;
+
+      background: var(--sand-soft);
+
+      border: 1px solid var(--border);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+    }
+
+
+    .history-image img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+
+      object-fit: cover;
+    }
+
+
+    .image-placeholder {
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .75rem;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+
+      color: var(--stone);
+
+      text-align: center;
+
+      padding: 30px;
+    }
+
+
+    /* =========================
+       CLOSING
+    ========================= */
+
+    .closing {
+      margin-top: 80px;
+
+      padding: 60px 40px;
+
+      background: var(--sand-soft);
+
+      border: 1px solid var(--border);
+
+      text-align: center;
+    }
+
+
+    .closing h2 {
+      font-family: "Cinzel", serif;
+
+      color: var(--clay-dark);
+
+      font-size: 2rem;
+
+      margin-bottom: 20px;
+    }
+
+
+    .closing p {
+      max-width: 750px;
+
+      margin: auto;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.35rem;
+
+      line-height: 1.7;
+
+      color: var(--text-light);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--clay-dark);
+
+      color: var(--white);
+
+      padding: 60px 5% 35px;
+    }
+
+
+    .footer-content {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 40px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .footer-brand {
+      max-width: 450px;
+    }
+
+
+    .footer-brand h3 {
+      font-family: "Cinzel", serif;
+
+      font-size: 1.5rem;
+
+      margin-bottom: 15px;
+    }
+
+
+    .footer-brand p {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 1.15rem;
+
+      line-height: 1.6;
+
+      opacity: .85;
+    }
+
+
+    .footer-links {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+
+    .footer-links a {
+      color: var(--white);
+
+      text-decoration: none;
+
+      font-size: .8rem;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+      opacity: .8;
+
+      transition: opacity .3s ease;
+    }
+
+
+    .footer-links a:hover {
+      opacity: 1;
+    }
+
+
+    .copyright {
+      max-width: 1100px;
+
+      margin: 40px auto 0;
+
+      padding-top: 25px;
+
+      border-top: 1px solid rgba(255,255,255,.2);
+
+      font-size: .75rem;
+
+      opacity: .65;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .topbar {
+        padding: 14px 20px;
+      }
+
+      .nav {
+        gap: 12px;
+      }
+
+      .nav a {
+        font-size: .65rem;
+      }
+
+      .hero {
+        min-height: 65vh;
+
+        padding: 80px 20px;
+      }
+
+      .history-container {
+        padding: 60px 20px 90px;
+      }
+
+      .history-section {
+        padding: 45px 0 60px;
+      }
+
+      .history-section p {
+        font-size: 1.2rem;
+      }
+
+      .history-image {
+        min-height: 250px;
+      }
+
+      .closing {
+        padding: 45px 25px;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .brand {
+        font-size: .9rem;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+      }
+
+      .intro h2 {
+        font-size: 1.7rem;
+      }
+
+      .history-section h2 {
+        font-size: 1.8rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOPBAR
+  ========================= -->
+
+  <header class="topbar">
+
+    <a href="index.html" class="brand">
+      Memoria del Mundo
+    </a>
+
+    <nav class="nav">
+
+      <a href="index.html">
+        Inicio
+      </a>
+
+      <a href="index.html#origenes">
+        Orígenes
+      </a>
+
+      <a href="index.html#civilizaciones">
+        Civilizaciones
+      </a>
+
+      <a href="index.html#religiones">
+        Religiones
+      </a>
+
+      <a href="index.html#cultura">
+        Cultura
+      </a>
+
+      <a href="index.html#historia">
+        Historia
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Orígenes de la humanidad
+      </div>
+
+      <h1>
+        Los primeros homininos
+      </h1>
+
+      <p>
+        El comienzo de la evolución humana en África y la larga historia
+        de los primeros antepasados de nuestra especie.
+      </p>
+
+      <div class="hero-line"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+
+  <main class="history-container">
+
+
+    <!-- INTRODUCCIÓN -->
+
+    <section class="intro">
+
+      <h2>
+        La evolución humana en África
+      </h2>
+
+      <p>
+        La historia de la humanidad no comenzó con una única especie que
+        avanzó de manera lineal hasta convertirse en el ser humano actual.
+        La evolución humana fue un proceso mucho más complejo, desarrollado
+        durante millones de años y marcado por la aparición, coexistencia y
+        desaparición de numerosas especies de homininos.
+      </p>
+
+      <p>
+        África ocupa un lugar fundamental en esta historia. Allí surgieron
+        algunos de los primeros miembros conocidos de nuestro linaje
+        evolutivo y allí pueden encontrarse algunas de las evidencias más
+        antiguas de los cambios anatómicos y conductuales que caracterizan
+        la evolución humana.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         01
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        01
+      </div>
+
+      <h2>
+        Los primeros homininos
+      </h2>
+
+      <p>
+        Los primeros homininos fueron antiguos miembros del linaje evolutivo
+        que, con el paso de millones de años, conduciría hasta
+        <em>Homo sapiens</em>. Los científicos utilizan este término para
+        referirse a diferentes especies y géneros relacionados con nuestra
+        propia línea evolutiva después de la separación de nuestro linaje
+        respecto al de los chimpancés y bonobos.
+      </p>
+
+      <p>
+        Las evidencias más antiguas conocidas de estos primeros homininos
+        proceden de África y tienen varios millones de años. Entre los
+        fósiles estudiados existen especies que presentan una combinación
+        de características: algunas recuerdan a los grandes simios, mientras
+        que otras muestran cambios relacionados con la locomoción y la vida
+        sobre el suelo.
+      </p>
+
+      <p>
+        Esto significa que la evolución humana no puede representarse como
+        una simple línea que comienza con un simio y termina con el ser
+        humano moderno. Durante la prehistoria existieron diferentes
+        especies de homininos y varias de ellas pudieron coexistir durante
+        determinados períodos.
+      </p>
+
+      <p>
+        El estudio de estos primeros homininos permite reconstruir, de manera
+        fragmentaria, una de las historias más antiguas de nuestra especie:
+        cómo nuestros antepasados cambiaron anatómicamente, cómo se
+        adaptaron a distintos ambientes y cómo, mucho después, apareció
+        <em>Homo sapiens</em>.
+      </p>
+
+
+      <!-- IMAGEN -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de los primeros homininos
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CIERRE
+    ========================= -->
+
+    <section class="closing">
+
+      <h2>
+        Una historia que apenas comenzaba
+      </h2>
+
+      <p>
+        Los primeros homininos representan uno de los capítulos más antiguos
+        de la evolución humana. Mucho antes de las ciudades, la escritura y
+        las primeras civilizaciones, distintas especies de nuestros
+        antepasados ya habitaban los paisajes africanos.
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+
+        <h3>
+          Memoria del Mundo
+        </h3>
+
+        <p>
+          Un atlas digital dedicado a explorar la historia de la humanidad,
+          sus civilizaciones, culturas, conocimientos y patrimonio.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="index.html#origenes">
+          Orígenes
+        </a>
+
+        <a href="index.html#civilizaciones">
+          Civilizaciones
+        </a>
+
+        <a href="index.html#cultura">
+          Cultura
+        </a>
+
+        <a href="index.html#historia">
+          Historia
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Memoria del Mundo. Todos los derechos reservados.
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
