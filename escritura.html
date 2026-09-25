@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La escritura | Memoria del Mundo</title>
+
+  <meta
+    name="description"
+    content="Descubre el origen de la escritura, los primeros sistemas de registro, la escritura cuneiforme, los jeroglíficos y la importancia de la escritura en las primeras civilizaciones."
+  >
+
+  <meta
+    name="keywords"
+    content="escritura, origen de la escritura, escritura cuneiforme, jeroglíficos, Mesopotamia, Egipto, escribas, primeras civilizaciones, historia de la humanidad"
+  >
+
+  <meta name="author" content="Memoria del Mundo">
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="La escritura | Memoria del Mundo">
+
+  <meta
+    property="og:description"
+    content="Explora el origen de la escritura y los primeros sistemas utilizados para registrar información, administrar recursos y conservar la memoria humana."
+  >
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:url"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/escritura.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+  >
+
+  <meta property="og:image:alt" content="Memoria del Mundo">
+
+  <meta property="og:image:type" content="image/jpeg">
+
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    :root {
+
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+
+      --border: #E1D4B9;
+
+      --shadow:
+        0 20px 50px rgba(120, 90, 45, .12);
+
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      background:
+        linear-gradient(
+          180deg,
+          var(--cream) 0%,
+          var(--white) 100%
+        );
+
+      color: var(--text);
+
+      font-family: "Cormorant Garamond", serif;
+
+      line-height: 1.7;
+
+      padding-top: 82px;
+
+    }
+
+
+    /* =========================
+       TOP BAR
+       ========================= */
+
+    .topbar {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 82px;
+
+      background: rgba(255, 253, 247, .96);
+
+      backdrop-filter: blur(10px);
+
+      border-bottom:
+        1px solid var(--border);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding:
+        0 6%;
+
+      z-index: 1000;
+
+      box-shadow:
+        0 5px 20px rgba(120, 90, 45, .08);
+
+    }
+
+
+    .brand {
+
+      font-family: "Cinzel", serif;
+
+      font-size: 1.15rem;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+
+      color: var(--clay-dark);
+
+      text-decoration: none;
+
+      white-space: nowrap;
+
+    }
+
+
+    .nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+    }
+
+
+    .nav > a,
+    .dropdown-button {
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 600;
+
+      letter-spacing: .05em;
+
+      text-transform: uppercase;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      padding:
+        10px 12px;
+
+      border: none;
+
+      background: transparent;
+
+      cursor: pointer;
+
+      transition:
+        color .25s ease,
+        background .25s ease;
+
+    }
+
+
+    .nav > a:hover,
+    .dropdown-button:hover {
+
+      color: var(--clay-dark);
+
+      background:
+        var(--sand-soft);
+
+    }
+
+
+    /* =========================
+       DROPDOWNS
+       ========================= */
+
+    .dropdown {
+
+      position: relative;
+
+    }
+
+
+    .dropdown-content {
+
+      position: absolute;
+
+      top: calc(100% + 10px);
+
+      left: 0;
+
+      min-width: 220px;
+
+      background: var(--white);
+
+      border:
+        1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      padding: 10px;
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform:
+        translateY(-8px);
+
+      transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    }
+
+
+    .dropdown:hover .dropdown-content {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    .dropdown-content a {
+
+      display: block;
+
+      padding:
+        11px 14px;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .72rem;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      transition:
+        background .2s ease,
+        color .2s ease;
+
+    }
+
+
+    .dropdown-content a:hover {
+
+      background:
+        var(--sand-soft);
+
+      color:
+        var(--clay-dark);
+
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+
+      position: relative;
+
+      min-height: 470px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding:
+        80px 20px;
+
+      background:
+        linear-gradient(
+          rgba(43, 36, 27, .48),
+          rgba(43, 36, 27, .68)
+        ),
+        url("memoria-del-mundo.JPG")
+        center / cover no-repeat;
+
+      color: var(--white);
+
+    }
+
+
+    .hero-content {
+
+      max-width: 900px;
+
+    }
+
+
+    .eyebrow {
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .75rem;
+
+      font-weight: 600;
+
+      letter-spacing: .25em;
+
+      text-transform: uppercase;
+
+      color: var(--sand-light);
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .hero h1 {
+
+      font-family: "Cinzel", serif;
+
+      font-size:
+        clamp(2.6rem, 6vw, 5rem);
+
+      font-weight: 600;
+
+      line-height: 1.1;
+
+      letter-spacing: .03em;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .hero p {
+
+      max-width: 720px;
+
+      margin:
+        0 auto;
+
+      font-size:
+        clamp(1.15rem, 2vw, 1.45rem);
+
+      line-height: 1.6;
+
+      color: var(--white);
+
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+       ========================= */
+
+    .history-container {
+
+      max-width: 1050px;
+
+      margin:
+        0 auto;
+
+      padding:
+        90px 25px 100px;
+
+    }
+
+
+    .history-intro {
+
+      max-width: 850px;
+
+      margin:
+        0 auto 80px;
+
+      text-align: center;
+
+    }
+
+
+    .history-intro h2 {
+
+      font-family: "Cinzel", serif;
+
+      font-size:
+        clamp(1.8rem, 4vw, 2.8rem);
+
+      font-weight: 600;
+
+      color: var(--clay-dark);
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .history-intro p {
+
+      font-size:
+        clamp(1.15rem, 2vw, 1.35rem);
+
+      color: var(--text-light);
+
+      line-height: 1.8;
+
+    }
+
+
+    /* =========================
+       HISTORY SECTIONS
+       ========================= */
+
+    .history-section {
+
+      position: relative;
+
+      padding:
+        65px 0;
+
+      border-top:
+        1px solid var(--border);
+
+    }
+
+
+    .section-number {
+
+      font-family: "Cinzel", serif;
+
+      font-size: .9rem;
+
+      font-weight: 700;
+
+      letter-spacing: .2em;
+
+      color: var(--sand-dark);
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .history-section h2 {
+
+      font-family: "Cinzel", serif;
+
+      font-size:
+        clamp(1.7rem, 3vw, 2.5rem);
+
+      font-weight: 600;
+
+      line-height: 1.25;
+
+      color: var(--clay-dark);
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .history-section p {
+
+      max-width: 900px;
+
+      font-size:
+        clamp(1.1rem, 1.8vw, 1.28rem);
+
+      color: var(--text);
+
+      line-height: 1.85;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    /* =========================
+       IMAGE PLACEHOLDER
+       ========================= */
+
+    .history-image {
+
+      margin-top: 45px;
+
+    }
+
+
+    .image-placeholder {
+
+      min-height: 330px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      border:
+        1px solid var(--border);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--sand-soft),
+          var(--cream)
+        );
+
+      color: var(--stone);
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .8rem;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+      box-shadow:
+        inset 0 0 0 1px
+        rgba(255, 255, 255, .45);
+
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+
+      background:
+        var(--clay-dark);
+
+      color:
+        var(--white);
+
+      padding:
+        60px 6% 35px;
+
+    }
+
+
+    .footer-content {
+
+      max-width: 1100px;
+
+      margin:
+        0 auto;
+
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr;
+
+      gap: 50px;
+
+    }
+
+
+    .footer-brand {
+
+      font-family: "Cinzel", serif;
+
+      font-size: 1.4rem;
+
+      font-weight: 600;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .footer p {
+
+      color:
+        rgba(255, 253, 247, .78);
+
+      font-size:
+        1rem;
+
+      line-height: 1.7;
+
+    }
+
+
+    .footer h3 {
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .75rem;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+
+      color: var(--sand-light);
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .footer a {
+
+      display: block;
+
+      color:
+        rgba(255, 253, 247, .8);
+
+      text-decoration: none;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .75rem;
+
+      margin-bottom: 10px;
+
+      transition:
+        color .2s ease;
+
+    }
+
+
+    .footer a:hover {
+
+      color:
+        var(--sand-light);
+
+    }
+
+
+    .footer-bottom {
+
+      max-width: 1100px;
+
+      margin:
+        45px auto 0;
+
+      padding-top:
+        25px;
+
+      border-top:
+        1px solid
+        rgba(255, 253, 247, .18);
+
+      text-align: center;
+
+      color:
+        rgba(255, 253, 247, .55);
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: .7rem;
+
+    }
+
+
+    /* =========================
+       RESPONSIVE
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .topbar {
+
+        padding:
+          0 3%;
+
+      }
+
+      .brand {
+
+        font-size: .95rem;
+
+      }
+
+      .nav {
+
+        gap: 2px;
+
+      }
+
+      .nav > a,
+      .dropdown-button {
+
+        padding:
+          9px 7px;
+
+        font-size: .62rem;
+
+      }
+
+      .footer-content {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      body {
+
+        padding-top: 70px;
+
+      }
+
+
+      .topbar {
+
+        height: 70px;
+
+      }
+
+
+      .brand {
+
+        display: none;
+
+      }
+
+
+      .nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+      }
+
+
+      .nav > a,
+      .dropdown-button {
+
+        font-size: .58rem;
+
+        padding:
+          7px 5px;
+
+      }
+
+
+      .dropdown-content {
+
+        left: 50%;
+
+        transform:
+          translate(-50%, -8px);
+
+      }
+
+
+      .dropdown:hover .dropdown-content {
+
+        transform:
+          translate(-50%, 0);
+
+      }
+
+
+      .hero {
+
+        min-height: 420px;
+
+      }
+
+
+      .history-container {
+
+        padding:
+          65px 20px 80px;
+
+      }
+
+
+      .history-section {
+
+        padding:
+          50px 0;
+
+      }
+
+
+      .image-placeholder {
+
+        min-height: 240px;
+
+      }
+
+
+      .footer-content {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 35px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOP BAR
+       ========================= -->
+
+  <header class="topbar">
+
+    <a href="index.html" class="brand">
+      Memoria del Mundo
+    </a>
+
+
+    <nav class="nav">
+
+      <a href="index.html">
+        Inicio
+      </a>
+
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">
+          Orígenes
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="primeros-homininos.html">
+            Primeros seres humanos
+          </a>
+
+          <a href="revolucion-neolitica.html">
+            Revolución neolítica
+          </a>
+
+          <a href="primeras-ciudades.html">
+            Primeras ciudades
+          </a>
+
+          <a href="escritura.html">
+            Escritura
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">
+          Civilizaciones
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="index.html#civilizaciones">
+            Mesopotamia
+          </a>
+
+          <a href="index.html#civilizaciones">
+            Egipto
+          </a>
+
+          <a href="index.html#civilizaciones">
+            Persia
+          </a>
+
+          <a href="index.html#civilizaciones">
+            India
+          </a>
+
+          <a href="index.html#civilizaciones">
+            China
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">
+          Religiones
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="index.html#religiones">
+            Religiones antiguas
+          </a>
+
+          <a href="index.html#religiones">
+            Judaísmo
+          </a>
+
+          <a href="index.html#religiones">
+            Cristianismo
+          </a>
+
+          <a href="index.html#religiones">
+            Islam
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">
+          Cultura
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="index.html#cultura">
+            Escritura
+          </a>
+
+          <a href="index.html#cultura">
+            Literatura
+          </a>
+
+          <a href="index.html#cultura">
+            Arte
+          </a>
+
+          <a href="index.html#cultura">
+            Ciencia
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="dropdown">
+
+        <button class="dropdown-button">
+          Historia
+        </button>
+
+        <div class="dropdown-content">
+
+          <a href="index.html#historia">
+            Antigüedad
+          </a>
+
+          <a href="index.html#historia">
+            Edad Media
+          </a>
+
+          <a href="index.html#historia">
+            Edad Moderna
+          </a>
+
+          <a href="index.html#historia">
+            Mundo Contemporáneo
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Orígenes de la humanidad
+      </div>
+
+      <h1>
+        La escritura
+      </h1>
+
+      <p>
+        El desarrollo de los primeros sistemas de escritura y su transformación
+        de la memoria humana.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN
+       ========================= -->
+
+  <main class="history-container">
+
+
+    <section class="history-intro">
+
+      <h2>
+        El nacimiento de la escritura
+      </h2>
+
+      <p>
+        La escritura permitió registrar información, administrar recursos,
+        conservar conocimientos y transmitir ideas más allá de la memoria
+        individual. Su aparición transformó profundamente las sociedades
+        humanas y abrió una nueva etapa en la historia.
+      </p>
+
+    </section>
+
+
+    <!-- AQUÍ IRÁN LAS 9 SECCIONES -->
+
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer class="footer">
+
+    <div class="footer-content">
+
+
+      <div>
+
+        <div class="footer-brand">
+          Memoria del Mundo
+        </div>
+
+        <p>
+          Un atlas digital dedicado a explorar la historia, las civilizaciones,
+          los conocimientos y el patrimonio de la humanidad.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Explorar
+        </h3>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="primeros-homininos.html">
+          Primeros seres humanos
+        </a>
+
+        <a href="revolucion-neolitica.html">
+          Revolución neolítica
+        </a>
+
+        <a href="primeras-ciudades.html">
+          Primeras ciudades
+        </a>
+
+        <a href="escritura.html">
+          Escritura
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Memoria del Mundo
+        </h3>
+
+        <a href="index.html#civilizaciones">
+          Civilizaciones
+        </a>
+
+        <a href="index.html#religiones">
+          Religiones
+        </a>
+
+        <a href="index.html#cultura">
+          Cultura
+        </a>
+
+        <a href="index.html#historia">
+          Historia
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 Memoria del Mundo · Historia y patrimonio de la humanidad
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
