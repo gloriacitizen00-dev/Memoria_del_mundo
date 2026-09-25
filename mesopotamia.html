@@ -1,0 +1,1685 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mesopotamia | Memoria del Mundo</title>
+
+  <meta
+    name="description"
+    content="Explora la historia de Mesopotamia, sus ciudades, pueblos, Estados, religiones, conocimientos y legado en la historia de la humanidad."
+  >
+
+  <meta
+    name="keywords"
+    content="Mesopotamia, Sumer, Akkad, Babilonia, Asiria, Uruk, Sargón, Hammurabi, Nínive, civilizaciones antiguas, historia"
+  >
+
+  <meta name="author" content="Memoria del Mundo">
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Mesopotamia | Memoria del Mundo">
+
+  <meta
+    property="og:description"
+    content="Explora la historia de Mesopotamia, sus ciudades, pueblos, Estados, religiones, conocimientos y legado."
+  >
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:url"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/mesopotamia.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+  >
+
+  <meta property="og:image:alt" content="Memoria del Mundo">
+
+  <meta property="og:image:type" content="image/jpeg">
+
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    :root {
+
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      background: var(--cream);
+
+      color: var(--text);
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================
+       TOPBAR
+    ========================= */
+
+    .topbar {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 1000;
+
+      background: rgba(255, 253, 247, .97);
+
+      border-bottom: 1px solid var(--border);
+
+      box-shadow: 0 4px 20px rgba(80, 60, 30, .08);
+
+    }
+
+
+    .topbar-container {
+
+      max-width: 1250px;
+
+      margin: auto;
+
+      padding: 0 25px;
+
+      min-height: 72px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+    }
+
+
+    .brand {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: 1.05rem;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+
+      color: var(--clay-dark);
+
+      text-decoration: none;
+
+      white-space: nowrap;
+
+    }
+
+
+    .nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+    }
+
+
+    .nav > a,
+    .dropdown-button {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 600;
+
+      letter-spacing: .04em;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      padding: 10px 12px;
+
+      border-radius: 4px;
+
+      transition: .25s ease;
+
+      background: transparent;
+
+      border: none;
+
+      cursor: pointer;
+
+    }
+
+
+    .nav > a:hover,
+    .dropdown-button:hover {
+
+      color: var(--clay-dark);
+
+      background: var(--sand-soft);
+
+    }
+
+
+    .dropdown {
+
+      position: relative;
+
+    }
+
+
+    .dropdown-content {
+
+      display: none;
+
+      position: absolute;
+
+      top: 100%;
+
+      left: 0;
+
+      min-width: 210px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      padding: 8px;
+
+      border-radius: 6px;
+
+    }
+
+
+    .dropdown:hover .dropdown-content {
+
+      display: block;
+
+    }
+
+
+    .dropdown-content a {
+
+      display: block;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .7rem;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      padding: 10px 12px;
+
+      border-radius: 4px;
+
+      transition: .2s ease;
+
+    }
+
+
+    .dropdown-content a:hover {
+
+      background: var(--sand-soft);
+
+      color: var(--clay-dark);
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+      position: relative;
+
+      min-height: 420px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 80px 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--clay-dark),
+          var(--sand-dark)
+        );
+
+      color: var(--white);
+
+    }
+
+
+    .hero-content {
+
+      max-width: 900px;
+
+      margin-top: 50px;
+
+    }
+
+
+    .eyebrow {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 600;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+
+      color: var(--sand-light);
+
+    }
+
+
+    .hero h1 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(2.6rem, 6vw, 5rem);
+
+      font-weight: 600;
+
+      line-height: 1.1;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .hero p {
+
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+
+      max-width: 720px;
+
+      margin: auto;
+
+      color: rgba(255,255,255,.88);
+
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .history-container {
+
+      max-width: 1050px;
+
+      margin: auto;
+
+      padding: 80px 25px 100px;
+
+    }
+
+
+    .history-intro {
+
+      max-width: 850px;
+
+      margin: 0 auto 75px;
+
+      text-align: center;
+
+    }
+
+
+    .history-intro h2 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+      color: var(--clay-dark);
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .history-intro p {
+
+      font-size: 1.25rem;
+
+      color: var(--text-light);
+
+    }
+
+
+    /* =========================
+       HISTORY SECTIONS
+    ========================= */
+
+    .history-section {
+
+      padding: 65px 0;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+    .history-section:first-of-type {
+
+      border-top: none;
+
+    }
+
+
+    .section-number {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      color: var(--sand-dark);
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .history-section h2 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+
+      color: var(--clay-dark);
+
+      line-height: 1.25;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .history-section p {
+
+      font-size: 1.2rem;
+
+      color: var(--text-light);
+
+      margin-bottom: 20px;
+
+      max-width: 900px;
+
+    }
+
+
+    /* =========================
+       IMAGES
+    ========================= */
+
+    .history-image {
+
+      margin-top: 35px;
+
+    }
+
+
+    .image-placeholder {
+
+      min-height: 250px;
+
+      border: 1px dashed var(--stone-light);
+
+      background: var(--sand-soft);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+      color: var(--stone);
+
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      background: var(--clay-dark);
+
+      color: var(--white);
+
+      padding: 60px 25px 35px;
+
+    }
+
+
+    .footer-container {
+
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      gap: 50px;
+
+    }
+
+
+    .footer-brand {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: 1.3rem;
+
+      font-weight: 700;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .footer-text {
+
+      color: rgba(255,255,255,.75);
+
+      font-size: 1rem;
+
+      max-width: 420px;
+
+    }
+
+
+    .footer-column h3 {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .12em;
+
+      margin-bottom: 15px;
+
+      color: var(--sand-light);
+
+    }
+
+
+    .footer-column a {
+
+      display: block;
+
+      color: rgba(255,255,255,.78);
+
+      text-decoration: none;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      margin-bottom: 9px;
+
+      transition: .2s ease;
+
+    }
+
+
+    .footer-column a:hover {
+
+      color: var(--white);
+
+    }
+
+
+    .footer-bottom {
+
+      max-width: 1100px;
+
+      margin: 45px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,.15);
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .68rem;
+
+      color: rgba(255,255,255,.55);
+
+      text-align: center;
+
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .topbar-container {
+
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+      }
+
+
+      .nav {
+
+        justify-content: center;
+
+      }
+
+
+      .dropdown-content {
+
+        position: static;
+
+        margin-top: 5px;
+
+      }
+
+
+      .hero {
+
+        min-height: 400px;
+
+      }
+
+
+      .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .nav {
+
+        gap: 2px;
+
+      }
+
+
+      .nav > a,
+      .dropdown-button {
+
+        font-size: .65rem;
+
+        padding: 8px 7px;
+
+      }
+
+
+      .history-container {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+      }
+
+
+      .history-section {
+
+        padding: 50px 0;
+
+      }
+
+
+      .history-section p {
+
+        font-size: 1.1rem;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOPBAR
+  ========================= -->
+
+  <header class="topbar">
+
+    <div class="topbar-container">
+
+      <a href="index.html" class="brand">
+        Memoria del Mundo
+      </a>
+
+
+      <nav class="nav">
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Orígenes
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="primeros-homininos.html">
+              Primeros seres humanos
+            </a>
+
+            <a href="revolucion-neolitica.html">
+              Revolución neolítica
+            </a>
+
+            <a href="primeras-ciudades.html">
+              Primeras ciudades
+            </a>
+
+            <a href="escritura.html">
+              Escritura
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Civilizaciones
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="mesopotamia.html">
+              Mesopotamia
+            </a>
+
+            <a href="#">
+              Egipto
+            </a>
+
+            <a href="#">
+              Persia
+            </a>
+
+            <a href="#">
+              India
+            </a>
+
+            <a href="#">
+              China
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Religiones
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Religiones antiguas
+            </a>
+
+            <a href="#">
+              Judaísmo
+            </a>
+
+            <a href="#">
+              Cristianismo
+            </a>
+
+            <a href="#">
+              Islam
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Cultura
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Escritura
+            </a>
+
+            <a href="#">
+              Literatura
+            </a>
+
+            <a href="#">
+              Arte
+            </a>
+
+            <a href="#">
+              Ciencia
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Historia
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Antigüedad
+            </a>
+
+            <a href="#">
+              Edad Media
+            </a>
+
+            <a href="#">
+              Edad Moderna
+            </a>
+
+            <a href="#">
+              Mundo Contemporáneo
+            </a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Civilizaciones antiguas
+      </div>
+
+      <h1>
+        Mesopotamia
+      </h1>
+
+      <p>
+        La tierra entre los ríos y el desarrollo de algunas de las primeras
+        ciudades, Estados y culturas de la historia.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main class="history-container">
+
+
+    <section class="history-intro">
+
+      <h2>
+        Una civilización entre dos ríos
+      </h2>
+
+      <p>
+        Mesopotamia fue una región histórica situada entre los ríos Tigris y
+        Éufrates. En ella se desarrollaron sociedades urbanas, sistemas de
+        escritura, instituciones políticas, tradiciones religiosas y formas
+        de conocimiento que dejaron una huella profunda en la historia humana.
+      </p>
+
+    </section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    01
+  </div>
+
+  <h2>
+    Mesopotamia: la tierra entre los ríos
+  </h2>
+
+  <p>
+    Mesopotamia es el nombre con el que se conoce a una región histórica del
+    antiguo Cercano Oriente situada principalmente entre los ríos Tigris y
+    Éufrates. El término procede del griego y significa literalmente
+    «tierra entre ríos».
+  </p>
+
+  <p>
+    La región comprendía diferentes paisajes. El sur estaba formado en gran
+    parte por llanuras aluviales creadas por los sedimentos de los ríos,
+    mientras que hacia el norte el territorio presentaba zonas más elevadas y
+    condiciones diferentes para la agricultura y los asentamientos.
+  </p>
+
+  <p>
+    Los ríos fueron fundamentales para la vida de las comunidades que se
+    establecieron en la región. El agua permitió desarrollar sistemas de
+    irrigación y cultivar tierras que, de otro modo, habrían sido mucho más
+    difíciles de aprovechar. Al mismo tiempo, las crecidas de los ríos podían
+    transformar el paisaje y requerían formas de organización para controlar y
+    distribuir el agua.
+  </p>
+
+  <p>
+    Mesopotamia no fue una civilización única ni un Estado que permaneciera
+    unido durante toda su historia. Durante miles de años, diferentes pueblos,
+    ciudades y reinos ocuparon la región, desarrollaron sus propias
+    instituciones y entraron en contacto, conflicto o intercambio con sus
+    vecinos.
+  </p>
+
+  <p>
+    Entre las sociedades que formaron parte de la historia mesopotámica se
+    encuentran los sumerios, acadios, babilonios y asirios. Sus historias no
+    fueron idénticas y pertenecen a períodos diferentes, pero todas forman
+    parte de una larga historia regional en la que se desarrollaron ciudades,
+    Estados, sistemas de escritura, instituciones religiosas y nuevas formas
+    de conocimiento.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen del mapa histórico de Mesopotamia
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    02
+  </div>
+
+  <h2>
+    Sumer y las primeras ciudades-Estado
+  </h2>
+
+  <p>
+    En el sur de Mesopotamia se desarrolló una de las primeras grandes
+    tradiciones urbanas de la región: Sumer. Durante el IV y III milenio a. C.,
+    numerosas ciudades crecieron en las llanuras situadas entre los ríos
+    Tigris y Éufrates.
+  </p>
+
+  <p>
+    Ciudades como Uruk, Ur, Lagash, Eridu y Nippur desarrollaron instituciones,
+    templos, actividades económicas y formas propias de organización política.
+    No existía un único Estado sumerio que gobernara permanentemente sobre todas
+    ellas. Cada ciudad podía funcionar como una entidad política independiente,
+    con sus propias autoridades y territorios.
+  </p>
+
+  <p>
+    Estas ciudades-Estado mantenían relaciones complejas entre sí. Podían
+    establecer alianzas, intercambiar productos y compartir tradiciones
+    religiosas, pero también podían enfrentarse por el control de tierras,
+    recursos y rutas de comunicación.
+  </p>
+
+  <p>
+    La vida económica dependía en gran medida de la agricultura y de los
+    sistemas de irrigación. La producción de cereales, dátiles y otros
+    productos agrícolas sostenía a una población cada vez más numerosa,
+    mientras que los talleres producían cerámica, tejidos, herramientas y
+    otros bienes.
+  </p>
+
+  <p>
+    La sociedad sumeria también desarrolló una compleja organización
+    institucional. Los templos desempeñaban importantes funciones religiosas y
+    económicas, mientras que las autoridades civiles y otros grupos
+    administraban tierras, trabajadores y recursos.
+  </p>
+
+  <p>
+    La tradición sumeria dejó además importantes testimonios escritos. La
+    escritura cuneiforme permitió registrar actividades administrativas, pero
+    posteriormente también fue utilizada para conservar himnos, relatos,
+    conocimientos y obras literarias. Gracias a estas fuentes es posible
+    estudiar numerosos aspectos de las primeras sociedades urbanas de
+    Mesopotamia.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de las ciudades-Estado de Sumer
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    03
+  </div>
+
+  <h2>
+    Akkad y Sargón
+  </h2>
+
+  <p>
+    Durante el III milenio a. C., las relaciones entre las ciudades de
+    Mesopotamia cambiaron con la expansión de nuevas formas de poder político.
+    En este contexto surgió Akkad, asociado a un pueblo de lengua semítica
+    conocido como los acadios.
+  </p>
+
+  <p>
+    La figura más conocida de esta transformación fue Sargón de Akkad, un
+    gobernante que vivió aproximadamente en el siglo XXIV a. C. Las fuentes
+    mesopotámicas posteriores lo presentan como el fundador de un gran poder
+    territorial que llegó a controlar amplias zonas de Mesopotamia.
+  </p>
+
+  <p>
+    La expansión de Sargón modificó el equilibrio existente entre las ciudades
+    sumerias. En lugar de limitarse al territorio de una sola ciudad-Estado,
+    el poder acadio incorporó diferentes centros urbanos y regiones bajo una
+    autoridad política más amplia.
+  </p>
+
+  <p>
+    El Imperio acadio combinó poblaciones y tradiciones diversas. La lengua
+    acadia pasó a desempeñar un papel importante en la administración y en la
+    vida política, mientras que la lengua sumeria continuó utilizándose durante
+    siglos en determinados contextos culturales y religiosos.
+  </p>
+
+  <p>
+    El Estado acadio no permaneció estable de manera indefinida. Después de
+    varias generaciones, perdió su capacidad de controlar el territorio y
+    desapareció como gran poder político. Sin embargo, la memoria de Sargón y
+    de su reino continuó influyendo en las tradiciones políticas de
+    Mesopotamia.
+  </p>
+
+  <p>
+    La experiencia de Akkad fue importante porque mostró una nueva posibilidad
+    de organización política: diferentes ciudades y territorios podían quedar
+    integrados dentro de una estructura de poder mucho más extensa que la de
+    una ciudad-Estado individual.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen relacionada con Sargón de Akkad y el Imperio acadio
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    04
+  </div>
+
+  <h2>
+    Babilonia y Hammurabi
+  </h2>
+
+  <p>
+    Babilonia fue una ciudad situada en el centro de Mesopotamia que con el
+    tiempo se convirtió en uno de los principales centros políticos y
+    culturales de la región. Aunque existía desde períodos anteriores, alcanzó
+    una importancia especial durante el reinado de Hammurabi, en el siglo XVIII
+    a. C.
+  </p>
+
+  <p>
+    Hammurabi consiguió ampliar considerablemente el territorio bajo su
+    autoridad y convirtió a Babilonia en el centro de un reino que llegó a
+    controlar una parte importante de Mesopotamia. Su expansión se produjo
+    mediante campañas militares, alianzas y la incorporación de diferentes
+    ciudades y territorios.
+  </p>
+
+  <p>
+    Hammurabi también es conocido por la colección de disposiciones legales
+    inscrita en una estela que actualmente recibe el nombre de Código de
+    Hammurabi. El texto reúne diferentes normas relacionadas con cuestiones
+    como la propiedad, los contratos, las deudas, el comercio, la familia y
+    determinadas responsabilidades dentro de la sociedad.
+  </p>
+
+  <p>
+    Estas leyes permiten observar que la sociedad babilónica estaba organizada
+    de manera jerárquica y que las consecuencias jurídicas podían variar según
+    la posición social de las personas involucradas. Por ello, el texto no debe
+    entenderse como un código moderno de leyes aplicable de manera uniforme a
+    toda la población.
+  </p>
+
+  <p>
+    La importancia de Babilonia no terminó con Hammurabi. La ciudad continuó
+    existiendo durante muchos siglos y posteriormente volvió a convertirse en
+    un importante centro político bajo otros gobernantes. Su nombre quedó
+    asociado a una de las ciudades más conocidas de la antigua Mesopotamia.
+  </p>
+
+  <p>
+    La historia de Babilonia muestra cómo una ciudad podía pasar de ocupar una
+    posición regional a convertirse en el centro de un gran reino y, con el
+    tiempo, conservar una importancia cultural que sobrevivió a diferentes
+    dinastías y períodos políticos.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de Babilonia y la estela de Hammurabi
+    </div>
+
+  </div>
+
+</section>
+    
+
+<section class="history-section">
+
+  <div class="section-number">
+    05
+  </div>
+
+  <h2>
+    Asiria
+  </h2>
+
+  <p>
+    Asiria se desarrolló en el norte de Mesopotamia y recibió su nombre de
+    Assur, una de sus principales ciudades y también el nombre de la divinidad
+    nacional asiria. A lo largo de muchos siglos, los gobernantes asirios
+    construyeron diferentes formas de poder regional que posteriormente
+    alcanzarían una expansión territorial extraordinaria.
+  </p>
+
+  <p>
+    Durante el período del Imperio neoasirio, entre los siglos IX y VII a. C.,
+    Asiria se convirtió en una de las principales potencias del antiguo
+    Cercano Oriente. Sus gobernantes extendieron su dominio sobre amplias
+    regiones de Mesopotamia, Siria, Anatolia, el Levante y otras zonas
+    vecinas.
+  </p>
+
+  <p>
+    El ejército fue una parte fundamental de esta expansión. Los asirios
+    desarrollaron una organización militar capaz de realizar campañas
+    prolongadas y mantener el control sobre territorios alejados del núcleo
+    original del reino. Las fuentes asirias también registraron numerosas
+    campañas y victorias de sus gobernantes.
+  </p>
+
+  <p>
+    Sin embargo, el poder asirio no dependía únicamente de la fuerza militar.
+    El imperio utilizó sistemas administrativos para gobernar las regiones
+    conquistadas, recaudar tributos y mantener comunicaciones entre diferentes
+    territorios. Las autoridades locales podían quedar integradas dentro de
+    una estructura política más amplia dirigida desde los centros asirios.
+  </p>
+
+  <p>
+    Los reyes asirios también construyeron grandes complejos palaciegos y
+    promovieron la producción de relieves, esculturas e inscripciones que
+    representaban acontecimientos políticos, ceremonias y campañas militares.
+    Ciudades como Nimrud, Khorsabad y Nínive se convirtieron en importantes
+    centros del poder imperial.
+  </p>
+
+  <p>
+    Nínive alcanzó especial importancia durante las últimas etapas del Imperio
+    neoasirio. Allí, el rey Asurbanipal reunió una gran colección de tablillas
+    cuneiformes que incluía textos literarios, religiosos, históricos y
+    científicos. Parte de este material permitió conservar obras y conocimientos
+    procedentes de tradiciones mesopotámicas mucho más antiguas.
+  </p>
+
+  <p>
+    El Imperio neoasirio cayó a finales del siglo VII a. C. después de una serie
+    de conflictos y ataques de sus adversarios. Su desaparición no significó el
+    final de la historia mesopotámica, pero puso fin a una de las estructuras
+    imperiales más extensas que habían surgido hasta entonces en la región.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de Asiria, Nínive o los relieves asirios
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    06
+  </div>
+
+  <h2>
+    Religión y cosmovisión
+  </h2>
+
+  <p>
+    La religión ocupaba un lugar central en las sociedades mesopotámicas. Las
+    personas entendían el mundo como un espacio habitado por numerosas
+    divinidades relacionadas con las fuerzas de la naturaleza, las ciudades,
+    la agricultura, la guerra, la justicia y diferentes aspectos de la vida
+    humana.
+  </p>
+
+  <p>
+    Entre las divinidades más importantes se encontraban Anu, asociado con el
+    cielo; Enlil, relacionado con el poder y las fuerzas atmosféricas; Enki o
+    Ea, vinculado con las aguas, la sabiduría y el conocimiento; e Inanna,
+    conocida posteriormente como Ishtar, relacionada con la fertilidad, el
+    poder, el amor y la guerra.
+  </p>
+
+  <p>
+    Cada ciudad podía tener una divinidad principal que ocupaba una posición
+    especial dentro de su identidad religiosa. Los templos funcionaban como
+    espacios dedicados al culto, pero también podían desempeñar importantes
+    funciones económicas y administrativas. En ellos se almacenaban recursos,
+    se organizaban actividades y trabajaban diferentes grupos especializados.
+  </p>
+
+  <p>
+    Los mesopotámicos realizaban ofrendas, ceremonias y rituales destinados a
+    mantener una relación adecuada con las divinidades. También prestaban
+    atención a fenómenos naturales y acontecimientos considerados señales que
+    podían proporcionar información sobre la voluntad de los dioses.
+  </p>
+
+  <p>
+    La religión estaba estrechamente relacionada con la organización política.
+    Los gobernantes se presentaban como responsables de mantener el orden de la
+    comunidad y de asegurar que los cultos y los templos funcionaran
+    correctamente. La legitimidad del poder podía estar vinculada a la relación
+    entre el gobernante, la ciudad y sus divinidades protectoras.
+  </p>
+
+  <p>
+    La visión mesopotámica del mundo también quedó registrada en relatos
+    mitológicos, himnos, plegarias y otros textos escritos. Estas fuentes
+    permiten estudiar cómo diferentes sociedades de la región intentaron
+    explicar el origen del mundo, la relación entre los dioses y los humanos,
+    la muerte, el destino y las fuerzas que afectaban la vida de las personas.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de la religión y los templos de Mesopotamia
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    07
+  </div>
+
+  <h2>
+    Conocimientos y legado
+  </h2>
+
+  <p>
+    Las sociedades mesopotámicas desarrollaron conocimientos que estuvieron
+    relacionados con las necesidades de la vida cotidiana, la administración,
+    la religión y la observación del mundo natural. Estos conocimientos fueron
+    registrados y transmitidos mediante diferentes tradiciones escritas a lo
+    largo de miles de años.
+  </p>
+
+  <p>
+    Las matemáticas tuvieron una importancia especial. Los escribas utilizaron
+    sistemas numéricos que permitían realizar operaciones relacionadas con la
+    distribución de alimentos, el comercio, las tierras y los salarios. La
+    tradición matemática mesopotámica utilizó principalmente un sistema
+    sexagesimal, basado en el número 60.
+  </p>
+
+  <p>
+    La observación del cielo también ocupó un lugar importante. Los
+    especialistas mesopotámicos registraron durante generaciones fenómenos
+    astronómicos como las fases de la Luna, los movimientos de determinados
+    astros y diferentes acontecimientos celestes. Estas observaciones estaban
+    relacionadas tanto con la organización del calendario como con prácticas
+    religiosas y adivinatorias.
+  </p>
+
+  <p>
+    La literatura constituye otro de los grandes legados de Mesopotamia. Las
+    tablillas conservaron himnos, mitos, relatos y composiciones literarias,
+    entre ellas diferentes versiones de la tradición de Gilgamesh. Estos textos
+    permiten estudiar ideas sobre la muerte, el poder, la amistad, los dioses y
+    la condición humana.
+  </p>
+
+  <p>
+    También se desarrollaron importantes tradiciones de medicina, derecho,
+    administración y educación. La existencia de escribas especializados
+    permitió acumular grandes cantidades de información y transmitirla dentro
+    de las instituciones durante generaciones.
+  </p>
+
+  <p>
+    El legado mesopotámico no consiste en una sola invención. Es el resultado
+    de miles de años de experimentación, observación, registro y transmisión
+    de conocimientos por parte de diferentes sociedades. La escritura
+    cuneiforme permitió conservar una parte de ese conocimiento y hace posible
+    que hoy podamos estudiar algunas de las primeras tradiciones intelectuales
+    documentadas de la humanidad.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de matemáticas, astronomía y tablillas mesopotámicas
+    </div>
+
+  </div>
+
+</section>
+
+<section class="history-section">
+
+  <div class="section-number">
+    08
+  </div>
+
+  <h2>
+    Mesopotamia en la memoria histórica
+  </h2>
+
+  <p>
+    La historia de Mesopotamia no desapareció con la caída de sus ciudades y
+    reinos. Una parte importante de su pasado quedó conservada en tablillas de
+    arcilla, inscripciones, edificios, objetos, relieves y restos de antiguas
+    ciudades que permiten reconstruir la vida de las sociedades que habitaron
+    la región.
+  </p>
+
+  <p>
+    Las tablillas escritas son especialmente importantes porque contienen
+    información de muy diferentes ámbitos. Existen registros administrativos,
+    contratos, cartas, textos religiosos, obras literarias, observaciones
+    astronómicas y documentos relacionados con la vida cotidiana.
+  </p>
+
+  <p>
+    La arqueología también ha permitido recuperar los restos de ciudades como
+    Ur, Uruk, Babilonia y Nínive. Sus templos, palacios, viviendas, murallas y
+    objetos muestran que Mesopotamia estuvo formada por sociedades diversas que
+    cambiaron a lo largo de miles de años.
+  </p>
+
+  <p>
+    La recuperación de este pasado fue un proceso largo. Durante los siglos XIX
+    y XX, investigadores comenzaron a excavar antiguos asentamientos y a
+    descifrar sistemas de escritura que habían dejado de utilizarse durante
+    muchos siglos. El estudio de las tablillas permitió relacionar los restos
+    arqueológicos con nombres, acontecimientos, instituciones y tradiciones
+    conservados en los propios documentos antiguos.
+  </p>
+
+  <p>
+    Lo que conocemos actualmente sobre Mesopotamia es, por tanto, el resultado
+    de la combinación de diferentes tipos de evidencia. Ninguna fuente por sí
+    sola permite reconstruir toda su historia. Los textos, la arqueología, el
+    estudio de las lenguas y otras disciplinas permiten construir una visión
+    cada vez más amplia de estas sociedades.
+  </p>
+
+  <p>
+    Mesopotamia permanece así como una parte fundamental de la memoria histórica
+    de la humanidad. Sus ciudades, lenguas, textos, conocimientos y tradiciones
+    forman parte de un pasado que todavía puede estudiarse a través de las
+    huellas que dejaron quienes vivieron allí hace miles de años.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen de tablillas, ruinas y patrimonio arqueológico de Mesopotamia
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="history-section">
+
+  <div class="section-number">
+    09
+  </div>
+
+  <h2>
+    ¿Por qué es importante Mesopotamia?
+  </h2>
+
+  <p>
+    Mesopotamia es importante porque permite observar uno de los momentos en
+    que las sociedades humanas comenzaron a dejar registros sistemáticos de
+    su propia existencia. A través de tablillas, edificios, objetos y restos
+    urbanos es posible estudiar no solamente a gobernantes y acontecimientos
+    políticos, sino también aspectos de la vida cotidiana.
+  </p>
+
+  <p>
+    Los documentos conservados incluyen contratos, registros económicos,
+    cartas, listas de productos, textos religiosos y otros testimonios que
+    permiten acercarse a las actividades de personas que vivieron hace miles
+    de años. Estas fuentes ofrecen una perspectiva diferente de la historia,
+    porque permiten conocer aspectos de las sociedades que difícilmente
+    podrían reconstruirse únicamente a partir de los restos materiales.
+  </p>
+
+  <p>
+    Su importancia también está en la diversidad de sociedades que ocuparon
+    la región a lo largo del tiempo. Sumerios, acadios, babilonios y asirios
+    no formaron una única civilización permanente. Fueron sociedades
+    diferentes que transformaron instituciones, lenguas y tradiciones
+    anteriores, mientras incorporaban elementos de otros pueblos.
+  </p>
+
+  <p>
+    Estudiar Mesopotamia permite observar así cómo las culturas cambian,
+    desaparecen, se mezclan y transmiten parte de sus conocimientos a las
+    generaciones posteriores. Su historia no es la historia de una sola
+    sociedad, sino la de una región en la que diferentes comunidades
+    construyeron sobre las huellas dejadas por quienes las precedieron.
+  </p>
+
+  <p>
+    Mesopotamia ocupa por eso un lugar particular en la historia de la
+    humanidad. Sus restos permiten estudiar no solo lo que las sociedades
+    hicieron, sino también aquello que decidieron registrar y conservar.
+    Las huellas que dejaron hacen posible reconstruir fragmentos de sus
+    vidas miles de años después.
+  </p>
+
+  <p>
+    En ese sentido, Mesopotamia forma parte de la historia de cómo la
+    humanidad comenzó a registrar su mundo y a dejar memoria de sí misma.
+    Su importancia no está únicamente en su antigüedad, sino en la posibilidad
+    de acercarnos a las personas que vivieron allí a través de las huellas
+    que dejaron.
+  </p>
+
+  <div class="history-image">
+
+    <div class="image-placeholder">
+      Imagen del patrimonio histórico de Mesopotamia
+    </div>
+
+  </div>
+
+</section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-container">
+
+
+      <div>
+
+        <div class="footer-brand">
+          Memoria del Mundo
+        </div>
+
+        <p class="footer-text">
+          Un atlas digital dedicado a explorar la historia, las civilizaciones,
+          las culturas y el patrimonio de la humanidad.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Orígenes
+        </h3>
+
+        <a href="primeros-homininos.html">
+          Primeros seres humanos
+        </a>
+
+        <a href="revolucion-neolitica.html">
+          Revolución neolítica
+        </a>
+
+        <a href="primeras-ciudades.html">
+          Primeras ciudades
+        </a>
+
+        <a href="escritura.html">
+          Escritura
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Civilizaciones
+        </h3>
+
+        <a href="mesopotamia.html">
+          Mesopotamia
+        </a>
+
+        <a href="#">
+          Egipto
+        </a>
+
+        <a href="#">
+          Persia
+        </a>
+
+        <a href="#">
+          India
+        </a>
+
+        <a href="#">
+          China
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 Memoria del Mundo · Historia, memoria y patrimonio de la humanidad
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
+```
