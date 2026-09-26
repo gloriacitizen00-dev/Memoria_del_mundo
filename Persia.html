@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Persia | Memoria del Mundo</title>
+
+    <meta
+        name="description"
+        content="Explora la historia de Persia, sus pueblos, imperios, gobernantes, religión, cultura, conocimientos, territorio y legado histórico."
+    >
+
+    <meta
+        name="keywords"
+        content="Persia, antiguo Persia, Imperio persa, aqueménidas, Ciro el Grande, Darío, Jerjes, Persépolis, Irán, historia persa"
+    >
+
+    <meta name="author" content="Memoria del Mundo">
+
+    <link rel="icon" href="favicon.jpg">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <meta property="og:title" content="Persia | Memoria del Mundo">
+
+    <meta
+        property="og:description"
+        content="Explora la historia de Persia, sus pueblos, imperios, gobernantes, religión, cultura, conocimientos, territorio y legado histórico."
+    >
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:url"
+        content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/persia.html"
+    >
+
+    <meta
+        property="og:image"
+        content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Memoria del Mundo"
+    >
+
+    <meta property="og:image:type" content="image/jpeg">
+
+
+    <style>
+
+        :root{
+            --sand:#C6A66B;
+            --sand-dark:#8A6A3F;
+            --sand-light:#E1C995;
+            --sand-soft:#F7F0DF;
+
+            --clay:#9A6842;
+            --clay-dark:#70472C;
+
+            --stone:#8B8172;
+            --stone-light:#C9C0B0;
+
+            --text:#2B241B;
+            --text-light:#665D51;
+
+            --white:#FFFDF7;
+            --cream:#FBF6EA;
+
+            --border:#E1D4B9;
+
+            --shadow:
+                0 20px 50px rgba(120,90,45,.12);
+        }
+
+
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+
+        body{
+            font-family:'Montserrat',sans-serif;
+            background:var(--cream);
+            color:var(--text);
+            line-height:1.8;
+        }
+
+
+        /* =========================
+           TOPBAR
+        ========================= */
+
+        .topbar{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            z-index:1000;
+
+            background:rgba(255,253,247,.97);
+
+            border-bottom:1px solid var(--border);
+
+            box-shadow:
+                0 5px 20px rgba(120,90,45,.08);
+        }
+
+
+        .nav-container{
+            max-width:1200px;
+            margin:auto;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            padding:15px 25px;
+        }
+
+
+        .site-logo{
+            font-family:'Cinzel',serif;
+            font-size:20px;
+            font-weight:700;
+
+            color:var(--clay-dark);
+
+            text-decoration:none;
+        }
+
+
+        .nav-menu{
+            display:flex;
+            align-items:center;
+            gap:10px;
+
+            list-style:none;
+        }
+
+
+        .nav-menu > li{
+            position:relative;
+        }
+
+
+        .nav-menu a,
+        .dropdown-button{
+            display:block;
+
+            padding:10px 14px;
+
+            color:var(--text);
+
+            text-decoration:none;
+
+            font-size:13px;
+            font-weight:600;
+
+            border:none;
+            background:none;
+
+            cursor:pointer;
+        }
+
+
+        .nav-menu a:hover,
+        .dropdown-button:hover{
+            color:var(--clay-dark);
+        }
+
+
+        .dropdown{
+            position:absolute;
+
+            top:100%;
+            left:0;
+
+            min-width:200px;
+
+            background:var(--white);
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+
+            opacity:0;
+            visibility:hidden;
+
+            transform:translateY(8px);
+
+            transition:.25s;
+        }
+
+
+        .nav-menu li:hover .dropdown{
+            opacity:1;
+            visibility:visible;
+
+            transform:translateY(0);
+        }
+
+
+        .dropdown a{
+            padding:11px 16px;
+            font-size:12px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+            position:relative;
+
+            min-height:650px;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            text-align:center;
+
+            padding:120px 20px 80px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--clay-dark),
+                    var(--sand-dark)
+                );
+
+            color:var(--white);
+        }
+
+
+        .hero-content{
+            max-width:900px;
+            margin:auto;
+        }
+
+
+        /* =========================
+           LOGO OFICIAL
+        ========================= */
+
+        .hero-logo-container{
+            width:340px;
+            height:340px;
+
+            margin:0 auto 35px;
+
+            border-radius:50%;
+
+            background:var(--white);
+
+            border:5px solid var(--sand-dark);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            overflow:hidden;
+
+            box-shadow:
+                0 0 0 10px rgba(198,166,107,.14),
+                0 30px 60px rgba(120,90,45,.20);
+        }
+
+
+        .hero-logo{
+            width:105%;
+
+            transition:.4s;
+        }
+
+
+        .hero-logo:hover{
+            transform:scale(1.05);
+        }
+
+
+        .hero h1{
+            font-family:'Cinzel',serif;
+
+            font-size:clamp(42px,6vw,72px);
+
+            font-weight:700;
+
+            margin-bottom:20px;
+        }
+
+
+        .hero p{
+            max-width:750px;
+
+            margin:auto;
+
+            font-family:'Cormorant Garamond',serif;
+
+            font-size:24px;
+
+            line-height:1.5;
+
+            color:var(--sand-soft);
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        main{
+            max-width:1100px;
+
+            margin:auto;
+
+            padding:80px 25px;
+        }
+
+
+        .history-section{
+            margin-bottom:80px;
+
+            background:var(--white);
+
+            padding:45px;
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+        }
+
+
+        .history-section h2{
+            font-family:'Cinzel',serif;
+
+            font-size:32px;
+
+            color:var(--clay-dark);
+
+            margin-bottom:25px;
+        }
+
+
+        .history-section p{
+            margin-bottom:20px;
+
+            color:var(--text-light);
+
+            font-size:16px;
+        }
+
+
+        .history-section strong{
+            color:var(--text);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+            background:var(--clay-dark);
+
+            color:var(--sand-soft);
+
+            text-align:center;
+
+            padding:45px 20px;
+        }
+
+
+        footer h3{
+            font-family:'Cinzel',serif;
+
+            margin-bottom:10px;
+        }
+
+
+        footer p{
+            font-size:13px;
+
+            opacity:.85;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px){
+
+            .nav-container{
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .nav-menu{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero-logo-container{
+                width:250px;
+                height:250px;
+            }
+
+            .hero{
+                padding-top:180px;
+            }
+
+            .history-section{
+                padding:30px;
+            }
+
+        }
+
+
+        @media(max-width:600px){
+
+            .nav-menu{
+                gap:2px;
+            }
+
+            .nav-menu a,
+            .dropdown-button{
+                padding:8px 9px;
+                font-size:11px;
+            }
+
+            .hero-logo-container{
+                width:220px;
+                height:220px;
+            }
+
+            .hero h1{
+                font-size:42px;
+            }
+
+            .hero p{
+                font-size:20px;
+            }
+
+            .history-section{
+                padding:25px 20px;
+            }
+
+            .history-section h2{
+                font-size:26px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOPBAR
+    ========================= -->
+
+    <header class="topbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="site-logo">
+                Memoria del Mundo
+            </a>
+
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Orígenes
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="primeros-homininos.html">
+                            Primeros seres humanos
+                        </a>
+
+                        <a href="revolucion-neolitica.html">
+                            Revolución neolítica
+                        </a>
+
+                        <a href="primeras-ciudades.html">
+                            Primeras ciudades
+                        </a>
+
+                        <a href="escritura.html">
+                            Escritura
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Civilizaciones
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="mesopotamia.html">
+                            Mesopotamia
+                        </a>
+
+                        <a href="egipto.html">
+                            Egipto
+                        </a>
+
+                        <a href="persia.html">
+                            Persia
+                        </a>
+
+                        <a href="#">
+                            India
+                        </a>
+
+                        <a href="#">
+                            China
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Religiones
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="#">
+                            Religiones antiguas
+                        </a>
+
+                        <a href="#">
+                            Judaísmo
+                        </a>
+
+                        <a href="#">
+                            Cristianismo
+                        </a>
+
+                        <a href="#">
+                            Islam
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Cultura
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="escritura.html">
+                            Escritura
+                        </a>
+
+                        <a href="#">
+                            Literatura
+                        </a>
+
+                        <a href="#">
+                            Arte
+                        </a>
+
+                        <a href="#">
+                            Ciencia
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Historia
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="#">
+                            Antigüedad
+                        </a>
+
+                        <a href="#">
+                            Edad Media
+                        </a>
+
+                        <a href="#">
+                            Edad Moderna
+                        </a>
+
+                        <a href="#">
+                            Mundo Contemporáneo
+                        </a>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <div class="hero-logo-container">
+
+                <img
+                    src="persia.png"
+                    class="hero-logo"
+                    alt="Logo de la civilización persa"
+                >
+
+            </div>
+
+
+            <h1>
+                Persia
+            </h1>
+
+
+            <p>
+                Una historia de pueblos, imperios, conocimientos y culturas
+                que transformaron el mundo antiguo.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HISTORIA
+    ========================= -->
+
+    <main>
+
+
+        <section class="history-section">
+
+            <h2>
+                La historia de Persia
+            </h2>
+
+            <p>
+                La historia de Persia será desarrollada aquí a través de sus
+                diferentes períodos, pueblos, gobernantes, culturas,
+                religiones y transformaciones políticas.
+            </p>
+
+        </section>
+
+
+        <!--
+        Las siguientes secciones se irán agregando
+        progresivamente.
+        -->
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            Memoria del Mundo
+        </h3>
+
+        <p>
+            Un atlas digital dedicado a la historia,
+            las civilizaciones y el patrimonio de la humanidad.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
