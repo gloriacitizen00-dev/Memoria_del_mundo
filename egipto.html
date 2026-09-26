@@ -1,1 +1,1508 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Egipto | Memoria del Mundo</title>
+
+  <meta
+    name="description"
+    content="Explora la historia del antiguo Egipto, su territorio, Estado, faraones, sociedad, religión, escritura, monumentos, conocimientos y legado."
+  >
+
+  <meta
+    name="keywords"
+    content="Egipto, antiguo Egipto, faraones, Nilo, pirámides, jeroglíficos, momificación, religión egipcia, civilización egipcia, historia"
+  >
+
+  <meta name="author" content="Memoria del Mundo">
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="Egipto | Memoria del Mundo">
+
+  <meta
+    property="og:description"
+    content="Explora la historia del antiguo Egipto, su sociedad, religión, escritura, monumentos, conocimientos y legado."
+  >
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:url"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/egipto.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/memoria-del-mundo.JPG"
+  >
+
+  <meta property="og:image:alt" content="Memoria del Mundo">
+  <meta property="og:image:type" content="image/jpeg">
+
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    :root {
+
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+
+    }
+
+
+    * {
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family: 'Cormorant Garamond', serif;
+
+      background: var(--cream);
+
+      color: var(--text);
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================
+       TOPBAR
+    ========================= */
+
+    .topbar {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 1000;
+
+      background: rgba(255, 253, 247, .97);
+
+      border-bottom: 1px solid var(--border);
+
+      box-shadow: 0 4px 20px rgba(80, 60, 30, .08);
+
+    }
+
+
+    .topbar-container {
+
+      max-width: 1250px;
+
+      margin: auto;
+
+      padding: 0 25px;
+
+      min-height: 72px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+
+    }
+
+
+    .brand {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: 1.05rem;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+
+      color: var(--clay-dark);
+
+      text-decoration: none;
+
+      white-space: nowrap;
+
+    }
+
+
+    .nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+
+      justify-content: flex-end;
+
+    }
+
+
+    .nav > a,
+    .dropdown-button {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 600;
+
+      letter-spacing: .04em;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      padding: 10px 12px;
+
+      border-radius: 4px;
+
+      transition: .25s ease;
+
+      background: transparent;
+
+      border: none;
+
+      cursor: pointer;
+
+    }
+
+
+    .nav > a:hover,
+    .dropdown-button:hover {
+
+      color: var(--clay-dark);
+
+      background: var(--sand-soft);
+
+    }
+
+
+    .dropdown {
+
+      position: relative;
+
+    }
+
+
+    .dropdown-content {
+
+      display: none;
+
+      position: absolute;
+
+      top: 100%;
+      left: 0;
+
+      min-width: 210px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      padding: 8px;
+
+      border-radius: 6px;
+
+    }
+
+
+    .dropdown:hover .dropdown-content {
+
+      display: block;
+
+    }
+
+
+    .dropdown-content a {
+
+      display: block;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .7rem;
+
+      color: var(--text);
+
+      text-decoration: none;
+
+      padding: 10px 12px;
+
+      border-radius: 4px;
+
+      transition: .2s ease;
+
+    }
+
+
+    .dropdown-content a:hover {
+
+      background: var(--sand-soft);
+
+      color: var(--clay-dark);
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+      position: relative;
+
+      min-height: 560px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 100px 20px 80px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--clay-dark),
+          var(--sand-dark)
+        );
+
+      color: var(--white);
+
+    }
+
+
+    .hero-content {
+
+      max-width: 900px;
+
+      margin-top: 40px;
+
+    }
+
+
+    /* =========================
+       CIVILIZATION LOGO
+    ========================= */
+
+    .hero-logo {
+
+      width: 85%;
+
+      height: auto;
+
+      display: block;
+
+      margin: 0 auto 35px;
+
+      transition: .35s;
+
+      transform: translateX(-10px);
+
+    }
+
+
+    .eyebrow {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .72rem;
+
+      font-weight: 600;
+
+      letter-spacing: .18em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+
+      color: var(--sand-light);
+
+    }
+
+
+    .hero h1 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(2.6rem, 6vw, 5rem);
+
+      font-weight: 600;
+
+      line-height: 1.1;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .hero p {
+
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+
+      max-width: 720px;
+
+      margin: auto;
+
+      color: rgba(255,255,255,.88);
+
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .history-container {
+
+      max-width: 1050px;
+
+      margin: auto;
+
+      padding: 80px 25px 100px;
+
+    }
+
+
+    .history-intro {
+
+      max-width: 850px;
+
+      margin: 0 auto 75px;
+
+      text-align: center;
+
+    }
+
+
+    .history-intro h2 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+      color: var(--clay-dark);
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .history-intro p {
+
+      font-size: 1.25rem;
+
+      color: var(--text-light);
+
+    }
+
+
+    /* =========================
+       HISTORY SECTIONS
+    ========================= */
+
+    .history-section {
+
+      padding: 65px 0;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+    .history-section:first-of-type {
+
+      border-top: none;
+
+    }
+
+
+    .section-number {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      font-weight: 700;
+
+      letter-spacing: .18em;
+
+      color: var(--sand-dark);
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .history-section h2 {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+
+      color: var(--clay-dark);
+
+      line-height: 1.25;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .history-section p {
+
+      font-size: 1.2rem;
+
+      color: var(--text-light);
+
+      margin-bottom: 20px;
+
+      max-width: 900px;
+
+    }
+
+
+    /* =========================
+       IMAGES
+    ========================= */
+
+    .history-image {
+
+      margin-top: 35px;
+
+    }
+
+
+    .image-placeholder {
+
+      min-height: 250px;
+
+      border: 1px dashed var(--stone-light);
+
+      background: var(--sand-soft);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+      color: var(--stone);
+
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      background: var(--clay-dark);
+
+      color: var(--white);
+
+      padding: 60px 25px 35px;
+
+    }
+
+
+    .footer-container {
+
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      gap: 50px;
+
+    }
+
+
+    .footer-brand {
+
+      font-family: 'Cinzel', serif;
+
+      font-size: 1.3rem;
+
+      font-weight: 700;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .footer-text {
+
+      color: rgba(255,255,255,.75);
+
+      font-size: 1rem;
+
+      max-width: 420px;
+
+    }
+
+
+    .footer-column h3 {
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .12em;
+
+      margin-bottom: 15px;
+
+      color: var(--sand-light);
+
+    }
+
+
+    .footer-column a {
+
+      display: block;
+
+      color: rgba(255,255,255,.78);
+
+      text-decoration: none;
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .75rem;
+
+      margin-bottom: 9px;
+
+      transition: .2s ease;
+
+    }
+
+
+    .footer-column a:hover {
+
+      color: var(--white);
+
+    }
+
+
+    .footer-bottom {
+
+      max-width: 1100px;
+
+      margin: 45px auto 0;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255,255,255,.15);
+
+      font-family: 'Montserrat', sans-serif;
+
+      font-size: .68rem;
+
+      color: rgba(255,255,255,.55);
+
+      text-align: center;
+
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      .topbar-container {
+
+        flex-direction: column;
+
+        padding: 15px 20px;
+
+      }
+
+
+      .nav {
+
+        justify-content: center;
+
+      }
+
+
+      .dropdown-content {
+
+        position: static;
+
+        margin-top: 5px;
+
+      }
+
+
+      .hero {
+
+        min-height: 500px;
+
+      }
+
+
+      .hero-logo {
+
+        width: 85%;
+
+      }
+
+
+      .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .nav {
+
+        gap: 2px;
+
+      }
+
+
+      .nav > a,
+      .dropdown-button {
+
+        font-size: .65rem;
+
+        padding: 8px 7px;
+
+      }
+
+
+      .history-container {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+      }
+
+
+      .history-section {
+
+        padding: 50px 0;
+
+      }
+
+
+      .history-section p {
+
+        font-size: 1.1rem;
+
+      }
+
+
+      .hero-logo {
+
+        width: 85%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOPBAR
+  ========================= -->
+
+  <header class="topbar">
+
+    <div class="topbar-container">
+
+      <a href="index.html" class="brand">
+        Memoria del Mundo
+      </a>
+
+
+      <nav class="nav">
+
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Orígenes
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="primeros-homininos.html">
+              Primeros seres humanos
+            </a>
+
+            <a href="revolucion-neolitica.html">
+              Revolución neolítica
+            </a>
+
+            <a href="primeras-ciudades.html">
+              Primeras ciudades
+            </a>
+
+            <a href="escritura.html">
+              Escritura
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Civilizaciones
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="mesopotamia.html">
+              Mesopotamia
+            </a>
+
+            <a href="egipto.html">
+              Egipto
+            </a>
+
+            <a href="#">
+              Persia
+            </a>
+
+            <a href="#">
+              India
+            </a>
+
+            <a href="#">
+              China
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Religiones
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Religiones antiguas
+            </a>
+
+            <a href="#">
+              Judaísmo
+            </a>
+
+            <a href="#">
+              Cristianismo
+            </a>
+
+            <a href="#">
+              Islam
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Cultura
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="escritura.html">
+              Escritura
+            </a>
+
+            <a href="#">
+              Literatura
+            </a>
+
+            <a href="#">
+              Arte
+            </a>
+
+            <a href="#">
+              Ciencia
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="dropdown">
+
+          <button class="dropdown-button">
+            Historia
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="#">
+              Antigüedad
+            </a>
+
+            <a href="#">
+              Edad Media
+            </a>
+
+            <a href="#">
+              Edad Moderna
+            </a>
+
+            <a href="#">
+              Mundo Contemporáneo
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+
+      <!-- LOGO DE EGIPTO
+           Sustituiremos este archivo
+           cuando creemos el logo definitivo.
+      -->
+
+      <img
+        src="camello-egipto.png"
+        class="hero-logo"
+        alt="Logo de la civilización del antiguo Egipto"
+      >
+
+
+      <div class="eyebrow">
+        Civilizaciones antiguas
+      </div>
+
+
+      <h1>
+        Egipto
+      </h1>
+
+
+      <p>
+        Una de las grandes civilizaciones del mundo antiguo y su relación
+        con el Nilo, el territorio, el poder, la religión y el conocimiento.
+      </p>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main class="history-container">
+
+
+    <section class="history-intro">
+
+      <h2>
+        El antiguo Egipto
+      </h2>
+
+      <p>
+        El antiguo Egipto se desarrolló durante miles de años a lo largo del
+        valle y el delta del Nilo. Sus sociedades construyeron instituciones,
+        tradiciones religiosas, sistemas de escritura, monumentos y formas de
+        conocimiento que dejaron una huella profunda en la historia humana.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         01
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        01
+      </div>
+
+      <h2>
+        El Nilo y el territorio egipcio
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen del Nilo y el territorio del antiguo Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         02
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        02
+      </div>
+
+      <h2>
+        El surgimiento del Estado egipcio
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen relacionada con el surgimiento del Estado egipcio
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         03
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        03
+      </div>
+
+      <h2>
+        Los faraones y el poder
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de los faraones y el poder político
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         04
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        04
+      </div>
+
+      <h2>
+        La sociedad egipcia
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la sociedad del antiguo Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         05
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        05
+      </div>
+
+      <h2>
+        La religión y la cosmovisión
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la religión y la cosmovisión egipcia
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         06
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        06
+      </div>
+
+      <h2>
+        La escritura y los escribas
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la escritura y los escribas egipcios
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         07
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        07
+      </div>
+
+      <h2>
+        Las pirámides y los grandes monumentos
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de las pirámides y los monumentos egipcios
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         08
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        08
+      </div>
+
+      <h2>
+        La vida cotidiana
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la vida cotidiana en el antiguo Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         09
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        09
+      </div>
+
+      <h2>
+        Ciencia, medicina y conocimientos
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la ciencia y los conocimientos egipcios
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         10
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        10
+      </div>
+
+      <h2>
+        La muerte, el entierro y los rituales funerarios
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de los rituales funerarios del antiguo Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         11
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        11
+      </div>
+
+      <h2>
+        Alimentación y bebidas
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen de la alimentación y bebidas en Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         12
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        12
+      </div>
+
+      <h2>
+        El cuidado personal y la apariencia
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen del cuidado personal y la apariencia en Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         13
+    ========================= -->
+
+    <section class="history-section">
+
+      <div class="section-number">
+        13
+      </div>
+
+      <h2>
+        ¿Por qué fue importante Egipto?
+      </h2>
+
+      <!-- INFORMACIÓN AQUÍ -->
+
+      <div class="history-image">
+
+        <div class="image-placeholder">
+          Imagen del patrimonio histórico de Egipto
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-container">
+
+
+      <div>
+
+        <div class="footer-brand">
+          Memoria del Mundo
+        </div>
+
+        <p class="footer-text">
+          Un espacio digital dedicado a explorar la historia de la humanidad,
+          sus civilizaciones, culturas, conocimientos y patrimonio.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Civilizaciones
+        </h3>
+
+        <a href="mesopotamia.html">
+          Mesopotamia
+        </a>
+
+        <a href="egipto.html">
+          Egipto
+        </a>
+
+        <a href="#">
+          Persia
+        </a>
+
+        <a href="#">
+          India
+        </a>
+
+        <a href="#">
+          China
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>
+          Memoria del Mundo
+        </h3>
+
+        <a href="index.html">
+          Inicio
+        </a>
+
+        <a href="escritura.html">
+          Escritura
+        </a>
+
+        <a href="#">
+          Religiones
+        </a>
+
+        <a href="#">
+          Historia
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 Memoria del Mundo · Costa Rica
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
+```
