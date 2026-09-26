@@ -365,14 +365,32 @@
 
     }
 
-.hero-logo-circle {
-    width: 85%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    border: 3px solid var(--sand);
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
+.hero-logo-container{
+
+width:340px;
+
+height:340px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:var(--white);
+
+border:5px solid var(--sand-dark);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+box-shadow:
+0 0 0 10px rgba(198,166,107,.14),
+0 30px 60px rgba(120,90,45,.20);
+
 }
 
 
@@ -1002,13 +1020,13 @@
            cuando creemos el logo definitivo.
       -->
 
-     <div class="hero-logo-circle">
-        <img
-           src="camello-egipto.png"
-           class="hero-logo"
-           alt="Logo de la civilización del antiguo Egipto"
-         >
-     </div>
+<div class="hero-logo-container">
+    <img
+        src="camello-egipto.png"
+        class="hero-logo"
+        alt="Logo de la civilización del antiguo Egipto"
+    >
+</div>
 
 
       <div class="eyebrow">
