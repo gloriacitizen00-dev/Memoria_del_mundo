@@ -1,0 +1,574 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>China | Memoria del Mundo</title>
+
+    <meta
+        name="description"
+        content="Explora la historia de China, sus pueblos, culturas, dinastías, conocimientos, religiones, arte, tecnología y legado histórico."
+    >
+
+    <meta
+        name="keywords"
+        content="China, historia de China, antigua China, dinastías chinas, Shang, Zhou, Qin, Han, Tang, Song, Yuan, Ming, Qing, cultura china"
+    >
+
+    <meta
+        property="og:title"
+        content="China | Memoria del Mundo"
+    >
+
+    <meta
+        property="og:description"
+        content="Explora la historia de China, sus pueblos, culturas, dinastías, conocimientos, religiones, arte, tecnología y legado histórico."
+    >
+
+    <meta
+        property="og:url"
+        content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/china.html"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root{
+
+            --sand:#C6A66B;
+            --sand-dark:#8A6A3F;
+            --sand-light:#E1C995;
+            --sand-soft:#F7F0DF;
+
+            --clay:#9A6842;
+            --clay-dark:#70472C;
+
+            --stone:#8B8172;
+            --stone-light:#C9C0B0;
+
+            --text:#2B241B;
+            --text-light:#665D51;
+
+            --white:#FFFDF7;
+            --cream:#FBF6EA;
+
+            --border:#E1D4B9;
+
+            --shadow:
+                0 20px 50px rgba(120,90,45,.12);
+        }
+
+
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+
+        body{
+
+            background:var(--cream);
+
+            color:var(--text);
+
+            font-family:'Cormorant Garamond',serif;
+
+            line-height:1.8;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .topbar{
+
+            position:fixed;
+
+            top:0;
+            left:0;
+
+            width:100%;
+
+            z-index:1000;
+
+            background:rgba(255,253,247,.96);
+
+            border-bottom:1px solid var(--border);
+
+            backdrop-filter:blur(10px);
+        }
+
+
+        .nav-container{
+
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:15px 25px;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+        }
+
+
+        .nav-logo{
+
+            font-family:'Cinzel',serif;
+
+            font-size:20px;
+
+            font-weight:700;
+
+            color:var(--clay-dark);
+
+            text-decoration:none;
+        }
+
+
+        .nav-menu{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:25px;
+        }
+
+
+        .nav-menu a{
+
+            font-family:'Montserrat',sans-serif;
+
+            font-size:13px;
+
+            font-weight:500;
+
+            color:var(--text);
+
+            text-decoration:none;
+
+            transition:.3s;
+        }
+
+
+        .nav-menu a:hover{
+
+            color:var(--clay-dark);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+
+            min-height:100vh;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            text-align:center;
+
+            padding:140px 25px 100px;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    var(--sand-soft) 0%,
+                    var(--cream) 65%
+                );
+        }
+
+
+        .hero-content{
+
+            max-width:900px;
+
+            margin:auto;
+        }
+
+
+        .hero-logo-container{
+
+            width:340px;
+
+            height:340px;
+
+            margin:0 auto 35px;
+
+            border-radius:50%;
+
+            background:var(--white);
+
+            border:5px solid var(--sand-dark);
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            overflow:hidden;
+
+            box-shadow:
+
+                0 0 0 10px rgba(198,166,107,.14),
+
+                0 30px 60px rgba(120,90,45,.20);
+        }
+
+
+        .hero-logo{
+
+            width:105%;
+
+            transition:.4s;
+        }
+
+
+        .hero-logo:hover{
+
+            transform:scale(1.05);
+        }
+
+
+        .hero h1{
+
+            font-family:'Cinzel',serif;
+
+            font-size:58px;
+
+            color:var(--clay-dark);
+
+            margin-bottom:20px;
+        }
+
+
+        .hero p{
+
+            max-width:750px;
+
+            margin:auto;
+
+            font-size:22px;
+
+            color:var(--text-light);
+        }
+
+
+        /* =========================
+           CONTENIDO
+        ========================= */
+
+        main{
+
+            max-width:1100px;
+
+            margin:auto;
+
+            padding:80px 25px;
+        }
+
+
+        /* ESPACIO ENTRE TEMAS */
+
+        section{
+
+            margin-bottom:80px;
+
+            background:var(--white);
+
+            padding:45px;
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+        }
+
+
+        section h2{
+
+            font-family:'Cinzel',serif;
+
+            font-size:32px;
+
+            color:var(--clay-dark);
+
+            margin-bottom:25px;
+        }
+
+
+        section p{
+
+            margin-bottom:20px;
+
+            color:var(--text-light);
+
+            font-size:17px;
+        }
+
+
+        section strong{
+
+            color:var(--text);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+
+            background:var(--clay-dark);
+
+            color:var(--sand-soft);
+
+            text-align:center;
+
+            padding:50px 25px;
+        }
+
+
+        footer p{
+
+            font-family:'Montserrat',sans-serif;
+
+            font-size:13px;
+
+            margin-bottom:10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px){
+
+            .nav-menu{
+
+                display:none;
+            }
+
+
+            .hero-logo-container{
+
+                width:250px;
+
+                height:250px;
+            }
+
+
+            .hero h1{
+
+                font-size:42px;
+            }
+
+
+            .hero p{
+
+                font-size:19px;
+            }
+
+
+            section{
+
+                padding:30px;
+            }
+
+
+            section h2{
+
+                font-size:27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="topbar">
+
+        <div class="nav-container">
+
+            <a
+                href="index.html"
+                class="nav-logo"
+            >
+                Memoria del Mundo
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="primeros-homininos.html">
+                    Orígenes
+                </a>
+
+                <a href="mesopotamia.html">
+                    Civilizaciones
+                </a>
+
+                <a href="#">
+                    Religiones
+                </a>
+
+                <a href="#">
+                    Cultura
+                </a>
+
+                <a href="#">
+                    Historia
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-logo-container">
+
+                <img
+                    src="china.png"
+                    class="hero-logo"
+                    alt="Emblema de China"
+                >
+
+            </div>
+
+
+            <h1>
+                China
+            </h1>
+
+
+            <p>
+                Una de las civilizaciones más antiguas del mundo,
+                marcada por sus pueblos, dinastías, conocimientos,
+                tradiciones y transformaciones a lo largo de miles de años.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <main>
+
+
+        <section>
+
+            <h2>
+                La historia de China
+            </h2>
+
+            <p>
+                La historia de China se desarrolló a lo largo de miles
+                de años y estuvo marcada por la aparición de numerosas
+                culturas, pueblos, Estados y dinastías. Desde las
+                primeras sociedades agrícolas y las culturas de la Edad
+                del Bronce hasta los grandes imperios y la China
+                contemporánea, el territorio chino experimentó profundas
+                transformaciones políticas, sociales y culturales.
+            </p>
+
+            <p>
+                A lo largo de estos períodos se desarrollaron sistemas
+                de escritura, formas de gobierno, tradiciones filosóficas,
+                conocimientos científicos, tecnologías, expresiones
+                artísticas y redes comerciales que tuvieron una influencia
+                importante dentro y fuera de Asia.
+            </p>
+
+            <p>
+                En este recorrido veremos cómo se formaron las primeras
+                sociedades chinas, cómo surgieron las grandes dinastías,
+                cómo cambiaron las estructuras políticas y sociales y
+                cómo diferentes tradiciones continuaron transformándose
+                a través de los siglos.
+            </p>
+
+        </section>
+
+      
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Memoria del Mundo
+        </p>
+
+        <p>
+            Un atlas digital de la historia humana.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
