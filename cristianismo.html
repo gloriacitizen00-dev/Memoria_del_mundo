@@ -1,1 +1,865 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cristianismo | Memoria del Mundo</title>
+
+    <meta name="description"
+        content="Historia del cristianismo: sus orígenes, expansión, comunidades, instituciones, transformaciones y desarrollo a través de los siglos.">
+
+    <meta name="keywords"
+        content="cristianismo, historia del cristianismo, Jesús, Iglesia, cristianismo antiguo, cristianismo medieval, Reforma">
+
+    <meta name="author" content="Memoria del Mundo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root{
+
+            --sand:#C6A66B;
+            --sand-dark:#8A6A3F;
+            --sand-light:#E1C995;
+            --sand-soft:#F7F0DF;
+
+            --clay:#9A6842;
+            --clay-dark:#70472C;
+
+            --stone:#8B8172;
+            --stone-light:#C9C0B0;
+
+            --text:#2B241B;
+            --text-light:#665D51;
+
+            --white:#FFFDF7;
+            --cream:#FBF6EA;
+
+            --border:#E1D4B9;
+
+            --shadow:0 20px 50px rgba(120,90,45,.12);
+
+        }
+
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+
+        body{
+
+            background:var(--cream);
+
+            color:var(--text);
+
+            font-family:'Cormorant Garamond',serif;
+
+            line-height:1.7;
+
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header{
+
+            position:fixed;
+
+            top:0;
+            left:0;
+            width:100%;
+
+            z-index:1000;
+
+            background:rgba(255,253,247,.96);
+
+            border-bottom:1px solid var(--border);
+
+            backdrop-filter:blur(10px);
+
+        }
+
+
+        nav{
+
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:18px 25px;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+        }
+
+
+        .logo{
+
+            font-family:'Cinzel',serif;
+
+            font-size:22px;
+
+            font-weight:700;
+
+            color:var(--clay-dark);
+
+            text-decoration:none;
+
+        }
+
+
+        .menu{
+
+            display:flex;
+
+            gap:25px;
+
+            list-style:none;
+
+        }
+
+
+        .menu > li{
+
+            position:relative;
+
+        }
+
+
+        .menu a{
+
+            text-decoration:none;
+
+            color:var(--text);
+
+            font-family:'Montserrat',sans-serif;
+
+            font-size:14px;
+
+        }
+
+
+        .dropdown{
+
+            position:absolute;
+
+            top:100%;
+
+            left:0;
+
+            min-width:220px;
+
+            background:var(--white);
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+
+            padding:12px;
+
+            display:none;
+
+        }
+
+
+        .menu li:hover .dropdown{
+
+            display:block;
+
+        }
+
+
+        .dropdown-button{
+
+            display:block;
+
+            padding:8px 10px;
+
+        }
+
+
+        .dropdown-button:hover{
+
+            background:var(--sand-soft);
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+
+            padding:150px 25px 90px;
+
+            text-align:center;
+
+            background:
+
+                linear-gradient(
+                    rgba(247,240,223,.90),
+                    rgba(251,246,234,.96)
+                );
+
+        }
+
+
+        .hero-logo-container{
+
+            width:340px;
+
+            height:340px;
+
+            margin:0 auto 35px;
+
+            border-radius:50%;
+
+            background:var(--white);
+
+            border:5px solid var(--sand-dark);
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            overflow:hidden;
+
+            box-shadow:
+
+                0 0 0 10px rgba(198,166,107,.14),
+
+                0 30px 60px rgba(120,90,45,.20);
+
+        }
+
+
+        .hero-logo{
+
+            width:105%;
+
+            transition:.4s;
+
+        }
+
+
+        .hero-logo:hover{
+
+            transform:scale(1.05);
+
+        }
+
+
+        .hero h1{
+
+            font-family:'Cinzel',serif;
+
+            font-size:48px;
+
+            color:var(--clay-dark);
+
+            margin-bottom:20px;
+
+        }
+
+
+        .hero p{
+
+            max-width:800px;
+
+            margin:auto;
+
+            font-size:21px;
+
+            color:var(--text-light);
+
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main{
+
+            max-width:1100px;
+
+            margin:80px auto;
+
+            padding:0 25px;
+
+        }
+
+
+        section{
+
+            margin-bottom:80px;
+
+            background:var(--white);
+
+            padding:45px;
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+
+        }
+
+
+        section h2{
+
+            font-family:'Cinzel',serif;
+
+            font-size:32px;
+
+            color:var(--clay-dark);
+
+            margin-bottom:25px;
+
+        }
+
+
+        section p{
+
+            margin-bottom:20px;
+
+            color:var(--text-light);
+
+            font-size:17px;
+
+        }
+
+
+        section strong{
+
+            color:var(--text);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+
+            background:var(--clay-dark);
+
+            color:var(--sand-soft);
+
+            text-align:center;
+
+            padding:40px 20px;
+
+            font-family:'Montserrat',sans-serif;
+
+            font-size:13px;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px){
+
+            .menu{
+
+                gap:12px;
+
+            }
+
+
+            .hero-logo-container{
+
+                width:250px;
+
+                height:250px;
+
+            }
+
+
+            .hero h1{
+
+                font-size:38px;
+
+            }
+
+
+            section{
+
+                padding:30px;
+
+            }
+
+        }
+
+
+        @media(max-width:650px){
+
+            .menu{
+
+                display:none;
+
+            }
+
+
+            .hero{
+
+                padding-top:120px;
+
+            }
+
+
+            .hero h1{
+
+                font-size:32px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            Memoria del Mundo
+        </a>
+
+
+        <ul class="menu">
+
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+
+            <li>
+
+                <a href="#">
+                    Orígenes
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="primeros-homininos.html" class="dropdown-button">
+                        Primeros seres humanos
+                    </a>
+
+                    <a href="revolucion-neolitica.html" class="dropdown-button">
+                        Revolución neolítica
+                    </a>
+
+                    <a href="primeras-ciudades.html" class="dropdown-button">
+                        Primeras ciudades
+                    </a>
+
+                    <a href="escritura.html" class="dropdown-button">
+                        Escritura
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+                    Civilizaciones
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="mesopotamia.html" class="dropdown-button">
+                        Mesopotamia
+                    </a>
+
+                    <a href="egipto.html" class="dropdown-button">
+                        Egipto
+                    </a>
+
+                    <a href="persia.html" class="dropdown-button">
+                        Persia
+                    </a>
+
+                    <a href="india.html" class="dropdown-button">
+                        India
+                    </a>
+
+                    <a href="china.html" class="dropdown-button">
+                        China
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Tibet
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+                    Religiones
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="religiones-antiguas.html" class="dropdown-button">
+                        Religiones antiguas
+                    </a>
+
+                    <a href="judaismo.html" class="dropdown-button">
+                        Judaísmo
+                    </a>
+
+                    <a href="cristianismo.html" class="dropdown-button">
+                        Cristianismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Islam
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Hinduismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Budismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Jainismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Zoroastrismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Sijismo
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Cienciología
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+                    Cultura
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="escritura.html" class="dropdown-button">
+                        Escritura
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Literatura
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Arte
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Ciencia
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <a href="#">
+                    Historia
+                </a>
+
+                <div class="dropdown">
+
+                    <a href="#" class="dropdown-button">
+                        Antigüedad
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Edad Media
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Edad Moderna
+                    </a>
+
+                    <a href="#" class="dropdown-button">
+                        Mundo Contemporáneo
+                    </a>
+
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-logo-container">
+
+        <img
+            src="paloma-cristianismo.png"
+            alt="Paloma, símbolo asociado al Espíritu Santo en el cristianismo"
+            class="hero-logo"
+        >
+
+    </div>
+
+
+    <h1>
+        Cristianismo
+    </h1>
+
+
+    <p>
+        Historia de una tradición religiosa que surgió en el mundo romano
+        del siglo I y se extendió posteriormente por distintas regiones
+        del mundo.
+    </p>
+
+</section>
+
+
+
+<main>
+
+
+    <section>
+
+        <h2>
+            Los orígenes del cristianismo
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Jesús de Nazaret y su contexto histórico
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Los primeros seguidores y las primeras comunidades
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Pablo de Tarso y la expansión del cristianismo
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El cristianismo bajo el Imperio romano
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Las persecuciones y los mártires
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Constantino y la transformación del Imperio
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El Concilio de Nicea y las primeras controversias doctrinales
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            La formación de la Iglesia y sus instituciones
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El cristianismo en la Antigüedad tardía
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El cristianismo en la Edad Media
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El Cisma de Oriente y Occidente
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            La Reforma protestante
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El cristianismo en la Edad Moderna
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            El cristianismo contemporáneo
+        </h2>
+
+        <!-- Contenido pendiente -->
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    © Memoria del Mundo — Historia, civilizaciones y patrimonio humano.
+
+</footer>
+
+
+</body>
+
+</html>
+```
