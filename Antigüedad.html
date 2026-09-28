@@ -1,1 +1,954 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Historia | Memoria del Mundo</title>
+
+<meta name="description"
+content="Historia de la Antigüedad y de las sociedades humanas que construyeron los primeros Estados, ciudades, gobiernos, imperios y redes de intercambio.">
+
+<meta name="keywords"
+content="historia, antigüedad, historia antigua, primeros Estados, sociedades antiguas, imperios, comercio, guerras, vida cotidiana">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+
+}
+
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+
+}
+
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+
+}
+
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+    padding:70px 30px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:52px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+}
+
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+
+section strong{
+
+    color:var(--text);
+
+}
+
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+
+}
+
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:50px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    section{
+
+        padding:30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">Memoria del Mundo</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Inicio</a>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Orígenes</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">Primeros seres humanos</a>
+<a href="revolucion-neolitica.html">Revolución neolítica</a>
+<a href="primeras-ciudades.html">Primeras ciudades</a>
+<a href="escritura.html">Escritura</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Civilizaciones</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">Mesopotamia</a>
+<a href="egipto.html">Egipto</a>
+<a href="persia.html">Persia</a>
+<a href="india.html">India</a>
+<a href="china.html">China</a>
+<a href="#">Tíbet</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Religiones</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">Religiones antiguas</a>
+<a href="judaismo.html">Judaísmo</a>
+<a href="cristianismo.html">Cristianismo</a>
+<a href="islam.html">Islam</a>
+<a href="#">Hinduismo</a>
+<a href="#">Budismo</a>
+<a href="#">Jainismo</a>
+<a href="#">Zoroastrismo</a>
+<a href="#">Sijismo</a>
+<a href="#">Cienciología</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Cultura</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">Escritura</a>
+<a href="literatura.html">Literatura</a>
+<a href="arte.html">Arte</a>
+<a href="ciencia.html">Ciencia</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Historia</button>
+
+<div class="dropdown-content">
+
+<a href="historia.html">Antigüedad</a>
+<a href="#">Edad Media</a>
+<a href="#">Edad Moderna</a>
+<a href="#">Mundo Contemporáneo</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<div class="hero">
+
+<h1>Antigüedad</h1>
+
+<p>
+Historia de las primeras sociedades organizadas, los Estados, los imperios
+y las redes de intercambio que transformaron el mundo antiguo.
+</p>
+
+</div>
+
+
+<section>
+
+<h2>¿Qué es la Antigüedad?</h2>
+
+<p>
+La <strong>Antigüedad</strong> es el período de la historia asociado con el
+desarrollo de las primeras ciudades, Estados y grandes civilizaciones.
+Durante estos siglos surgieron nuevas formas de organización política,
+económica y social que transformaron las sociedades humanas.
+</p>
+
+<p>
+Aunque suele relacionarse con las primeras civilizaciones del Mediterráneo
+y del Cercano Oriente, la Antigüedad fue un período mucho más amplio.
+En distintas regiones de <strong>Asia, África, Europa y América</strong>
+se desarrollaron sociedades con sus propias estructuras políticas,
+económicas y culturales.
+</p>
+
+<p>
+El estudio de este período permite observar cómo las sociedades pasaron de
+comunidades relativamente pequeñas a estructuras capaces de administrar
+territorios extensos, producir excedentes, organizar ejércitos y establecer
+sistemas de gobierno.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El nacimiento de los primeros Estados</h2>
+
+<p>
+Con el crecimiento de las ciudades aparecieron formas de organización
+política cada vez más complejas. Algunas comunidades comenzaron a estar
+dirigidas por reyes, gobernantes, consejos u otras autoridades encargadas
+de administrar recursos y organizar a la población.
+</p>
+
+<p>
+Los primeros Estados surgieron en diferentes regiones y no siguieron un
+único modelo. Mesopotamia, Egipto, el valle del Indo y China desarrollaron
+estructuras políticas propias, mientras que otras sociedades construyeron
+formas diferentes de organización.
+</p>
+
+<p>
+La formación de los Estados también estuvo relacionada con la necesidad de
+administrar <strong>tierras, agua, alimentos, impuestos, construcciones y
+trabajo</strong>. La escritura se convirtió en una herramienta importante
+para registrar parte de estas actividades.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La organización de las sociedades antiguas</h2>
+
+<p>
+Las sociedades antiguas estaban organizadas en grupos con diferentes
+funciones y niveles de autoridad. Gobernantes, sacerdotes, soldados,
+artesanos, comerciantes, campesinos y trabajadores realizaban actividades
+distintas dentro de cada sociedad.
+</p>
+
+<p>
+Estas divisiones no fueron iguales en todas las regiones. Cada sociedad
+desarrolló sus propias instituciones, leyes, costumbres y formas de
+distribuir el trabajo y los recursos.
+</p>
+
+<p>
+La posición social podía depender del nacimiento, la riqueza, la función
+que una persona desempeñaba o su relación con las instituciones políticas
+y religiosas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Reyes, gobiernos y formas de poder</h2>
+
+<p>
+El poder político adoptó diferentes formas durante la Antigüedad. En muchos
+Estados existieron monarquías, mientras que otras sociedades desarrollaron
+consejos, asambleas, ciudades-Estado o sistemas con diferentes grupos
+participando en el gobierno.
+</p>
+
+<p>
+Los gobernantes podían controlar territorios, administrar recursos,
+organizar ejércitos y supervisar grandes proyectos de construcción.
+La autoridad también podía estar relacionada con las instituciones
+religiosas y con las tradiciones de cada sociedad.
+</p>
+
+<p>
+Grecia, Roma, Persia, China, India, Egipto y Mesopotamia muestran que no
+existió una única manera de organizar el poder político en el mundo
+antiguo.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las leyes y la administración</h2>
+
+<p>
+El crecimiento de los Estados hizo necesario establecer normas para
+regular diferentes aspectos de la vida social. Algunas sociedades
+registraron sus leyes por escrito, mientras que otras conservaron gran
+parte de sus normas mediante la tradición.
+</p>
+
+<p>
+Las leyes podían establecer reglas relacionadas con la propiedad, el
+comercio, las deudas, el trabajo, la familia y los conflictos entre
+personas.
+</p>
+
+<p>
+La administración también permitió organizar <strong>impuestos,
+almacenes, tierras, obras públicas y registros</strong>, especialmente en
+sociedades con grandes poblaciones y territorios.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Guerras, ejércitos y expansión territorial</h2>
+
+<p>
+Las guerras fueron una parte importante de la historia de muchas sociedades
+antiguas. Los conflictos podían surgir por territorios, recursos, rutas
+comerciales, fronteras o disputas entre Estados.
+</p>
+
+<p>
+Con el tiempo aparecieron ejércitos cada vez más organizados. Algunos
+Estados desarrollaron unidades militares especializadas, sistemas de
+fortificación y nuevas tecnologías de armas y transporte.
+</p>
+
+<p>
+Las conquistas permitieron a determinados Estados ampliar sus territorios
+y controlar poblaciones diversas. También produjeron migraciones,
+intercambios culturales y transformaciones políticas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El comercio y las rutas del mundo antiguo</h2>
+
+<p>
+El comercio conectó regiones muy alejadas entre sí. Las rutas terrestres y
+marítimas permitieron intercambiar alimentos, metales, textiles, cerámica,
+piedras preciosas y otros productos.
+</p>
+
+<p>
+Estas redes conectaron el Mediterráneo con Asia occidental, el norte de
+África y diferentes regiones de Asia. También existieron importantes rutas
+comerciales dentro de cada región.
+</p>
+
+<p>
+El intercambio de productos estuvo acompañado por el movimiento de
+<strong>personas, conocimientos, tecnologías, idiomas y costumbres</strong>,
+contribuyendo a transformar las sociedades que entraban en contacto.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Migraciones y contactos entre pueblos</h2>
+
+<p>
+Las poblaciones humanas continuaron desplazándose durante toda la
+Antigüedad. Las migraciones podían estar relacionadas con guerras,
+cambios económicos, búsqueda de tierras, comercio o transformaciones
+ambientales.
+</p>
+
+<p>
+Estos movimientos contribuyeron a la formación de nuevas comunidades y al
+contacto entre pueblos con diferentes idiomas, religiones y tradiciones.
+</p>
+
+<p>
+La historia antigua, por lo tanto, no estuvo formada por sociedades
+completamente aisladas. Los contactos entre regiones fueron constantes,
+aunque su intensidad varió según el período y el lugar.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La esclavitud en las sociedades antiguas</h2>
+
+<p>
+La esclavitud existió en diferentes sociedades antiguas y adoptó formas
+diversas. Las personas podían convertirse en esclavas como consecuencia de
+guerras, deudas, nacimiento u otras circunstancias reconocidas por las
+leyes y costumbres de determinadas sociedades.
+</p>
+
+<p>
+Las personas esclavizadas podían realizar trabajos domésticos, agrícolas,
+artesanales, militares o administrativos. Sus condiciones de vida variaban
+considerablemente según la sociedad, el período y la función que
+desempeñaban.
+</p>
+
+<p>
+Estudiar la esclavitud permite comprender las desigualdades económicas,
+sociales y jurídicas que formaron parte de muchas sociedades de la
+Antigüedad.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La vida cotidiana en la Antigüedad</h2>
+
+<p>
+La mayoría de la población antigua vivía de actividades relacionadas con
+la agricultura, la ganadería, la pesca, la artesanía y el comercio.
+La alimentación, la vivienda y el trabajo dependían de los recursos
+disponibles en cada región.
+</p>
+
+<p>
+Las ciudades reunían mercados, talleres, espacios religiosos,
+administrativos y viviendas, mientras que gran parte de la población
+continuaba viviendo en comunidades rurales.
+</p>
+
+<p>
+La vida cotidiana también estaba marcada por las costumbres, las
+festividades, la religión, las relaciones familiares y las obligaciones
+sociales.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La familia y la organización social</h2>
+
+<p>
+La familia era una institución importante en muchas sociedades antiguas.
+Además de las relaciones personales, podía estar vinculada con la
+transmisión de propiedades, el trabajo, las alianzas y la continuidad de
+los grupos familiares.
+</p>
+
+<p>
+Las estructuras familiares variaban según la región y el período. También
+existían diferencias importantes en los derechos y obligaciones de hombres,
+mujeres, niños y personas pertenecientes a diferentes grupos sociales.
+</p>
+
+<p>
+Por ello, no puede hablarse de una única forma de familia o de organización
+social para toda la Antigüedad.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las mujeres en las sociedades antiguas</h2>
+
+<p>
+La posición de las mujeres varió considerablemente entre las sociedades
+antiguas. Sus derechos, responsabilidades y posibilidades de participación
+en la vida pública dependían de las leyes, costumbres y estructuras
+sociales de cada región.
+</p>
+
+<p>
+Las mujeres participaron en actividades domésticas, agrícolas, comerciales,
+religiosas y artesanales. Algunas también ocuparon posiciones de autoridad
+política o religiosa.
+</p>
+
+<p>
+El estudio de fuentes históricas permite observar tanto las limitaciones
+impuestas a las mujeres como los espacios en los que tuvieron participación
+y autoridad.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Religión, sociedad y poder</h2>
+
+<p>
+Las creencias religiosas estuvieron relacionadas con muchos aspectos de la
+vida social antigua. Los rituales, templos, sacerdotes y festividades podían
+formar parte de la organización de las comunidades.
+</p>
+
+<p>
+En algunas sociedades, las instituciones religiosas estuvieron vinculadas
+al poder político y a la administración. En otras, las prácticas religiosas
+se desarrollaron junto con diferentes estructuras de gobierno.
+</p>
+
+<p>
+Las religiones antiguas ya fueron estudiadas con mayor profundidad en la
+sección correspondiente del Atlas, por lo que aquí interesan principalmente
+sus relaciones con la organización histórica de las sociedades.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Ciudades, campos y formas de vida</h2>
+
+<p>
+La Antigüedad estuvo marcada por la relación entre ciudades y territorios
+rurales. Las ciudades concentraban actividades políticas, comerciales,
+religiosas y artesanales, mientras que las zonas rurales producían gran
+parte de los alimentos y materias primas.
+</p>
+
+<p>
+Esta relación permitió sostener poblaciones urbanas cada vez mayores y
+favoreció el desarrollo de mercados, rutas comerciales y sistemas de
+administración.
+</p>
+
+<p>
+Las formas de vida fueron muy diferentes según la región, desde grandes
+centros urbanos hasta pequeñas comunidades agrícolas y pastoriles.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Los grandes imperios de la Antigüedad</h2>
+
+<p>
+Con el tiempo, algunos Estados extendieron su dominio sobre territorios
+muy amplios. Estos imperios reunieron poblaciones con diferentes idiomas,
+religiones y tradiciones bajo estructuras políticas comunes.
+</p>
+
+<p>
+Entre ellos estuvieron el Imperio persa, los grandes Estados de China,
+los reinos y poderes de India, y posteriormente los imperios de Grecia
+helenística y Roma.
+</p>
+
+<p>
+Los imperios transformaron las relaciones entre regiones mediante la
+conquista, la administración, el comercio, la construcción de caminos y
+el intercambio cultural.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El Mediterráneo antiguo</h2>
+
+<p>
+El Mediterráneo fue una de las principales zonas de contacto del mundo
+antiguo. Sus costas conectaron comunidades de Europa, África y Asia
+occidental mediante rutas marítimas y terrestres.
+</p>
+
+<p>
+Fenicios, griegos, egipcios, persas, cartagineses, romanos y muchos otros
+pueblos participaron en las redes políticas y comerciales de la región.
+</p>
+
+<p>
+El Mediterráneo cambió constantemente como consecuencia de las migraciones,
+guerras, alianzas y transformaciones económicas de las sociedades que lo
+rodeaban.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>América antes de la conquista europea</h2>
+
+<p>
+Mientras las sociedades de Eurasia y África atravesaban sus propios
+procesos históricos, en América también se desarrollaron sociedades
+complejas con sistemas políticos, económicos y culturales propios.
+</p>
+
+<p>
+En distintas regiones surgieron ciudades, centros ceremoniales, redes
+comerciales y estructuras de poder. Entre ellas estuvieron las sociedades
+mesoamericanas y las civilizaciones de los Andes.
+</p>
+
+<p>
+Estos procesos tuvieron desarrollos independientes de los ocurridos en
+Eurasia y África y forman parte de la historia antigua del continente
+americano.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El final de la Antigüedad</h2>
+
+<p>
+La Antigüedad no terminó en un único momento ni por una sola causa. Durante
+los últimos siglos de este período ocurrieron transformaciones políticas,
+económicas, militares, religiosas y sociales en diferentes regiones.
+</p>
+
+<p>
+En Europa occidental, la caída del Imperio romano de Occidente durante el
+siglo V suele utilizarse como una referencia para marcar el inicio de la
+Edad Media. Sin embargo, otros territorios continuaron desarrollando
+estructuras políticas y culturales propias.
+</p>
+
+<p>
+La transición hacia la <strong>Edad Media</strong> fue, por tanto, un proceso
+gradual y diferente según la región. A partir de aquí comienza otro período
+histórico del Atlas.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+Memoria del Mundo · Historia de la humanidad, sus sociedades y su memoria
+
+</footer>
+
+
+</body>
+</html>
 
