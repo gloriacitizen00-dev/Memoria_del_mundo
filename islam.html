@@ -1,1 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Islam | Memoria del Mundo</title>
+
+<meta name="description"
+content="Historia del islam: sus orígenes en Arabia, Mahoma, el Corán, la expansión islámica y el desarrollo de las sociedades y culturas musulmanas.">
+
+<meta name="keywords"
+content="islam, historia del islam, Mahoma, Corán, Arabia, califato, civilización islámica">
+
+<meta name="author" content="Memoria del Mundo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:var(--cream);
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+}
+
+.topbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+}
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+}
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+}
+
+.dropdown{
+
+    position:relative;
+}
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+}
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.hero-logo-container{
+
+    width:340px;
+
+    height:340px;
+
+    margin:0 auto 35px;
+
+    border-radius:50%;
+
+    background:var(--white);
+
+    border:5px solid var(--sand-dark);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 0 10px rgba(198,166,107,.14),
+        0 30px 60px rgba(120,90,45,.20);
+}
+
+.hero-logo{
+
+    width:105%;
+
+    transition:.4s;
+}
+
+.hero-logo:hover{
+
+    transform:scale(1.05);
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+}
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+}
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+}
+
+section strong{
+
+    color:var(--text);
+}
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+}
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+    }
+
+    .hero-logo-container{
+
+        width:250px;
+
+        height:250px;
+    }
+
+    .hero h1{
+
+        font-size:36px;
+    }
+
+    section{
+
+        padding:30px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">
+Memoria del Mundo
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">
+Inicio
+</a>
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Orígenes
+</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">
+Primeros seres humanos
+</a>
+
+<a href="revolucion-neolitica.html">
+Revolución neolítica
+</a>
+
+<a href="primeras-ciudades.html">
+Primeras ciudades
+</a>
+
+<a href="escritura.html">
+Escritura
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Civilizaciones
+</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">
+Mesopotamia
+</a>
+
+<a href="egipto.html">
+Egipto
+</a>
+
+<a href="persia.html">
+Persia
+</a>
+
+<a href="india.html">
+India
+</a>
+
+<a href="china.html">
+China
+</a>
+
+<a href="tibet.html">
+Tíbet
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Religiones
+</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">
+Religiones antiguas
+</a>
+
+<a href="judaismo.html">
+Judaísmo
+</a>
+
+<a href="cristianismo.html">
+Cristianismo
+</a>
+
+<a href="islam.html">
+Islam
+</a>
+
+<a href="#">
+Hinduismo
+</a>
+
+<a href="#">
+Budismo
+</a>
+
+<a href="#">
+Jainismo
+</a>
+
+<a href="#">
+Zoroastrismo
+</a>
+
+<a href="#">
+Sijismo
+</a>
+
+<a href="#">
+Cienciología
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Cultura
+</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">
+Escritura
+</a>
+
+<a href="#">
+Literatura
+</a>
+
+<a href="#">
+Arte
+</a>
+
+<a href="#">
+Ciencia
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Historia
+</button>
+
+<div class="dropdown-content">
+
+<a href="#">
+Antigüedad
+</a>
+
+<a href="#">
+Edad Media
+</a>
+
+<a href="#">
+Edad Moderna
+</a>
+
+<a href="#">
+Mundo Contemporáneo
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+<div class="hero-logo-container">
+
+<img
+    src="kaaba.png"
+    alt="Kaaba, lugar sagrado central del islam"
+    class="hero-logo"
+>
+
+</div>
+
+<h1>Islam</h1>
+
+<p>
+Historia de una tradición religiosa surgida en Arabia durante el siglo VII
+y de las sociedades y culturas que se desarrollaron posteriormente en el
+mundo islámico.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Los orígenes del islam</h2>
+
+<p>
+El islam surgió en la <strong>península arábiga durante el siglo VII
+d. C.</strong>, en un contexto marcado por diferentes tradiciones
+religiosas, redes comerciales y relaciones entre las comunidades de Arabia
+y los grandes imperios de la región.
+</p>
+
+<p>
+La nueva tradición religiosa se desarrolló alrededor de
+<strong>Mahoma</strong>, a quien la tradición islámica considera el último
+de una serie de profetas. Sus seguidores comenzaron a formar una comunidad
+religiosa que recibió el nombre de <strong>umma</strong>.
+</p>
+
+<p>
+Durante las décadas siguientes, el islam se extendió desde Arabia hacia
+otras regiones de Oriente Próximo, el norte de África y Asia. Con el tiempo,
+esta expansión dio lugar a sociedades, instituciones y culturas muy diversas
+dentro del mundo islámico.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La Arabia del siglo VII</h2>
+
+<p>
+La península arábiga del siglo VII estaba habitada por diferentes grupos
+tribales y comunidades sedentarias. Las ciudades de <strong>La Meca y
+Medina</strong> eran importantes centros comerciales y sociales dentro de
+la región.
+</p>
+
+<p>
+La sociedad árabe no constituía un Estado unificado. Existían alianzas,
+rivalidades y relaciones entre diferentes tribus, mientras las rutas
+comerciales conectaban Arabia con regiones como Siria, Mesopotamia,
+Palestina y el mar Rojo.
+</p>
+
+<p>
+En Arabia coexistían distintas tradiciones religiosas, incluyendo
+<strong>cultos politeístas, comunidades judías y comunidades cristianas</strong>.
+Este contexto religioso y cultural formó parte del mundo en el que surgió
+el islam.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Mahoma y las primeras revelaciones</h2>
+
+<p>
+Según la tradición islámica, <strong>Mahoma</strong> comenzó a recibir
+revelaciones de Dios alrededor del año <strong>610 d. C.</strong> mientras
+se encontraba en La Meca. Estas revelaciones fueron transmitidas a sus
+seguidores y posteriormente formarían parte del Corán.
+</p>
+
+<p>
+Mahoma predicó la existencia de un único Dios y llamó a sus seguidores a
+abandonar los cultos politeístas. También enseñó principios relacionados
+con la justicia, la responsabilidad individual, la ayuda a los necesitados
+y la vida comunitaria.
+</p>
+
+<p>
+Sus enseñanzas provocaron conflictos con sectores de la sociedad de La Meca.
+Con el crecimiento de sus seguidores, la comunidad enfrentó oposición y
+finalmente abandonó la ciudad para establecerse en <strong>Medina</strong>.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La Hégira y la comunidad de Medina</h2>
+
+<p>
+En el año <strong>622 d. C.</strong>, Mahoma y sus seguidores emigraron
+desde La Meca hacia Medina. Este acontecimiento, conocido como la
+<strong>Hégira</strong>, constituye el punto de partida del calendario
+islámico.
+</p>
+
+<p>
+En Medina se desarrolló una comunidad religiosa y política que reunió a
+diferentes grupos. Mahoma asumió funciones de liderazgo religioso y también
+participó en la organización de las relaciones entre las comunidades de la
+ciudad.
+</p>
+
+<p>
+Durante los años siguientes, la comunidad musulmana estableció alianzas y
+entró en conflictos con diferentes grupos de Arabia. Finalmente, Mahoma y
+sus seguidores regresaron a La Meca, que pasó a ocupar un lugar central
+dentro de la nueva comunidad islámica.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La expansión del islam</h2>
+
+<p>
+Después de la muerte de Mahoma en el año <strong>632 d. C.</strong>, la
+comunidad musulmana continuó expandiéndose. Los primeros califas dirigieron
+campañas que incorporaron grandes territorios de Arabia, Siria, Egipto,
+Mesopotamia y Persia.
+</p>
+
+<p>
+Durante los siglos siguientes, el mundo islámico se extendió por
+<strong>el norte de África, la península ibérica, Asia central, India y
+otras regiones de Asia</strong>. La expansión se produjo mediante una
+combinación de conquistas, alianzas, comercio y procesos de conversión.
+</p>
+
+<p>
+La expansión no produjo una sociedad uniforme. Las poblaciones incorporadas
+mantuvieron diferentes lenguas, tradiciones culturales y comunidades
+religiosas, que interactuaron con las nuevas instituciones islámicas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El Corán y las primeras tradiciones</h2>
+
+<p>
+El <strong>Corán</strong> es el texto sagrado central del islam. Según la
+tradición musulmana, contiene las revelaciones que Dios transmitió a
+Mahoma y que fueron posteriormente recopiladas en forma escrita.
+</p>
+
+<p>
+Junto al Corán se desarrolló la tradición de los <strong>hadices</strong>,
+relatos sobre las palabras y acciones de Mahoma. Estos textos adquirieron
+una importancia fundamental para la interpretación religiosa y jurídica
+del islam.
+</p>
+
+<p>
+A partir de estas fuentes se desarrollaron diferentes escuelas de
+interpretación, pensamiento jurídico y teología. Estas tradiciones
+contribuyeron a la diversidad intelectual y religiosa del mundo islámico.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Los califatos y la organización del mundo islámico</h2>
+
+<p>
+Después de la muerte de Mahoma, los primeros líderes de la comunidad
+recibieron el título de <strong>califas</strong>. Los primeros cuatro son
+conocidos en la tradición suní como los califas bien guiados.
+</p>
+
+<p>
+Posteriormente surgieron grandes dinastías, entre ellas los
+<strong>omeyas y los abasíes</strong>. El califato omeya estableció su
+capital en Damasco, mientras que el califato abasí trasladó el centro
+político a Bagdad.
+</p>
+
+<p>
+Con el tiempo aparecieron diferentes Estados y dinastías musulmanas.
+Aunque compartían elementos religiosos, estas sociedades desarrollaron
+estructuras políticas, económicas y culturales propias.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La división entre suníes y chiíes</h2>
+
+<p>
+Una de las principales divisiones históricas del islam surgió a partir de
+las discusiones sobre el liderazgo de la comunidad musulmana después de la
+muerte de Mahoma.
+</p>
+
+<p>
+Los <strong>suníes</strong> desarrollaron una tradición que reconocía la
+autoridad de los primeros califas y posteriormente de diferentes
+instituciones y escuelas jurídicas. Los <strong>chiíes</strong> defendieron
+la importancia de la descendencia de Mahoma a través de Ali y su familia
+como línea legítima de liderazgo religioso.
+</p>
+
+<p>
+Con el paso de los siglos, ambas tradiciones desarrollaron sus propias
+instituciones, interpretaciones y comunidades. La división no fue solamente
+política, sino que también produjo diferencias religiosas y jurídicas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El desarrollo de la civilización islámica</h2>
+
+<p>
+Entre los siglos VIII y XIII, diferentes regiones del mundo islámico
+experimentaron un importante desarrollo urbano, comercial, científico y
+cultural. Ciudades como <strong>Bagdad, Damasco, El Cairo, Córdoba y
+Samarkanda</strong> se convirtieron en centros de actividad intelectual y
+económica.
+</p>
+
+<p>
+Los intercambios comerciales conectaron el Mediterráneo, África, Oriente
+Próximo, Asia central, India y China. Estas redes facilitaron la circulación
+de productos, conocimientos, tecnologías y textos.
+</p>
+
+<p>
+La civilización islámica también incorporó conocimientos procedentes de
+tradiciones anteriores, incluyendo las culturas <strong>griega, persa,
+india y mesopotámica</strong>, que fueron traducidas, estudiadas y
+desarrolladas por distintos autores musulmanes y no musulmanes.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Ciencia, filosofía, medicina y conocimiento</h2>
+
+<p>
+Durante la Edad Media, científicos y pensadores de diferentes regiones del
+mundo islámico realizaron importantes trabajos en <strong>matemáticas,
+astronomía, medicina, filosofía y otras áreas del conocimiento</strong>.
+</p>
+
+<p>
+En ciudades como Bagdad se desarrollaron instituciones dedicadas a la
+traducción y estudio de obras procedentes de las tradiciones griega, persa
+e india. Estos conocimientos fueron posteriormente ampliados por autores
+de diferentes regiones.
+</p>
+
+<p>
+Entre las figuras destacadas se encuentran <strong>Al-Juarismi</strong>,
+relacionado con el desarrollo del álgebra, e <strong>Ibn Sina</strong>,
+cuyos trabajos médicos tuvieron una amplia influencia durante siglos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El islam en África, Asia y Europa</h2>
+
+<p>
+El islam se extendió mucho más allá de Arabia mediante diferentes procesos
+históricos. En <strong>África</strong>, las rutas comerciales favorecieron
+su expansión hacia el Sahara y África occidental, mientras que en el este
+del continente surgieron comunidades musulmanas vinculadas al comercio del
+océano Índico.
+</p>
+
+<p>
+En <strong>Asia</strong>, el islam llegó a Persia, Asia central, India,
+China y posteriormente al sudeste asiático. El comercio, las migraciones,
+las redes intelectuales y diferentes procesos políticos contribuyeron a
+su expansión.
+</p>
+
+<p>
+En <strong>Europa</strong>, el islam se estableció especialmente en
+Al-Ándalus y en diferentes territorios del Mediterráneo y los Balcanes.
+Estas sociedades desarrollaron formas propias de cultura, arquitectura,
+ciencia y organización política.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Los grandes imperios islámicos</h2>
+
+<p>
+Después de la fragmentación de los primeros califatos surgieron numerosos
+Estados y dinastías musulmanas. Entre los más importantes estuvieron los
+<strong>seléucidas, mamelucos, otomanos, safávidas y mogoles</strong>.
+</p>
+
+<p>
+Estos imperios controlaron territorios extensos y reunieron poblaciones de
+diferentes lenguas, culturas y tradiciones religiosas. Sus gobiernos
+desarrollaron sistemas administrativos y militares adaptados a sus
+respectivos territorios.
+</p>
+
+<p>
+El <strong>Imperio otomano</strong>, establecido a finales del siglo XIII,
+se convirtió posteriormente en una de las principales potencias del mundo
+islámico y mantuvo su existencia hasta comienzos del siglo XX.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El islam en la Edad Moderna</h2>
+
+<p>
+Durante la Edad Moderna, los grandes Estados musulmanes mantuvieron
+relaciones comerciales, militares y diplomáticas con Europa, África y Asia.
+Los imperios otomano, safávida y mogol dominaron extensos territorios y
+desarrollaron importantes centros urbanos y culturales.
+</p>
+
+<p>
+A partir del siglo XVIII, las potencias europeas incrementaron su presencia
+económica y política en diferentes regiones de mayoría musulmana. Durante
+los siglos XIX y XX, numerosos territorios quedaron bajo diferentes formas
+de dominio colonial europeo.
+</p>
+
+<p>
+Estos procesos modificaron las estructuras políticas y económicas de muchas
+sociedades musulmanas y contribuyeron a la formación de los Estados
+modernos que surgirían posteriormente.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El islam contemporáneo</h2>
+
+<p>
+Durante los siglos XIX y XX, las sociedades musulmanas experimentaron
+importantes transformaciones relacionadas con la modernización, el
+colonialismo, la formación de nuevos Estados y los cambios económicos y
+sociales.
+</p>
+
+<p>
+El islam continuó desarrollándose en diferentes regiones del mundo y surgieron
+diversos movimientos intelectuales, políticos y religiosos. Las comunidades
+musulmanas también establecieron nuevas instituciones educativas, culturales
+y religiosas.
+</p>
+
+<p>
+Actualmente, el islam reúne comunidades muy diversas pertenecientes a
+diferentes tradiciones, entre ellas <strong>suníes y chiíes</strong>.
+Los musulmanes viven en prácticamente todas las regiones del mundo y
+mantienen una gran diversidad de lenguas, culturas y formas de práctica
+religiosa.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+Memoria del Mundo — Civilizaciones, Historia y Patrimonio
+
+</footer>
+
+</body>
+
+</html>
 
