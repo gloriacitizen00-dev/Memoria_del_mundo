@@ -1,1 +1,1027 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Escritura | Memoria del Mundo</title>
+
+<meta name="description"
+content="Historia de la escritura: sus primeros sistemas, la escritura cuneiforme, los jeroglíficos, China, los alfabetos, los manuscritos, la imprenta y la escritura digital.">
+
+<meta name="keywords"
+content="escritura, historia de la escritura, cuneiforme, jeroglíficos, escritura china, alfabeto, escritura árabe, escritura hebrea, imprenta">
+
+<meta name="author" content="Memoria del Mundo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+}
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+}
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+}
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+}
+
+.dropdown{
+
+    position:relative;
+}
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+}
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+    padding:70px 30px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:52px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+}
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+}
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+}
+
+section strong{
+
+    color:var(--text);
+}
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+}
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+    }
+
+    .hero{
+
+        padding:50px 25px;
+    }
+
+    .hero h1{
+
+        font-size:38px;
+    }
+
+    section{
+
+        padding:30px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">
+Memoria del Mundo
+</a>
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Orígenes
+</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">
+Primeros seres humanos
+</a>
+
+<a href="revolucion-neolitica.html">
+Revolución neolítica
+</a>
+
+<a href="primeras-ciudades.html">
+Primeras ciudades
+</a>
+
+<a href="escritura.html">
+Escritura
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Civilizaciones
+</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">
+Mesopotamia
+</a>
+
+<a href="egipto.html">
+Egipto
+</a>
+
+<a href="persia.html">
+Persia
+</a>
+
+<a href="india.html">
+India
+</a>
+
+<a href="china.html">
+China
+</a>
+
+<a href="tibet.html">
+Tíbet
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Religiones
+</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">
+Religiones antiguas
+</a>
+
+<a href="judaismo.html">
+Judaísmo
+</a>
+
+<a href="cristianismo.html">
+Cristianismo
+</a>
+
+<a href="islam.html">
+Islam
+</a>
+
+<a href="#">
+Hinduismo
+</a>
+
+<a href="#">
+Budismo
+</a>
+
+<a href="#">
+Jainismo
+</a>
+
+<a href="#">
+Zoroastrismo
+</a>
+
+<a href="#">
+Sijismo
+</a>
+
+<a href="#">
+Cienciología
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Cultura
+</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">
+Escritura
+</a>
+
+<a href="#">
+Literatura
+</a>
+
+<a href="#">
+Arte
+</a>
+
+<a href="#">
+Ciencia
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Historia
+</button>
+
+<div class="dropdown-content">
+
+<a href="#">
+Antigüedad
+</a>
+
+<a href="#">
+Edad Media
+</a>
+
+<a href="#">
+Edad Moderna
+</a>
+
+<a href="#">
+Mundo Contemporáneo
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+<h1>Escritura</h1>
+
+<p>
+La historia de la escritura y de los sistemas que las sociedades humanas
+desarrollaron para registrar, transmitir y conservar información.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>¿Qué es la escritura?</h2>
+
+<p>
+La <strong>escritura</strong> es un sistema organizado de signos utilizado
+para representar y comunicar información mediante un soporte físico o
+digital. A diferencia de una simple marca o imagen, un sistema de escritura
+utiliza signos que siguen determinadas reglas para transmitir un lenguaje.
+</p>
+
+<p>
+Los primeros sistemas de escritura surgieron en sociedades que necesitaban
+registrar información relacionada con actividades como el
+<strong>comercio, la administración, los impuestos, las propiedades y los
+rituales religiosos</strong>.
+</p>
+
+<p>
+Con el tiempo, la escritura dejó de utilizarse solamente para asuntos
+administrativos y comenzó a registrar leyes, relatos históricos, literatura,
+conocimientos científicos y textos religiosos.
+</p>
+
+<p>
+La escritura permitió conservar información más allá de la memoria de una
+persona y transformó profundamente la manera en que las sociedades
+transmitían conocimiento entre generaciones.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Antes de la escritura</h2>
+
+<p>
+Antes de que existieran sistemas de escritura, las sociedades humanas
+utilizaron diferentes formas de <strong>representación y registro</strong>.
+Marcas sobre piedra, hueso, cerámica y otros materiales podían servir para
+representar cantidades, objetos o acontecimientos.
+</p>
+
+<p>
+En algunas sociedades del antiguo Cercano Oriente se utilizaron también
+<strong>fichas de arcilla</strong> para representar productos y cantidades.
+Estos sistemas ayudaron a desarrollar formas cada vez más complejas de
+registro económico y administrativo.
+</p>
+
+<p>
+Sin embargo, no todas las marcas antiguas pueden considerarse escritura.
+La diferencia fundamental es que un sistema de escritura debe permitir
+representar información lingüística mediante un conjunto organizado de
+signos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Mesopotamia y la escritura cuneiforme</h2>
+
+<p>
+La escritura conocida más antigua surgió en <strong>Mesopotamia</strong>
+durante finales del IV milenio a. C., especialmente en la ciudad de
+<strong>Uruk</strong>. Los primeros documentos conocidos estaban
+relacionados principalmente con la administración y el registro de bienes.
+</p>
+
+<p>
+Los escribas utilizaban un instrumento de caña para realizar marcas sobre
+tablillas de arcilla húmeda. Estas marcas tenían forma de pequeñas
+impresiones, por lo que el sistema recibió posteriormente el nombre de
+<strong>escritura cuneiforme</strong>.
+</p>
+
+<p>
+Con el tiempo, la escritura cuneiforme se utilizó para diferentes lenguas,
+incluyendo el <strong>sumerio y el acadio</strong>. También permitió
+registrar leyes, cartas, textos religiosos, relatos literarios y documentos
+administrativos.
+</p>
+
+<p>
+La escritura mesopotámica continuó utilizándose durante más de tres mil
+años y se convirtió en uno de los sistemas de escritura más importantes del
+antiguo Oriente Próximo.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Egipto y los jeroglíficos</h2>
+
+<p>
+En el antiguo Egipto se desarrolló un sistema de escritura propio hacia
+finales del <strong>IV milenio a. C.</strong>. Los signos podían representar
+objetos, ideas o sonidos y fueron utilizados para registrar diferentes
+tipos de información.
+</p>
+
+<p>
+Los <strong>jeroglíficos</strong> se emplearon especialmente en monumentos,
+templos, tumbas y objetos relacionados con la religión y el poder. También
+existieron formas más rápidas de escritura, como la escritura
+<strong>hierática</strong> y posteriormente la <strong>demótica</strong>.
+</p>
+
+<p>
+Los escribas egipcios utilizaron la escritura para registrar textos
+religiosos, documentos administrativos, literatura, leyes y diferentes
+aspectos de la vida cotidiana.
+</p>
+
+<p>
+Los jeroglíficos continuaron utilizándose durante miles de años hasta que
+el conocimiento de su lectura se perdió. Su desciframiento moderno comenzó
+con la <strong>Piedra de Rosetta</strong>, estudiada por investigadores
+europeos durante el siglo XIX.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura en China y la dinastía Shang</h2>
+
+<p>
+La escritura china constituye una de las tradiciones escritas más antiguas
+que continúan teniendo una relación histórica directa con un sistema de
+escritura utilizado posteriormente.
+</p>
+
+<p>
+Las primeras evidencias claras de escritura china desarrollada pertenecen a
+la <strong>dinastía Shang</strong>, aproximadamente desde el siglo XIII o
+XII a. C. Muchas de estas inscripciones fueron realizadas sobre
+<strong>huesos de animales y caparazones de tortuga</strong>.
+</p>
+
+<p>
+Estos objetos eran utilizados principalmente en prácticas de adivinación.
+Las inscripciones registraban preguntas dirigidas a los antepasados o a
+fuerzas sobrenaturales y posteriormente podían registrar los resultados de
+los rituales.
+</p>
+
+<p>
+La escritura Shang es especialmente importante porque sus signos muestran
+una relación histórica con diferentes formas posteriores de escritura
+china, aunque el sistema experimentó numerosas transformaciones a lo largo
+de los siglos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La evolución de la escritura china</h2>
+
+<p>
+Después de la dinastía Shang, los sistemas de escritura chinos continuaron
+transformándose durante las dinastías <strong>Zhou, Qin y Han</strong>.
+Los signos fueron adquiriendo nuevas formas y estilos según los materiales
+y las necesidades administrativas.
+</p>
+
+<p>
+Durante la unificación realizada por <strong>Qin Shi Huang</strong> en el
+siglo III a. C., se impulsó una estandarización de los caracteres utilizados
+en la administración imperial.
+</p>
+
+<p>
+Posteriormente se desarrollaron diferentes estilos de escritura, entre ellos
+la escritura de sello, la escritura clerical y la escritura regular. Estos
+estilos influyeron en la tradición caligráfica china y en otros sistemas de
+escritura de Asia oriental.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Los alfabetos del Mediterráneo</h2>
+
+<p>
+En el Mediterráneo oriental surgieron sistemas de escritura que representaban
+principalmente <strong>sonidos del lenguaje</strong>. Esta característica
+permitió desarrollar sistemas más reducidos que los utilizados por algunas
+escrituras logográficas o silábicas.
+</p>
+
+<p>
+Uno de los sistemas más influyentes fue el desarrollado por los pueblos
+<strong>fenicios</strong>, que utilizaba signos principalmente para
+representar consonantes.
+</p>
+
+<p>
+La expansión comercial de los fenicios contribuyó a la difusión de su
+sistema por diferentes regiones del Mediterráneo. Posteriormente, otros
+pueblos adaptaron estos signos a sus propias lenguas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Del alfabeto fenicio al griego</h2>
+
+<p>
+Los <strong>griegos</strong> adoptaron y modificaron el sistema de escritura
+fenicio durante el primer milenio a. C. Una de sus principales innovaciones
+fue utilizar determinados signos para representar <strong>vocales</strong>.
+</p>
+
+<p>
+Esta modificación produjo un sistema alfabético más adecuado para representar
+la lengua griega y tuvo una influencia considerable sobre otros alfabetos
+posteriores.
+</p>
+
+<p>
+A través de diferentes transformaciones históricas, la tradición alfabética
+griega influyó en sistemas como el <strong>alfabeto etrusco y el latino</strong>,
+que posteriormente tendría una enorme difusión.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El alfabeto latino</h2>
+
+<p>
+El <strong>alfabeto latino</strong> se desarrolló a partir de alfabetos
+utilizados en la península itálica, especialmente a través de la influencia
+del alfabeto etrusco, que a su vez estaba relacionado con el griego.
+</p>
+
+<p>
+Con la expansión de <strong>Roma</strong>, el alfabeto latino comenzó a
+utilizarse en una gran parte de Europa y en diferentes territorios del
+Mediterráneo.
+</p>
+
+<p>
+Después de la caída del Imperio romano, el alfabeto continuó utilizándose
+en diferentes lenguas europeas. Con el tiempo se convirtió en la base de
+numerosos sistemas de escritura modernos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura hebrea</h2>
+
+<p>
+La escritura hebrea pertenece a la familia de sistemas de escritura
+<strong>semíticos</strong> desarrollados en el antiguo Levante. Su evolución
+estuvo relacionada con otros alfabetos de la región.
+</p>
+
+<p>
+La forma conocida como <strong>alfabeto hebreo cuadrado</strong> se desarrolló
+a partir de la escritura aramea y fue adoptada progresivamente por las
+comunidades judías.
+</p>
+
+<p>
+Este sistema se utilizó para escribir la <strong>Biblia hebrea</strong> y
+posteriormente numerosos textos religiosos, jurídicos, literarios y
+científicos de las comunidades judías.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura árabe</h2>
+
+<p>
+La escritura árabe se desarrolló a partir de antiguas tradiciones de
+escritura semítica utilizadas en Arabia y regiones vecinas. Con la expansión
+del islam, adquirió una importancia mucho mayor.
+</p>
+
+<p>
+La escritura árabe fue utilizada para registrar el <strong>Corán</strong>
+y posteriormente se convirtió en el sistema principal para escribir la
+lengua árabe y otras lenguas de diferentes regiones musulmanas.
+</p>
+
+<p>
+A lo largo de los siglos surgieron diferentes estilos de caligrafía árabe,
+utilizados en manuscritos, arquitectura, documentos administrativos y
+objetos artísticos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Escrituras de India y Asia</h2>
+
+<p>
+En el sur de Asia surgieron diferentes sistemas de escritura. Uno de los
+más importantes fue el <strong>brahmi</strong>, utilizado desde al menos
+el siglo III a. C. y conocido especialmente por las inscripciones asociadas
+con el emperador <strong>Ashoka</strong>.
+</p>
+
+<p>
+A partir de diferentes tradiciones derivadas o relacionadas con Brahmi se
+desarrollaron numerosos sistemas utilizados posteriormente para escribir
+lenguas del sur y del sudeste asiático.
+</p>
+
+<p>
+Estos sistemas muestran que la escritura evolucionó de diferentes maneras
+según las lenguas, las regiones y las necesidades de las sociedades que las
+utilizaban.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura en Mesoamérica</h2>
+
+<p>
+En Mesoamérica también surgieron sistemas de escritura desarrollados de
+manera independiente de las tradiciones del Viejo Mundo. Diferentes pueblos
+utilizaron signos para registrar nombres, acontecimientos, fechas y
+contenidos religiosos.
+</p>
+
+<p>
+La escritura <strong>maya</strong> es uno de los sistemas más conocidos.
+Utilizaba una combinación de signos que podían representar palabras,
+sílabas y otros elementos del lenguaje.
+</p>
+
+<p>
+Las inscripciones mayas aparecen en monumentos, cerámica, edificios y
+manuscritos. Su desciframiento moderno permitió conocer numerosos aspectos
+de la historia política y religiosa de las ciudades mayas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura como herramienta de poder y administración</h2>
+
+<p>
+Desde sus primeras etapas, la escritura estuvo estrechamente relacionada con
+la <strong>administración de las sociedades</strong>. Los gobiernos y las
+instituciones utilizaron documentos para registrar impuestos, propiedades,
+comercio, leyes y obligaciones.
+</p>
+
+<p>
+Los escribas adquirieron una función especializada porque la lectura y la
+escritura requerían conocimientos que no estaban disponibles para toda la
+población.
+</p>
+
+<p>
+La escritura permitió también conservar decisiones políticas y jurídicas,
+facilitando la administración de territorios cada vez más grandes y
+complejos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura y la conservación de la memoria</h2>
+
+<p>
+La escritura permitió registrar información que podía sobrevivir a la vida
+de las personas que la producían. Esto transformó la transmisión del
+conocimiento y permitió conservar <strong>historias, leyes, relatos,
+genealogías y tradiciones religiosas</strong>.
+</p>
+
+<p>
+Los textos escritos también permitieron comparar versiones, corregir,
+copiar y reinterpretar información transmitida durante generaciones.
+</p>
+
+<p>
+Gran parte de lo que conocemos sobre las sociedades antiguas procede de
+documentos escritos conservados en tablillas, papiros, pergaminos,
+inscripciones, manuscritos y otros soportes.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>De los manuscritos a la imprenta</h2>
+
+<p>
+Durante gran parte de la historia, los textos fueron reproducidos
+manualmente por <strong>escribas y copistas</strong>. Este proceso requería
+mucho tiempo y hacía que los manuscritos fueran objetos relativamente
+limitados y costosos.
+</p>
+
+<p>
+La fabricación del <strong>papel</strong> y su expansión hacia diferentes
+regiones facilitó la producción y circulación de textos. En China también
+se desarrollaron técnicas de impresión mucho antes de la imprenta europea.
+</p>
+
+<p>
+Durante el siglo XV, <strong>Johannes Gutenberg</strong> desarrolló en
+Europa una imprenta de tipos móviles que permitió producir grandes
+cantidades de textos de manera más rápida.
+</p>
+
+<p>
+La imprenta transformó la circulación del conocimiento y tuvo consecuencias
+profundas para la educación, la religión, la ciencia y la política.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La escritura en la era digital</h2>
+
+<p>
+Durante los siglos XX y XXI, la escritura pasó progresivamente del papel a
+los medios electrónicos. Computadoras, teléfonos y redes digitales
+permitieron producir, copiar y transmitir textos prácticamente de manera
+instantánea.
+</p>
+
+<p>
+Los sistemas digitales también tuvieron que desarrollar estándares capaces
+de representar diferentes alfabetos y sistemas de escritura. Uno de los más
+importantes es <strong>Unicode</strong>, que permite codificar caracteres
+de numerosas lenguas y sistemas de escritura.
+</p>
+
+<p>
+La escritura continúa transformándose con las nuevas tecnologías. Hoy puede
+aparecer en documentos, páginas web, redes sociales, bases de datos,
+aplicaciones y sistemas de inteligencia artificial.
+</p>
+
+<p>
+Desde las primeras tablillas de arcilla hasta los sistemas digitales, la
+escritura ha permitido a las sociedades humanas <strong>registrar,
+transmitir y conservar información a través del tiempo</strong>.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+Memoria del Mundo — Civilizaciones, Historia y Patrimonio
+
+</footer>
+
+
+</body>
+
+</html>
+```
