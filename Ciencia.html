@@ -1,1 +1,1169 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ciencia | Memoria del Mundo</title>
+
+    <meta name="description"
+        content="Historia de la ciencia y del conocimiento humano, desde las primeras observaciones hasta la ciencia contemporánea y la era digital.">
+
+    <meta name="keywords"
+        content="ciencia, historia de la ciencia, astronomía, matemáticas, medicina, física, química, biología, conocimiento">
+
+    <meta name="author" content="Gloria Martínez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:
+        linear-gradient(
+            rgba(251,246,234,.94),
+            rgba(251,246,234,.94)
+        );
+
+    color:var(--text);
+
+    font-family:'Cormorant Garamond',serif;
+
+    line-height:1.7;
+
+    padding-top:80px;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:rgba(255,253,247,.97);
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+}
+
+
+.nav{
+
+    width:95%;
+
+    max-width:1400px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+
+.logo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    letter-spacing:1px;
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    padding:12px 14px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+}
+
+
+.nav-links a:hover,
+.dropdown-button:hover{
+
+    color:var(--clay-dark);
+}
+
+
+/* =========================
+   DROPDOWNS
+========================= */
+
+.dropdown{
+
+    position:relative;
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:220px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px 0;
+
+    z-index:1001;
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+    white-space:nowrap;
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:90px 20px 80px;
+
+    margin-bottom:60px;
+
+    background:
+        linear-gradient(
+            rgba(247,240,223,.92),
+            rgba(247,240,223,.92)
+        );
+
+    border-bottom:1px solid var(--border);
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:64px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+}
+
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:21px;
+
+    color:var(--text-light);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+}
+
+
+section strong{
+
+    color:var(--text);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    margin-top:100px;
+}
+
+
+footer h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+
+footer p{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:12px;
+
+    opacity:.8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav{
+
+        flex-direction:column;
+
+        padding:10px 0;
+    }
+
+    .topbar{
+
+        height:auto;
+    }
+
+    body{
+
+        padding-top:120px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero h1{
+
+        font-size:46px;
+    }
+
+    .hero p{
+
+        font-size:19px;
+    }
+
+    section{
+
+        padding:30px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:38px;
+    }
+
+    section h2{
+
+        font-size:26px;
+    }
+
+    section p{
+
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <nav class="nav">
+
+        <a href="index.html" class="logo">
+            Memoria del Mundo
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Orígenes
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="primeros-homininos.html">
+                        Primeros seres humanos
+                    </a>
+
+                    <a href="revolucion-neolitica.html">
+                        Revolución neolítica
+                    </a>
+
+                    <a href="primeras-ciudades.html">
+                        Primeras ciudades
+                    </a>
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Civilizaciones
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="mesopotamia.html">
+                        Mesopotamia
+                    </a>
+
+                    <a href="egipto.html">
+                        Egipto
+                    </a>
+
+                    <a href="persia.html">
+                        Persia
+                    </a>
+
+                    <a href="india.html">
+                        India
+                    </a>
+
+                    <a href="china.html">
+                        China
+                    </a>
+
+                    <a href="#">
+                        Tibet
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Religiones
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="religiones-antiguas.html">
+                        Religiones antiguas
+                    </a>
+
+                    <a href="judaismo.html">
+                        Judaísmo
+                    </a>
+
+                    <a href="cristianismo.html">
+                        Cristianismo
+                    </a>
+
+                    <a href="islam.html">
+                        Islam
+                    </a>
+
+                    <a href="#">
+                        Hinduismo
+                    </a>
+
+                    <a href="#">
+                        Budismo
+                    </a>
+
+                    <a href="#">
+                        Jainismo
+                    </a>
+
+                    <a href="#">
+                        Zoroastrismo
+                    </a>
+
+                    <a href="#">
+                        Sijismo
+                    </a>
+
+                    <a href="#">
+                        Cienciología
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Cultura
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                    <a href="literatura.html">
+                        Literatura
+                    </a>
+
+                    <a href="arte.html">
+                        Arte
+                    </a>
+
+                    <a href="ciencia.html">
+                        Ciencia
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Historia
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="#">
+                        Antigüedad
+                    </a>
+
+                    <a href="#">
+                        Edad Media
+                    </a>
+
+                    <a href="#">
+                        Edad Moderna
+                    </a>
+
+                    <a href="#">
+                        Mundo Contemporáneo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<header class="hero">
+
+    <div class="container">
+
+        <h1>Ciencia</h1>
+
+        <p>
+            Historia del conocimiento científico y de las formas en que las
+            sociedades humanas han estudiado la naturaleza, el universo y sus
+            propios cuerpos.
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<section>
+
+    <h2>¿Qué es la ciencia?</h2>
+
+    <p>
+        La ciencia es una forma organizada de <strong>observar, estudiar y
+        explicar el mundo natural</strong>. A través de la observación, la
+        formulación de preguntas y el análisis de evidencias, las sociedades
+        humanas han desarrollado conocimientos sobre la naturaleza y sus
+        procesos.
+    </p>
+
+    <p>
+        El conocimiento científico se construye mediante diferentes métodos
+        de investigación. La observación, la experimentación, la medición y
+        la comparación permiten poner a prueba explicaciones y desarrollar
+        nuevas ideas.
+    </p>
+
+    <p>
+        La ciencia comprende numerosos campos, entre ellos
+        <strong>la astronomía, las matemáticas, la medicina, la física, la
+        química, la biología y las ciencias de la Tierra</strong>. Estas áreas
+        se han desarrollado de diferentes maneras y en distintos períodos
+        históricos.
+    </p>
+
+    <p>
+        La historia de la ciencia no pertenece a una sola civilización.
+        <strong>Mesopotamia, Egipto, India, China, Grecia, el mundo islámico,
+        Europa y muchas otras sociedades</strong> realizaron observaciones,
+        desarrollaron técnicas y conservaron conocimientos que contribuyeron
+        al desarrollo científico posterior.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>El conocimiento antes de la ciencia</h2>
+
+    <p>
+        Mucho antes de la aparición de la ciencia como disciplina organizada,
+        las sociedades humanas desarrollaron conocimientos sobre su entorno.
+        Observar los ciclos de las estaciones, los animales, las plantas y
+        los movimientos del cielo era fundamental para la vida cotidiana.
+    </p>
+
+    <p>
+        La experiencia acumulada permitió desarrollar conocimientos prácticos
+        relacionados con <strong>la agricultura, la construcción, la navegación,
+        la medicina y la fabricación de herramientas</strong>.
+    </p>
+
+    <p>
+        Estos conocimientos no seguían necesariamente los métodos científicos
+        modernos, pero constituyeron una parte importante del desarrollo
+        histórico de la observación y la investigación sobre el mundo natural.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>Mesopotamia y los primeros conocimientos científicos</h2>
+
+    <p>
+        Las sociedades de Mesopotamia desarrollaron sistemas de conocimiento
+        relacionados con la agricultura, la administración, las matemáticas
+        y la observación del cielo.
+    </p>
+
+    <p>
+        Los escribas utilizaron sistemas matemáticos basados principalmente
+        en el <strong>sistema sexagesimal</strong>. Este conocimiento permitió
+        realizar cálculos relacionados con tierras, comercio, calendarios y
+        otras actividades administrativas.
+    </p>
+
+    <p>
+        Los astrónomos mesopotámicos registraron durante siglos fenómenos
+        celestes y desarrollaron calendarios. Sus observaciones contribuyeron
+        posteriormente al desarrollo de la astronomía en otras culturas.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>Egipto y el desarrollo de las matemáticas y la medicina</h2>
+
+    <p>
+        En el antiguo Egipto se desarrollaron conocimientos matemáticos
+        relacionados con la administración, la agricultura, la construcción
+        y la medición de terrenos.
+    </p>
+
+    <p>
+        Los egipcios también desarrollaron conocimientos médicos registrados
+        en diferentes documentos. El <strong>Papiro de Ebers</strong>, por
+        ejemplo, contiene información sobre enfermedades, tratamientos y
+        preparados médicos.
+    </p>
+
+    <p>
+        La construcción de grandes monumentos también requirió conocimientos
+        de geometría, medición, ingeniería y organización del trabajo.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en la antigua Grecia</h2>
+
+    <p>
+        Durante la Antigüedad griega surgieron nuevas formas de estudiar la
+        naturaleza mediante la observación, el razonamiento y la discusión
+        filosófica.
+    </p>
+
+    <p>
+        Pensadores como <strong>Aristóteles, Hipócrates, Euclides y
+        Arquímedes</strong> realizaron aportes en campos como la filosofía
+        natural, la medicina, la geometría y la física.
+    </p>
+
+    <p>
+        Aunque la ciencia griega no utilizaba los métodos experimentales
+        modernos, sus investigaciones influyeron profundamente en el
+        desarrollo posterior del conocimiento científico.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La astronomía y las matemáticas griegas</h2>
+
+    <p>
+        La observación del cielo ocupó un lugar importante en el conocimiento
+        griego. Los astrónomos estudiaron los movimientos aparentes del Sol,
+        la Luna, los planetas y las estrellas.
+    </p>
+
+    <p>
+        <strong>Hiparco</strong> realizó importantes observaciones astronómicas
+        y desarrolló métodos matemáticos para estudiar las posiciones de los
+        cuerpos celestes.
+    </p>
+
+    <p>
+        Las matemáticas también alcanzaron un gran desarrollo. La geometría
+        de <strong>Euclides</strong> se convirtió en una de las obras
+        matemáticas más influyentes de la Antigüedad.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en el mundo helenístico</h2>
+
+    <p>
+        Después de las conquistas de Alejandro Magno, diferentes centros del
+        mundo mediterráneo y del Cercano Oriente reunieron conocimientos
+        procedentes de diversas tradiciones.
+    </p>
+
+    <p>
+        La ciudad de <strong>Alejandría</strong> se convirtió en uno de los
+        principales centros intelectuales del mundo antiguo. Allí trabajaron
+        matemáticos, astrónomos, médicos y otros investigadores.
+    </p>
+
+    <p>
+        <strong>Arquímedes, Eratóstenes y Herón de Alejandría</strong> realizaron
+        investigaciones relacionadas con las matemáticas, la geografía, la
+        astronomía y la mecánica.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en Roma</h2>
+
+    <p>
+        El mundo romano heredó numerosos conocimientos de las culturas
+        griega y helenística y los aplicó a diferentes necesidades prácticas.
+    </p>
+
+    <p>
+        La ingeniería romana permitió construir <strong>acueductos, caminos,
+        puentes, sistemas de drenaje y grandes edificios</strong>. Estas
+        obras requerían conocimientos de medición, materiales y construcción.
+    </p>
+
+    <p>
+        En medicina destacó <strong>Galeno</strong>, cuyos escritos tuvieron
+        una influencia importante durante siglos en Europa y el mundo
+        mediterráneo.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en India</h2>
+
+    <p>
+        India desarrolló importantes tradiciones matemáticas, astronómicas y
+        médicas durante diferentes períodos de su historia.
+    </p>
+
+    <p>
+        Los matemáticos indios contribuyeron al desarrollo del
+        <strong>sistema decimal y del concepto de cero</strong>, elementos que
+        posteriormente fueron transmitidos a otras regiones.
+    </p>
+
+    <p>
+        La astronomía también alcanzó un importante desarrollo. En medicina,
+        diferentes tradiciones dieron origen a sistemas como el
+        <strong>Ayurveda</strong>, cuya historia se extiende durante siglos.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en China</h2>
+
+    <p>
+        China desarrolló conocimientos científicos y técnicos en campos como
+        la astronomía, la medicina, la agricultura, la ingeniería y la
+        metalurgia.
+    </p>
+
+    <p>
+        Entre sus desarrollos tecnológicos destacan el <strong>papel, la
+        imprenta, la brújula y la pólvora</strong>, aunque cada uno apareció
+        en períodos históricos diferentes.
+    </p>
+
+    <p>
+        Los astrónomos chinos realizaron observaciones sistemáticas del cielo
+        y registraron fenómenos como eclipses, cometas y nuevas estrellas.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en el mundo islámico</h2>
+
+    <p>
+        Entre los siglos VIII y XIII, diferentes centros del mundo islámico
+        reunieron, tradujeron y desarrollaron conocimientos procedentes de
+        tradiciones griegas, persas, indias y de otras regiones.
+    </p>
+
+    <p>
+        Matemáticos como <strong>Al-Juarismi</strong> realizaron aportes
+        fundamentales al álgebra. Astrónomos y médicos también desarrollaron
+        nuevas observaciones, instrumentos y métodos.
+    </p>
+
+    <p>
+        Entre las figuras destacadas se encuentran <strong>Ibn al-Haytham,
+        Al-Biruni, Avicena e Ibn al-Nafis</strong>, asociados con avances en
+        óptica, astronomía y medicina.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en la Edad Media</h2>
+
+    <p>
+        Durante la Edad Media, el conocimiento científico continuó
+        desarrollándose en diferentes regiones de Europa, Asia, África y el
+        mundo islámico.
+    </p>
+
+    <p>
+        Las universidades europeas surgieron a partir del siglo XI y se
+        convirtieron en nuevos centros de estudio. En ellas se conservaron,
+        comentaron y discutieron textos de autores antiguos y medievales.
+    </p>
+
+    <p>
+        Al mismo tiempo, científicos de otras regiones continuaron trabajando
+        en <strong>astronomía, matemáticas, medicina, ingeniería y filosofía
+        natural</strong>.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>El Renacimiento y la transformación del conocimiento</h2>
+
+    <p>
+        Durante los siglos XV y XVI, Europa experimentó importantes cambios
+        intelectuales relacionados con el Renacimiento, la expansión de la
+        imprenta y el acceso a nuevos textos y conocimientos.
+    </p>
+
+    <p>
+        La observación directa de la naturaleza adquirió mayor importancia.
+        Artistas e investigadores estudiaron la <strong>anatomía, la
+        perspectiva, la mecánica y otros fenómenos naturales</strong>.
+    </p>
+
+    <p>
+        Estas transformaciones contribuyeron a crear las condiciones para
+        nuevos métodos de investigación que se desarrollarían durante la
+        Revolución científica.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La Revolución científica</h2>
+
+    <p>
+        Durante los siglos XVI y XVII se produjo una transformación profunda
+        en el estudio de la naturaleza. La observación, las matemáticas y la
+        experimentación adquirieron un papel cada vez más importante.
+    </p>
+
+    <p>
+        <strong>Nicolás Copérnico, Johannes Kepler, Galileo Galilei e Isaac
+        Newton</strong> realizaron contribuciones fundamentales a la astronomía
+        y a la física.
+    </p>
+
+    <p>
+        La publicación de nuevas investigaciones y la creación de sociedades
+        científicas ayudaron a establecer formas más sistemáticas de comunicar
+        y comprobar conocimientos.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La Ilustración y el conocimiento científico</h2>
+
+    <p>
+        Durante el siglo XVIII, la Ilustración promovió una mayor valoración
+        de la razón, la observación y la investigación sistemática.
+    </p>
+
+    <p>
+        Las academias, sociedades científicas y publicaciones permitieron que
+        los investigadores compartieran resultados y desarrollaran nuevas
+        áreas de estudio.
+    </p>
+
+    <p>
+        También se realizaron importantes avances en <strong>astronomía,
+        química, electricidad, anatomía y ciencias naturales</strong>.
+        La clasificación de especies de Carl Linneo fue uno de los desarrollos
+        destacados de este período.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia en los siglos XIX y XX</h2>
+
+    <p>
+        Durante los siglos XIX y XX, la ciencia se expandió rápidamente y se
+        convirtió en una institución fundamental de las sociedades modernas.
+    </p>
+
+    <p>
+        Se produjeron avances importantes en campos como la
+        <strong>evolución, la genética, la microbiología, la química, la
+        física y la astronomía</strong>.
+    </p>
+
+    <p>
+        También surgieron nuevas tecnologías basadas en conocimientos
+        científicos, transformando áreas como la medicina, las comunicaciones,
+        la industria y el transporte.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia contemporánea</h2>
+
+    <p>
+        La ciencia contemporánea comprende una gran cantidad de disciplinas
+        especializadas que estudian desde las partículas subatómicas hasta
+        los ecosistemas y las galaxias.
+    </p>
+
+    <p>
+        Durante los siglos XX y XXI se desarrollaron campos como la
+        <strong>física cuántica, la biología molecular, la genética, la
+        informática, la climatología y la exploración espacial</strong>.
+    </p>
+
+    <p>
+        La investigación científica actual se realiza cada vez más mediante
+        grandes equipos internacionales, laboratorios especializados y
+        sistemas de procesamiento de grandes cantidades de datos.
+    </p>
+
+</section>
+
+
+
+<section>
+
+    <h2>La ciencia y la era digital</h2>
+
+    <p>
+        Las tecnologías digitales han transformado la manera en que se
+        recopilan, procesan y comparten datos científicos. Computadoras,
+        sensores y redes permiten analizar cantidades de información que
+        anteriormente no podían procesarse con la misma rapidez.
+    </p>
+
+    <p>
+        La inteligencia artificial, la simulación computacional y el análisis
+        de grandes conjuntos de datos se utilizan actualmente en campos como
+        <strong>la medicina, la astronomía, la biología y las ciencias
+        climáticas</strong>.
+    </p>
+
+    <p>
+        La ciencia continúa siendo un proceso abierto de investigación:
+        nuevas observaciones pueden confirmar, modificar o cuestionar las
+        explicaciones existentes y generar nuevas preguntas sobre el mundo.
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+    <h3>Memoria del Mundo</h3>
+
+    <p>
+        Historia, cultura y patrimonio de las sociedades humanas.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
