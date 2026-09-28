@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edad Moderna | Memoria del Mundo</title>
+
+<meta name="description"
+content="Edad Moderna: Renacimiento, imprenta, Reforma, expansión marítima, colonización, comercio mundial, ciencia y transformaciones políticas.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+
+}
+
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+
+}
+
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+
+}
+
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+    padding:70px 30px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:52px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+}
+
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+
+section strong{
+
+    color:var(--text);
+
+}
+
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+
+}
+
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:50px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    section{
+
+        padding:30px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN HISTÓRICA
+========================================================= */
+
+.history-menu{
+
+    position:sticky;
+
+    top:76px;
+
+    z-index:900;
+
+    margin-bottom:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.history-menu select{
+
+    width:min(520px,100%);
+
+    padding:15px 20px;
+
+    border:1px solid var(--sand-dark);
+
+    background:rgba(43,36,27,.94);
+
+    color:var(--sand-light);
+
+    font-family:'Cinzel',serif;
+
+    font-size:15px;
+
+    letter-spacing:.4px;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 30px rgba(43,36,27,.18);
+
+}
+
+
+.history-menu select:focus{
+
+    outline:none;
+
+    border-color:var(--sand);
+
+}
+
+
+/* =========================================================
+   MENÚ INTERNO
+   VAINILLA + CARAMELO
+========================================================= */
+
+.section-menu{
+
+    margin:35px 0 55px;
+
+    padding:18px;
+
+    background:rgba(43,36,27,.88);
+
+    border:1px solid rgba(225,201,149,.45);
+
+    box-shadow:0 15px 35px rgba(43,36,27,.16);
+
+}
+
+
+.section-menu-label{
+
+    display:block;
+
+    margin-bottom:9px;
+
+    color:var(--sand-light);
+
+    font-family:'Cinzel',serif;
+
+    font-size:14px;
+
+    letter-spacing:.6px;
+
+}
+
+
+.section-menu select{
+
+    width:100%;
+
+    padding:13px 16px;
+
+    border:1px solid var(--sand-dark);
+
+    background:rgba(112,71,44,.55);
+
+    color:var(--sand-soft);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+}
+
+
+.section-menu select:focus{
+
+    outline:none;
+
+    border-color:var(--sand-light);
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+[id]{
+
+    scroll-margin-top:120px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">
+Memoria del Mundo
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Inicio</a>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Orígenes
+</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">
+Primeros seres humanos
+</a>
+
+<a href="revolucion-neolitica.html">
+Revolución neolítica
+</a>
+
+<a href="primeras-ciudades.html">
+Primeras ciudades
+</a>
+
+<a href="escritura.html">
+Escritura
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Civilizaciones
+</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">Mesopotamia</a>
+<a href="egipto.html">Egipto</a>
+<a href="persia.html">Persia</a>
+<a href="india.html">India</a>
+<a href="china.html">China</a>
+<a href="#">Tíbet</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Religiones
+</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">
+Religiones antiguas
+</a>
+
+<a href="judaismo.html">Judaísmo</a>
+
+<a href="cristianismo.html">Cristianismo</a>
+
+<a href="islam.html">Islam</a>
+
+<a href="#">Hinduismo</a>
+
+<a href="#">Budismo</a>
+
+<a href="#">Jainismo</a>
+
+<a href="#">Zoroastrismo</a>
+
+<a href="#">Sijismo</a>
+
+<a href="#">Cienciología</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Cultura
+</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">Escritura</a>
+
+<a href="literatura.html">Literatura</a>
+
+<a href="arte.html">Arte</a>
+
+<a href="ciencia.html">Ciencia</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Historia
+</button>
+
+<div class="dropdown-content">
+
+<a href="historia.html">Antigüedad</a>
+
+<a href="edad-media.html">Edad Media</a>
+
+<a href="edad-moderna.html">Edad Moderna</a>
+
+<a href="edad-contemporanea.html">
+Edad Contemporánea
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+<main>
+
+
+<div class="hero">
+
+<h1>Edad Moderna</h1>
+
+<p>
+Una época de transformaciones políticas, culturales, religiosas,
+científicas y económicas que conectaron regiones del mundo a una
+escala cada vez mayor.
+</p>
+
+</div>
+
+
+
+<!-- =====================================================
+     MENÚ PRINCIPAL
+===================================================== -->
+
+<div class="history-menu">
+
+<select onchange="irASeccion(this.value)">
+
+<option value="">
+Explorar la Edad Moderna
+</option>
+
+<option value="tema1">
+¿Qué es la Edad Moderna?
+</option>
+
+<option value="tema2">
+La transición desde la Edad Media
+</option>
+
+<option value="tema3">
+El Renacimiento y los cambios culturales
+</option>
+
+<option value="tema4">
+La imprenta y la circulación del conocimiento
+</option>
+
+<option value="tema5">
+La Reforma y las transformaciones religiosas
+</option>
+
+<option value="tema6">
+Las monarquías y la concentración del poder
+</option>
+
+<option value="tema7">
+Los Estados y la diplomacia
+</option>
+
+<option value="tema8">
+La expansión marítima europea
+</option>
+
+<option value="tema9">
+La conquista y colonización de América
+</option>
+
+<option value="tema10">
+África y las nuevas redes comerciales
+</option>
+
+<option value="tema11">
+Asia y los grandes imperios
+</option>
+
+<option value="tema12">
+El comercio mundial
+</option>
+
+<option value="tema13">
+La esclavitud y el comercio atlántico
+</option>
+
+<option value="tema14">
+Ciencia, exploración y nuevas formas de conocimiento
+</option>
+
+<option value="tema15">
+Las sociedades y la vida cotidiana
+</option>
+
+<option value="tema16">
+Las mujeres en la Edad Moderna
+</option>
+
+<option value="tema17">
+Las revoluciones políticas
+</option>
+
+<option value="tema18">
+La transición hacia la Edad Contemporánea
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- =====================================================
+     TEMAS
+===================================================== -->
+
+
+<section id="tema1">
+
+<h2>¿Qué es la Edad Moderna?</h2>
+
+<p>
+La Edad Moderna es el período histórico situado entre la Edad Media
+y la Edad Contemporánea. Su cronología exacta varía según la tradición
+historiográfica, pero suele situarse entre los siglos XV y XVIII.
+</p>
+
+<p>
+Fue una época de grandes transformaciones políticas, económicas,
+religiosas, culturales y científicas. También estuvo marcada por
+una creciente conexión entre regiones de Europa, África, Asia y
+América.
+</p>
+
+</section>
+
+
+
+<section id="tema2">
+
+<h2>La transición desde la Edad Media</h2>
+
+<p>
+El paso de la Edad Media a la Edad Moderna no ocurrió en un único
+momento. Fue un proceso gradual en el que cambiaron las estructuras
+políticas, económicas, culturales y sociales de distintas regiones.
+</p>
+
+<p>
+El crecimiento de las ciudades, la expansión comercial, la consolidación
+de algunos Estados y los cambios culturales contribuyeron a transformar
+el mundo medieval.
+</p>
+
+</section>
+
+
+
+<section id="tema3">
+
+<h2>El Renacimiento y los cambios culturales</h2>
+
+<p>
+El Renacimiento fue un amplio movimiento cultural que se desarrolló
+principalmente en distintas ciudades europeas entre los siglos XIV
+y XVI. Recuperó y reinterpretó elementos de la Antigüedad clásica
+y produjo nuevas formas de expresión artística e intelectual.
+</p>
+
+<p>
+Sus efectos se extendieron a la literatura, el arte, la educación,
+la filosofía y otras áreas del conocimiento.
+</p>
+
+</section>
+
+
+
+<section id="tema4">
+
+<h2>La imprenta y la circulación del conocimiento</h2>
+
+<p>
+La expansión de la imprenta de tipos móviles en Europa durante
+el siglo XV facilitó la reproducción de textos a una escala mucho
+mayor que la de los manuscritos tradicionales.
+</p>
+
+<p>
+La circulación de libros y otras publicaciones contribuyó a ampliar
+el acceso al conocimiento y favoreció la difusión de ideas religiosas,
+científicas, políticas y literarias.
+</p>
+
+</section>
+
+
+
+<section id="tema5">
+
+<h2>La Reforma y las transformaciones religiosas</h2>
+
+<p>
+Durante el siglo XVI surgieron movimientos de reforma religiosa
+que cuestionaron diferentes aspectos de la Iglesia occidental.
+Entre ellos destacó la Reforma protestante, asociada a figuras
+como Martín Lutero, Juan Calvino y otros reformadores.
+</p>
+
+<p>
+Estos procesos provocaron profundas transformaciones religiosas
+y políticas en Europa y estuvieron acompañados por la Reforma
+católica y otros movimientos de renovación dentro del catolicismo.
+</p>
+
+</section>
+
+
+
+<section id="tema6">
+
+<h2>Las monarquías y la concentración del poder</h2>
+
+<p>
+Durante la Edad Moderna, varias monarquías europeas fortalecieron
+sus instituciones centrales, ampliaron sus administraciones y
+desarrollaron mecanismos más complejos de recaudación, justicia
+y organización militar.
+</p>
+
+<p>
+El grado de concentración del poder varió considerablemente entre
+Estados y regiones. Las monarquías coexistieron con parlamentos,
+asambleas, ciudades y otros poderes locales.
+</p>
+
+</section>
+
+
+
+<section id="tema7">
+
+<h2>Los Estados y la diplomacia</h2>
+
+<p>
+La Edad Moderna vio el desarrollo de formas más permanentes de
+diplomacia entre Estados. Las embajadas, tratados, alianzas y
+negociaciones se convirtieron en instrumentos importantes de
+las relaciones internacionales.
+</p>
+
+<p>
+Estos mecanismos coexistieron con guerras, disputas territoriales
+y rivalidades entre diferentes potencias.
+</p>
+
+</section>
+
+
+
+<section id="tema8">
+
+<h2>La expansión marítima europea</h2>
+
+<p>
+Desde finales del siglo XV, Portugal y Castilla impulsaron grandes
+expediciones marítimas que conectaron de manera permanente Europa
+con África, Asia y América.
+</p>
+
+<p>
+La expansión marítima transformó las rutas comerciales y produjo
+nuevos contactos, intercambios y conflictos entre sociedades que
+hasta entonces habían tenido conexiones limitadas o indirectas.
+</p>
+
+</section>
+
+
+
+<section id="tema9">
+
+<h2>La conquista y colonización de América</h2>
+
+<p>
+La llegada de los europeos a América inició procesos de conquista
+y colonización que transformaron profundamente las sociedades
+indígenas y la organización política y económica del continente.
+</p>
+
+<p>
+Las consecuencias incluyeron guerras, epidemias, desplazamientos,
+imposición de nuevas instituciones y religiones y la incorporación
+de América a redes económicas globales dominadas progresivamente
+por las potencias europeas.
+</p>
+
+</section>
+
+
+
+<section id="tema10">
+
+<h2>África y las nuevas redes comerciales</h2>
+
+<p>
+Durante la Edad Moderna, distintas regiones africanas participaron
+activamente en redes comerciales que conectaban África con Europa,
+el Mediterráneo, el océano Índico y, posteriormente, el Atlántico.
+</p>
+
+<p>
+Los intercambios incluyeron oro, marfil, textiles, productos
+agrícolas y personas esclavizadas. Las relaciones comerciales
+variaron según la región y estuvieron acompañadas por cambios
+políticos y económicos.
+</p>
+
+</section>
+
+
+
+<section id="tema11">
+
+<h2>Asia y los grandes imperios</h2>
+
+<p>
+Durante la Edad Moderna existieron grandes Estados e imperios
+en Asia, entre ellos el Imperio otomano, el Imperio safávida,
+el Imperio mogol y la China de las dinastías Ming y Qing.
+</p>
+
+<p>
+Estas sociedades desarrollaron sistemas políticos, económicos
+y culturales propios y participaron en amplias redes comerciales
+que conectaban el Mediterráneo, Asia central, el océano Índico
+y Asia oriental.
+</p>
+
+</section>
+
+
+
+<section id="tema12">
+
+<h2>El comercio mundial</h2>
+
+<p>
+La expansión marítima y el crecimiento de las redes comerciales
+conectaron regiones que anteriormente mantenían vínculos más
+limitados. Productos, metales, alimentos, animales, tecnologías
+y conocimientos comenzaron a circular entre continentes.
+</p>
+
+<p>
+Este proceso contribuyó al desarrollo de una economía mundial
+cada vez más integrada y modificó la importancia económica de
+diferentes regiones.
+</p>
+
+</section>
+
+
+
+<section id="tema13">
+
+<h2>La esclavitud y el comercio atlántico</h2>
+
+<p>
+Durante la Edad Moderna se expandió enormemente el comercio
+transatlántico de personas esclavizadas. Millones de africanos
+fueron capturados, transportados por la fuerza y vendidos en
+diferentes territorios de América.
+</p>
+
+<p>
+La esclavitud estuvo vinculada a sistemas agrícolas y comerciales
+que generaron enormes beneficios para diferentes grupos económicos
+y dejó consecuencias sociales y demográficas que continuaron
+durante siglos.
+</p>
+
+</section>
+
+
+
+<section id="tema14">
+
+<h2>Ciencia, exploración y nuevas formas de conocimiento</h2>
+
+<p>
+Durante la Edad Moderna se produjeron importantes cambios en
+la manera de observar, registrar y explicar el mundo. La astronomía,
+la medicina, las matemáticas, la cartografía y otras áreas
+experimentaron transformaciones.
+</p>
+
+<p>
+Estos cambios no surgieron de una sola tradición. El conocimiento
+europeo incorporó y desarrolló ideas procedentes de sociedades
+anteriores y de contactos con conocimientos de otras regiones.
+</p>
+
+</section>
+
+
+
+<section id="tema15">
+
+<h2>Las sociedades y la vida cotidiana</h2>
+
+<p>
+La vida cotidiana durante la Edad Moderna variaba enormemente
+según la región, la clase social, la actividad económica y
+la condición jurídica de cada persona.
+</p>
+
+<p>
+Agricultura, comercio, artesanía, trabajo doméstico, servicio,
+religión y vida urbana formaban parte de sociedades profundamente
+jerarquizadas y diversas.
+</p>
+
+</section>
+
+
+
+<section id="tema16">
+
+<h2>Las mujeres en la Edad Moderna</h2>
+
+<p>
+Las mujeres participaron en la agricultura, el comercio, la
+producción artesanal, la vida religiosa, la administración de
+hogares y otras actividades económicas y sociales.
+</p>
+
+<p>
+Sus derechos y oportunidades dependían de factores como la región,
+la clase social, el estado civil y las normas jurídicas. También
+existieron mujeres que participaron en actividades intelectuales,
+políticas, religiosas y económicas.
+</p>
+
+</section>
+
+
+
+<section id="tema17">
+
+<h2>Las revoluciones políticas</h2>
+
+<p>
+Durante los siglos XVII y XVIII surgieron conflictos y revoluciones
+que cuestionaron distintas formas de autoridad política y
+contribuyeron a transformar las ideas sobre gobierno y soberanía.
+</p>
+
+<p>
+La Revolución inglesa, la independencia de las Trece Colonias
+y otros procesos políticos prepararon el terreno para las
+grandes transformaciones de finales del siglo XVIII.
+</p>
+
+</section>
+
+
+
+<section id="tema18">
+
+<h2>La transición hacia la Edad Contemporánea</h2>
+
+<p>
+El final de la Edad Moderna fue un proceso gradual marcado por
+transformaciones políticas, económicas, sociales e intelectuales.
+No existe un único acontecimiento que explique por sí solo el
+paso hacia la Edad Contemporánea.
+</p>
+
+<p>
+La <strong>Revolución Industrial</strong> transformó la producción,
+el trabajo y las relaciones económicas; la <strong>Revolución
+estadounidense</strong> planteó nuevas formas de organización
+política; y la <strong>Revolución francesa</strong> alteró
+profundamente las estructuras políticas y sociales de Europa.
+</p>
+
+<p>
+Estos procesos estuvieron relacionados entre sí, pero tuvieron
+causas y consecuencias diferentes. Juntos forman parte de la
+transición que suele situarse entre finales del siglo XVIII
+y el comienzo de la Edad Contemporánea.
+</p>
+
+</section>
+
+
+
+<footer>
+
+Memoria del Mundo<br>
+
+Civilizaciones · Cultura · Historia · Ciencia
+
+</footer>
+
+
+
+<script>
+
+function irASeccion(id){
+
+    if(!id) return;
+
+    const elemento = document.getElementById(id);
+
+    if(elemento){
+
+        elemento.scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
