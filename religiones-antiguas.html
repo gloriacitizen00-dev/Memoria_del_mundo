@@ -1,0 +1,501 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Religiones antiguas | Memoria del Mundo</title>
+
+    <meta name="description"
+        content="Explora las religiones antiguas, sus creencias, dioses, rituales, mitos y su influencia en las primeras sociedades humanas.">
+
+    <meta name="keywords"
+        content="religiones antiguas, religión antigua, dioses antiguos, mitología, rituales, Mesopotamia, Egipto, Grecia, Roma, historia de las religiones">
+
+    <meta property="og:title" content="Religiones antiguas | Memoria del Mundo">
+    <meta property="og:description"
+        content="Explora las religiones antiguas y su influencia en las sociedades humanas.">
+    <meta property="og:url"
+        content="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/religiones-antiguas.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        :root{
+            --sand:#C6A66B;
+            --sand-dark:#8A6A3F;
+            --sand-light:#E1C995;
+            --sand-soft:#F7F0DF;
+
+            --clay:#9A6842;
+            --clay-dark:#70472C;
+
+            --stone:#8B8172;
+            --stone-light:#C9C0B0;
+
+            --text:#2B241B;
+            --text-light:#665D51;
+
+            --white:#FFFDF7;
+            --cream:#FBF6EA;
+            --border:#E1D4B9;
+
+            --shadow:0 20px 50px rgba(120,90,45,.12);
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Montserrat',sans-serif;
+            background:var(--cream);
+            color:var(--text);
+            line-height:1.7;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            z-index:1000;
+
+            background:rgba(255,253,247,.96);
+            border-bottom:1px solid var(--border);
+
+            padding:18px 40px;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+        }
+
+        .nav-logo{
+            font-family:'Cinzel',serif;
+            font-size:20px;
+            font-weight:700;
+            color:var(--clay-dark);
+            text-decoration:none;
+        }
+
+        .nav-links{
+            display:flex;
+            align-items:center;
+            gap:25px;
+        }
+
+        .nav-links a,
+        .dropdown-button{
+            font-family:'Montserrat',sans-serif;
+            font-size:14px;
+            font-weight:500;
+            color:var(--text);
+            text-decoration:none;
+            cursor:pointer;
+        }
+
+        .dropdown{
+            position:relative;
+        }
+
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            top:100%;
+            left:0;
+
+            min-width:220px;
+
+            background:var(--white);
+            border:1px solid var(--border);
+            box-shadow:var(--shadow);
+
+            padding:12px 0;
+        }
+
+        .dropdown-content a{
+            display:block;
+            padding:10px 18px;
+            color:var(--text);
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        .dropdown-content a:hover{
+            background:var(--sand-soft);
+            color:var(--clay-dark);
+        }
+
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+            padding:180px 20px 100px;
+            text-align:center;
+            background:
+                linear-gradient(
+                    rgba(251,246,234,.92),
+                    rgba(251,246,234,.96)
+                );
+        }
+
+        .hero h1{
+            font-family:'Cinzel',serif;
+            font-size:58px;
+            color:var(--clay-dark);
+            margin-bottom:25px;
+        }
+
+        .hero p{
+            max-width:850px;
+            margin:auto;
+            font-family:'Cormorant Garamond',serif;
+            font-size:24px;
+            color:var(--text-light);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main{
+            max-width:1100px;
+            margin:0 auto;
+            padding:20px 30px 80px;
+        }
+
+        section{
+            margin-bottom:80px;
+            background:var(--white);
+            padding:45px;
+            border:1px solid var(--border);
+            box-shadow:var(--shadow);
+        }
+
+        section h2{
+            font-family:'Cinzel',serif;
+            font-size:32px;
+            color:var(--clay-dark);
+            margin-bottom:25px;
+        }
+
+        section p{
+            margin-bottom:20px;
+            color:var(--text-light);
+            font-size:17px;
+        }
+
+        section strong{
+            color:var(--text);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+            background:var(--clay-dark);
+            color:var(--white);
+            text-align:center;
+            padding:45px 20px;
+        }
+
+        footer h3{
+            font-family:'Cinzel',serif;
+            margin-bottom:10px;
+        }
+
+        footer p{
+            font-size:14px;
+            opacity:.85;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px){
+
+            nav{
+                padding:15px 20px;
+            }
+
+            .nav-links{
+                gap:12px;
+            }
+
+            .hero{
+                padding:150px 20px 80px;
+            }
+
+            .hero h1{
+                font-size:42px;
+            }
+
+            .hero p{
+                font-size:21px;
+            }
+
+            section{
+                padding:30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav>
+
+        <a href="index.html" class="nav-logo">
+            Memoria del Mundo
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <!-- ORÍGENES -->
+
+            <div class="dropdown">
+
+                <span class="dropdown-button">
+                    Orígenes
+                </span>
+
+                <div class="dropdown-content">
+
+                    <a href="primeros-homininos.html">
+                        Primeros seres humanos
+                    </a>
+
+                    <a href="revolucion-neolitica.html">
+                        Revolución neolítica
+                    </a>
+
+                    <a href="primeras-ciudades.html">
+                        Primeras ciudades
+                    </a>
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CIVILIZACIONES -->
+
+            <div class="dropdown">
+
+                <span class="dropdown-button">
+                    Civilizaciones
+                </span>
+
+                <div class="dropdown-content">
+
+                    <a href="mesopotamia.html">
+                        Mesopotamia
+                    </a>
+
+                    <a href="egipto.html">
+                        Egipto
+                    </a>
+
+                    <a href="persia.html">
+                        Persia
+                    </a>
+
+                    <a href="india.html">
+                        India
+                    </a>
+
+                    <a href="china.html">
+                        China
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RELIGIONES -->
+
+            <div class="dropdown">
+
+                <span class="dropdown-button">
+                    Religiones
+                </span>
+
+                <div class="dropdown-content">
+
+                    <a href="religiones-antiguas.html">
+                        Religiones antiguas
+                    </a>
+
+                    <a href="#">
+                        Judaísmo
+                    </a>
+
+                    <a href="#">
+                        Cristianismo
+                    </a>
+
+                    <a href="#">
+                        Islam
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CULTURA -->
+
+            <div class="dropdown">
+
+                <span class="dropdown-button">
+                    Cultura
+                </span>
+
+                <div class="dropdown-content">
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                    <a href="#">
+                        Literatura
+                    </a>
+
+                    <a href="#">
+                        Arte
+                    </a>
+
+                    <a href="#">
+                        Ciencia
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HISTORIA -->
+
+            <div class="dropdown">
+
+                <span class="dropdown-button">
+                    Historia
+                </span>
+
+                <div class="dropdown-content">
+
+                    <a href="#">
+                        Antigüedad
+                    </a>
+
+                    <a href="#">
+                        Edad Media
+                    </a>
+
+                    <a href="#">
+                        Edad Moderna
+                    </a>
+
+                    <a href="#">
+                        Mundo Contemporáneo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <header class="hero">
+
+        <h1>
+            Religiones antiguas
+        </h1>
+
+        <p>
+            Las creencias religiosas de las primeras sociedades humanas
+            y su influencia en la historia, la cultura y la vida cotidiana.
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <main>
+
+        <!-- AQUÍ VAMOS A AGREGAR LOS SECTION -->
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            Memoria del Mundo
+        </h3>
+
+        <p>
+            Un atlas digital de la historia humana.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
