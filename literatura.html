@@ -1,1 +1,1068 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Literatura | Memoria del Mundo</title>
+
+<meta name="description"
+content="Historia de la literatura: tradición oral, primeras obras literarias, literatura de las grandes civilizaciones, Edad Media, Renacimiento, literatura moderna, contemporánea y digital.">
+
+<meta name="keywords"
+content="literatura, historia de la literatura, literatura antigua, literatura mesopotámica, literatura egipcia, literatura griega, literatura romana, literatura medieval, literatura moderna">
+
+<meta name="author" content="Memoria del Mundo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+
+}
+
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+
+}
+
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+
+}
+
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+    padding:70px 30px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:52px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+}
+
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+
+section strong{
+
+    color:var(--text);
+
+}
+
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+
+}
+
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:50px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    section{
+
+        padding:30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="navbar">
+
+
+<a href="index.html" class="brand">
+Memoria del Mundo
+</a>
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+Inicio
+</a>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Orígenes
+</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">
+Primeros seres humanos
+</a>
+
+<a href="revolucion-neolitica.html">
+Revolución neolítica
+</a>
+
+<a href="primeras-ciudades.html">
+Primeras ciudades
+</a>
+
+<a href="escritura.html">
+Escritura
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Civilizaciones
+</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">
+Mesopotamia
+</a>
+
+<a href="egipto.html">
+Egipto
+</a>
+
+<a href="persia.html">
+Persia
+</a>
+
+<a href="india.html">
+India
+</a>
+
+<a href="china.html">
+China
+</a>
+
+<a href="tibet.html">
+Tíbet
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Religiones
+</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">
+Religiones antiguas
+</a>
+
+<a href="judaismo.html">
+Judaísmo
+</a>
+
+<a href="cristianismo.html">
+Cristianismo
+</a>
+
+<a href="islam.html">
+Islam
+</a>
+
+<a href="#">
+Hinduismo
+</a>
+
+<a href="#">
+Budismo
+</a>
+
+<a href="#">
+Jainismo
+</a>
+
+<a href="#">
+Zoroastrismo
+</a>
+
+<a href="#">
+Sijismo
+</a>
+
+<a href="#">
+Cienciología
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Cultura
+</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">
+Escritura
+</a>
+
+<a href="literatura.html">
+Literatura
+</a>
+
+<a href="#">
+Arte
+</a>
+
+<a href="#">
+Ciencia
+</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">
+Historia
+</button>
+
+<div class="dropdown-content">
+
+<a href="#">
+Antigüedad
+</a>
+
+<a href="#">
+Edad Media
+</a>
+
+<a href="#">
+Edad Moderna
+</a>
+
+<a href="#">
+Mundo Contemporáneo
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+<h1>Literatura</h1>
+
+<p>
+Historia de las obras, relatos y tradiciones literarias que las sociedades
+humanas han creado para conservar ideas, experiencias, historias y formas
+de imaginar el mundo.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>¿Qué es la literatura?</h2>
+
+<p>
+La <strong>literatura</strong> comprende obras y tradiciones que utilizan
+el lenguaje para expresar ideas, experiencias, relatos y formas de
+interpretar el mundo. Puede presentarse de manera oral o escrita y adoptar
+formas como la poesía, la narrativa, el teatro y otros géneros.
+</p>
+
+<p>
+Durante gran parte de la historia humana, las historias fueron transmitidas
+de manera <strong>oral</strong>. Las personas utilizaban relatos, poemas,
+canciones y fórmulas memorísticas para conservar conocimientos y tradiciones
+antes de que estos fueran registrados por escrito.
+</p>
+
+<p>
+Con la aparición de la escritura, algunas de estas tradiciones pudieron ser
+registradas y conservadas en tablillas, papiros, pergaminos, manuscritos y
+otros soportes. Esto permitió que determinadas obras fueran transmitidas
+durante siglos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura oral</h2>
+
+<p>
+Antes de la existencia de sistemas de escritura, las sociedades transmitían
+historias mediante la <strong>memoria y la tradición oral</strong>. Los
+relatos podían explicar acontecimientos, transmitir normas, conservar
+genealogías o enseñar conocimientos.
+</p>
+
+<p>
+Los poemas, cantos y relatos podían ser repetidos y modificados por
+diferentes generaciones. La repetición de determinadas estructuras ayudaba
+a los narradores a conservar textos extensos.
+</p>
+
+<p>
+La tradición oral continuó existiendo incluso después de la aparición de la
+escritura. Muchas obras conocidas actualmente tuvieron inicialmente una
+larga historia de transmisión oral antes de ser registradas por escrito.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las primeras obras literarias</h2>
+
+<p>
+Algunas de las primeras obras literarias conocidas aparecieron en las
+primeras sociedades que desarrollaron escritura. Entre ellas se encuentran
+textos religiosos, himnos, relatos mitológicos, poemas y composiciones
+relacionadas con la vida de gobernantes y comunidades.
+</p>
+
+<p>
+Uno de los ejemplos más importantes es la <strong>Epopeya de
+Gilgamesh</strong>, cuyos relatos se desarrollaron en Mesopotamia y fueron
+registrados posteriormente en tablillas de escritura cuneiforme.
+</p>
+
+<p>
+Estas primeras obras muestran que la escritura no fue utilizada únicamente
+para administrar bienes. También permitió conservar relatos sobre dioses,
+héroes, gobernantes, conflictos, muerte, amistad y otros temas de interés
+para las sociedades antiguas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura de Mesopotamia</h2>
+
+<p>
+Mesopotamia produjo algunas de las tradiciones literarias más antiguas
+conocidas. Los escribas registraron poemas, himnos, mitos, lamentaciones y
+relatos utilizando <strong>escritura cuneiforme</strong>.
+</p>
+
+<p>
+Entre las obras más conocidas se encuentra la <strong>Epopeya de
+Gilgamesh</strong>, que presenta las aventuras del rey Gilgamesh y su
+relación con Enkidu, además de reflexiones sobre la amistad, la muerte y la
+búsqueda de una existencia duradera.
+</p>
+
+<p>
+También se conservaron relatos sobre divinidades mesopotámicas,
+inundaciones, creación, reyes y conflictos entre ciudades. Estos textos
+permiten conocer aspectos religiosos y culturales de las sociedades de
+Mesopotamia.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura del antiguo Egipto</h2>
+
+<p>
+La literatura egipcia se desarrolló durante miles de años y fue registrada
+en diferentes soportes, incluyendo <strong>papiros, ostraca, estelas y
+paredes de tumbas y templos</strong>.
+</p>
+
+<p>
+Entre sus obras se encuentran himnos religiosos, relatos, poemas, textos
+funerarios, instrucciones morales y composiciones relacionadas con la vida
+de los gobernantes.
+</p>
+
+<p>
+Algunos textos, como el <strong>Libro de los Muertos</strong>, reunían
+fórmulas y composiciones destinadas a acompañar al difunto en su tránsito
+hacia la otra vida. Otros textos presentan reflexiones sobre la moral, la
+justicia, el conocimiento y la experiencia humana.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura de India</h2>
+
+<p>
+India desarrolló una de las tradiciones literarias más extensas y diversas
+del mundo. Durante siglos coexistieron tradiciones <strong>orales y
+escritas</strong> en diferentes lenguas y regiones.
+</p>
+
+<p>
+Los <strong>Vedas</strong> se encuentran entre los textos más antiguos de
+la tradición india. Fueron transmitidos oralmente durante generaciones antes
+de ser registrados por escrito y contienen himnos, fórmulas rituales y
+material religioso.
+</p>
+
+<p>
+Posteriormente se desarrollaron grandes obras como el
+<strong>Mahabharata</strong> y el <strong>Ramayana</strong>, además de
+numerosos textos filosóficos, religiosos, poéticos y científicos.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura de China</h2>
+
+<p>
+La literatura china posee una tradición escrita que se desarrolló durante
+miles de años. Los primeros textos conocidos incluyen inscripciones
+religiosas y administrativas, mientras que posteriormente aparecieron
+poemas, obras históricas, filosóficas y literarias.
+</p>
+
+<p>
+Uno de los textos clásicos más importantes es el
+<strong>Shijing o Libro de los Cantos</strong>, una colección de poemas que
+forma parte de los clásicos de la tradición china.
+</p>
+
+<p>
+Pensadores como <strong>Confucio</strong> y diferentes historiadores y
+poetas contribuyeron a una tradición literaria que combinó filosofía,
+historia, poesía y reflexión sobre la sociedad y el gobierno.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura de Grecia</h2>
+
+<p>
+La literatura griega tuvo una enorme influencia sobre las tradiciones
+literarias posteriores de Europa y el Mediterráneo. Entre sus primeras
+grandes obras se encuentran la <strong>Ilíada y la Odisea</strong>,
+atribuidas tradicionalmente a Homero.
+</p>
+
+<p>
+La literatura griega desarrolló también formas como la
+<strong>tragedia, la comedia, la poesía lírica y la historiografía</strong>.
+Autores como Esquilo, Sófocles, Eurípides, Aristófanes y Heródoto
+representan diferentes etapas de esta tradición.
+</p>
+
+<p>
+La filosofía también estuvo estrechamente relacionada con la producción
+escrita griega. Las obras de Platón y Aristóteles tuvieron una influencia
+profunda sobre la filosofía, la política y el pensamiento occidental.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura de Roma</h2>
+
+<p>
+La literatura romana recibió una fuerte influencia de la tradición griega,
+pero desarrolló géneros y estilos propios en lengua <strong>latina</strong>.
+La expansión de Roma ayudó a difundir el latín por numerosos territorios.
+</p>
+
+<p>
+Entre los autores romanos más importantes se encuentran
+<strong>Virgilio, Ovidio, Cicerón, Horacio y Séneca</strong>. Sus obras
+incluyen poesía épica, poesía lírica, filosofía, retórica y teatro.
+</p>
+
+<p>
+La literatura latina continuó teniendo una enorme influencia después de la
+caída del Imperio romano y se convirtió en una de las bases de la literatura
+europea medieval y posterior.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura hebrea y bíblica</h2>
+
+<p>
+La tradición literaria hebrea incluye diferentes tipos de textos
+conservados en las <strong>Escrituras hebreas</strong>. Entre ellos existen
+relatos históricos, poesía, literatura sapiencial, textos proféticos y
+composiciones religiosas.
+</p>
+
+<p>
+Los <strong>Salmos</strong>, el libro de Job, Proverbios y diferentes
+relatos del Tanaj muestran una amplia variedad de formas literarias y temas,
+incluyendo la relación con Dios, la justicia, el sufrimiento, la sabiduría
+y la vida comunitaria.
+</p>
+
+<p>
+Estos textos tuvieron una influencia considerable sobre la literatura
+religiosa y cultural posterior, especialmente dentro del judaísmo y el
+cristianismo.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura persa</h2>
+
+<p>
+La tradición literaria persa se desarrolló durante diferentes períodos
+históricos y en distintas formas de lengua persa. Después de la conquista
+islámica, el persa continuó siendo una importante lengua literaria y
+cultural.
+</p>
+
+<p>
+Una de las obras más importantes es el <strong>Shahnameh</strong> o Libro
+de los Reyes, escrito por <strong>Ferdowsi</strong> alrededor del año 1000.
+La obra reúne relatos sobre reyes, héroes y acontecimientos de la tradición
+histórica y legendaria persa.
+</p>
+
+<p>
+Posteriormente, poetas como <strong>Rumi, Hafez, Saadi y Omar
+Jayyam</strong> desarrollaron una tradición poética que tuvo influencia en
+Persia y en otras regiones de Asia.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura árabe</h2>
+
+<p>
+La literatura árabe posee una larga tradición oral y escrita. La poesía
+ocupó un lugar especialmente importante en las sociedades árabes anteriores
+y posteriores al surgimiento del islam.
+</p>
+
+<p>
+El <strong>Corán</strong> se convirtió en una obra fundamental de la lengua
+árabe y tuvo una enorme influencia sobre su literatura, vocabulario y
+desarrollo escrito.
+</p>
+
+<p>
+Durante la Edad Media aparecieron también obras de poesía, filosofía,
+historia y narrativa. Una de las colecciones más conocidas es
+<strong>Las mil y una noches</strong>, que reúne relatos procedentes de
+diferentes tradiciones culturales.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura medieval</h2>
+
+<p>
+Durante la Edad Media se desarrollaron diferentes tradiciones literarias en
+Europa, Oriente Próximo, África y Asia. Las obras podían escribirse en
+lenguas religiosas o en lenguas utilizadas cotidianamente por las
+poblaciones.
+</p>
+
+<p>
+En Europa occidental se produjeron textos religiosos, crónicas, poemas
+épicos y literatura cortesana. En otras regiones continuaron desarrollándose
+tradiciones literarias propias en árabe, persa, chino, sánscrito y otras
+lenguas.
+</p>
+
+<p>
+La literatura medieval también estuvo estrechamente relacionada con la
+transmisión manuscrita. Monasterios, escuelas y centros de estudio
+participaron en la conservación y copia de numerosas obras.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura del Renacimiento</h2>
+
+<p>
+Durante los siglos XV y XVI, el <strong>Renacimiento</strong> transformó
+la producción literaria europea. Los autores recuperaron y estudiaron
+numerosas obras de la Antigüedad clásica y desarrollaron nuevas formas de
+expresión.
+</p>
+
+<p>
+La expansión de la <strong>imprenta</strong> permitió producir libros en
+mayor cantidad y facilitó su circulación entre diferentes regiones.
+También aumentó la publicación de obras en lenguas vernáculas.
+</p>
+
+<p>
+Autores como <strong>William Shakespeare, Miguel de Cervantes y
+Nicolás Maquiavelo</strong> representan diferentes aspectos de las
+transformaciones literarias de este período.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura y la imprenta</h2>
+
+<p>
+La expansión de la imprenta durante los siglos XV y XVI transformó la
+producción y circulación de textos. Los libros podían reproducirse con mayor
+rapidez y llegar a un público más amplio.
+</p>
+
+<p>
+La impresión favoreció la difusión de obras religiosas, científicas,
+literarias y educativas. También contribuyó a la estandarización de
+determinadas lenguas y formas de escritura.
+</p>
+
+<p>
+Durante los siglos siguientes, el crecimiento de la alfabetización y de la
+producción editorial permitió que la literatura alcanzara públicos cada vez
+más amplios.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura moderna</h2>
+
+<p>
+Entre los siglos XVIII y XIX surgieron nuevas formas literarias vinculadas
+con los cambios sociales, políticos e intelectuales de la época. La novela
+se convirtió en uno de los géneros más importantes de la literatura
+moderna.
+</p>
+
+<p>
+El <strong>Romanticismo</strong>, el <strong>Realismo</strong> y el
+<strong>Naturalismo</strong> desarrollaron diferentes maneras de representar
+la sociedad, la experiencia individual y los cambios históricos.
+</p>
+
+<p>
+La expansión de los periódicos, las editoriales y la educación permitió que
+los escritores alcanzaran nuevos públicos y que la literatura participara
+cada vez más en los debates culturales de sus sociedades.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura contemporánea</h2>
+
+<p>
+Durante los siglos XX y XXI, la literatura se volvió cada vez más diversa
+en sus lenguas, géneros y formas de publicación. Las guerras mundiales, las
+migraciones, los cambios políticos y las transformaciones sociales
+influyeron en numerosas obras.
+</p>
+
+<p>
+Surgieron y se desarrollaron movimientos como el <strong>modernismo, las
+vanguardias, el realismo mágico y el posmodernismo</strong>, entre muchos
+otros.
+</p>
+
+<p>
+La literatura contemporánea también amplió la presencia de autores y
+tradiciones procedentes de África, Asia, América Latina, Oriente Próximo y
+otras regiones que durante mucho tiempo estuvieron menos representadas en
+los principales circuitos editoriales occidentales.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La literatura en la era digital</h2>
+
+<p>
+La llegada de Internet transformó nuevamente la producción y circulación de
+la literatura. Los textos pueden publicarse y distribuirse digitalmente sin
+necesidad de pasar por los procesos tradicionales de impresión.
+</p>
+
+<p>
+Los <strong>libros electrónicos, blogs, plataformas de publicación y
+redes sociales</strong> permitieron que nuevos autores produjeran y
+compartieran obras directamente con sus lectores.
+</p>
+
+<p>
+También aparecieron nuevas formas narrativas que combinan texto, imagen,
+audio, video e interacción. La literatura continúa adaptándose a las
+tecnologías mediante las cuales las sociedades producen y comparten
+historias.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+Memoria del Mundo — Civilizaciones, Historia y Patrimonio
+
+</footer>
+
+
+</body>
+
+</html>
+```
