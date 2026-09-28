@@ -1,1 +1,1263 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arte | Memoria del Mundo</title>
+
+    <meta name="description"
+        content="Historia del arte: desde las primeras expresiones humanas hasta el arte contemporáneo y digital.">
+
+    <meta name="keywords"
+        content="arte, historia del arte, arte rupestre, Egipto, Mesopotamia, Grecia, Roma, Renacimiento, Barroco, arte moderno, arte contemporáneo">
+
+    <meta name="author" content="Gloria Martínez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root{
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:
+        linear-gradient(
+            rgba(251,246,234,.94),
+            rgba(251,246,234,.94)
+        );
+
+    color:var(--text);
+
+    font-family:'Cormorant Garamond',serif;
+
+    line-height:1.7;
+
+    padding-top:80px;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    background:rgba(255,253,247,.97);
+
+    border-bottom:1px solid var(--border);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+}
+
+
+.nav{
+
+    width:95%;
+
+    max-width:1400px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+
+.logo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    letter-spacing:1px;
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    padding:12px 14px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+}
+
+
+.nav-links a:hover,
+.dropdown-button:hover{
+
+    color:var(--clay-dark);
+}
+
+
+/* =========================
+   DROPDOWNS
+========================= */
+
+.dropdown{
+
+    position:relative;
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    min-width:220px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px 0;
+
+    z-index:1001;
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:10px 18px;
+
+    font-size:13px;
+
+    white-space:nowrap;
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    text-align:center;
+
+    padding:90px 20px 80px;
+
+    margin-bottom:60px;
+
+    background:
+
+        linear-gradient(
+            rgba(247,240,223,.92),
+            rgba(247,240,223,.92)
+        );
+
+    border-bottom:1px solid var(--border);
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:64px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+}
+
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:21px;
+
+    color:var(--text-light);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+}
+
+
+section strong{
+
+    color:var(--text);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    margin-top:100px;
+}
+
+
+footer h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+}
+
+
+footer p{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:12px;
+
+    opacity:.8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav{
+
+        flex-direction:column;
+
+        padding:10px 0;
+    }
+
+    .topbar{
+
+        height:auto;
+    }
+
+    body{
+
+        padding-top:120px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero h1{
+
+        font-size:46px;
+    }
+
+    .hero p{
+
+        font-size:19px;
+    }
+
+    section{
+
+        padding:30px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:38px;
+    }
+
+    section h2{
+
+        font-size:26px;
+    }
+
+    section p{
+
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MENÚ PRINCIPAL
+========================= -->
+
+<header class="topbar">
+
+    <nav class="nav">
+
+        <a href="index.html" class="logo">
+            Memoria del Mundo
+        </a>
+
+
+        <div class="nav-links">
+
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+
+            <!-- ORÍGENES -->
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Orígenes
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="primeros-homininos.html">
+                        Primeros seres humanos
+                    </a>
+
+                    <a href="revolucion-neolitica.html">
+                        Revolución neolítica
+                    </a>
+
+                    <a href="primeras-ciudades.html">
+                        Primeras ciudades
+                    </a>
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CIVILIZACIONES -->
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Civilizaciones
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="mesopotamia.html">
+                        Mesopotamia
+                    </a>
+
+                    <a href="egipto.html">
+                        Egipto
+                    </a>
+
+                    <a href="persia.html">
+                        Persia
+                    </a>
+
+                    <a href="india.html">
+                        India
+                    </a>
+
+                    <a href="china.html">
+                        China
+                    </a>
+
+                    <a href="#">
+                        Tibet
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RELIGIONES -->
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Religiones
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="religiones-antiguas.html">
+                        Religiones antiguas
+                    </a>
+
+                    <a href="judaismo.html">
+                        Judaísmo
+                    </a>
+
+                    <a href="cristianismo.html">
+                        Cristianismo
+                    </a>
+
+                    <a href="islam.html">
+                        Islam
+                    </a>
+
+                    <a href="#">
+                        Hinduismo
+                    </a>
+
+                    <a href="#">
+                        Budismo
+                    </a>
+
+                    <a href="#">
+                        Jainismo
+                    </a>
+
+                    <a href="#">
+                        Zoroastrismo
+                    </a>
+
+                    <a href="#">
+                        Sijismo
+                    </a>
+
+                    <a href="#">
+                        Cienciología
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CULTURA -->
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Cultura
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                    <a href="literatura.html">
+                        Literatura
+                    </a>
+
+                    <a href="arte.html">
+                        Arte
+                    </a>
+
+                    <a href="#">
+                        Ciencia
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HISTORIA -->
+
+            <div class="dropdown">
+
+                <button class="dropdown-button">
+                    Historia
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a href="#">
+                        Antigüedad
+                    </a>
+
+                    <a href="#">
+                        Edad Media
+                    </a>
+
+                    <a href="#">
+                        Edad Moderna
+                    </a>
+
+                    <a href="#">
+                        Mundo Contemporáneo
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <h1>Arte</h1>
+
+        <p>
+            Historia de las expresiones visuales, materiales y simbólicas
+            creadas por las sociedades humanas, desde las primeras imágenes
+            hasta el arte contemporáneo y digital.
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<!-- =========================
+     1
+========================= -->
+
+<section>
+
+    <h2>¿Qué es el arte?</h2>
+
+    <p>
+        El arte comprende distintas formas de creación mediante las cuales
+        las sociedades humanas han producido <strong>imágenes, objetos,
+        construcciones, sonidos y otras expresiones culturales</strong>.
+        Sus formas y significados han cambiado según cada época y sociedad.
+    </p>
+
+    <p>
+        Pintura, escultura, arquitectura, cerámica, música y otras prácticas
+        artísticas han servido para representar personas, animales, divinidades,
+        acontecimientos, ideas y aspectos de la vida cotidiana.
+    </p>
+
+    <p>
+        El estudio del arte permite observar cómo diferentes sociedades
+        utilizaron materiales, técnicas y símbolos para expresar su visión
+        del mundo y conservar parte de su memoria cultural.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     2
+========================= -->
+
+<section>
+
+    <h2>El arte antes de las civilizaciones</h2>
+
+    <p>
+        Las primeras expresiones artísticas conocidas aparecieron mucho antes
+        de la formación de las ciudades y los Estados. Los grupos humanos
+        utilizaron <strong>pigmentos, piedra, hueso, madera y otros materiales</strong>
+        para crear objetos e imágenes.
+    </p>
+
+    <p>
+        Algunas de estas piezas parecen haber tenido funciones simbólicas,
+        rituales o decorativas, aunque en muchos casos no es posible conocer
+        con certeza el significado que tuvieron para quienes las realizaron.
+    </p>
+
+    <p>
+        Estas primeras expresiones muestran que la capacidad humana para crear
+        imágenes y objetos con significado cultural existe desde tiempos
+        prehistóricos.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     3
+========================= -->
+
+<section>
+
+    <h2>El arte rupestre</h2>
+
+    <p>
+        El arte rupestre incluye pinturas, grabados y otras representaciones
+        realizadas sobre superficies rocosas. Se han encontrado ejemplos en
+        diferentes regiones de <strong>Europa, África, Asia y Australia</strong>.
+    </p>
+
+    <p>
+        Muchas representaciones muestran animales, figuras humanas, manos y
+        diferentes signos. Algunas fueron realizadas utilizando pigmentos
+        minerales aplicados directamente sobre las paredes de las cuevas.
+    </p>
+
+    <p>
+        Entre los ejemplos más conocidos se encuentran las pinturas de
+        <strong>Altamira</strong>, en España, y las cuevas de
+        <strong>Lascaux</strong>, en Francia.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     4
+========================= -->
+
+<section>
+
+    <h2>El arte de Mesopotamia</h2>
+
+    <p>
+        En Mesopotamia, el desarrollo de las ciudades y de los Estados dio
+        lugar a nuevas formas de arte vinculadas con la religión, el poder y
+        la administración.
+    </p>
+
+    <p>
+        Los artistas trabajaron con <strong>piedra, arcilla, metales y otros
+        materiales</strong> para crear esculturas, relieves, sellos cilíndricos
+        y objetos ceremoniales.
+    </p>
+
+    <p>
+        Los palacios y templos también fueron decorados con relieves que
+        representaban gobernantes, divinidades, animales, guerras y ceremonias.
+        El arte formaba parte de la vida política y religiosa de las ciudades.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     5
+========================= -->
+
+<section>
+
+    <h2>El arte del antiguo Egipto</h2>
+
+    <p>
+        El arte egipcio estuvo estrechamente relacionado con la religión,
+        la autoridad del faraón y las creencias sobre la muerte y la vida
+        después de ella.
+    </p>
+
+    <p>
+        Pinturas, relieves y esculturas representaban a <strong>faraones,
+        dioses, funcionarios, animales y escenas de la vida cotidiana</strong>.
+        Las imágenes seguían convenciones que se mantuvieron durante largos
+        períodos.
+    </p>
+
+    <p>
+        Templos, tumbas y monumentos monumentales fueron decorados con
+        esculturas e inscripciones que ayudaban a conservar la memoria de
+        personas, acontecimientos y creencias.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     6
+========================= -->
+
+<section>
+
+    <h2>El arte de Persia</h2>
+
+    <p>
+        El arte persa combinó tradiciones desarrolladas dentro de Irán con
+        influencias provenientes de diferentes regiones del Imperio aqueménida.
+    </p>
+
+    <p>
+        En <strong>Persépolis</strong> se conservan relieves monumentales que
+        muestran delegaciones de distintos pueblos del imperio llevando
+        tributos al rey.
+    </p>
+
+    <p>
+        La arquitectura, los relieves, la orfebrería y otros objetos reflejan
+        la diversidad cultural de un imperio que conectaba territorios desde
+        Asia Central hasta el Mediterráneo.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     7
+========================= -->
+
+<section>
+
+    <h2>El arte de India</h2>
+
+    <p>
+        El arte de India se desarrolló a través de numerosas tradiciones
+        religiosas y culturales. Sus primeras manifestaciones incluyen
+        esculturas, cerámicas, sellos y objetos de la civilización del valle
+        del Indo.
+    </p>
+
+    <p>
+        Posteriormente surgieron importantes tradiciones artísticas asociadas
+        con el <strong>hinduismo, el budismo y el jainismo</strong>.
+        Templos, esculturas y pinturas representaron divinidades, figuras
+        religiosas y escenas de diferentes tradiciones.
+    </p>
+
+    <p>
+        La arquitectura india también produjo estupas, templos, cuevas
+        excavadas y complejos monumentales que muestran la diversidad artística
+        desarrollada durante miles de años.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     8
+========================= -->
+
+<section>
+
+    <h2>El arte de China</h2>
+
+    <p>
+        El arte chino se desarrolló durante miles de años y estuvo relacionado
+        con la religión, la corte, la filosofía, la naturaleza y la vida
+        cotidiana.
+    </p>
+
+    <p>
+        Entre sus principales expresiones se encuentran la <strong>cerámica,
+        el bronce, la pintura, la caligrafía, la escultura y la arquitectura</strong>.
+        La producción artística estuvo especialmente vinculada con las
+        instituciones de las diferentes dinastías.
+    </p>
+
+    <p>
+        La pintura y la caligrafía adquirieron una importancia particular,
+        especialmente en la representación de paisajes y en la expresión de
+        ideas relacionadas con la naturaleza y la cultura.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     9
+========================= -->
+
+<section>
+
+    <h2>El arte de Grecia</h2>
+
+    <p>
+        El arte griego desarrolló nuevas formas de representar el cuerpo
+        humano, la arquitectura y la escultura. Durante diferentes períodos,
+        los artistas buscaron representar <strong>proporción, movimiento y
+        características humanas</strong>.
+    </p>
+
+    <p>
+        La escultura y la arquitectura alcanzaron un gran desarrollo,
+        especialmente durante el período clásico. Los templos griegos
+        utilizaron órdenes arquitectónicos como el dórico, jónico y corintio.
+    </p>
+
+    <p>
+        Las obras griegas influyeron profundamente en el arte romano y,
+        posteriormente, en numerosas tradiciones artísticas europeas.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     10
+========================= -->
+
+<section>
+
+    <h2>El arte de Roma</h2>
+
+    <p>
+        El arte romano recibió una fuerte influencia de las tradiciones
+        griegas, pero desarrolló características propias relacionadas con
+        la vida política, militar y social del Imperio.
+    </p>
+
+    <p>
+        Los romanos produjeron <strong>esculturas, mosaicos, frescos,
+        relieves y monumentos públicos</strong>. Los retratos de emperadores
+        y ciudadanos tuvieron una presencia importante.
+    </p>
+
+    <p>
+        La arquitectura romana destacó por el uso de arcos, bóvedas,
+        cúpulas y grandes obras públicas, entre ellas anfiteatros,
+        acueductos, termas y caminos.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     11
+========================= -->
+
+<section>
+
+    <h2>El arte de las culturas mesoamericanas</h2>
+
+    <p>
+        Las sociedades mesoamericanas desarrollaron tradiciones artísticas
+        propias mucho antes de la llegada de los europeos. Entre ellas se
+        encuentran las culturas <strong>olmeca, maya, teotihuacana, zapoteca
+        y mexica</strong>.
+    </p>
+
+    <p>
+        La escultura, la arquitectura, la cerámica, los códices y otros
+        objetos representaron gobernantes, divinidades, animales,
+        acontecimientos y elementos de la cosmología.
+    </p>
+
+    <p>
+        Grandes centros ceremoniales y ciudades fueron construidos con
+        pirámides, templos, plazas y monumentos decorados con esculturas,
+        relieves y pinturas.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     12
+========================= -->
+
+<section>
+
+    <h2>El arte medieval</h2>
+
+    <p>
+        Durante la Edad Media se desarrollaron diferentes tradiciones
+        artísticas en Europa, Oriente Medio, África y Asia. El arte estuvo
+        relacionado con <strong>religiones, cortes, ciudades y comunidades</strong>.
+    </p>
+
+    <p>
+        En Europa destacaron el arte románico y posteriormente el gótico,
+        con iglesias decoradas mediante esculturas, frescos y vitrales.
+    </p>
+
+    <p>
+        Al mismo tiempo, diferentes regiones de Asia y África desarrollaron
+        tradiciones propias que no pueden reducirse a la historia artística
+        europea.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     13
+========================= -->
+
+<section>
+
+    <h2>El arte islámico</h2>
+
+    <p>
+        El arte islámico se desarrolló en diferentes regiones desde el
+        surgimiento del islam y adquirió formas diversas según las culturas
+        y períodos históricos.
+    </p>
+
+    <p>
+        La arquitectura tuvo una importancia central, especialmente en
+        <strong>mezquitas, palacios, madrasas y mausoleos</strong>. También
+        destacaron la cerámica, los textiles, la metalistería y la decoración
+        de manuscritos.
+    </p>
+
+    <p>
+        La caligrafía árabe adquirió una importancia especial y fue utilizada
+        tanto en manuscritos como en elementos arquitectónicos y decorativos.
+        Los diseños geométricos y vegetales también fueron ampliamente
+        utilizados.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     14
+========================= -->
+
+<section>
+
+    <h2>El Renacimiento</h2>
+
+    <p>
+        El Renacimiento surgió en las ciudades italianas durante los siglos
+        <strong>XV y XVI</strong> y posteriormente se extendió por otras
+        regiones de Europa.
+    </p>
+
+    <p>
+        Los artistas estudiaron la antigüedad clásica, la anatomía, la
+        perspectiva y las proporciones humanas. La pintura y la escultura
+        adquirieron nuevas formas de representación.
+    </p>
+
+    <p>
+        Entre sus figuras más conocidas se encuentran <strong>Leonardo da
+        Vinci, Miguel Ángel y Rafael</strong>. Sus obras forman parte de uno
+        de los períodos más estudiados de la historia del arte europeo.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     15
+========================= -->
+
+<section>
+
+    <h2>El Barroco</h2>
+
+    <p>
+        El Barroco se desarrolló principalmente durante los siglos
+        <strong>XVII y XVIII</strong>. Se caracterizó por composiciones
+        dinámicas, contrastes de luz y una fuerte atención a los efectos
+        visuales.
+    </p>
+
+    <p>
+        La pintura barroca representó escenas religiosas, mitológicas,
+        históricas y de la vida cotidiana. También se desarrollaron nuevas
+        formas de retrato y representación de interiores y paisajes.
+    </p>
+
+    <p>
+        Entre los artistas asociados con este período se encuentran
+        <strong>Caravaggio, Rembrandt, Velázquez y Bernini</strong>, aunque
+        las tradiciones barrocas variaron considerablemente según cada región.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     16
+========================= -->
+
+<section>
+
+    <h2>El arte moderno</h2>
+
+    <p>
+        Durante los siglos XIX y XX, los artistas comenzaron a cuestionar
+        muchas de las normas tradicionales de representación. La aparición
+        de nuevas técnicas y materiales amplió las posibilidades de creación.
+    </p>
+
+    <p>
+        Surgieron movimientos como el <strong>impresionismo, expresionismo,
+        cubismo, futurismo, surrealismo y abstracción</strong>, entre muchos
+        otros.
+    </p>
+
+    <p>
+        El arte moderno también estuvo relacionado con los cambios sociales,
+        industriales y tecnológicos que transformaron las sociedades durante
+        este período.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     17
+========================= -->
+
+<section>
+
+    <h2>El arte contemporáneo</h2>
+
+    <p>
+        El arte contemporáneo comprende una gran variedad de prácticas
+        desarrolladas principalmente desde la segunda mitad del siglo XX
+        hasta la actualidad.
+    </p>
+
+    <p>
+        Los artistas utilizan pintura y escultura, pero también
+        <strong>fotografía, instalación, performance, video, sonido y medios
+        digitales</strong>.
+    </p>
+
+    <p>
+        La producción artística contemporánea se desarrolla en sociedades
+        culturalmente diversas y aborda temas relacionados con la identidad,
+        la memoria, la tecnología, el medioambiente y los cambios sociales.
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     18
+========================= -->
+
+<section>
+
+    <h2>El arte en la era digital</h2>
+
+    <p>
+        Las tecnologías digitales han transformado la manera de producir,
+        distribuir y conservar obras de arte. Computadoras, cámaras digitales,
+        programas de edición y herramientas de inteligencia artificial han
+        ampliado las posibilidades de creación.
+    </p>
+
+    <p>
+        El arte digital incluye ilustraciones, animaciones, videojuegos,
+        instalaciones interactivas, obras generativas y diferentes formas
+        de creación audiovisual.
+    </p>
+
+    <p>
+        Internet también permite que las obras puedan ser compartidas con
+        audiencias de todo el mundo y que nuevas comunidades de artistas
+        desarrollen sus propias formas de creación y colaboración.
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>Memoria del Mundo</h3>
+
+    <p>
+        Historia, cultura y patrimonio de las sociedades humanas.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```
