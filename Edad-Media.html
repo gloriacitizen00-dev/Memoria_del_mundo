@@ -1,1 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edad Media | Memoria del Mundo</title>
+
+<meta name="description"
+content="Historia de la Edad Media: reinos, sociedades, religiones, comercio, ciudades y transformaciones que marcaron este período de la historia.">
+
+<meta name="keywords"
+content="Edad Media, historia medieval, feudalismo, Imperio bizantino, islam medieval, Europa medieval, África medieval, China medieval, India medieval">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+    --sand:#C6A66B;
+    --sand-dark:#8A6A3F;
+    --sand-light:#E1C995;
+    --sand-soft:#F7F0DF;
+
+    --clay:#9A6842;
+    --clay-dark:#70472C;
+
+    --stone:#8B8172;
+    --stone-light:#C9C0B0;
+
+    --text:#2B241B;
+    --text-light:#665D51;
+
+    --white:#FFFDF7;
+    --cream:#FBF6EA;
+
+    --border:#E1D4B9;
+
+    --shadow:0 20px 50px rgba(120,90,45,.12);
+}
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+body{
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    font-family:'Montserrat',sans-serif;
+
+    line-height:1.7;
+
+}
+
+
+.topbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,253,247,.96);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 5px 20px rgba(120,90,45,.08);
+
+}
+
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:18px 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.brand{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    color:var(--clay-dark);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:8px;
+
+    align-items:center;
+
+}
+
+
+.nav-links a,
+.dropdown-button{
+
+    font-family:'Montserrat',sans-serif;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    padding:10px 12px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+}
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+    left:0;
+
+    min-width:210px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    padding:10px;
+
+}
+
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:9px 12px;
+
+    font-size:13px;
+
+}
+
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+
+main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:130px 30px 60px;
+
+}
+
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+    padding:70px 30px;
+
+    background:var(--white);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:52px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:var(--text-light);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+}
+
+
+section{
+
+    margin-bottom:80px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+section h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:var(--clay-dark);
+
+    margin-bottom:25px;
+
+}
+
+
+section p{
+
+    margin-bottom:20px;
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+
+
+section strong{
+
+    color:var(--text);
+
+}
+
+
+footer{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
+
+    font-size:13px;
+
+}
+
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding:50px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    section{
+
+        padding:30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">Memoria del Mundo</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">Inicio</a>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Orígenes</button>
+
+<div class="dropdown-content">
+
+<a href="primeros-homininos.html">Primeros seres humanos</a>
+<a href="revolucion-neolitica.html">Revolución neolítica</a>
+<a href="primeras-ciudades.html">Primeras ciudades</a>
+<a href="escritura.html">Escritura</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Civilizaciones</button>
+
+<div class="dropdown-content">
+
+<a href="mesopotamia.html">Mesopotamia</a>
+<a href="egipto.html">Egipto</a>
+<a href="persia.html">Persia</a>
+<a href="india.html">India</a>
+<a href="china.html">China</a>
+<a href="#">Tíbet</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Religiones</button>
+
+<div class="dropdown-content">
+
+<a href="religiones-antiguas.html">Religiones antiguas</a>
+<a href="judaismo.html">Judaísmo</a>
+<a href="cristianismo.html">Cristianismo</a>
+<a href="islam.html">Islam</a>
+<a href="#">Hinduismo</a>
+<a href="#">Budismo</a>
+<a href="#">Jainismo</a>
+<a href="#">Zoroastrismo</a>
+<a href="#">Sijismo</a>
+<a href="#">Cienciología</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Cultura</button>
+
+<div class="dropdown-content">
+
+<a href="escritura.html">Escritura</a>
+<a href="literatura.html">Literatura</a>
+<a href="arte.html">Arte</a>
+<a href="ciencia.html">Ciencia</a>
+
+</div>
+
+</div>
+
+
+<div class="dropdown">
+
+<button class="dropdown-button">Historia</button>
+
+<div class="dropdown-content">
+
+<a href="historia.html">Antigüedad</a>
+<a href="edad-media.html">Edad Media</a>
+<a href="#">Edad Moderna</a>
+<a href="#">Mundo Contemporáneo</a>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<div class="hero">
+
+<h1>Edad Media</h1>
+
+<p>
+Historia de un período marcado por la formación de nuevos reinos,
+la expansión de grandes religiones, el crecimiento de las ciudades
+y la transformación de las sociedades de Europa, Asia y África.
+</p>
+
+</div>
+
+
+<section>
+
+<h2>¿Qué es la Edad Media?</h2>
+
+<p>
+La <strong>Edad Media</strong> es el período histórico que generalmente se
+sitúa entre el final de la Antigüedad y el comienzo de la Edad Moderna.
+Sus límites cronológicos varían según la región y la interpretación
+histórica.
+</p>
+
+<p>
+En Europa occidental suele situarse aproximadamente entre los siglos
+V y XV. Sin embargo, durante esos mismos siglos existieron procesos
+históricos diferentes en Asia, África, Oriente Medio y otras regiones.
+</p>
+
+<p>
+Por ello, la Edad Media no fue una etapa uniforme. Fue un período de
+grandes transformaciones políticas, económicas, sociales y culturales.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La transición desde la Antigüedad</h2>
+
+<p>
+La transición hacia la Edad Media fue un proceso gradual. En Europa
+occidental, la desintegración del Imperio romano de Occidente durante
+el siglo V transformó las estructuras políticas que habían dominado
+gran parte de la región.
+</p>
+
+<p>
+Nuevos reinos ocuparon antiguos territorios romanos, mientras algunas
+instituciones, leyes, lenguas y tradiciones continuaron existiendo y
+se mezclaron con las de los nuevos pueblos.
+</p>
+
+<p>
+En otras regiones, como el Imperio bizantino, Persia, India y China,
+las transformaciones siguieron caminos diferentes.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La formación de los reinos medievales</h2>
+
+<p>
+Durante los primeros siglos medievales surgieron numerosos reinos en
+Europa occidental. Muchos se formaron a partir de la combinación entre
+tradiciones romanas, pueblos germánicos y estructuras políticas locales.
+</p>
+
+<p>
+Los territorios cambiaban de tamaño y de gobernantes mediante guerras,
+alianzas, matrimonios y acuerdos políticos.
+</p>
+
+<p>
+Con el tiempo algunos reinos desarrollaron instituciones más estables,
+sistemas administrativos y estructuras de autoridad que contribuyeron
+a la formación de los Estados posteriores.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El feudalismo y la organización social</h2>
+
+<p>
+En partes de Europa occidental se desarrollaron relaciones políticas,
+económicas y sociales que posteriormente fueron descritas bajo el
+concepto de <strong>feudalismo</strong>.
+</p>
+
+<p>
+Estas relaciones podían involucrar tierras, obligaciones militares,
+protección y vínculos entre diferentes grupos de la sociedad.
+</p>
+
+<p>
+El sistema no fue idéntico en toda Europa y el término feudalismo también
+ha sido discutido por los historiadores para describir la diversidad de
+estructuras medievales.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La Iglesia y la sociedad medieval</h2>
+
+<p>
+El cristianismo tuvo una presencia importante en muchas sociedades de
+Europa medieval. La Iglesia desarrolló instituciones que participaron
+en la educación, la administración, la asistencia social y la vida
+religiosa.
+</p>
+
+<p>
+Los monasterios conservaron y copiaron numerosos manuscritos y también
+funcionaron como centros de producción agrícola y conocimiento.
+</p>
+
+<p>
+La relación entre autoridades religiosas y gobernantes políticos fue
+compleja y cambió considerablemente durante el período.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El Imperio bizantino</h2>
+
+<p>
+El <strong>Imperio bizantino</strong> fue la continuación del Imperio
+romano de Oriente. Su capital, Constantinopla, se convirtió en uno de
+los principales centros políticos, económicos y culturales del mundo
+medieval.
+</p>
+
+<p>
+El imperio mantuvo tradiciones romanas y una fuerte identidad cristiana
+oriental, al mismo tiempo que desarrolló instituciones y formas
+culturales propias.
+</p>
+
+<p>
+Durante siglos mantuvo relaciones, conflictos y contactos comerciales
+con Europa, Persia, los pueblos eslavos y diferentes sociedades del
+Mediterráneo y Asia occidental.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El surgimiento y expansión del islam</h2>
+
+<p>
+Durante el siglo VII surgió el islam en Arabia. En las décadas posteriores
+se expandió rápidamente por regiones de Oriente Medio, el norte de África
+y otras áreas de Asia y Europa.
+</p>
+
+<p>
+La expansión política estuvo acompañada por la formación de nuevas
+sociedades, centros urbanos y redes comerciales conectadas por una
+tradición religiosa común.
+</p>
+
+<p>
+La historia del islam medieval será desarrollada con mayor profundidad
+en la sección dedicada al <strong>mundo islámico y al islam</strong> del
+Atlas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Europa occidental en la Edad Media</h2>
+
+<p>
+Europa occidental estuvo formada por numerosos reinos, principados,
+ciudades y territorios con diferentes niveles de autonomía.
+</p>
+
+<p>
+La población aumentó durante determinados períodos y se expandieron las
+actividades agrícolas, comerciales y urbanas. Las relaciones entre los
+diferentes poderes políticos cambiaron constantemente.
+</p>
+
+<p>
+Hacia los últimos siglos medievales, algunos reinos comenzaron a
+fortalecer sus instituciones y a consolidar territorios más amplios.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El mundo islámico medieval</h2>
+
+<p>
+Durante la Edad Media, diferentes dinastías gobernaron extensos
+territorios del mundo islámico. Bagdad, Damasco, El Cairo, Córdoba y
+otras ciudades se convirtieron en importantes centros políticos,
+comerciales y culturales.
+</p>
+
+<p>
+Las redes comerciales conectaron el Mediterráneo, África, Arabia,
+Persia, Asia Central y el océano Índico.
+</p>
+
+<p>
+Estas conexiones favorecieron el intercambio de productos, conocimientos,
+idiomas y tecnologías entre regiones muy alejadas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>China durante la Edad Media</h2>
+
+<p>
+China atravesó diferentes períodos de división y reunificación durante
+la Edad Media. Las dinastías Sui, Tang y Song estuvieron entre las más
+importantes de este período.
+</p>
+
+<p>
+Las ciudades, la administración estatal, la agricultura y el comercio
+experimentaron importantes transformaciones. China también mantuvo
+contactos con Asia Central, Corea, Japón y otras regiones.
+</p>
+
+<p>
+El desarrollo histórico de China será tratado con mayor profundidad en
+la página dedicada a esta civilización.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>India durante la Edad Media</h2>
+
+<p>
+El subcontinente indio estuvo dividido entre numerosos reinos y
+dinastías durante diferentes etapas de la Edad Media.
+</p>
+
+<p>
+El comercio conectó la región con Asia Central, el sudeste asiático,
+el mundo islámico y las rutas del océano Índico.
+</p>
+
+<p>
+También se produjo una interacción constante entre diferentes
+tradiciones religiosas, lenguas y culturas.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>África medieval y sus grandes reinos</h2>
+
+<p>
+África tuvo importantes centros políticos y comerciales durante la Edad
+Media. En África occidental surgieron reinos y Estados vinculados a las
+rutas comerciales del Sahara.
+</p>
+
+<p>
+El oro, la sal y otros productos fueron intercambiados a través de
+extensas redes que conectaban el interior del continente con el norte
+de África y el Mediterráneo.
+</p>
+
+<p>
+En otras regiones también se desarrollaron sociedades urbanas, Estados
+y redes comerciales vinculadas al mar Rojo y al océano Índico.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las ciudades y el crecimiento del comercio</h2>
+
+<p>
+A partir de los últimos siglos medievales, numerosas ciudades europeas
+experimentaron un crecimiento importante. Los mercados y las actividades
+artesanales adquirieron mayor importancia económica.
+</p>
+
+<p>
+Los comerciantes organizaron rutas terrestres y marítimas que conectaban
+diferentes regiones. Las ferias y puertos facilitaron el intercambio de
+productos.
+</p>
+
+<p>
+El crecimiento urbano contribuyó a transformar las relaciones económicas
+y sociales y preparó el camino para cambios posteriores.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las rutas comerciales y los intercambios culturales</h2>
+
+<p>
+Las rutas comerciales medievales conectaron regiones mucho más amplias
+que Europa occidental. La Ruta de la Seda, las rutas del océano Índico
+y las redes comerciales africanas permitieron el movimiento de bienes y
+personas.
+</p>
+
+<p>
+Junto con los productos también circularon <strong>ideas, tecnologías,
+idiomas, conocimientos científicos y tradiciones religiosas</strong>.
+</p>
+
+<p>
+Estos intercambios contribuyeron a crear relaciones entre sociedades que
+se encontraban a miles de kilómetros de distancia.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las Cruzadas y los conflictos entre regiones</h2>
+
+<p>
+Las Cruzadas fueron una serie de campañas militares iniciadas a finales
+del siglo XI y desarrolladas principalmente en el Mediterráneo oriental.
+</p>
+
+<p>
+Estuvieron relacionadas con conflictos políticos y religiosos entre
+diferentes poderes europeos y sociedades del mundo islámico, además de
+intereses territoriales y económicos.
+</p>
+
+<p>
+Los contactos producidos durante estos conflictos también estuvieron
+acompañados por intercambios comerciales y culturales entre regiones.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>La vida cotidiana en la Edad Media</h2>
+
+<p>
+La mayoría de la población medieval vivía en comunidades rurales y
+dependía principalmente de la agricultura y la ganadería.
+</p>
+
+<p>
+En las ciudades aumentaron los talleres artesanales, los mercados y las
+actividades comerciales. Las condiciones de vida variaban ampliamente
+según la región, la posición social y la época.
+</p>
+
+<p>
+La alimentación, la vivienda, el trabajo y las costumbres estuvieron
+determinados por los recursos disponibles y por las estructuras sociales
+de cada comunidad.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>Las mujeres en la sociedad medieval</h2>
+
+<p>
+La posición de las mujeres dependió de la región, la religión, la clase
+social y el período histórico. Sus responsabilidades podían incluir el
+trabajo doméstico, agrícola, artesanal y comercial.
+</p>
+
+<p>
+Algunas mujeres participaron también en actividades religiosas,
+económicas y políticas, aunque las oportunidades y derechos disponibles
+variaban considerablemente.
+</p>
+
+<p>
+Las fuentes medievales permiten estudiar tanto las restricciones sociales
+como los espacios de participación que existieron para las mujeres.
+</p>
+
+</section>
+
+
+<section>
+
+<h2>El final de la Edad Media</h2>
+
+<p>
+Durante los siglos XIV y XV ocurrieron importantes transformaciones en
+Europa y otras regiones. Las guerras, epidemias, cambios económicos y
+crisis políticas modificaron muchas estructuras medievales.
+</p>
+
+<p>
+Al mismo tiempo crecieron las ciudades, el comercio y algunas formas de
+administración centralizada. Nuevas rutas y contactos ampliaron la
+conexión entre diferentes regiones.
+</p>
+
+<p>
+Estos procesos contribuyeron a la transición hacia la
+<strong>Edad Moderna</strong>, aunque el cambio fue gradual y diferente
+según cada región.
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+Memoria del Mundo · Historia de la humanidad, sus sociedades y su memoria
+
+</footer>
+
+
+</body>
+</html>
