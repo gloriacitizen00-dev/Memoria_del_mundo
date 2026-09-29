@@ -9,7 +9,10 @@
 
 <title>Mundo contemporáneo | Memoria del Mundo</title>
 
+<meta name="description" content="Historia del mundo contemporáneo, sus guerras, sociedades, transformaciones, ciencia, tecnología, recursos y desafíos globales.">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 
 <style>
 
@@ -161,9 +164,10 @@ body{
     position:absolute;
 
     top:100%;
+
     left:0;
 
-    min-width:270px;
+    min-width:230px;
 
     background:var(--white);
 
@@ -180,20 +184,9 @@ body{
 
     display:block;
 
-    padding:10px 12px;
+    padding:9px 12px;
 
     font-size:13px;
-
-    color:var(--text);
-
-    text-decoration:none;
-
-}
-
-
-.dropdown-content a:hover{
-
-    background:var(--sand-soft);
 
 }
 
@@ -220,7 +213,7 @@ main{
 
     text-align:center;
 
-    margin-bottom:80px;
+    margin-bottom:50px;
 
     padding:70px 30px;
 
@@ -261,41 +254,51 @@ main{
 }
 
 
-section{
+/* MENÚ PRINCIPAL */
 
-    margin-bottom:80px;
+.history-menu{
 
-    background:var(--white);
+    background:var(--clay-dark);
 
-    padding:45px;
+    padding:25px 30px;
 
-    border:1px solid var(--border);
+    border:1px solid var(--clay-dark);
 
     box-shadow:var(--shadow);
 
-}
-
-
-section h2{
-
-    font-family:'Cinzel',serif;
-
-    font-size:32px;
-
-    color:var(--clay-dark);
-
-    margin-bottom:25px;
+    margin-bottom:60px;
 
 }
 
 
-section p{
+.history-menu select{
 
-    margin-bottom:20px;
+    width:100%;
 
-    color:var(--text-light);
+    padding:16px 18px;
 
-    font-size:17px;
+    background:rgba(255,253,247,.12);
+
+    color:var(--sand-soft);
+
+    border:1px solid var(--sand);
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+.history-menu option{
+
+    background:var(--clay-dark);
+
+    color:var(--sand-soft);
 
 }
 
@@ -323,21 +326,17 @@ footer{
 
     }
 
+
     .hero{
 
         padding:50px 25px;
 
     }
 
+
     .hero h1{
 
         font-size:38px;
-
-    }
-
-    section{
-
-        padding:30px;
 
     }
 
@@ -357,7 +356,9 @@ footer{
 
 
 <a href="index.html" class="brand">
+
 Memoria del Mundo
+
 </a>
 
 
@@ -365,14 +366,18 @@ Memoria del Mundo
 
 
 <a href="index.html">
+
 Inicio
+
 </a>
 
 
 <div class="dropdown">
 
 <button class="dropdown-button">
+
 Orígenes
+
 </button>
 
 <div class="dropdown-content">
@@ -401,7 +406,9 @@ Escritura
 <div class="dropdown">
 
 <button class="dropdown-button">
+
 Civilizaciones
+
 </button>
 
 <div class="dropdown-content">
@@ -424,7 +431,9 @@ Civilizaciones
 <div class="dropdown">
 
 <button class="dropdown-button">
+
 Religiones
+
 </button>
 
 <div class="dropdown-content">
@@ -477,7 +486,9 @@ Cienciología
 <div class="dropdown">
 
 <button class="dropdown-button">
+
 Cultura
+
 </button>
 
 <div class="dropdown-content">
@@ -506,7 +517,9 @@ Ciencia
 <div class="dropdown">
 
 <button class="dropdown-button">
+
 Historia
+
 </button>
 
 <div class="dropdown-content">
@@ -532,53 +545,6 @@ Mundo contemporáneo
 </div>
 
 
-<!-- MUNDO CONTEMPORÁNEO -->
-
-<div class="dropdown">
-
-<button class="dropdown-button">
-Mundo contemporáneo
-</button>
-
-<div class="dropdown-content">
-
-<a href="#primera-guerra">
-Primera Guerra Mundial
-</a>
-
-<a href="#segunda-guerra">
-Segunda Guerra Mundial
-</a>
-
-<a href="#guerra-fria">
-Guerra Fría
-</a>
-
-<a href="#descolonizacion">
-Descolonización
-</a>
-
-<a href="#mundo-actual">
-Mundo actual
-</a>
-
-<a href="#emergencias">
-Emergencias Mundiales
-</a>
-
-<a href="#magia">
-Magia, ocultismo y mundo invisible
-</a>
-
-<a href="#creencias">
-Creencias y mundos espirituales
-</a>
-
-</div>
-
-</div>
-
-
 </div>
 
 </nav>
@@ -596,82 +562,55 @@ Mundo contemporáneo
 </h1>
 
 <p>
-Historia, sociedades, conflictos, ciencia, tecnología y transformaciones del mundo contemporáneo.
+Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mundo contemporáneo.
 </p>
 
 </div>
 
 
-<section id="primera-guerra">
+<div class="history-menu">
 
-<h2>
+<select onchange="irASeccion(this.value)">
+
+<option value="">
+Explorar Mundo contemporáneo
+</option>
+
+<option value="primera-guerra">
 Primera Guerra Mundial
-</h2>
+</option>
 
-</section>
-
-
-<section id="segunda-guerra">
-
-<h2>
+<option value="segunda-guerra">
 Segunda Guerra Mundial
-</h2>
+</option>
 
-</section>
-
-
-<section id="guerra-fria">
-
-<h2>
+<option value="guerra-fria">
 Guerra Fría
-</h2>
+</option>
 
-</section>
-
-
-<section id="descolonizacion">
-
-<h2>
+<option value="descolonizacion">
 Descolonización
-</h2>
+</option>
 
-</section>
-
-
-<section id="mundo-actual">
-
-<h2>
+<option value="mundo-actual">
 Mundo actual
-</h2>
+</option>
 
-</section>
-
-
-<section id="emergencias">
-
-<h2>
+<option value="emergencias">
 Emergencias Mundiales
-</h2>
+</option>
 
-</section>
-
-
-<section id="magia">
-
-<h2>
+<option value="magia">
 Magia, ocultismo y mundo invisible
-</h2>
+</option>
 
-</section>
-
-
-<section id="creencias">
-
-<h2>
+<option value="creencias">
 Creencias y mundos espirituales
-</h2>
+</option>
 
-</section>
+</select>
+
+</div>
 
 
 </main>
@@ -682,6 +621,19 @@ Creencias y mundos espirituales
 Memoria del Mundo · Civilizaciones, Historia y Patrimonio
 
 </footer>
+
+
+<script>
+
+function irASeccion(id){
+
+    if(!id) return;
+
+    window.location.href = "#" + id;
+
+}
+
+</script>
 
 
 </body>
