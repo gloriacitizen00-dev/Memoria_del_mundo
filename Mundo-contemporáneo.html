@@ -567,85 +567,139 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 
 </div>
 
-
+```html
 <div class="history-menu">
 
-<select onchange="irASeccion(this.value)">
+    <select onchange="mostrarSubmenu(this.value)">
 
-<option value="">
-Explorar Mundo contemporáneo
-</option>
+        <option value="">
+            Explorar Mundo contemporáneo
+        </option>
 
+        <option value="primera-guerra">
+            Primera Guerra Mundial
+        </option>
 
+        <option value="segunda-guerra">
+            Segunda Guerra Mundial
+        </option>
 
-<option value="segunda-guerra">
-Segunda Guerra Mundial
-</option>
+        <option value="guerra-fria">
+            Guerra Fría
+        </option>
 
-<option value="guerra-fria">
-Guerra Fría
-</option>
+        <option value="descolonizacion">
+            Descolonización
+        </option>
 
-<option value="descolonizacion">
-Descolonización
-</option>
+        <option value="mundo-actual">
+            Mundo actual
+        </option>
 
-<option value="mundo-actual">
-Mundo actual
-</option>
+        <option value="emergencias">
+            Emergencias Mundiales
+        </option>
 
-<option value="emergencias">
-Emergencias Mundiales
-</option>
+        <option value="magia">
+            Magia, ocultismo y mundo invisible
+        </option>
 
-<option value="magia">
-Magia, ocultismo y mundo invisible
-</option>
+        <option value="creencias">
+            Creencias y mundos espirituales
+        </option>
 
-<option value="creencias">
-Creencias y mundos espirituales
-</option>
-
-</select>
+    </select>
 
 </div>
 
 
-</main>
+<!-- SUBMENÚ: PRIMERA GUERRA MUNDIAL -->
 
+<div id="primera-guerra" class="submenu-history" style="display:none;">
 
-<footer>
+    <select onchange="irASeccion(this.value)">
 
-Memoria del Mundo · Civilizaciones, Historia y Patrimonio
+        <option value="">
+            Explorar Primera Guerra Mundial
+        </option>
 
-</footer>
+        <option value="#primera-europa">
+            Europa
+        </option>
 
+        <option value="#primera-oriente-medio">
+            Oriente Medio
+        </option>
 
+        <option value="#primera-africa">
+            África
+        </option>
+
+        <option value="#primera-asia">
+            Asia
+        </option>
+
+        <option value="#primera-america-latina">
+            América Latina
+        </option>
+
+        <option value="#primera-mujeres">
+            Mujeres y sociedad
+        </option>
+
+        <option value="#primera-arte-guerra">
+            El arte de la guerra
+        </option>
+
+        <option value="#primera-tecnologia">
+            Tecnología y nuevas armas
+        </option>
+
+        <option value="#primera-creencias">
+            Creencias, espiritualidad y guerra
+        </option>
+
+    </select>
+
+</div>
+```
+
+Y **reemplaza todo tu JavaScript final** por esto:
+
+```html
 <script>
 
-<script>
+function mostrarSubmenu(id){
+
+    /* Ocultar todos los submenús */
+    document.querySelectorAll('.submenu-history').forEach(function(menu){
+
+        menu.style.display = 'none';
+
+    });
+
+
+    /* Mostrar el submenú seleccionado */
+    if(id){
+
+        const submenu = document.getElementById(id);
+
+        if(submenu){
+
+            submenu.style.display = 'block';
+
+        }
+
+    }
+
+}
+
 
 function irASeccion(id){
 
     if(!id) return;
 
-    /* Mostrar el segundo menú de Primera Guerra Mundial */
-    if(id === "primera-guerra"){
-
-        document.getElementById("primera-guerra").style.display = "block";
-
-        return;
-    }
-
-    /* Ir a una sección interna */
-    if(id.startsWith("#")){
-
-        window.location.href = id;
-
-        return;
-    }
-
-    window.location.href = "#" + id;
+    window.location.href = id;
 
 }
 
@@ -653,7 +707,7 @@ function irASeccion(id){
 
 </script>
 
-
-</body>
+</body> 
 
 </html>
+
