@@ -365,6 +365,13 @@ main{
 
 }
 
+.contemporary-content{
+
+    display:none;
+
+    margin-top:40px;
+
+}
 
 
 footer{
@@ -680,10 +687,10 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 
 <div id="primera-guerra" class="submenu-history" style="display:none;">
 
-    <select onchange="irASeccion(this.value)">
+    <select onchange="mostrarContenido(this.value)">
 
-        <option value="">
-            Explorar Primera Guerra Mundial
+        <option value="#primera-oriente-medio">
+            Oriente Medio
         </option>
 
         <option value="#primera-europa">
@@ -705,6 +712,7 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
         <option value="#primera-america-latina">
             América Latina
         </option>
+
 
         <option value="#primera-mujeres">
             Mujeres y sociedad
@@ -763,7 +771,7 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 
 </section>
     
-<section id="primera-europa">
+<section id="primera-europa" class="contemporary-content">
 
     <h2>Europa</h2>
 
@@ -872,6 +880,17 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
     
 <script>
 
+function ocultarContenidos(){
+
+    document.querySelectorAll('.contemporary-content').forEach(function(seccion){
+
+        seccion.style.display = 'none';
+
+    });
+
+}
+
+
 function mostrarSubmenu(id){
 
     /* Ocultar todos los submenús */
@@ -880,6 +899,10 @@ function mostrarSubmenu(id){
         menu.style.display = 'none';
 
     });
+
+
+    /* Ocultar todo el contenido */
+    ocultarContenidos();
 
 
     /* Mostrar el submenú seleccionado */
@@ -898,15 +921,29 @@ function mostrarSubmenu(id){
 }
 
 
-function irASeccion(id){
+function mostrarContenido(id){
 
-    if(!id) return;
+    /* Ocultar todos los contenidos */
+    ocultarContenidos();
 
-    window.location.href = id;
+
+    /* Mostrar el contenido seleccionado */
+    if(id){
+
+        const contenido = document.querySelector(id);
+
+        if(contenido){
+
+            contenido.style.display = 'block';
+
+        }
+
+    }
 
 }
 
 </script>
+
 
 </script>
 
