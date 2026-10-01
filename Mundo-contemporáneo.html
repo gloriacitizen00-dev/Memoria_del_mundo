@@ -688,7 +688,7 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 
     </select>
 
-       <div id="mundo-actual" class="submenu-history" style="display:none;">
+       <div id="mundo-actual" class="submenu-history" data-parent="" style="display:none;">
 
         <select onchange="mostrarSubmenu(this.value)">
 
@@ -697,15 +697,15 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
             </option>
 
             <option value="actual-1991-1994">
-                1991–1994 · Nacimiento del mundo digital
+                1991–1994
             </option>
 
             <option value="actual-1995-1999">
-                1995–1999 · Internet entra en la sociedad
+                1995–1999
             </option>
 
             <option value="actual-2000-2001">
-                2000–2001 · El comienzo del siglo XXI
+                2000–2001
             </option>
 
         </select>
@@ -713,7 +713,7 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
     </div>
 
 
-    <div id="actual-1991-1994" class="submenu-history" style="display:none;">
+    <div id="actual-1991-1994" class="submenu-history" data-parent="mundo-actual" style="display:none;">
 
         <select onchange="mostrarContenido(this.value)">
 
@@ -737,15 +737,11 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
                 1994 · La expansión de la Web
             </option>
 
-            <option value="#actual-1991-1994-contexto">
-                1991–1994 · El nacimiento del mundo digital
-            </option>
-
         </select>
 
     </div>
 
-    <div id="actual-1995-1999" class="submenu-history" style="display:none;">
+    <div id="actual-1995-1999" class="submenu-history" data-parent="mundo-actual" style="display:none;">
 
     <select onchange="mostrarContenido(this.value)">
 
@@ -10665,6 +10661,10 @@ function ocultarContenidos(){
 
 function mostrarSubmenu(id){
 
+    /* Ocultar todo el contenido */
+    ocultarContenidos();
+
+
     /* Ocultar todos los submenús */
     document.querySelectorAll('.submenu-history').forEach(function(menu){
 
@@ -10673,25 +10673,51 @@ function mostrarSubmenu(id){
     });
 
 
-    /* Ocultar todo el contenido */
-    ocultarContenidos();
+    /* Si no hay selección, no hacer nada */
+    if(!id){
+
+        return;
+
+    }
 
 
-    /* Mostrar el submenú seleccionado */
-    if(id){
+    /* Buscar el submenú seleccionado */
+    const submenu = document.getElementById(id);
 
-        const submenu = document.getElementById(id);
 
-        if(submenu){
+    if(submenu){
 
-            submenu.style.display = 'block';
+        /* Mostrar el submenú seleccionado */
+        submenu.style.display = 'block';
+
+
+        /* Buscar si tiene un submenú padre */
+        let parentId = submenu.getAttribute('data-parent');
+
+
+        /* Mostrar también todos sus padres */
+        while(parentId){
+
+            const parentMenu = document.getElementById(parentId);
+
+
+            if(parentMenu){
+
+                parentMenu.style.display = 'block';
+
+                parentId = parentMenu.getAttribute('data-parent');
+
+            }else{
+
+                break;
+
+            }
 
         }
 
     }
 
 }
-
 
 function mostrarContenido(id){
 
