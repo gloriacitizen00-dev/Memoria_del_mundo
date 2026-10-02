@@ -65,958 +65,600 @@
 
   <style>
 
-    :root {
+        :root{
+            --sand:#C6A66B;
+            --sand-dark:#8A6A3F;
+            --sand-light:#E1C995;
+            --sand-soft:#F7F0DF;
 
-      --sand: #C6A66B;
-      --sand-dark: #8A6A3F;
-      --sand-light: #E1C995;
-      --sand-soft: #F7F0DF;
+            --clay:#9A6842;
+            --clay-dark:#70472C;
 
-      --clay: #9A6842;
-      --clay-dark: #70472C;
+            --stone:#8B8172;
+            --stone-light:#C9C0B0;
 
-      --stone: #8B8172;
-      --stone-light: #C9C0B0;
+            --text:#2B241B;
+            --text-light:#665D51;
 
-      --text: #2B241B;
-      --text-light: #665D51;
+            --white:#FFFDF7;
+            --cream:#FBF6EA;
 
-      --white: #FFFDF7;
-      --cream: #FBF6EA;
+            --border:#E1D4B9;
 
-      --border: #E1D4B9;
+            --shadow:
+                0 20px 50px rgba(120,90,45,.12);
+        }
 
-      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
 
-    }
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
 
 
-    * {
+        body{
+            font-family:'Montserrat',sans-serif;
+            background:var(--cream);
+            color:var(--text);
+            line-height:1.8;
+        }
 
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
 
-    }
+        /* =========================
+           TOPBAR
+        ========================= */
 
+        .topbar{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            z-index:1000;
 
-    html {
+            background:rgba(255,253,247,.97);
 
-      scroll-behavior: smooth;
+            border-bottom:1px solid var(--border);
 
-    }
+            box-shadow:
+                0 5px 20px rgba(120,90,45,.08);
+        }
 
 
-    body {
+        .nav-container{
+            max-width:1200px;
+            margin:auto;
 
-      font-family: 'Cormorant Garamond', serif;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
 
-      background: var(--cream);
+            padding:15px 25px;
+        }
 
-      color: var(--text);
 
-      line-height: 1.7;
+        .site-logo{
+            font-family:'Cinzel',serif;
+            font-size:20px;
+            font-weight:700;
 
-    }
+            color:var(--clay-dark);
 
+            text-decoration:none;
+        }
 
-    /* =========================
-       TOPBAR
-    ========================= */
 
-    .topbar {
+        .nav-menu{
+            display:flex;
+            align-items:center;
+            gap:10px;
 
-      position: fixed;
+            list-style:none;
+        }
 
-      top: 0;
-      left: 0;
-      right: 0;
 
-      z-index: 1000;
+        .nav-menu > li{
+            position:relative;
+        }
 
-      background: rgba(255, 253, 247, .97);
 
-      border-bottom: 1px solid var(--border);
+        .nav-menu a,
+        .dropdown-button{
+            display:block;
 
-      box-shadow: 0 4px 20px rgba(80, 60, 30, .08);
+            padding:10px 14px;
 
-    }
+            color:var(--text);
 
+            text-decoration:none;
 
-    .topbar-container {
+            font-size:13px;
+            font-weight:600;
 
-      max-width: 1250px;
+            border:none;
+            background:none;
 
-      margin: auto;
+            cursor:pointer;
+        }
 
-      padding: 0 25px;
 
-      min-height: 72px;
+        .nav-menu a:hover,
+        .dropdown-button:hover{
+            color:var(--clay-dark);
+        }
 
-      display: flex;
 
-      align-items: center;
+        .dropdown{
+            position:absolute;
 
-      justify-content: space-between;
+            top:100%;
+            left:0;
 
-      gap: 25px;
+            min-width:200px;
 
-    }
+            background:var(--white);
 
+            border:1px solid var(--border);
 
-    .brand {
+            box-shadow:var(--shadow);
 
-      font-family: 'Cinzel', serif;
+            opacity:0;
+            visibility:hidden;
 
-      font-size: 1.05rem;
+            transform:translateY(8px);
 
-      font-weight: 700;
+            transition:.25s;
+        }
 
-      letter-spacing: .08em;
 
-      color: var(--clay-dark);
+        .nav-menu li:hover .dropdown{
+            opacity:1;
+            visibility:visible;
 
-      text-decoration: none;
+            transform:translateY(0);
+        }
 
-      white-space: nowrap;
 
-    }
+        .dropdown a{
+            padding:11px 16px;
+            font-size:12px;
+        }
 
 
-    .nav {
+        /* =========================
+           HERO
+        ========================= */
 
-      display: flex;
+        .hero{
+            position:relative;
 
-      align-items: center;
+            min-height:650px;
 
-      gap: 8px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
 
-      flex-wrap: wrap;
+            text-align:center;
 
-      justify-content: flex-end;
+            padding:120px 20px 80px;
 
-    }
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--clay-dark),
+                    var(--sand-dark)
+                );
 
+            color:var(--white);
+        }
 
-    .nav > a,
-    .dropdown-button {
 
-      font-family: 'Montserrat', sans-serif;
+        .hero-content{
+            max-width:900px;
+            margin:auto;
+        }
 
-      font-size: .72rem;
 
-      font-weight: 600;
-
-      letter-spacing: .04em;
-
-      color: var(--text);
-
-      text-decoration: none;
-
-      padding: 10px 12px;
-
-      border-radius: 4px;
-
-      transition: .25s ease;
-
-      background: transparent;
-
-      border: none;
-
-      cursor: pointer;
-
-    }
-
-
-    .nav > a:hover,
-    .dropdown-button:hover {
-
-      color: var(--clay-dark);
-
-      background: var(--sand-soft);
-
-    }
-
-
-    .dropdown {
-
-      position: relative;
-
-    }
-
-
-    .dropdown-content {
-
-      display: none;
-
-      position: absolute;
-
-      top: 100%;
-      left: 0;
-
-      min-width: 210px;
-
-      background: var(--white);
-
-      border: 1px solid var(--border);
-
-      box-shadow: var(--shadow);
-
-      padding: 8px;
-
-      border-radius: 6px;
-
-    }
-
-
-    .dropdown:hover .dropdown-content {
-
-      display: block;
-
-    }
-
-
-    .dropdown-content a {
-
-      display: block;
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .7rem;
-
-      color: var(--text);
-
-      text-decoration: none;
-
-      padding: 10px 12px;
-
-      border-radius: 4px;
-
-      transition: .2s ease;
-
-    }
-
-
-    .dropdown-content a:hover {
-
-      background: var(--sand-soft);
-
-      color: var(--clay-dark);
-
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-
-      position: relative;
-
-      min-height: 560px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      padding: 100px 20px 80px;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--clay-dark),
-          var(--sand-dark)
-        );
-
-      color: var(--white);
-
-    }
-
-
-    .hero-content {
-
-      max-width: 900px;
-
-      margin-top: 40px;
-
-    }
-
-
-    /* =========================
-       CIVILIZATION LOGO
-    ========================= */
-
-    .hero-logo {
-
-      width: 85%;
-
-      height: auto;
-
-      display: block;
-
-      margin: 0 auto 35px;
-
-      transition: .35s;
-
-      transform: translateX(-10px);
-
-    }
-
-.hero-logo-container{
-
-width:250px;
-
-height:250px;
-
-margin:0 auto 35px;
-
-border-radius:50%;
-
-background:var(--white);
-
-border:5px solid var(--sand-dark);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-box-shadow:
-0 0 0 10px rgba(198,166,107,.14),
-0 30px 60px rgba(120,90,45,.20);
-
-}
-
-
-    .eyebrow {
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .72rem;
-
-      font-weight: 600;
-
-      letter-spacing: .18em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 18px;
-
-      color: var(--sand-light);
-
-    }
-
-
-    .hero h1 {
-
-      font-family: 'Cinzel', serif;
-
-      font-size: clamp(2.6rem, 6vw, 5rem);
-
-      font-weight: 600;
-
-      line-height: 1.1;
-
-      margin-bottom: 22px;
-
-    }
-
-
-    .hero p {
-
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-
-      max-width: 720px;
-
-      margin: auto;
-
-      color: rgba(255,255,255,.88);
-
-    }
-
-
-    /* =========================
-       MAIN CONTENT
-    ========================= */
-
-    .history-container {
-
-      max-width: 1050px;
-
-      margin: auto;
-
-      padding: 80px 25px 100px;
-
-    }
-
-
-    .history-intro {
-
-      max-width: 850px;
-
-      margin: 0 auto 75px;
-
-      text-align: center;
-
-    }
-
-
-    .history-intro h2 {
-
-      font-family: 'Cinzel', serif;
-
-      font-size: clamp(1.8rem, 4vw, 2.7rem);
-
-      color: var(--clay-dark);
-
-      margin-bottom: 20px;
-
-    }
-
-
-    .history-intro p {
-
-      font-size: 1.25rem;
-
-      color: var(--text-light);
-
-    }
-
-
-    /* =========================
-       HISTORY SECTIONS
-    ========================= */
-
-    .history-section {
-
-      padding: 65px 0;
-
-      border-top: 1px solid var(--border);
-
-    }
-
-
-    .history-section:first-of-type {
-
-      border-top: none;
-
-    }
-
-
-    .section-number {
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .75rem;
-
-      font-weight: 700;
-
-      letter-spacing: .18em;
-
-      color: var(--sand-dark);
-
-      margin-bottom: 12px;
-
-    }
-
-
-    .history-section h2 {
-
-      font-family: 'Cinzel', serif;
-
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-
-      color: var(--clay-dark);
-
-      line-height: 1.25;
-
-      margin-bottom: 25px;
-
-    }
-
-
-    .history-section p {
-
-      font-size: 1.2rem;
-
-      color: var(--text-light);
-
-      margin-bottom: 20px;
-
-      max-width: 900px;
-
-    }
-
-
-    /* =========================
-       IMAGES
-    ========================= */
-
-    .history-image {
-
-      margin-top: 35px;
-
-    }
-
-
-    .image-placeholder {
-
-      min-height: 250px;
-
-      border: 1px dashed var(--stone-light);
-
-      background: var(--sand-soft);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-
-      padding: 30px;
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .75rem;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
-
-      color: var(--stone);
-
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-
-      background: var(--clay-dark);
-
-      color: var(--white);
-
-      padding: 60px 25px 35px;
-
-    }
-
-
-    .footer-container {
-
-      max-width: 1100px;
-
-      margin: auto;
-
-      display: grid;
-
-      grid-template-columns: 1.5fr 1fr 1fr;
-
-      gap: 50px;
-
-    }
-
-
-    .footer-brand {
-
-      font-family: 'Cinzel', serif;
-
-      font-size: 1.3rem;
-
-      font-weight: 700;
-
-      margin-bottom: 15px;
-
-    }
-
-
-    .footer-text {
-
-      color: rgba(255,255,255,.75);
-
-      font-size: 1rem;
-
-      max-width: 420px;
-
-    }
-
-
-    .footer-column h3 {
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .75rem;
-
-      text-transform: uppercase;
-
-      letter-spacing: .12em;
-
-      margin-bottom: 15px;
-
-      color: var(--sand-light);
-
-    }
-
-
-    .footer-column a {
-
-      display: block;
-
-      color: rgba(255,255,255,.78);
-
-      text-decoration: none;
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .75rem;
-
-      margin-bottom: 9px;
-
-      transition: .2s ease;
-
-    }
-
-
-    .footer-column a:hover {
-
-      color: var(--white);
-
-    }
-
-
-    .footer-bottom {
-
-      max-width: 1100px;
-
-      margin: 45px auto 0;
-
-      padding-top: 20px;
-
-      border-top: 1px solid rgba(255,255,255,.15);
-
-      font-family: 'Montserrat', sans-serif;
-
-      font-size: .68rem;
-
-      color: rgba(255,255,255,.55);
-
-      text-align: center;
-
-    }
-
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 850px) {
-
-      .topbar-container {
-
-        flex-direction: column;
-
-        padding: 15px 20px;
-
-      }
-
-
-      .nav {
-
-        justify-content: center;
-
-      }
-
-
-      .dropdown-content {
-
-        position: static;
-
-        margin-top: 5px;
-
-      }
-
-
-      .hero {
-
-        min-height: 500px;
-
-      }
-
-
-      .hero-logo {
-
-        width: 85%;
-
-      }
-
-       .hero-logo-container{
-        width:250px;
-        height:250px;
-    }
-
-
-
-      .footer-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-      }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-      .nav {
-
-        gap: 2px;
-
-      }
-
-
-      .nav > a,
-      .dropdown-button {
-
-        font-size: .65rem;
-
-        padding: 8px 7px;
-
-      }
-
-
-      .history-container {
-
-        padding-left: 18px;
-
-        padding-right: 18px;
-
-      }
-
-
-      .history-section {
-
-        padding: 50px 0;
-
-      }
-
-
-      .history-section p {
-
-        font-size: 1.1rem;
-
-      }
-
-
-      .hero-logo {
-
-        width: 85%;
-
-      }
+        /* =========================
+           LOGO OFICIAL
+        ========================= */
 
         .hero-logo-container{
-        width:220px;
-        height:220px;
-    }
+            width:340px;
+            height:340px;
 
-    }
+            margin:0 auto 35px;
 
-  </style>
+            border-radius:50%;
 
+            background:var(--white);
+
+            border:5px solid var(--sand-dark);
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            overflow:hidden;
+
+            box-shadow:
+                0 0 0 10px rgba(198,166,107,.14),
+                0 30px 60px rgba(120,90,45,.20);
+        }
+
+
+        .hero-logo{
+            width:105%;
+
+            transition:.4s;
+        }
+
+
+        .hero-logo:hover{
+            transform:scale(1.05);
+        }
+
+
+        .hero h1{
+            font-family:'Cinzel',serif;
+
+            font-size:clamp(42px,6vw,72px);
+
+            font-weight:700;
+
+            margin-bottom:20px;
+        }
+
+
+        .hero p{
+            max-width:750px;
+
+            margin:auto;
+
+            font-family:'Cormorant Garamond',serif;
+
+            font-size:24px;
+
+            line-height:1.5;
+
+            color:var(--sand-soft);
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        main{
+            max-width:1100px;
+
+            margin:auto;
+
+            padding:80px 25px;
+        }
+
+
+        .history-section{
+            margin-bottom:150px;
+
+            background:var(--white);
+
+            padding:55px 50px;
+
+            border:1px solid var(--border);
+
+            box-shadow:var(--shadow);
+        }
+
+        .space-between-sections{
+            height:80px;
+         }
+
+        .history-section h2{
+            font-family:'Cinzel',serif;
+
+            font-size:32px;
+
+            color:var(--clay-dark);
+
+            margin-top:20px;
+
+            margin-bottom:30px;
+        }
+
+
+        .history-section p{
+            margin-bottom:22px;
+
+            color:var(--text-light);
+
+            font-size:16px;
+        }
+
+
+        .history-section strong{
+            color:var(--text);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+            background:var(--clay-dark);
+
+            color:var(--sand-soft);
+
+            text-align:center;
+
+            padding:45px 20px;
+        }
+
+
+        footer h3{
+            font-family:'Cinzel',serif;
+
+            margin-bottom:10px;
+        }
+
+
+        footer p{
+            font-size:13px;
+
+            opacity:.85;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px){
+
+            .nav-container{
+                flex-direction:column;
+                gap:10px;
+            }
+
+            .nav-menu{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero-logo-container{
+                width:250px;
+                height:250px;
+            }
+
+            .hero{
+                padding-top:180px;
+            }
+
+            .history-section{
+                padding:30px;
+            }
+
+        }
+
+
+        @media(max-width:600px){
+
+            .nav-menu{
+                gap:2px;
+            }
+
+            .nav-menu a,
+            .dropdown-button{
+                padding:8px 9px;
+                font-size:11px;
+            }
+
+            .hero-logo-container{
+                width:220px;
+                height:220px;
+            }
+
+            .hero h1{
+                font-size:42px;
+            }
+
+            .hero p{
+                font-size:20px;
+            }
+
+            .history-section{
+                padding:25px 20px;
+            }
+
+            .history-section h2{
+                font-size:26px;
+            }
+
+        }
+
+    </style>
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       TOPBAR
-  ========================= -->
+    <!-- =========================
+         TOPBAR
+    ========================= -->
 
-  <header class="topbar">
+    <header class="topbar">
 
-    <div class="topbar-container">
+        <div class="nav-container">
 
-      <a href="index.html" class="brand">
-        Memoria del Mundo
-      </a>
-
-
-      <nav class="nav">
-
-
-        <a href="index.html">
-          Inicio
-        </a>
-
-
-        <div class="dropdown">
-
-          <button class="dropdown-button">
-            Orígenes
-          </button>
-
-          <div class="dropdown-content">
-
-            <a href="primeros-homininos.html">
-              Primeros seres humanos
+            <a href="index.html" class="site-logo">
+                Memoria del Mundo
             </a>
 
-            <a href="revolucion-neolitica.html">
-              Revolución neolítica
-            </a>
 
-            <a href="primeras-ciudades.html">
-              Primeras ciudades
-            </a>
+            <ul class="nav-menu">
 
-            <a href="escritura.html">
-              Escritura
-            </a>
+                <li>
+                    <a href="index.html">
+                        Inicio
+                    </a>
+                </li>
 
-          </div>
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Orígenes
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="primeros-homininos.html">
+                            Primeros seres humanos
+                        </a>
+
+                        <a href="revolucion-neolitica.html">
+                            Revolución neolítica
+                        </a>
+
+                        <a href="primeras-ciudades.html">
+                            Primeras ciudades
+                        </a>
+
+                        <a href="escritura.html">
+                            Escritura
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Civilizaciones
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="mesopotamia.html">
+                            Mesopotamia
+                        </a>
+
+                        <a href="egipto.html">
+                            Egipto
+                        </a>
+
+                        <a href="persia.html">
+                            Persia
+                        </a>
+
+                        <a href="India.html">
+                            India
+                        </a>
+
+                        <a href="China.html">
+                            China
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Religiones
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="religiones-antiguas.html">
+                            Religiones antiguas
+                        </a>
+
+                        <a href="judaismo.html">
+                            Judaísmo
+                        </a>
+
+                        <a href="cristianismo.html">
+                            Cristianismo
+                        </a>
+
+                        <a href="islam.html">
+                            Islam
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Cultura
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="escritura.html">
+                            Escritura
+                        </a>
+
+                        <a href="literatura.html">
+                            Literatura
+                        </a>
+
+                        <a href="Arte.html">
+                            Arte
+                        </a>
+
+                        <a href="Ciencia.html">
+                            Ciencia
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+
+                    <button class="dropdown-button">
+                        Historia
+                    </button>
+
+                    <div class="dropdown">
+
+                        <a href="Antigüedad.html">
+                            Antigüedad
+                        </a>
+
+                        <a href="Edad-Media.html">
+                            Edad Media
+                        </a>
+
+                        <a href="Edad-moderna.html">
+                            Edad Moderna
+                        </a>
+
+                        <a href="Mundo-contemporáneo.html">
+                            Mundo Contemporáneo
+                        </a>
+
+                    </div>
+
+                </li>
+
+            </ul>
 
         </div>
 
-
-        <div class="dropdown">
-
-          <button class="dropdown-button">
-            Civilizaciones
-          </button>
-
-          <div class="dropdown-content">
-
-            <a href="mesopotamia.html">
-              Mesopotamia
-            </a>
-
-            <a href="egipto.html">
-              Egipto
-            </a>
-
-            <a href="Persia.html">
-              Persia
-            </a>
-
-            <a href="India.html">
-              India
-            </a>
-
-            <a href="China.html">
-              China
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="dropdown">
-
-          <button class="dropdown-button">
-            Religiones
-          </button>
-
-          <div class="dropdown-content">
-
-            <a href="religiones-antiguas.html">
-              Religiones antiguas
-            </a>
-
-            <a href="judaismo.html">
-              Judaísmo
-            </a>
-
-            <a href="cristianismo.html">
-              Cristianismo
-            </a>
-
-            <a href="islam.html">
-              Islam
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="dropdown">
-
-          <button class="dropdown-button">
-            Cultura
-          </button>
-
-          <div class="dropdown-content">
-
-            <a href="escritura-moderna.html">
-              Escritura
-            </a>
-
-            <a href="literatura.html">
-              Literatura
-            </a>
-
-            <a href="Arte.html">
-              Arte
-            </a>
-
-            <a href="Ciencia.html">
-              Ciencia
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="dropdown">
-
-          <button class="dropdown-button">
-            Historia
-          </button>
-
-          <div class="dropdown-content">
-
-            <a href="Antigüedad.html">
-              Antigüedad
-            </a>
-
-            <a href="Edad-Media.html">
-              Edad Media
-            </a>
-
-            <a href="Edad-moderna.html">
-              Edad Moderna
-            </a>
-
-            <a href="Mundo-contemporáneo.html">
-              Mundo Contemporáneo
-            </a>
-
-          </div>
-
-        </div>
-
-
-      </nav>
-
-    </div>
-
-  </header>
-
+    </header>
 
 
   <!-- =========================
