@@ -382,14 +382,24 @@
             nav{
 
                 padding:15px 20px;
+                flex-direction:column;
+                gap:10px;
             }
 
 
             .nav-links{
+                 width:100%;
+                 gap:8px;
+                 flex-wrap:wrap;
+                 justify-content:center;
+             }
 
-                gap:12px;
-            }
-
+            .dropdown-content{
+                   left:50%;
+                   transform:translateX(-50%);
+                   min-width:220px;
+                   max-width:calc(100vw - 30px);
+              }
 
             .hero{
 
