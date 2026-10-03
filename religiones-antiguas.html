@@ -74,7 +74,7 @@
             top:0;
             left:0;
             width:100%;
-            z-index:1000;
+            z-index:10000;
 
             background:rgba(255,253,247,.96);
             border-bottom:1px solid var(--border);
@@ -250,6 +250,13 @@
                 gap:8px;
                 flex-wrap:wrap;
                 justify-content:center;
+              }
+
+            .dropdown-content{
+                 left:50%;
+                 transform:translateX(-50%);
+                 min-width:220px;
+                 max-width:calc(100vw - 30px);
               }
 
             .hero{
