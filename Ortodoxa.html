@@ -1,1 +1,1329 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Historia de la Iglesia Ortodoxa y del cristianismo oriental: conoce sus orígenes, tradición, liturgia, teología, relación con Bizancio y desarrollo histórico desde la Antigüedad hasta la actualidad.">
+
+    <meta name="keywords"
+          content="Iglesia Ortodoxa, Iglesia Ortodoxa Oriental, cristianismo ortodoxo, cristianismo oriental, cristianismo de Oriente, Iglesia de Oriente, historia de la Iglesia Ortodoxa, Iglesia bizantina, Bizancio, Imperio bizantino, Cisma de 1054, cristianismo antiguo, liturgia ortodoxa, teología ortodoxa, iconos, tradición cristiana oriental, patriarcado de Constantinopla">
+
+    <meta name="author"
+          content="Memoria del Mundo">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- FAVICON -->
+
+    <link rel="icon"
+          type="image/png"
+          href="imagen/favicon.png">
+
+
+    <!-- TITLE -->
+
+    <title>
+        La Iglesia Ortodoxa | Historia y Tradición Cristiana de Oriente | Memoria del Mundo
+    </title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- OPEN GRAPH -->
+
+    <meta property="og:title"
+          content="La Iglesia Ortodoxa | La tradición cristiana de Oriente">
+
+    <meta property="og:description"
+          content="Explora la historia de la Iglesia Ortodoxa, el cristianismo oriental, su tradición teológica, liturgia, iconografía y desarrollo histórico.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:site_name"
+          content="Memoria del Mundo">
+
+
+</head>
+
+<style>
+
+    :root{
+        --sand:#C6A66B;
+        --sand-dark:#8A6A3F;
+        --sand-light:#E1C995;
+        --sand-soft:#F7F0DF;
+
+        --clay:#9A6842;
+        --clay-dark:#70472C;
+
+        --stone:#8B8172;
+        --stone-light:#C9C0B0;
+
+        --text:#2B241B;
+        --text-light:#665D51;
+
+        --white:#FFFDF7;
+        --cream:#FBF6EA;
+
+        --border:#E1D4B9;
+
+        --shadow:
+            0 20px 50px rgba(120,90,45,.12);
+    }
+
+    *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        font-family:'Montserrat',sans-serif;
+        background:var(--cream);
+        color:var(--text);
+        line-height:1.8;
+    }
+
+    /* TOPBAR */
+
+    .topbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1000;
+        background:rgba(255,253,247,.97);
+        border-bottom:1px solid var(--border);
+        box-shadow:0 5px 20px rgba(120,90,45,.08);
+    }
+
+    .nav-container{
+        max-width:1200px;
+        margin:auto;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:15px 25px;
+    }
+
+    .site-logo{
+        font-family:'Cinzel',serif;
+        font-size:20px;
+        font-weight:700;
+        color:var(--clay-dark);
+        text-decoration:none;
+    }
+
+    .nav-menu{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        list-style:none;
+    }
+
+    .nav-menu > li{
+        position:relative;
+    }
+
+    .nav-menu a,
+    .dropdown-button{
+        display:block;
+        padding:10px 14px;
+        color:var(--text);
+        text-decoration:none;
+        font-size:13px;
+        font-weight:600;
+        border:none;
+        background:none;
+        cursor:pointer;
+    }
+
+    .nav-menu a:hover,
+    .dropdown-button:hover{
+        color:var(--clay-dark);
+    }
+
+    .dropdown{
+        position:absolute;
+        top:100%;
+        left:0;
+        min-width:200px;
+        background:var(--white);
+        border:1px solid var(--border);
+        box-shadow:var(--shadow);
+        opacity:0;
+        visibility:hidden;
+        transform:translateY(8px);
+        transition:.25s;
+    }
+
+    .nav-menu li:hover .dropdown{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+    }
+
+    .dropdown a{
+        padding:11px 16px;
+        font-size:12px;
+    }
+
+    /* HERO */
+
+    .hero{
+        position:relative;
+        min-height:650px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:120px 20px 80px;
+        background:
+            linear-gradient(
+                135deg,
+                var(--clay-dark),
+                var(--sand-dark)
+            );
+        color:var(--white);
+    }
+
+    .hero-content{
+        max-width:900px;
+        margin:auto;
+    }
+
+    /* LOGO OFICIAL */
+
+    .hero-logo-container{
+        width:340px;
+        height:340px;
+        margin:0 auto 35px;
+        border-radius:50%;
+        background:var(--white);
+        border:5px solid var(--sand-dark);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        box-shadow:
+            0 0 0 10px rgba(198,166,107,.14),
+            0 30px 60px rgba(120,90,45,.20);
+    }
+
+    .hero-logo{
+        width:105%;
+        transition:.4s;
+    }
+
+    .hero-logo:hover{
+        transform:scale(1.05);
+    }
+
+    .hero h1{
+        font-family:'Cinzel',serif;
+        font-size:clamp(42px,6vw,72px);
+        font-weight:700;
+        margin-bottom:20px;
+    }
+
+    .hero p{
+        max-width:750px;
+        margin:auto;
+        font-family:'Cormorant Garamond',serif;
+        font-size:24px;
+        line-height:1.5;
+        color:var(--sand-soft);
+    }
+
+    /* CONTENT */
+
+    main{
+        max-width:1100px;
+        margin:auto;
+        padding:80px 25px;
+    }
+
+    .history-section{
+        margin-bottom:150px;
+        background:var(--white);
+        padding:55px 50px;
+        border:1px solid var(--border);
+        box-shadow:var(--shadow);
+    }
+
+    .space-between-sections{
+        height:80px;
+    }
+
+    .history-section h2{
+        font-family:'Cinzel',serif;
+        font-size:32px;
+        color:var(--clay-dark);
+        margin-top:20px;
+        margin-bottom:30px;
+    }
+
+    .history-section p{
+        margin-bottom:22px;
+        color:var(--text-light);
+        font-size:16px;
+    }
+
+    .history-section strong{
+        color:var(--text);
+    }
+
+    /* FOOTER */
+
+    footer{
+        background:var(--clay-dark);
+        color:var(--sand-soft);
+        text-align:center;
+        padding:45px 20px;
+    }
+
+    footer h3{
+        font-family:'Cinzel',serif;
+        margin-bottom:10px;
+    }
+
+    footer p{
+        font-size:13px;
+        opacity:.85;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+        .nav-container{
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .nav-menu{
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .hero-logo-container{
+            width:250px;
+            height:250px;
+        }
+
+        .hero{
+            padding-top:180px;
+        }
+
+        .history-section{
+            padding:30px;
+        }
+
+    }
+
+    @media(max-width:600px){
+
+        .nav-menu{
+            gap:2px;
+        }
+
+        .nav-menu a,
+        .dropdown-button{
+            padding:8px 9px;
+            font-size:11px;
+        }
+
+        .hero-logo-container{
+            width:220px;
+            height:220px;
+        }
+
+        .hero h1{
+            font-size:42px;
+        }
+
+        .hero p{
+            font-size:20px;
+        }
+
+        .history-section{
+            padding:25px 20px;
+        }
+
+        .history-section h2{
+            font-size:26px;
+        }
+
+    }
+
+</style>
+
+<body>
+
+<!-- =========================
+     TOPBAR
+========================= -->
+
+<header class="topbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="site-logo">
+            Memoria del Mundo
+        </a>
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <button class="dropdown-button">
+                    Orígenes
+                </button>
+
+                <div class="dropdown">
+                    <a href="primeros-homininos.html">Primeros seres humanos</a>
+                    <a href="revolucion-neolitica.html">Revolución neolítica</a>
+                    <a href="primeras-ciudades.html">Primeras ciudades</a>
+                    <a href="escritura.html">Escritura</a>
+                </div>
+            </li>
+
+            <li>
+                <button class="dropdown-button">
+                    Civilizaciones
+                </button>
+
+                <div class="dropdown">
+                    <a href="mesopotamia.html">Mesopotamia</a>
+                    <a href="egipto.html">Egipto</a>
+                    <a href="persia.html">Persia</a>
+                    <a href="India.html">India</a>
+                    <a href="China.html">China</a>
+                    <a href="Tibet.html">Tibet</a>
+                  
+                </div>
+            </li>
+
+            <li>
+                <button class="dropdown-button">
+                    Religiones
+                </button>
+
+                <div class="dropdown">
+                    <a href="religiones-antiguas.html">Religiones antiguas</a>
+                    <a href="judaismo.html">Judaísmo</a>
+                    <a href="cristianismo.html">Cristianismo</a>
+                    <a href="islam.html">Islam</a>
+                    <a href="iglesia-ortodoxa.html">
+                        Iglesia Ortodoxa
+                    </a>
+                </div>
+            </li>
+
+            <li>
+                <button class="dropdown-button">
+                    Cultura
+                </button>
+
+                <div class="dropdown">
+                    <a href="escritura-moderna.html">Escritura</a>
+                    <a href="literatura.html">Literatura</a>
+                    <a href="Arte.html">Arte</a>
+                    <a href="Ciencia.html">Ciencia</a>
+                </div>
+            </li>
+
+            <li>
+                <button class="dropdown-button">
+                    Historia
+                </button>
+
+                <div class="dropdown">
+                    <a href="Antigüedad.html">Antigüedad</a>
+                    <a href="Edad-Media.html">Edad Media</a>
+                    <a href="Edad-moderna.html">Edad Moderna</a>
+                    <a href="Mundo-contemporáneo.html">
+                        Mundo Contemporáneo
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-logo-container">
+
+            <img
+                src="imagen/iglesia-ortodoxa-logo.PNG"
+                class="hero-logo"
+                alt="Símbolo de la Iglesia Ortodoxa y de la tradición cristiana de Oriente"
+            >
+
+        </div>
+
+        <h1>
+            La Iglesia Ortodoxa
+        </h1>
+
+        <p>
+            La tradición cristiana de Oriente,
+            su historia, teología, liturgia y legado cultural.
+        </p>
+
+    </div>
+
+</section>
+
+<main>
+
+<section class="history-section">
+
+    <h2>
+        La Iglesia cristiana original
+    </h2>
+
+    <p>
+        El cristianismo surgió en el <strong>siglo I</strong> en el contexto
+        del judaísmo del Mediterráneo oriental, a partir de la vida y las
+        enseñanzas de <strong>Jesús de Nazaret</strong>. Sus primeros
+        seguidores formaron comunidades en Jerusalén y posteriormente en
+        otras ciudades de Judea, Siria, Asia Menor, Egipto, Grecia y el
+        mundo mediterráneo.
+    </p>
+
+    <p>
+        Durante sus primeros siglos, el cristianismo no estaba dividido en
+        las denominaciones que existen actualmente. Las comunidades
+        cristianas compartían una misma fe fundamental, celebraban el
+        bautismo y la <strong>Eucaristía</strong>, y reconocían la autoridad
+        de obispos, presbíteros y diáconos. Al mismo tiempo, existían
+        diferencias de idioma, costumbres, liturgia y organización entre
+        las distintas regiones.
+    </p>
+
+    <p>
+        Con el crecimiento del cristianismo surgieron importantes centros
+        episcopales en ciudades como <strong>Jerusalén, Antioquía, Roma,
+        Alejandría y Constantinopla</strong>. Estas sedes adquirieron una
+        importancia particular en la organización de la Iglesia y
+        contribuyeron al desarrollo de las tradiciones cristianas de Oriente
+        y Occidente.
+    </p>
+
+    <p>
+        Los primeros siglos también estuvieron marcados por debates sobre
+        cuestiones teológicas fundamentales. Los concilios de la Antigüedad
+        cristiana buscaron establecer formulaciones comunes sobre la
+        <strong>Trinidad, Jesucristo y la naturaleza de la fe cristiana</strong>.
+        Estas discusiones serían decisivas para la formación de las distintas
+        tradiciones cristianas que aparecerían posteriormente.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Jesús y los apóstoles
+    </h2>
+
+    <p>
+        El cristianismo surgió en el <strong>siglo I</strong> en el contexto
+        del judaísmo del Segundo Templo. Su figura central es
+        <strong>Jesús de Nazaret</strong>, un predicador judío de Galilea
+        cuya vida y enseñanza quedaron recogidas principalmente en los
+        Evangelios del Nuevo Testamento.
+    </p>
+
+    <p>
+        Jesús reunió a un grupo de discípulos, entre los que destacaron los
+        <strong>Doce apóstoles</strong>. Después de su muerte, sus seguidores
+        comenzaron a anunciar que había resucitado y que en él se cumplían
+        las promesas y esperanzas de las Escrituras de Israel. Este anuncio
+        se convirtió en el centro de la nueva comunidad cristiana.
+    </p>
+
+    <p>
+        Los apóstoles y otros primeros seguidores llevaron el mensaje
+        cristiano fuera de Judea. Las comunidades surgieron progresivamente
+        en distintas ciudades del Mediterráneo y de Oriente Próximo, entre
+        ellas <strong>Jerusalén, Antioquía, Alejandría, Éfeso y Roma</strong>.
+        Estas primeras comunidades desarrollaron formas de culto, enseñanza
+        y organización que serían fundamentales para la historia posterior
+        de la Iglesia.
+    </p>
+
+    <p>
+        Entre los primeros misioneros destacó <strong>Pablo de Tarso</strong>,
+        cuyas cartas constituyen algunos de los textos cristianos más
+        antiguos conservados. La expansión de estas comunidades creó una
+        red de iglesias conectadas por la enseñanza apostólica, la liturgia
+        y la vida comunitaria, de la que posteriormente surgirían las
+        diferentes tradiciones cristianas.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Jerusalén y las primeras comunidades
+    </h2>
+
+    <p>
+        Los orígenes del cristianismo se encuentran en <strong>Jerusalén</strong>
+        y en las comunidades judías de Judea del siglo I. Después de la
+        predicación y muerte de <strong>Jesús de Nazaret</strong>, sus
+        seguidores comenzaron a organizar comunidades que proclamaban su
+        resurrección y continuaban sus enseñanzas.
+    </p>
+
+    <p>
+        La comunidad de Jerusalén ocupó una posición fundamental durante las
+        primeras décadas del cristianismo. Entre sus figuras destacaron
+        <strong>Pedro</strong>, <strong>Santiago</strong> y otros dirigentes
+        vinculados a los primeros discípulos. Desde esta ciudad comenzaron a
+        desarrollarse redes de comunidades que posteriormente se extendieron
+        por Judea, Samaria y otras regiones del Mediterráneo oriental.
+    </p>
+
+    <p>
+        Durante el siglo I, el cristianismo se expandió más allá de sus
+        primeros círculos judíos. Las comunidades cristianas aparecieron en
+        ciudades como <strong>Antioquía, Alejandría y Roma</strong>, creando
+        diferentes centros de enseñanza, culto y organización. La expansión
+        también favoreció la circulación de cartas, evangelios y otros
+        textos que contribuyeron a formar la tradición cristiana.
+    </p>
+
+    <p>
+        Jerusalén conservó una importancia especial como lugar asociado a
+        los acontecimientos fundamentales de la vida de Jesús. Con el paso
+        del tiempo, la memoria de estos lugares y de las primeras
+        comunidades contribuyó a convertir la ciudad en uno de los grandes
+        centros espirituales del cristianismo, especialmente para las
+        tradiciones cristianas orientales.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Concilio de Jerusalén
+    </h2>
+
+    <p>
+        El <strong>Concilio de Jerusalén</strong>, celebrado aproximadamente
+        hacia el año <strong>49 d. C.</strong>, fue uno de los primeros
+        grandes debates de la comunidad cristiana. La cuestión principal
+        era determinar si los <strong>no judíos que se convertían al
+        cristianismo</strong> debían cumplir también las normas religiosas
+        de la tradición judía, incluida la circuncisión.
+    </p>
+
+    <p>
+        El debate enfrentó diferentes posiciones dentro de las primeras
+        comunidades cristianas. Algunos consideraban necesario mantener
+        determinadas prácticas de la Ley de Moisés, mientras que otros,
+        entre ellos <strong>Pablo de Tarso</strong>, defendían que los
+        conversos procedentes de otros pueblos no debían adoptar todas las
+        obligaciones de la tradición judía.
+    </p>
+
+    <p>
+        Según los <strong>Hechos de los Apóstoles</strong>, la reunión contó
+        con figuras importantes de la comunidad de Jerusalén, entre ellas
+        <strong>Pedro</strong> y <strong>Santiago</strong>. La decisión
+        favoreció una incorporación más amplia de los pueblos no judíos al
+        movimiento cristiano, estableciendo determinadas normas que debían
+        observarse sin exigir la conversión completa al judaísmo.
+    </p>
+
+    <p>
+        Este acontecimiento fue fundamental para la expansión del
+        cristianismo por el Mediterráneo. Al permitir que personas de
+        diferentes pueblos ingresaran a las comunidades cristianas sin
+        adoptar todas las prácticas de la Ley judía, contribuyó a que el
+        cristianismo se desarrollara progresivamente como una tradición
+        religiosa extendida mucho más allá de sus raíces judías.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Cómo se organizaban los primeros obispos
+    </h2>
+
+    <p>
+        Desde los primeros siglos del cristianismo, las comunidades fueron
+        organizándose alrededor de <strong>obispos, presbíteros y diáconos</strong>.
+        El obispo era responsable de la dirección de una comunidad cristiana
+        y de la preservación de sus enseñanzas, mientras que los presbíteros
+        colaboraban en la celebración de los sacramentos y en la atención de
+        los fieles.
+    </p>
+
+    <p>
+        Los obispos estaban vinculados a ciudades concretas y mantenían
+        comunicación con otros dirigentes cristianos de las regiones
+        cercanas. Esta estructura permitió crear redes entre diferentes
+        comunidades y favorecer una mayor unidad en cuestiones de
+        <strong>doctrina, culto y disciplina</strong>.
+    </p>
+
+    <p>
+        Con el crecimiento del cristianismo, algunas ciudades adquirieron
+        una importancia especial debido a su tamaño, antigüedad o relevancia
+        política. Las sedes episcopales de <strong>Roma, Constantinopla,
+        Alejandría, Antioquía y Jerusalén</strong> llegaron a ocupar un lugar
+        destacado dentro del mundo cristiano antiguo.
+    </p>
+
+    <p>
+        Estas sedes desarrollaron relaciones entre sí mediante cartas,
+        reuniones y concilios. Los obispos podían debatir cuestiones
+        doctrinales y resolver problemas que afectaban a varias comunidades,
+        contribuyendo progresivamente a la formación de una estructura
+        eclesiástica más amplia que posteriormente tendría un papel
+        fundamental en la historia del cristianismo oriental.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El nacimiento de la tradición que después llamaremos ortodoxa
+    </h2>
+
+    <p>
+        El cristianismo nació en el <strong>siglo I</strong> dentro del
+        mundo judío de Palestina y se extendió rápidamente por las ciudades
+        del Mediterráneo y del Cercano Oriente. Desde sus primeros siglos
+        existieron comunidades cristianas en regiones como Siria, Egipto,
+        Anatolia, Grecia y Mesopotamia, cada una desarrollando sus propias
+        tradiciones litúrgicas, teológicas y culturales.
+    </p>
+
+    <p>
+        Las comunidades cristianas de Oriente estuvieron especialmente
+        vinculadas a ciudades como <strong>Antioquía, Alejandría,
+        Jerusalén y Constantinopla</strong>. Estas sedes episcopales
+        adquirieron una enorme importancia en la organización y en el
+        pensamiento cristiano, y sus teólogos participaron en los grandes
+        debates sobre la doctrina que marcaron los primeros siglos de la
+        Iglesia.
+    </p>
+
+    <p>
+        Entre los siglos IV y VIII, los cristianos debatieron cuestiones
+        fundamentales sobre la naturaleza de <strong>Jesucristo, la
+        Trinidad y la relación entre lo divino y lo humano</strong>.
+        Los concilios ecuménicos reunieron a obispos de distintas regiones
+        para discutir estas cuestiones y establecer formulaciones
+        doctrinales que serían fundamentales para las diferentes tradiciones
+        cristianas.
+    </p>
+
+    <p>
+        Con el tiempo, las diferencias culturales, lingüísticas, políticas
+        y teológicas entre las comunidades cristianas de Oriente y Occidente
+        fueron adquiriendo mayor importancia. De este largo proceso surgiría
+        la tradición que posteriormente sería conocida como
+        <strong>cristianismo ortodoxo oriental</strong>, aunque la separación
+        entre Oriente y Occidente fue gradual y no puede reducirse a un
+        único acontecimiento.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Qué significaba originalmente orthodoxia
+    </h2>
+
+    <p>
+        La palabra <strong>orthodoxia</strong> procede del griego
+        <em>orthódoxos</em>, formado a partir de <em>orthós</em>
+        («correcto» o «recto») y <em>dóxa</em>, una palabra que podía
+        significar «opinión», «creencia» o «gloria». En el contexto
+        cristiano, el término llegó a expresar la idea de mantener una
+        <strong>enseñanza considerada correcta</strong> dentro de la fe.
+    </p>
+
+    <p>
+        En los primeros siglos del cristianismo, «ortodoxo» no designaba
+        todavía a una Iglesia separada de Occidente. Se utilizaba para
+        distinguir las enseñanzas y prácticas consideradas conformes con
+        la tradición cristiana recibida frente a aquellas que eran
+        consideradas <strong>heterodoxas</strong> o contrarias a la doctrina
+        aceptada.
+    </p>
+
+    <p>
+        La definición de lo que se consideraba doctrina correcta fue tomando
+        forma mediante las <strong>Escrituras, la tradición de las
+        comunidades cristianas y los concilios</strong>. Las discusiones
+        sobre la naturaleza de Cristo, la Trinidad y otros aspectos
+        fundamentales de la fe fueron especialmente importantes para el
+        desarrollo de la doctrina cristiana.
+    </p>
+
+    <p>
+        Con el paso de los siglos, el término adquirió también un significado
+        histórico e institucional. En la tradición cristiana oriental,
+        <strong>Ortodoxia</strong> terminó identificándose con las Iglesias
+        que conservaron determinadas tradiciones litúrgicas, teológicas y
+        canónicas vinculadas al cristianismo oriental.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Patriarcados antiguos
+    </h2>
+
+    <p>
+        Desde los primeros siglos del cristianismo, varias ciudades del
+        Mediterráneo oriental se convirtieron en importantes centros de
+        autoridad religiosa. Entre ellas destacaron <strong>Roma,
+        Constantinopla, Alejandría, Antioquía y Jerusalén</strong>, cuyos
+        obispos adquirieron una posición especial dentro de la organización
+        de la Iglesia antigua.
+    </p>
+
+    <p>
+        Estas sedes episcopales estuvieron vinculadas a algunas de las
+        comunidades cristianas más antiguas. Sus dirigentes, conocidos
+        posteriormente como <strong>patriarcas</strong>, participaron en
+        debates teológicos, concilios y decisiones relacionadas con la
+        organización de las comunidades cristianas.
+    </p>
+
+    <p>
+        Con el crecimiento del cristianismo y la transformación política del
+        Imperio romano, la importancia de estos centros fue cambiando.
+        <strong>Constantinopla</strong>, capital del Imperio romano de
+        Oriente, adquirió una posición especialmente destacada, mientras
+        que Alejandría, Antioquía y Jerusalén continuaron siendo importantes
+        centros religiosos e intelectuales.
+    </p>
+
+    <p>
+        Las diferencias teológicas, políticas y culturales entre las
+        distintas comunidades cristianas también produjeron divisiones.
+        Algunas de estas separaciones dieron origen a tradiciones eclesiales
+        diferentes, mientras que otras contribuyeron al desarrollo de las
+        iglesias que posteriormente formarían el mundo
+        <strong>ortodoxo oriental</strong>.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Antioquía, Alejandría, Jerusalén, Roma y Constantinopla
+    </h2>
+
+    <p>
+        Durante los primeros siglos del cristianismo, cinco grandes sedes
+        episcopales adquirieron una importancia especial: <strong>Roma,
+        Constantinopla, Alejandría, Antioquía y Jerusalén</strong>. Estas
+        ciudades estaban vinculadas a las primeras comunidades cristianas y
+        se convirtieron en importantes centros de autoridad religiosa,
+        enseñanza y organización eclesiástica.
+    </p>
+
+    <p>
+        <strong>Jerusalén</strong> ocupaba un lugar único por su relación
+        directa con la vida, muerte y resurrección de Jesús. 
+        <strong>Antioquía</strong>, una de las primeras grandes comunidades
+        cristianas fuera de Judea, desempeñó además un papel fundamental en
+        la expansión del cristianismo hacia otras regiones del Mediterráneo.
+    </p>
+
+    <p>
+        <strong>Alejandría</strong> se convirtió en uno de los principales
+        centros intelectuales del cristianismo antiguo, especialmente por el
+        desarrollo de la teología y la interpretación de las Escrituras.
+        <strong>Roma</strong>, por su parte, adquirió una posición central
+        en Occidente y quedó asociada a la tradición apostólica de Pedro y
+        Pablo.
+    </p>
+
+    <p>
+        Finalmente, <strong>Constantinopla</strong>, fundada como nueva
+        capital imperial por Constantino en el siglo IV, se convirtió en el
+        principal centro cristiano del Oriente romano. La importancia de
+        estas cinco sedes evolucionó con el tiempo y sus relaciones fueron
+        fundamentales para comprender la organización del cristianismo
+        antiguo y las posteriores divisiones entre las Iglesias cristianas.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Sucesión apostólica
+    </h2>
+
+    <p>
+        La <strong>sucesión apostólica</strong> es uno de los principios
+        fundamentales de la tradición cristiana ortodoxa. Según esta
+        concepción, los obispos reciben su autoridad mediante una sucesión
+        ininterrumpida de ordenaciones que se remonta a los
+        <strong>apóstoles</strong> y a las primeras comunidades cristianas.
+    </p>
+
+    <p>
+        Esta continuidad no se entiende únicamente como una transmisión
+        histórica de cargos. Para la Iglesia Ortodoxa, la sucesión apostólica
+        está vinculada a la preservación de la <strong>fe, la liturgia y la
+        vida sacramental</strong> recibidas de las primeras generaciones
+        cristianas.
+    </p>
+
+    <p>
+        Los obispos ocupan un lugar central dentro de esta estructura. Cada
+        obispo preside una comunidad local, mientras que las Iglesias
+        ortodoxas mantienen entre sí una relación de comunión. No existe un
+        único obispo con autoridad universal equivalente a la que ejerce el
+        papa en la Iglesia Católica.
+    </p>
+
+    <p>
+        La sucesión apostólica también contribuyó a conservar la continuidad
+        institucional de las antiguas sedes cristianas de Oriente, entre
+        ellas <strong>Constantinopla, Alejandría, Antioquía y Jerusalén</strong>.
+        Estas comunidades desempeñaron un papel fundamental en el desarrollo
+        histórico y teológico del cristianismo oriental.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Los patriarcados históricos
+    </h2>
+
+    <p>
+        Desde los primeros siglos del cristianismo, varias ciudades se
+        convirtieron en importantes centros de organización y autoridad
+        eclesiástica. Entre ellas destacaron <strong>Roma, Constantinopla,
+        Alejandría, Antioquía y Jerusalén</strong>, cuyos obispos llegaron a
+        ocupar una posición especialmente importante dentro de la
+        organización de la Iglesia antigua.
+    </p>
+
+    <p>
+        Estos grandes centros episcopales estuvieron vinculados a distintas
+        regiones del mundo cristiano y desarrollaron tradiciones litúrgicas,
+        teológicas y culturales propias. Con el tiempo, las diferencias
+        políticas, culturales y doctrinales entre Oriente y Occidente
+        contribuyeron a transformar las relaciones entre estas sedes.
+    </p>
+
+    <p>
+        Tras la separación entre las tradiciones cristianas de Oriente y
+        Occidente, Constantinopla pasó a ocupar un lugar central dentro del
+        cristianismo ortodoxo oriental. Al mismo tiempo, los patriarcados de
+        <strong>Alejandría, Antioquía y Jerusalén</strong> conservaron su
+        importancia histórica y religiosa.
+    </p>
+
+    <p>
+        A estos antiguos patriarcados se fueron sumando posteriormente otras
+        Iglesias ortodoxas, algunas de las cuales desarrollaron estructuras
+        propias y llegaron a ser reconocidas como <strong>Iglesias
+        autocéfalas</strong>. Esta evolución explica por qué la Iglesia
+        Ortodoxa no funciona como una única institución centralizada, sino
+        como una comunión de Iglesias que comparten la misma tradición
+        cristiana.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Imperio romano y el cristianismo
+    </h2>
+
+    <p>
+        El cristianismo surgió en el contexto del <strong>Imperio romano</strong>
+        durante el siglo I. Desde Palestina, sus comunidades se extendieron
+        progresivamente por distintas ciudades del Mediterráneo, incluyendo
+        importantes centros del mundo romano como <strong>Antioquía,
+        Alejandría y Roma</strong>.
+    </p>
+
+    <p>
+        Durante sus primeros siglos, las comunidades cristianas estuvieron
+        organizadas en diferentes iglesias locales dirigidas por obispos.
+        Algunas ciudades adquirieron una importancia especial debido a su
+        tamaño, tradición apostólica y posición dentro del Imperio. Entre
+        ellas destacaron Roma, Constantinopla, Alejandría, Antioquía y
+        Jerusalén.
+    </p>
+
+    <p>
+        La relación entre el cristianismo y las autoridades romanas cambió
+        con el tiempo. Los cristianos fueron perseguidos en distintos
+        períodos, aunque estas persecuciones no fueron constantes ni
+        tuvieron la misma intensidad en todas las regiones. Un cambio
+        decisivo ocurrió durante el gobierno de <strong>Constantino I</strong>,
+        cuando el cristianismo obtuvo reconocimiento legal en el Imperio
+        mediante el <strong>Edicto de Milán de 313</strong>.
+    </p>
+
+    <p>
+        Durante los siglos IV y V, el cristianismo pasó de ser una religión
+        perseguida a convertirse en una institución fundamental del Imperio.
+        Los concilios ecuménicos definieron importantes aspectos de la
+        doctrina cristiana y establecieron formas de organización que
+        influirían profundamente en las iglesias de Oriente y Occidente.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Constantino y el cristianismo imperial
+    </h2>
+
+    <p>
+        A comienzos del siglo IV, el cristianismo todavía era una religión
+        extendida por diferentes regiones del Imperio romano, pero había
+        atravesado períodos de persecución. La situación comenzó a cambiar
+        durante el gobierno de <strong>Constantino I</strong>, quien se
+        convirtió en el primer emperador romano que favoreció abiertamente
+        al cristianismo.
+    </p>
+
+    <p>
+        En el año <strong>313</strong>, Constantino y Licinio establecieron
+        una política de tolerancia religiosa conocida tradicionalmente como
+        el <strong>Edicto de Milán</strong>. Esta medida permitió a los
+        cristianos practicar su religión públicamente y recuperar bienes
+        confiscados durante las persecuciones anteriores.
+    </p>
+
+    <p>
+        Constantino también intervino en cuestiones relacionadas con la
+        organización de la Iglesia. En <strong>325</strong> convocó el
+        <strong>Concilio de Nicea</strong>, donde obispos procedentes de
+        diferentes partes del Imperio discutieron cuestiones doctrinales,
+        especialmente la controversia relacionada con <strong>Arrio</strong>
+        y la naturaleza de Cristo.
+    </p>
+
+    <p>
+        Durante su reinado, Constantinopla adquirió una importancia
+        creciente. Constantino reconstruyó la antigua ciudad de Bizancio y
+        la inauguró en <strong>330</strong> como nueva capital imperial.
+        Con el tiempo, esta ciudad se convertiría en el principal centro
+        político, cultural y religioso del cristianismo oriental.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Legalización del cristianismo
+    </h2>
+
+    <p>
+        Durante los primeros siglos de nuestra era, las comunidades
+        cristianas del Imperio romano enfrentaron períodos de persecución y
+        restricciones legales. La situación comenzó a cambiar durante el
+        <strong>siglo IV</strong>, cuando varios emperadores modificaron la
+        política imperial hacia el cristianismo.
+    </p>
+
+    <p>
+        En el año <strong>313</strong>, los emperadores
+        <strong>Constantino I y Licinio</strong> acordaron una política de
+        tolerancia religiosa conocida tradicionalmente como
+        <strong>Edicto de Milán</strong>. El cristianismo dejó de ser una
+        religión perseguida y sus comunidades obtuvieron reconocimiento
+        legal, permitiendo también la devolución de bienes confiscados.
+    </p>
+
+    <p>
+        La transformación fue gradual. Durante el reinado de
+        <strong>Constantino</strong>, el Estado comenzó a favorecer cada vez
+        más a las comunidades cristianas y el emperador intervino en asuntos
+        relacionados con la organización de la Iglesia. En <strong>325</strong>,
+        convocó el <strong>Concilio de Nicea</strong>, uno de los primeros
+        grandes concilios de la Iglesia.
+    </p>
+
+    <p>
+        Más adelante, en <strong>380</strong>, el emperador
+        <strong>Teodosio I</strong> estableció el cristianismo niceno como
+        religión oficial del Imperio. Este proceso transformó profundamente
+        la relación entre el poder imperial y la Iglesia y preparó el
+        desarrollo de las grandes tradiciones cristianas que surgirían en
+        Oriente y Occidente.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Constantinopla y el desarrollo del cristianismo oriental
+    </h2>
+
+    <p>
+        La ciudad de <strong>Constantinopla</strong>, fundada por el emperador
+        Constantino en el año <strong>330</strong> sobre la antigua ciudad de
+        Bizancio, se convirtió en uno de los principales centros del
+        cristianismo. Su posición entre Europa y Asia favoreció su desarrollo
+        como capital del <strong>Imperio romano de Oriente</strong> y como
+        importante centro político, cultural y religioso.
+    </p>
+
+    <p>
+        A medida que el cristianismo se consolidó dentro del Imperio romano,
+        Constantinopla adquirió una posición destacada entre las principales
+        sedes episcopales. El <strong>patriarca de Constantinopla</strong>
+        llegó a ocupar un lugar de especial importancia dentro del
+        cristianismo oriental, aunque su autoridad se desarrolló en relación
+        con otras grandes sedes como Roma, Alejandría, Antioquía y Jerusalén.
+    </p>
+
+    <p>
+        El cristianismo oriental desarrolló una tradición teológica y
+        litúrgica propia, profundamente vinculada con la cultura del mundo
+        <strong>bizantino</strong>. La reflexión de teólogos y escritores
+        cristianos, la celebración de la liturgia y el desarrollo de la
+        arquitectura y el <strong>arte religioso</strong> contribuyeron a
+        formar una identidad cristiana característica de Oriente.
+    </p>
+
+    <p>
+        Constantinopla también desempeñó un papel fundamental en la
+        transmisión del cristianismo hacia otras regiones. A través de
+        misioneros, traducciones y relaciones políticas, la tradición
+        cristiana oriental llegó progresivamente a los pueblos de Europa
+        oriental y de otras regiones vinculadas al mundo bizantino.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El paso de una religión perseguida a una institución imperial
+    </h2>
+
+    <p>
+        Durante los primeros siglos de nuestra era, las comunidades
+        cristianas del Imperio romano atravesaron distintos períodos de
+        tolerancia y persecución. Esta situación comenzó a cambiar de manera
+        decisiva durante el <strong>siglo IV</strong>, cuando el cristianismo
+        pasó de ser una religión perseguida a convertirse progresivamente
+        en una religión favorecida por el poder imperial.
+    </p>
+
+    <p>
+        En <strong>313</strong>, el emperador <strong>Constantino</strong> y
+        Licinio establecieron políticas de tolerancia religiosa que
+        permitieron a los cristianos practicar su fe abiertamente. Constantino
+        también apoyó a las comunidades cristianas y convocó el
+        <strong>Concilio de Nicea en 325</strong>, donde obispos de distintas
+        regiones debatieron cuestiones fundamentales de doctrina.
+    </p>
+
+    <p>
+        Durante las décadas siguientes, la relación entre el cristianismo y
+        el Estado romano se hizo cada vez más estrecha. En <strong>380</strong>,
+        el emperador <strong>Teodosio I</strong> declaró el cristianismo
+        niceno como religión oficial del Imperio, mientras que los concilios
+        de los siglos IV y V continuaron definiendo doctrinas y estructuras
+        de autoridad dentro de la Iglesia.
+    </p>
+
+    <p>
+        Este proceso transformó profundamente al cristianismo. Los obispos
+        adquirieron una mayor importancia institucional y las grandes
+        ciudades imperiales se convirtieron en centros religiosos. En la
+        parte oriental del Imperio, especialmente en
+        <strong>Constantinopla, Antioquía y Alejandría</strong>, se
+        desarrollaron importantes tradiciones teológicas que posteriormente
+        formarían parte fundamental de la historia del cristianismo oriental.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Los siete Concilios Ecuménicos
+    </h2>
+
+    <p>
+        Los <strong>siete Concilios Ecuménicos</strong> celebrados entre los
+        siglos IV y VIII fueron fundamentales para la formación doctrinal de
+        la tradición cristiana antigua. En ellos participaron obispos de
+        diferentes regiones del mundo cristiano para debatir cuestiones
+        relacionadas con la fe, la doctrina y la organización de la Iglesia.
+    </p>
+
+    <p>
+        El primero fue el <strong>Concilio de Nicea</strong>, celebrado en
+        el año 325, que rechazó el arrianismo y afirmó la plena divinidad
+        del Hijo. Posteriormente, el <strong>Concilio de Constantinopla
+        (381)</strong> profundizó la formulación de la doctrina trinitaria.
+        Los concilios de <strong>Éfeso (431)</strong> y
+        <strong>Calcedonia (451)</strong> trataron principalmente cuestiones
+        relacionadas con la persona de Cristo.
+    </p>
+
+    <p>
+        Los tres concilios posteriores tuvieron lugar en
+        <strong>Constantinopla</strong>: el segundo de Constantinopla en
+        553, el tercero en 680–681 y el segundo Concilio de Nicea en 787.
+        Este último defendió el uso y la veneración de las
+        <strong>imágenes sagradas o iconos</strong>, una cuestión que había
+        provocado importantes conflictos religiosos durante el período
+        conocido como la controversia iconoclasta.
+    </p>
+
+    <p>
+        Estos concilios establecieron formulaciones doctrinales que siguen
+        siendo fundamentales para la <strong>Iglesia Ortodoxa</strong>.
+        También forman parte de la historia común de otras tradiciones
+        cristianas, aunque las distintas Iglesias no reconocen exactamente
+        los mismos concilios como ecuménicos. Por ello, los siete concilios
+        constituyen una referencia esencial para comprender la evolución del
+        cristianismo oriental y sus posteriores divisiones históricas.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        La Iglesia Ortodoxa: la tradición cristiana de Oriente
+    </h2>
+
+    <p>
+        A medida que el cristianismo se expandió por el Imperio romano,
+        comenzaron a desarrollarse diferentes tradiciones culturales,
+        lingüísticas y litúrgicas en sus principales centros. Las comunidades
+        de <strong>Oriente</strong> estuvieron especialmente vinculadas a
+        ciudades como Constantinopla, Antioquía, Alejandría y Jerusalén,
+        mientras que en <strong>Occidente</strong> Roma adquirió una
+        posición cada vez más importante.
+    </p>
+
+    <p>
+        Las diferencias entre ambas tradiciones no fueron inicialmente una
+        ruptura completa. Durante siglos existieron intercambios entre las
+        iglesias orientales y occidentales, pero también surgieron
+        desacuerdos sobre cuestiones de <strong>autoridad, teología,
+        liturgia y organización eclesiástica</strong>. Las diferencias
+        culturales también aumentaron después de la división política del
+        Imperio romano entre sus partes oriental y occidental.
+    </p>
+
+    <p>
+        Uno de los principales puntos de tensión fue la autoridad del
+        <strong>obispo de Roma</strong>. Mientras la tradición occidental
+        desarrolló una concepción más amplia de la autoridad papal, las
+        iglesias orientales mantuvieron una estructura basada en la
+        <strong>colegialidad de los obispos y los patriarcados</strong>,
+        reconociendo al obispo de Roma una posición de honor, pero no una
+        autoridad universal equivalente a la que posteriormente defendería
+        la Iglesia latina.
+    </p>
+
+    <p>
+        La separación conocida como el <strong>Cisma de 1054</strong> fue
+        uno de los momentos más importantes de este largo proceso, aunque
+        las diferencias entre Oriente y Occidente continuaron desarrollándose
+        durante siglos. Con el tiempo, las iglesias que siguieron la tradición
+        bizantina formaron el núcleo de la <strong>Iglesia Ortodoxa
+        Oriental</strong>, caracterizada por sus propias tradiciones
+        litúrgicas, teológicas y espirituales.
+    </p>
+
+</section>
+
+    <!-- última sección de la Iglesia Ortodoxa -->
+
+</main>
+
+
+<footer>
+
+    <h3>
+        Memoria del Mundo™
+    </h3>
+
+    <p>
+        Un atlas digital de historia, cultura y civilización.
+    </p>
+
+    <p>
+        Creado por Gloria Martínez · San José, Costa Rica
+    </p>
+
+    <p>
+        © 2026 Gloria Martínez. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+</body>
+</html>
