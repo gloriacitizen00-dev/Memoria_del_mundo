@@ -1,1 +1,1345 @@
+<!DOCTYPE html>
 
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Historia del Tíbet: conoce el territorio tibetano, la meseta tibetana, su geografía, cultura, pueblos y evolución histórica entre Asia Central, India y China.">
+
+    <meta name="keywords"
+          content="Tíbet, Tibet, historia del Tíbet, civilización tibetana, cultura tibetana, meseta tibetana, Himalaya, Asia Central, India, China, historia asiática, civilizaciones de Asia">
+
+    <meta name="author"
+          content="Memoria del Mundo">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <link rel="icon"
+          type="image/png"
+          href="imagen/favicon.png">
+
+
+    <title>
+        Tíbet | Historia, Civilización y Cultura | Memoria del Mundo
+    </title>
+
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+          content="Tíbet | Historia, Civilización y Cultura">
+
+    <meta property="og:description"
+          content="Explora la historia del Tíbet, su territorio, civilización, cultura y evolución histórica en el corazón de Asia.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:site_name"
+          content="Memoria del Mundo">
+
+  <style>
+
+    :root{
+        --sand:#C6A66B;
+        --sand-dark:#8A6A3F;
+        --sand-light:#E1C995;
+        --sand-soft:#F7F0DF;
+
+        --clay:#9A6842;
+        --clay-dark:#70472C;
+
+        --stone:#8B8172;
+        --stone-light:#C9C0B0;
+
+        --text:#2B241B;
+        --text-light:#665D51;
+
+        --white:#FFFDF7;
+        --cream:#FBF6EA;
+
+        --border:#E1D4B9;
+
+        --shadow:
+            0 20px 50px rgba(120,90,45,.12);
+    }
+
+
+    *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+    }
+
+
+    body{
+        font-family:'Montserrat',sans-serif;
+        background:var(--cream);
+        color:var(--text);
+        line-height:1.8;
+    }
+
+
+    /* =========================
+       TOPBAR
+    ========================= */
+
+    .topbar{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1000;
+
+        background:rgba(255,253,247,.97);
+
+        border-bottom:1px solid var(--border);
+
+        box-shadow:
+            0 5px 20px rgba(120,90,45,.08);
+    }
+
+
+    .nav-container{
+        max-width:1200px;
+        margin:auto;
+
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+
+        padding:15px 25px;
+    }
+
+
+    .site-logo{
+        font-family:'Cinzel',serif;
+        font-size:20px;
+        font-weight:700;
+
+        color:var(--clay-dark);
+
+        text-decoration:none;
+    }
+
+
+    .nav-menu{
+        display:flex;
+        align-items:center;
+        gap:10px;
+
+        list-style:none;
+    }
+
+
+    .nav-menu > li{
+        position:relative;
+    }
+
+
+    .nav-menu a,
+    .dropdown-button{
+        display:block;
+
+        padding:10px 14px;
+
+        color:var(--text);
+
+        text-decoration:none;
+
+        font-size:13px;
+        font-weight:600;
+
+        border:none;
+        background:none;
+
+        cursor:pointer;
+    }
+
+
+    .nav-menu a:hover,
+    .dropdown-button:hover{
+        color:var(--clay-dark);
+    }
+
+
+    .dropdown{
+        position:absolute;
+
+        top:100%;
+        left:0;
+
+        min-width:200px;
+
+        background:var(--white);
+
+        border:1px solid var(--border);
+
+        box-shadow:var(--shadow);
+
+        opacity:0;
+        visibility:hidden;
+
+        transform:translateY(8px);
+
+        transition:.25s;
+    }
+
+
+    .nav-menu li:hover .dropdown{
+        opacity:1;
+        visibility:visible;
+
+        transform:translateY(0);
+    }
+
+
+    .dropdown a{
+        padding:11px 16px;
+        font-size:12px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero{
+        position:relative;
+
+        min-height:650px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        text-align:center;
+
+        padding:120px 20px 80px;
+
+        background:
+            linear-gradient(
+                135deg,
+                var(--clay-dark),
+                var(--sand-dark)
+            );
+
+        color:var(--white);
+    }
+
+
+    .hero-content{
+        max-width:900px;
+        margin:auto;
+    }
+
+
+    /* =========================
+       LOGO OFICIAL
+    ========================= */
+
+    .hero-logo-container{
+        width:340px;
+        height:340px;
+
+        margin:0 auto 35px;
+
+        border-radius:50%;
+
+        background:var(--white);
+
+        border:5px solid var(--sand-dark);
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        overflow:hidden;
+
+        box-shadow:
+            0 0 0 10px rgba(198,166,107,.14),
+            0 30px 60px rgba(120,90,45,.20);
+    }
+
+
+    .hero-logo{
+        width:105%;
+
+        transition:.4s;
+    }
+
+
+    .hero-logo:hover{
+        transform:scale(1.05);
+    }
+
+
+    .hero h1{
+        font-family:'Cinzel',serif;
+
+        font-size:clamp(42px,6vw,72px);
+
+        font-weight:700;
+
+        margin-bottom:20px;
+    }
+
+
+    .hero p{
+        max-width:750px;
+
+        margin:auto;
+
+        font-family:'Cormorant Garamond',serif;
+
+        font-size:24px;
+
+        line-height:1.5;
+
+        color:var(--sand-soft);
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    main{
+        max-width:1100px;
+
+        margin:auto;
+
+        padding:80px 25px;
+    }
+
+
+    .history-section{
+        margin-bottom:150px;
+
+        background:var(--white);
+
+        padding:55px 50px;
+
+        border:1px solid var(--border);
+
+        box-shadow:var(--shadow);
+    }
+
+
+    .space-between-sections{
+        height:80px;
+    }
+
+
+    .history-section h2{
+        font-family:'Cinzel',serif;
+
+        font-size:32px;
+
+        color:var(--clay-dark);
+
+        margin-top:20px;
+
+        margin-bottom:30px;
+    }
+
+
+    .history-section p{
+        margin-bottom:22px;
+
+        color:var(--text-light);
+
+        font-size:16px;
+    }
+
+
+    .history-section strong{
+        color:var(--text);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer{
+        background:var(--clay-dark);
+
+        color:var(--sand-soft);
+
+        text-align:center;
+
+        padding:45px 20px;
+    }
+
+
+    footer h3{
+        font-family:'Cinzel',serif;
+
+        margin-bottom:10px;
+    }
+
+
+    footer p{
+        font-size:13px;
+
+        opacity:.85;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:900px){
+
+        .nav-container{
+            flex-direction:column;
+            gap:10px;
+        }
+
+        .nav-menu{
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .hero-logo-container{
+            width:250px;
+            height:250px;
+        }
+
+        .hero{
+            padding-top:180px;
+        }
+
+        .history-section{
+            padding:30px;
+        }
+
+    }
+
+
+    @media(max-width:600px){
+
+        .nav-menu{
+            gap:2px;
+        }
+
+        .nav-menu a,
+        .dropdown-button{
+            padding:8px 9px;
+            font-size:11px;
+        }
+
+        .hero-logo-container{
+            width:220px;
+            height:220px;
+        }
+
+        .hero h1{
+            font-size:42px;
+        }
+
+        .hero p{
+            font-size:20px;
+        }
+
+        .history-section{
+            padding:25px 20px;
+        }
+
+        .history-section h2{
+            font-size:26px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     TOPBAR
+========================= -->
+
+<header class="topbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="site-logo">
+            Memoria del Mundo
+        </a>
+
+
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    Inicio
+                </a>
+            </li>
+
+
+            <li>
+
+                <button class="dropdown-button">
+                    Orígenes
+                </button>
+
+                <div class="dropdown">
+
+                    <a href="primeros-homininos.html">
+                        Primeros seres humanos
+                    </a>
+
+                    <a href="revolucion-neolitica.html">
+                        Revolución neolítica
+                    </a>
+
+                    <a href="primeras-ciudades.html">
+                        Primeras ciudades
+                    </a>
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <button class="dropdown-button">
+                    Civilizaciones
+                </button>
+
+                <div class="dropdown">
+
+                    <a href="mesopotamia.html">
+                        Mesopotamia
+                    </a>
+
+                    <a href="egipto.html">
+                        Egipto
+                    </a>
+
+                    <a href="persia.html">
+                        Persia
+                    </a>
+
+                    <a href="India.html">
+                        India
+                    </a>
+
+                    <a href="China.html">
+                        China
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <button class="dropdown-button">
+                    Religiones
+                </button>
+
+                <div class="dropdown">
+
+                    <a href="religiones-antiguas.html">
+                        Religiones antiguas
+                    </a>
+
+                    <a href="judaismo.html">
+                        Judaísmo
+                    </a>
+
+                    <a href="cristianismo.html">
+                        Cristianismo
+                    </a>
+
+                    <a href="islam.html">
+                        Islam
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <button class="dropdown-button">
+                    Cultura
+                </button>
+
+                <div class="dropdown">
+
+                    <a href="escritura.html">
+                        Escritura
+                    </a>
+
+                    <a href="literatura.html">
+                        Literatura
+                    </a>
+
+                    <a href="Arte.html">
+                        Arte
+                    </a>
+
+                    <a href="Ciencia.html">
+                        Ciencia
+                    </a>
+
+                </div>
+
+            </li>
+
+
+            <li>
+
+                <button class="dropdown-button">
+                    Historia
+                </button>
+
+                <div class="dropdown">
+
+                    <a href="Antigüedad.html">
+                        Antigüedad
+                    </a>
+
+                    <a href="Edad-Media.html">
+                        Edad Media
+                    </a>
+
+                    <a href="Edad-moderna.html">
+                        Edad Moderna
+                    </a>
+
+                    <a href="Mundo-contemporáneo.html">
+                        Mundo Contemporáneo
+                    </a>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <div class="hero-logo-container">
+
+            <img
+                src="imagen/tibet-logo.PNG"
+                class="hero-logo"
+                alt="Símbolo del Tíbet y de la cultura tibetana"
+            >
+
+        </div>
+
+
+        <h1>
+            Tíbet
+        </h1>
+
+
+        <p>
+            Una historia de pueblos, imperios, religión y cultura
+            desarrollada en el corazón de la meseta tibetana.
+        </p>
+
+    </div>
+
+</section>
+
+<main>
+
+<section class="history-section">
+
+    <h2>
+        El territorio tibetano
+    </h2>
+
+    <p>
+        El Tíbet se encuentra en el corazón de Asia, sobre una extensa región
+        conocida como la <strong>meseta tibetana</strong>, una de las zonas
+        habitadas de mayor altitud del planeta. Rodeada por algunas de las
+        montañas más elevadas del mundo, especialmente el <strong>Himalaya</strong>,
+        esta región posee un paisaje marcado por grandes mesetas, valles,
+        desiertos y sistemas montañosos.
+    </p>
+
+    <p>
+        Su posición geográfica convirtió al Tíbet en un espacio de contacto
+        entre diferentes regiones de Asia. Hacia el sur se encuentra el
+        <strong>subcontinente indio</strong>; hacia el norte y el este se
+        extienden regiones vinculadas históricamente con <strong>China y Asia
+        Central</strong>. Esta ubicación permitió el desarrollo de rutas de
+        intercambio, migraciones y relaciones políticas y culturales entre
+        pueblos de distintas regiones.
+    </p>
+
+    <p>
+        La meseta tibetana también tiene una enorme importancia geográfica
+        porque en ella nacen algunos de los grandes ríos de Asia, entre ellos
+        el <strong>Yarlung Tsangpo</strong>, que continúa hacia el sur como
+        el Brahmaputra. Estos recursos de agua contribuyeron al desarrollo
+        de comunidades agrícolas y ganaderas y conectaron el territorio
+        tibetano con las sociedades de las regiones vecinas.
+    </p>
+
+    <p>
+        La geografía del Tíbet influyó profundamente en su historia. La
+        altitud, las montañas y los pasos naturales dificultaron las
+        comunicaciones, pero al mismo tiempo protegieron ciertos territorios
+        y crearon corredores estratégicos hacia Asia Central, China y la India.
+        Comprender este paisaje es fundamental para entender la formación
+        histórica de la <strong>civilización tibetana</strong>.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Los primeros pueblos y reinos
+    </h2>
+
+    <p>
+        Mucho antes de la formación de un Estado tibetano unificado, la
+        meseta estuvo habitada por diversas comunidades dedicadas a la
+        <strong>ganadería, la agricultura y el intercambio</strong>. Las
+        condiciones ambientales favorecieron especialmente el pastoreo de
+        animales adaptados a las grandes alturas, mientras que los valles
+        permitieron el desarrollo de comunidades agrícolas.
+    </p>
+
+    <p>
+        Durante la Antigüedad existieron diferentes grupos, clanes y
+        entidades políticas en distintas partes de la meseta. Las
+        tradiciones tibetanas posteriores conservaron relatos sobre antiguos
+        gobernantes y reinos, aunque la información histórica disponible
+        para los períodos más tempranos es limitada y combina evidencias
+        arqueológicas con tradiciones posteriores.
+    </p>
+
+    <p>
+        Entre las sociedades anteriores a la expansión del Imperio tibetano
+        destacó la región del <strong>valle del río Yarlung</strong>, en el
+        sur de la meseta. Allí surgieron comunidades y poderes locales que
+        posteriormente desempeñarían un papel fundamental en la formación
+        de un reino tibetano más amplio.
+    </p>
+
+    <p>
+        Con el paso de los siglos, las alianzas entre grupos, los conflictos
+        regionales y la expansión de determinados gobernantes transformaron
+        este panorama político. De este proceso surgiría una nueva estructura
+        de poder que, durante el <strong>siglo VII</strong>, conseguiría
+        reunir grandes territorios bajo una autoridad central y daría origen
+        al <strong>Imperio tibetano</strong>.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Imperio tibetano
+    </h2>
+
+    <p>
+        Durante el <strong>siglo VII</strong>, los gobernantes del valle de
+        Yarlung lograron ampliar progresivamente su autoridad sobre
+        diferentes territorios de la meseta. El proceso alcanzó una nueva
+        dimensión durante el reinado de <strong>Songtsen Gampo</strong>,
+        quien gobernó aproximadamente entre los años 618 y 650.
+    </p>
+
+    <p>
+        Bajo su gobierno, el reino tibetano se convirtió en una potencia
+        regional y estableció relaciones diplomáticas con otros grandes
+        Estados de Asia. La expansión política estuvo acompañada por una
+        mayor organización administrativa y por el fortalecimiento de la
+        capital en <strong>Lhasa</strong>.
+    </p>
+
+    <p>
+        Durante los siglos VII, VIII y IX, el Imperio tibetano extendió su
+        influencia mucho más allá de la meseta. Sus ejércitos participaron
+        en conflictos y negociaciones con la <strong>dinastía Tang de
+        China</strong>, mientras que sus territorios se conectaban con las
+        rutas comerciales que atravesaban Asia Central.
+    </p>
+
+    <p>
+        El poder imperial alcanzó uno de sus momentos de mayor expansión
+        durante el <strong>siglo VIII</strong>. Sin embargo, las disputas
+        internas, las dificultades administrativas y los conflictos por el
+        poder debilitaron progresivamente al Estado. Hacia mediados del
+        <strong>siglo IX</strong>, el sistema imperial comenzó a
+        fragmentarse, dando paso a diferentes poderes regionales.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        La expansión hacia Asia Central
+    </h2>
+
+    <p>
+        La expansión del Imperio tibetano llevó a sus gobernantes fuera de
+        la meseta y hacia importantes regiones de <strong>Asia Central</strong>.
+        Durante los siglos VII y VIII, los ejércitos tibetanos participaron
+        en disputas por territorios estratégicos, especialmente en las
+        regiones cercanas a las rutas que comunicaban China con Asia Central.
+    </p>
+
+    <p>
+        El control de determinados valles, pasos montañosos y centros
+        comerciales permitió al Imperio tibetano participar directamente en
+        las redes de intercambio que atravesaban el continente. Por estas
+        rutas circulaban <strong>seda, caballos, metales, productos
+        agrícolas y objetos religiosos</strong>, conectando a pueblos de
+        diferentes culturas.
+    </p>
+
+    <p>
+        Uno de los principales rivales del Imperio tibetano fue la
+        <strong>dinastía Tang</strong>, que también buscaba controlar
+        territorios y rutas estratégicas en Asia Central. La competencia
+        entre ambos poderes produjo campañas militares, alianzas y cambios
+        constantes en el control de determinadas regiones.
+    </p>
+
+    <p>
+        La presencia tibetana también puso al imperio en contacto con
+        diferentes pueblos de Asia Central. Estas relaciones no fueron
+        únicamente militares: el comercio, la diplomacia y la circulación
+        de ideas contribuyeron a ampliar los vínculos culturales del Tíbet
+        con el resto del continente.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        La llegada y consolidación del budismo tibetano
+    </h2>
+
+    <p>
+        El <strong>budismo</strong> comenzó a llegar al Tíbet durante el
+        período imperial, especialmente a partir del <strong>siglo VII</strong>.
+        Su expansión estuvo relacionada con los contactos políticos y
+        culturales que el reino tibetano mantenía con la India, Nepal, China
+        y otras regiones de Asia.
+    </p>
+
+    <p>
+        Durante el reinado de <strong>Songtsen Gampo</strong>, las relaciones
+        con los reinos vecinos favorecieron la llegada de nuevas ideas
+        religiosas y culturales. Sin embargo, la incorporación del budismo
+        fue un proceso gradual que se desarrolló durante varias
+        generaciones y que estuvo acompañado por las tradiciones religiosas
+        que ya existían en el Tíbet.
+    </p>
+
+    <p>
+        Durante los siglos VIII y IX, distintos maestros procedentes de la
+        India contribuyeron a establecer comunidades monásticas y a
+        traducir textos budistas al <strong>idioma tibetano</strong>.
+        Entre las figuras más importantes de este período se encuentran
+        <strong>Śāntarakṣita</strong> y <strong>Padmasambhava</strong>,
+        asociados a la consolidación temprana del budismo en el Tíbet.
+    </p>
+
+    <p>
+        La traducción y preservación de textos religiosos permitió crear una
+        extensa tradición intelectual propia. Con el tiempo, el budismo
+        tibetano desarrolló sistemas de filosofía, ritual, arte, medicina y
+        educación que se integraron profundamente en la cultura de la región.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Las escuelas y tradiciones religiosas
+    </h2>
+
+    <p>
+        Con el paso de los siglos, el budismo desarrollado en el Tíbet dio
+        origen a diferentes <strong>escuelas y linajes religiosos</strong>.
+        Cada tradición desarrolló sus propios maestros, monasterios,
+        prácticas rituales y formas de interpretar las enseñanzas budistas,
+        aunque todas compartían una base doctrinal común.
+    </p>
+
+    <p>
+        Entre las principales tradiciones se encuentra la
+        <strong>Nyingma</strong>, considerada la escuela más antigua del
+        budismo tibetano y vinculada a las primeras traducciones realizadas
+        durante el período imperial. También surgieron las tradiciones
+        <strong>Kagyu</strong> y <strong>Sakya</strong>, que adquirieron
+        gran influencia durante los siglos posteriores a la fragmentación
+        del antiguo imperio.
+    </p>
+
+    <p>
+        Otra tradición fundamental fue la <strong>Gelug</strong>, fundada
+        por <strong>Tsongkhapa</strong> durante el siglo XV. Esta escuela
+        puso especial énfasis en el estudio filosófico, la disciplina
+        monástica y la formación académica, y posteriormente adquirió una
+        importante influencia política.
+    </p>
+
+    <p>
+        Estas escuelas no existieron siempre de manera aislada. Sus maestros
+        y comunidades mantuvieron intercambios intelectuales y religiosos,
+        mientras que distintas tradiciones podían coexistir dentro de una
+        misma región. Esta diversidad contribuyó a formar la riqueza
+        religiosa y cultural que caracteriza al Tíbet histórico.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El sistema político-religioso y los grandes monasterios
+    </h2>
+
+    <p>
+        A lo largo de la historia tibetana, los <strong>monasterios</strong>
+        se convirtieron en importantes centros de religión, educación y
+        producción intelectual. Además de funcionar como lugares de práctica
+        religiosa, algunos monasterios administraban tierras, recibían
+        recursos y mantenían relaciones con comunidades y autoridades
+        locales.
+    </p>
+
+    <p>
+        Los monasterios más importantes podían reunir a grandes comunidades
+        de monjes y desarrollar bibliotecas, escuelas y talleres dedicados a
+        la elaboración de manuscritos, pinturas religiosas y objetos
+        rituales. También contribuyeron a preservar conocimientos de
+        <strong>filosofía, medicina, astronomía, literatura y arte</strong>.
+    </p>
+
+    <p>
+        La relación entre las instituciones religiosas y el poder político
+        cambió según la época. Diferentes escuelas budistas establecieron
+        vínculos con gobernantes regionales, familias aristocráticas y
+        poderes extranjeros, mientras que determinados monasterios llegaron
+        a ejercer una considerable influencia sobre sus territorios.
+    </p>
+
+    <p>
+        Esta organización no significaba que todo el territorio tibetano
+        estuviera gobernado de la misma manera. Durante largos períodos
+        existieron diferentes autoridades locales y regionales. Sin embargo,
+        la combinación de instituciones religiosas, administración
+        territorial y redes monásticas se convirtió en una característica
+        fundamental de la historia política del Tíbet.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Dalái Lama y la escuela Gelug
+    </h2>
+
+    <p>
+        La tradición del <strong>Dalái Lama</strong> está vinculada a la
+        escuela <strong>Gelug</strong> del budismo tibetano. El título
+        comenzó a utilizarse en el <strong>siglo XVI</strong>, cuando el
+        líder mongol Altan Khan otorgó este título a Sonam Gyatso, considerado
+        posteriormente el tercer Dalái Lama. Los dos dirigentes anteriores
+        fueron reconocidos de manera retrospectiva dentro de la misma
+        sucesión.
+    </p>
+
+    <p>
+        La institución adquirió una importancia creciente durante los siglos
+        XVI y XVII. En particular, el <strong>quinto Dalái Lama,
+        Ngawang Lobsang Gyatso</strong>, estableció una nueva estructura de
+        gobierno en el Tíbet durante el siglo XVII con el apoyo del líder
+        mongol Güshi Khan.
+    </p>
+
+    <p>
+        El quinto Dalái Lama consolidó su autoridad sobre amplias regiones y
+        convirtió a <strong>Lhasa</strong> en el principal centro político y
+        religioso del Tíbet. Durante este período comenzó también la
+        construcción del <strong>Palacio de Potala</strong>, que se
+        convertiría en uno de los símbolos más reconocibles de la historia
+        tibetana.
+    </p>
+
+    <p>
+        Desde entonces, la figura del Dalái Lama adquirió una doble
+        importancia. Por una parte, representaba una autoridad religiosa
+        dentro de la escuela Gelug; por otra, los Dalái Lama gobernaron el
+        Tíbet durante determinados períodos históricos. Esta relación entre
+        autoridad religiosa y gobierno político evolucionó con el tiempo y
+        no permaneció igual durante toda la historia tibetana.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Relaciones con los imperios mongoles y China
+    </h2>
+
+    <p>
+        Desde la Edad Media, el Tíbet mantuvo relaciones políticas, religiosas
+        y económicas con los <strong>pueblos mongoles</strong> y con los
+        diferentes Estados que surgieron en China. Estas relaciones no
+        fueron siempre iguales: incluyeron alianzas, vínculos religiosos,
+        conflictos y acuerdos políticos.
+    </p>
+
+    <p>
+        Durante el <strong>siglo XIII</strong>, el Imperio mongol incorporó
+        amplios territorios de Asia. Los dirigentes mongoles establecieron
+        relaciones particulares con los líderes religiosos tibetanos, y
+        algunos gobernantes adoptaron el budismo tibetano. Esta conexión
+        religiosa adquirió especial importancia durante el período de la
+        <strong>dinastía Yuan</strong>, fundada por Kublai Khan en China.
+    </p>
+
+    <p>
+        El vínculo entre los gobernantes mongoles y los líderes tibetanos
+        combinó elementos religiosos y políticos. Maestros tibetanos podían
+        actuar como consejeros espirituales de los gobernantes mongoles,
+        mientras que estos ofrecían protección y apoyo a determinadas
+        instituciones religiosas.
+    </p>
+
+    <p>
+        Después de la caída de la dinastía Yuan en el siglo XIV, las
+        relaciones políticas cambiaron nuevamente. Durante los siglos
+        siguientes, distintos poderes mongoles continuaron teniendo
+        influencia en los asuntos tibetanos, mientras que los Estados chinos
+        de las dinastías <strong>Ming</strong> y posteriormente
+        <strong>Qing</strong> desarrollaron sus propias relaciones con la
+        región.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Tíbet bajo la dinastía Qing
+    </h2>
+
+    <p>
+        La <strong>dinastía Qing</strong>, establecida por los manchúes en
+        China en el siglo XVII, comenzó a intervenir de manera más directa
+        en los asuntos tibetanos durante el siglo XVIII. Esta relación se
+        desarrolló en un contexto de conflictos regionales y de competencia
+        entre diferentes poderes de Asia Central.
+    </p>
+
+    <p>
+        En <strong>1720</strong>, una expedición Qing expulsó de Lhasa a las
+        fuerzas del kanato dzungar. Después de este conflicto, el gobierno
+        Qing estableció una presencia política y militar en la región. Los
+        representantes imperiales conocidos como <strong>ambanes</strong>
+        fueron destinados a Lhasa para supervisar determinados asuntos y
+        mantener la comunicación con la corte Qing.
+    </p>
+
+    <p>
+        La relación entre el Tíbet y el Imperio Qing no significó que todas
+        las instituciones tibetanas fueran sustituidas. El gobierno local,
+        la autoridad religiosa del <strong>Dalái Lama</strong> y numerosas
+        estructuras administrativas tibetanas continuaron desempeñando
+        funciones importantes, mientras que la corte Qing ejercía distintos
+        grados de influencia política y militar.
+    </p>
+
+    <p>
+        Durante los siglos XVIII y XIX, esta relación estuvo marcada por
+        cambios en el nivel de intervención imperial. Al mismo tiempo,
+        factores externos comenzaron a adquirir mayor importancia,
+        especialmente con la expansión de las potencias europeas en Asia.
+        La posición del Tíbet entre China, India y Asia Central convertiría
+        nuevamente a la región en un espacio de competencia estratégica.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        Tíbet, Gran Bretaña y el Himalaya
+    </h2>
+
+    <p>
+        Durante el siglo XIX, el Tíbet adquirió una importancia estratégica
+        para el <strong>Imperio británico</strong> debido a su proximidad con
+        la India británica y a su posición entre China y Asia Central. La
+        expansión de Rusia hacia Asia Central también generó preocupación en
+        Londres y contribuyó a la rivalidad conocida como el
+        <strong>Great Game</strong>.
+    </p>
+
+    <p>
+        Las autoridades británicas buscaban establecer relaciones comerciales
+        y diplomáticas con el Tíbet, mientras que las autoridades tibetanas
+        intentaban limitar la presencia extranjera en la región. Las
+        relaciones fueron difíciles y estuvieron condicionadas por la
+        geografía montañosa, las restricciones al acceso y las disputas sobre
+        las fronteras y las rutas comerciales.
+    </p>
+
+    <p>
+        En <strong>1903–1904</strong>, una expedición militar británica
+        dirigida por <strong>Francis Younghusband</strong> avanzó hacia
+        Lhasa. La campaña terminó con un acuerdo que favorecía los intereses
+        británicos y permitió ampliar el comercio con determinados puntos
+        del Tíbet. El episodio estuvo acompañado por enfrentamientos
+        militares y numerosas muertes tibetanas.
+    </p>
+
+    <p>
+        La intervención británica modificó el equilibrio político de la
+        región, pero no resolvió definitivamente la cuestión de las
+        relaciones entre el Tíbet, China y las potencias extranjeras.
+        Durante los años siguientes, la caída de la dinastía Qing y los
+        cambios políticos en China transformarían nuevamente la situación
+        del Tíbet.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        La caída de los Qing y el Tíbet del siglo XX
+    </h2>
+
+    <p>
+        Durante el siglo XIX, el Tíbet adquirió una importancia estratégica
+        para el <strong>Imperio británico</strong> debido a su proximidad con
+        la India británica y a su posición entre China y Asia Central. La
+        expansión de Rusia hacia Asia Central también generó preocupación en
+        Londres y contribuyó a la rivalidad conocida como el
+        <strong>Great Game</strong>.
+    </p>
+
+    <p>
+        Las autoridades británicas buscaban establecer relaciones comerciales
+        y diplomáticas con el Tíbet, mientras que las autoridades tibetanas
+        intentaban limitar la presencia extranjera en la región. Las
+        relaciones fueron difíciles y estuvieron condicionadas por la
+        geografía montañosa, las restricciones al acceso y las disputas sobre
+        las fronteras y las rutas comerciales.
+    </p>
+
+    <p>
+        En <strong>1903–1904</strong>, una expedición militar británica
+        dirigida por <strong>Francis Younghusband</strong> avanzó hacia
+        Lhasa. La campaña terminó con un acuerdo que favorecía los intereses
+        británicos y permitió ampliar el comercio con determinados puntos
+        del Tíbet. El episodio estuvo acompañado por enfrentamientos
+        militares y numerosas muertes tibetanas.
+    </p>
+
+    <p>
+        La intervención británica modificó el equilibrio político de la
+        región, pero no resolvió definitivamente la cuestión de las
+        relaciones entre el Tíbet, China y las potencias extranjeras.
+        Durante los años siguientes, la caída de la dinastía Qing y los
+        cambios políticos en China transformarían nuevamente la situación
+        del Tíbet.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        La expansión china y la incorporación del Tíbet a la República Popular China
+    </h2>
+
+    <p>
+        Tras la proclamación de la <strong>República Popular China en 1949</strong>,
+        el nuevo gobierno declaró que el Tíbet formaba parte del territorio
+        chino y anunció su intención de establecer allí su autoridad. En
+        <strong>1950</strong>, las fuerzas del Ejército Popular de Liberación
+        avanzaron hacia el este del Tíbet, donde se produjeron enfrentamientos
+        con las fuerzas tibetanas.
+    </p>
+
+    <p>
+        En <strong>1951</strong>, representantes tibetanos y el gobierno de
+        la República Popular China firmaron el denominado
+        <strong>Acuerdo de Diecisiete Puntos</strong>. El acuerdo reconocía
+        la soberanía china sobre el Tíbet y establecía disposiciones sobre
+        la administración de la región, al mismo tiempo que prometía
+        preservar determinadas instituciones religiosas y sociales tibetanas.
+    </p>
+
+    <p>
+        Durante los años siguientes aumentó la presencia administrativa,
+        militar y económica de la República Popular China. La transformación
+        de las estructuras políticas y sociales generó tensiones, especialmente
+        en algunas regiones del este del Tíbet, donde se produjeron
+        enfrentamientos y resistencia armada.
+    </p>
+
+    <p>
+        En <strong>1959</strong>, una importante rebelión en Lhasa provocó
+        una nueva crisis política. El <strong>Dalái Lama</strong> abandonó
+        el Tíbet y posteriormente estableció su residencia en la India junto
+        con parte de sus seguidores. Desde entonces, el gobierno de la
+        República Popular China consolidó su administración sobre el
+        territorio tibetano, mientras que la cuestión del estatus político
+        del Tíbet continuó siendo objeto de debate internacional.
+    </p>
+
+</section>
+
+<section class="history-section">
+
+    <h2>
+        El Tíbet actual
+    </h2>
+
+    <p>
+        En la actualidad, la mayor parte del territorio tibetano histórico
+        se encuentra integrada en la <strong>República Popular China</strong>.
+        La principal unidad administrativa es la <strong>Región Autónoma
+        del Tíbet</strong>, mientras que otras comunidades tibetanas viven
+        en provincias como Sichuan, Qinghai, Gansu y Yunnan.
+    </p>
+
+    <p>
+        Desde mediados del siglo XX, el territorio ha experimentado
+        importantes transformaciones políticas, económicas y sociales.
+        La administración china ha desarrollado infraestructura, educación,
+        transporte y nuevas actividades económicas, al mismo tiempo que
+        mantiene un fuerte control político sobre las instituciones
+        religiosas y sobre determinados aspectos de la vida cultural.
+    </p>
+
+    <p>
+        La <strong>cultura tibetana</strong> continúa presente en la lengua,
+        la literatura, el arte, la música, las tradiciones religiosas y las
+        prácticas de diferentes comunidades. El budismo tibetano mantiene
+        una importancia central para muchas de estas comunidades, aunque la
+        identidad tibetana también comprende elementos históricos y
+        culturales que van más allá de la religión.
+    </p>
+
+    <p>
+        Después de abandonar el Tíbet en <strong>1959</strong>, el
+        decimocuarto Dalái Lama, <strong>Tenzin Gyatso</strong>, estableció
+        una comunidad tibetana en el exilio en la India. Desde entonces, la
+        cuestión del futuro político del Tíbet ha continuado siendo objeto
+        de debate internacional, especialmente en torno a la autonomía, la
+        identidad cultural, la religión y la relación con el Estado chino.
+    </p>
+
+    <p>
+        Otro tema relevante es la sucesión del <strong>Dalái Lama</strong>.
+        El proceso tradicional de reconocimiento de su reencarnación se
+        encuentra actualmente relacionado con una cuestión política más
+        amplia, debido a las posiciones diferentes entre las autoridades
+        chinas y la comunidad tibetana en el exilio sobre quién deberá
+        participar en ese proceso.
+    </p>
+
+    <p>
+        El Tíbet contemporáneo es, por tanto, el resultado de una historia
+        compleja en la que confluyen <strong>territorio, religión, cultura,
+        identidad, relaciones internacionales y transformaciones
+        políticas</strong>. Comprender su situación actual requiere
+        considerar tanto la historia de las instituciones tibetanas como
+        los cambios ocurridos en Asia durante los siglos XIX y XX.
+    </p>
+
+</section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+    <h3>
+        Memoria del Mundo™
+    </h3>
+
+    <p>
+          Atlas histórico sobre las civilizaciones, culturas,
+          religiones e ideas que han formado nuestro mundo.
+    </p>
+
+    <p>
+        Creado por Gloria Martínez · San José, Costa Rica
+    </p>
+
+    <p>
+        © 2026 Gloria Martínez. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
+  
