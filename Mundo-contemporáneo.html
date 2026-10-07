@@ -20396,60 +20396,80 @@ function mostrarSubmenu(id){
     /* Ocultar todo el contenido */
     ocultarContenidos();
 
-
-    /* Ocultar todos los submenús */
-    document.querySelectorAll('.submenu-history').forEach(function(menu){
-
-        menu.style.display = 'none';
-
-    });
-
-
-    /* Si no hay selección, no hacer nada */
     if(!id){
+
+        document.querySelectorAll('.submenu-history').forEach(function(menu){
+
+            menu.style.display = 'none';
+
+        });
 
         return;
 
     }
 
 
-    /* Buscar el submenú seleccionado */
     const submenu = document.getElementById(id);
 
+    if(!submenu){
 
-    if(submenu){
+        return;
 
-        /* Mostrar el submenú seleccionado */
-        submenu.style.display = 'block';
-
-
-        /* Buscar si tiene un submenú padre */
-        let parentId = submenu.getAttribute('data-parent');
+    }
 
 
-        /* Mostrar también todos sus padres */
-        while(parentId){
+    /* Ocultar todos los submenús excepto el menú principal */
+    document.querySelectorAll('.submenu-history').forEach(function(menu){
 
-            const parentMenu = document.getElementById(parentId);
+        if(menu.id !== 'expansion-global'){
+
+            menu.style.display = 'none';
+
+        }
+
+    });
 
 
-            if(parentMenu){
+    /* Mostrar el submenú seleccionado */
+    submenu.style.display = 'block';
 
-                parentMenu.style.display = 'block';
 
-                parentId = parentMenu.getAttribute('data-parent');
+    /* Mantener visible el menú principal de Expansión global */
+    const expansionGlobal = document.getElementById('expansion-global');
 
-            }else{
+    if(expansionGlobal){
 
-                break;
+        expansionGlobal.style.display = 'block';
 
-            }
+    }
+
+
+    /* Buscar si tiene un submenú padre */
+    let parentId = submenu.getAttribute('data-parent');
+
+
+    /* Mostrar también todos sus padres */
+    while(parentId){
+
+        const parentMenu = document.getElementById(parentId);
+
+
+        if(parentMenu){
+
+            parentMenu.style.display = 'block';
+
+            parentId = parentMenu.getAttribute('data-parent');
+
+        }else{
+
+            break;
 
         }
 
     }
 
 }
+
 
 function mostrarContenido(id){
 
@@ -20477,4 +20497,3 @@ function mostrarContenido(id){
 </body> 
 
 </html>
-
