@@ -20152,8 +20152,12 @@ function ocultarContenidos(){
 
 function mostrarSubmenu(id){
 
-    /* Ocultar todo el contenido */
+    /* Ocultar todos los contenidos */
+
     ocultarContenidos();
+
+
+    /* Si no se seleccionó nada */
 
     if(!id){
 
@@ -20168,16 +20172,49 @@ function mostrarSubmenu(id){
     }
 
 
-    const submenu = document.getElementById(id);
+    /* Buscar el elemento seleccionado */
 
-    if(!submenu){
+    const elemento = document.getElementById(id);
+
+
+    if(!elemento){
 
         return;
 
     }
 
 
-    /* Ocultar todos los submenús excepto el menú principal */
+    /*
+    Si el elemento seleccionado es un contenido
+    (por ejemplo Qatar, Emiratos, Turquía, etc.),
+    mostrarlo directamente.
+    */
+
+    if(elemento.classList.contains('contemporary-content')){
+
+        elemento.style.display = 'block';
+
+
+        /* Mantener visible el menú de Expansión global */
+
+        const expansionGlobal = document.getElementById('expansion-global');
+
+        if(expansionGlobal){
+
+            expansionGlobal.style.display = 'block';
+
+        }
+
+        return;
+
+    }
+
+
+    /*
+    Si el elemento seleccionado es un submenú,
+    continuar con el comportamiento normal.
+    */
+
     document.querySelectorAll('.submenu-history').forEach(function(menu){
 
         if(menu.id !== 'expansion-global'){
@@ -20190,10 +20227,12 @@ function mostrarSubmenu(id){
 
 
     /* Mostrar el submenú seleccionado */
-    submenu.style.display = 'block';
+
+    elemento.style.display = 'block';
 
 
     /* Mantener visible el menú principal de Expansión global */
+
     const expansionGlobal = document.getElementById('expansion-global');
 
     if(expansionGlobal){
@@ -20204,10 +20243,12 @@ function mostrarSubmenu(id){
 
 
     /* Buscar si tiene un submenú padre */
-    let parentId = submenu.getAttribute('data-parent');
+
+    let parentId = elemento.getAttribute('data-parent');
 
 
     /* Mostrar también todos sus padres */
+
     while(parentId){
 
         const parentMenu = document.getElementById(parentId);
@@ -20233,13 +20274,16 @@ function mostrarSubmenu(id){
 function mostrarContenido(id){
 
     /* Ocultar todos los contenidos */
+
     ocultarContenidos();
 
 
     /* Mostrar el contenido seleccionado */
+
     if(id){
 
         const contenido = document.querySelector(id);
+
 
         if(contenido){
 
@@ -20252,7 +20296,6 @@ function mostrarContenido(id){
 }
 
 </script>
-
 </body> 
 
 </html>
