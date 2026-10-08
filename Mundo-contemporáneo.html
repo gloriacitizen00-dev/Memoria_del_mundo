@@ -24211,163 +24211,59 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 </footer>
        
 <script>
-
 function ocultarContenidos(){
-
     document.querySelectorAll('.contemporary-content').forEach(function(seccion){
-
         seccion.style.display = 'none';
-
     });
-
 }
 
+function ocultarSubmenus(){
+    document.querySelectorAll('.submenu-history').forEach(function(menu){
+        menu.style.display = 'none';
+    });
+}
 
 function mostrarSubmenu(id){
-
-    /* Ocultar todos los contenidos */
-
     ocultarContenidos();
-
-
-    /* Si no se seleccionó nada */
+    ocultarSubmenus();
 
     if(!id){
-
-        document.querySelectorAll('.submenu-history').forEach(function(menu){
-
-            menu.style.display = 'none';
-
-        });
-
         return;
-
     }
-
-
-    /* Buscar el elemento seleccionado */
 
     const elemento = document.getElementById(id);
 
-
     if(!elemento){
-
         return;
-
     }
-
-
-    /*
-    Si el elemento seleccionado es un contenido
-    (por ejemplo Qatar, Emiratos, Turquía, etc.),
-    mostrarlo directamente.
-    */
-
-    if(elemento.classList.contains('contemporary-content')){
-
-        elemento.style.display = 'block';
-
-
-        /* Mantener visible el menú de Expansión global */
-
-        const expansionGlobal = document.getElementById('expansion-global');
-
-        if(expansionGlobal){
-
-            expansionGlobal.style.display = 'block';
-
-        }
-
-        return;
-
-    }
-
-
-    /*
-    Si el elemento seleccionado es un submenú,
-    continuar con el comportamiento normal.
-    */
-
-    document.querySelectorAll('.submenu-history').forEach(function(menu){
-
-        if(menu.id !== 'expansion-global'){
-
-            menu.style.display = 'none';
-
-        }
-
-    });
-
-
-    /* Mostrar el submenú seleccionado */
 
     elemento.style.display = 'block';
 
-
-    /* Mantener visible el menú principal de Expansión global */
-
-    const expansionGlobal = document.getElementById('expansion-global');
-
-    if(expansionGlobal){
-
-        expansionGlobal.style.display = 'block';
-
-    }
-
-
-    /* Buscar si tiene un submenú padre */
-
     let parentId = elemento.getAttribute('data-parent');
 
-
-    /* Mostrar también todos sus padres */
-
     while(parentId){
-
         const parentMenu = document.getElementById(parentId);
 
-
         if(parentMenu){
-
             parentMenu.style.display = 'block';
-
             parentId = parentMenu.getAttribute('data-parent');
-
         }else{
-
             break;
-
         }
-
     }
-
 }
-
 
 function mostrarContenido(id){
-
-    /* Ocultar todos los contenidos */
-
     ocultarContenidos();
 
-
-    /* Mostrar el contenido seleccionado */
-
     if(id){
-
         const contenido = document.querySelector(id);
 
-
         if(contenido){
-
             contenido.style.display = 'block';
-
         }
-
     }
-
 }
-
 </script>
 </body> 
 
