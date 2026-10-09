@@ -1249,7 +1249,7 @@ Historia, conflictos, sociedades, ciencia, tecnología y transformaciones del mu
 
 <div id="expansion-global" class="submenu-history" data-parent="" style="display:none;">
 
-    <select onchange="mostrarSubmenu(this.value)">
+    <select onchange="mostrarContenido('#' + this.value)">
 
         <option value="">
             Seleccionar país o potencia
@@ -24262,14 +24262,6 @@ function mostrarContenido(id){
         if(contenido){
             contenido.style.display = 'block';
         }
-    }
-
-    // Mantener visible el menú de países
-    // cuando se consulta una sección de expansión global.
-    const expansionGlobal = document.getElementById('expansion-global');
-
-    if(expansionGlobal && expansionGlobal.style.display === 'block'){
-        expansionGlobal.style.display = 'block';
     }
 }
 </script>
