@@ -1,6 +1,6 @@
 ## Licencia y derechos de autor
 
-© 2026 Gloria Martínez. Todos los derechos reservados.
+© 2026 Gloria Martínez. Todos los derechos reservados. ❤️
 
 **Memoria del Mundo™** es una obra original creada y desarrollada por
 Gloria Martínez.
