@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>La Tierra actual | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Descubre la Tierra actual: sus continentes, océanos, placas tectónicas, clima, ecosistemas y la influencia de la humanidad sobre el planeta.">
+  <meta name="keywords" content="Tierra actual, historia de la Tierra, continentes, océanos, placas tectónicas, clima, ecosistemas, cambio climático, geología">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="La Tierra actual | Historia de la Tierra">
+  <meta property="og:description" content="El planeta que habitamos: su geografía, sus ecosistemas y los cambios que continúan transformándolo.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../images/tierra-actual.jpg">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 7%;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+    }
+
+    .hero {
+      position: relative;
+      padding: 75px 7% 65px;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(198, 166, 107, 0.20),
+          transparent 35%
+        ),
+        linear-gradient(135deg, #F7F0DF, #FBF6EA);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 15px;
+      color: var(--clay);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin-bottom: 18px;
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 23px;
+      line-height: 1.6;
+    }
+
+    .history-section {
+      padding: 65px 5%;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      align-items: stretch;
+      gap: 45px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .history-image {
+      position: sticky;
+      top: 25px;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      max-height: 720px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--sand-soft);
+      box-shadow: var(--shadow);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content-column {
+      min-width: 0;
+      padding: 10px 0;
+    }
+
+    .period-label {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      color: var(--clay-dark);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .content-column h2 {
+      margin: 0 0 20px;
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .content-column h3 {
+      margin: 30px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .content-column p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .content-column strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .history-list {
+      margin: 12px 0 22px;
+      padding-left: 22px;
+    }
+
+    .history-list li {
+      margin-bottom: 12px;
+      padding-left: 4px;
+      color: var(--text-light);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .history-list li::marker {
+      color: var(--sand-dark);
+    }
+
+    .closing-section {
+      margin-top: 35px;
+      padding: 25px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+    }
+
+    .closing-section h3 {
+      margin-top: 0;
+    }
+
+    .closing-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .side-navigation {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 35px;
+    }
+
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--sand);
+      background: var(--white);
+      color: var(--sand-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .nav-button:hover {
+      border-color: var(--sand-dark);
+      background: var(--sand-dark);
+      color: var(--white);
+    }
+
+    .return-section {
+      padding: 55px 7%;
+      border-top: 1px solid var(--border);
+      background: var(--sand-soft);
+      text-align: center;
+    }
+
+    .return-section h2 {
+      margin-bottom: 12px;
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(21px, 3vw, 29px);
+      font-weight: 500;
+    }
+
+    .return-section p {
+      max-width: 650px;
+      margin: 0 auto 24px;
+      color: var(--text-light);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .return-link {
+      display: inline-block;
+      padding: 13px 23px;
+      border: 1px solid var(--sand-dark);
+      color: var(--sand-dark);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .return-link:hover {
+      background: var(--sand-dark);
+      color: var(--white);
+    }
+
+    footer {
+      padding: 27px 7%;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--sand-dark);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .topbar {
+        padding: 18px 6%;
+      }
+
+      .hero {
+        padding: 55px 6% 45px;
+      }
+
+      .hero p {
+        font-size: 21px;
+      }
+
+      .history-section {
+        padding: 35px 6% 45px;
+      }
+
+      .history-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .history-image {
+        position: static;
+        aspect-ratio: 4 / 3;
+        max-height: none;
+      }
+
+      .content-column {
+        padding: 0;
+      }
+
+      .content-column h2 {
+        font-size: 24px;
+      }
+
+      .content-column h3 {
+        font-size: 24px;
+      }
+
+      .side-navigation {
+        margin-top: 28px;
+      }
+
+      .nav-button {
+        width: 100%;
+      }
+
+      .return-section {
+        padding: 42px 6%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .period-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .content-column p,
+      .history-list li {
+        font-size: 12px;
+      }
+
+      .closing-section {
+        padding: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Historia de la Tierra · Etapa final</div>
+
+      <h1>La Tierra actual</h1>
+
+      <p>
+        Un planeta en transformación constante, formado por millones de años
+        de cambios geológicos, climáticos y biológicos, y habitado por una
+        especie capaz de modificar profundamente su entorno.
+      </p>
+    </div>
+  </section>
+
+  <main class="history-section">
+    <div class="history-layout">
+
+      <div class="image-column">
+        <div class="history-image">
+          <img
+            src="../images/tierra-actual.jpg"
+            alt="La Tierra actual vista desde el espacio, con sus continentes, océanos y nubes"
+            loading="eager"
+          >
+        </div>
+      </div>
+
+      <article class="content-column">
+
+        <span class="period-label">
+          Presente · Hace 2,58 millones de años hasta hoy
+        </span>
+
+        <h2>El planeta que habitamos</h2>
+
+        <p>
+          La Tierra actual es el resultado de una historia de aproximadamente
+          <strong>4.540 millones de años</strong>. Los continentes, los océanos,
+          las montañas y las cuencas oceánicas que conocemos no siempre tuvieron
+          su forma presente. Son parte de un sistema dinámico que continúa
+          cambiando.
+        </p>
+
+        <p>
+          Aunque los mapas modernos representan una distribución aparentemente
+          estable de tierras y mares, la superficie terrestre sigue transformándose.
+          Las placas tectónicas se desplazan, los océanos se expanden o se cierran
+          lentamente y las fuerzas internas del planeta levantan cordilleras
+          y producen actividad volcánica.
+        </p>
+
+        <h3>Los continentes y los océanos</h3>
+
+        <p>
+          Hoy reconocemos grandes masas continentales —África, América del Norte,
+          América del Sur, Asia, Europa, Oceanía y la Antártida— rodeadas por los
+          océanos Pacífico, Atlántico, Índico, Ártico y Austral. Esta clasificación
+          geográfica es una manera de organizar la superficie terrestre; las
+          fronteras entre algunos continentes dependen de convenciones históricas
+          y culturales.
+        </p>
+
+        <p>
+          La distribución actual es temporal en términos geológicos. África
+          continúa desplazándose hacia el norte, Australia se mueve hacia el
+          norte y el océano Atlántico sigue ensanchándose en determinadas zonas.
+          A escalas de decenas y cientos de millones de años, estos movimientos
+          pueden transformar por completo los mapas del mundo.
+        </p>
+
+        <h3>Un planeta geológicamente activo</h3>
+
+        <p>
+          La litosfera está dividida en placas que se mueven sobre materiales
+          más profundos del interior terrestre. En sus límites se producen
+          muchos terremotos y volcanes, se forman cordilleras y se genera
+          nueva corteza oceánica.
+        </p>
+
+        <ul class="history-list">
+          <li>
+            <strong>Montañas:</strong> se forman, entre otros procesos, cuando
+            las placas convergen y comprimen o elevan la corteza.
+          </li>
+          <li>
+            <strong>Océanos:</strong> sus fondos se renuevan en las dorsales
+            oceánicas y parte de la corteza se hunde en zonas de subducción.
+          </li>
+          <li>
+            <strong>Terremotos y volcanes:</strong> expresan la liberación de
+            energía y el movimiento de materiales en el interior del planeta.
+          </li>
+          <li>
+            <strong>Erosión:</strong> el agua, el viento, el hielo y la gravedad
+            modifican continuamente las superficies continentales.
+          </li>
+        </ul>
+
+        <h3>El clima y los ecosistemas</h3>
+
+        <p>
+          La Tierra alberga desiertos, bosques tropicales, praderas, tundras,
+          humedales, arrecifes y ecosistemas de aguas profundas. Su distribución
+          depende de factores como la temperatura, las precipitaciones, la
+          altitud, los suelos y la circulación oceánica.
+        </p>
+
+        <p>
+          El clima terrestre nunca ha sido completamente inmóvil. A lo largo
+          de su historia han ocurrido glaciaciones, periodos cálidos y cambios
+          en la composición de la atmósfera. En el presente, el calentamiento
+          global provocado principalmente por las actividades humanas está
+          alterando las temperaturas, el nivel del mar y numerosos ecosistemas.
+        </p>
+
+        <h3>La humanidad transforma el planeta</h3>
+
+        <p>
+          <em>Homo sapiens</em> surgió en África hace aproximadamente
+          300.000 años. Con el tiempo, las poblaciones humanas se expandieron
+          por distintos continentes y desarrollaron formas diversas de
+          organización social, conocimiento y tecnología.
+        </p>
+
+        <p>
+          La agricultura, la ganadería y los asentamientos permanentes
+          transformaron muchos paisajes. Más tarde, el crecimiento de las
+          ciudades, la industrialización y el uso masivo de combustibles fósiles
+          aumentaron la escala de la intervención humana sobre los sistemas
+          naturales.
+        </p>
+
+        <ul class="history-list">
+          <li>
+            <strong>Atmósfera:</strong> las emisiones de gases de efecto
+            invernadero intensifican el calentamiento global.
+          </li>
+          <li>
+            <strong>Océanos:</strong> absorben gran parte del exceso de calor
+            y parte del dióxido de carbono emitido por las actividades humanas.
+          </li>
+          <li>
+            <strong>Biodiversidad:</strong> la pérdida de hábitats, la
+            contaminación, la sobreexplotación y el cambio climático amenazan
+            numerosas especies.
+          </li>
+          <li>
+            <strong>Recursos naturales:</strong> la extracción y el consumo
+            modifican suelos, ríos, bosques y otros sistemas terrestres.
+          </li>
+        </ul>
+
+        <h3>¿Ha comenzado una nueva época geológica?</h3>
+
+        <p>
+          La influencia humana ha llevado a proponer el término
+          <strong>Antropoceno</strong> para describir una etapa en la que
+          las actividades de nuestra especie producen cambios detectables
+          a escala planetaria.
+        </p>
+
+        <p>
+          Sin embargo, el Antropoceno no ha sido aprobado oficialmente como
+          una época geológica dentro de la escala internacional del tiempo
+          geológico. Sigue utilizándose en numerosos debates científicos,
+          ambientales y culturales para analizar la magnitud de la transformación
+          humana.
+        </p>
+
+        <div class="closing-section">
+          <h3>Una historia que continúa</h3>
+
+          <p>
+            La Tierra no llegó a su forma actual mediante un proceso lineal
+            ni alcanzó un estado definitivo. Es un planeta dinámico, donde
+            los cambios geológicos ocurren junto a transformaciones climáticas
+            y evolutivas.
+          </p>
+
+          <p>
+            Conocer su historia permite comprender que los paisajes, los
+            océanos y los ecosistemas que hoy parecen permanentes son parte
+            de una evolución mucho más extensa. La historia de la Tierra
+            también incluye las decisiones de quienes la habitan y el futuro
+            que esas decisiones contribuyen a construir.
+          </p>
+        </div>
+
+        <nav class="side-navigation" aria-label="Navegación histórica">
+          <a class="nav-button" href="cuaternario.html">
+            ← Anterior: El Cuaternario
+          </a>
+        </nav>
+
+      </article>
+    </div>
+  </main>
+
+  <section class="return-section">
+    <h2>Fin del recorrido geológico</h2>
+
+    <p>
+      Desde la formación de la Tierra hasta el planeta que conocemos hoy,
+      este recorrido reúne algunos de los grandes acontecimientos que
+      transformaron su superficie y su vida. La historia continúa.
+    </p>
+
+    <a class="return-link" href="../index.html">
+      Volver al inicio de Historia de la Tierra
+    </a>
+  </section>
+
+  <footer>
+    <p>
+      <a href="../index.html">Memoria del Mundo</a>
+      · Historia, civilizaciones y patrimonio de la humanidad
+    </p>
+  </footer>
+
+</body>
+</html>
