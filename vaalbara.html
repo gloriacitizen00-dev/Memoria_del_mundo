@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Vaalbara: uno de los primeros supercontinentes | Memoria del Mundo</title>
+
+    <meta name="description" content="Descubre Vaalbara, la hipótesis de uno de los primeros supercontinentes de la Tierra, y la evidencia geológica de los antiguos cratones de Kaapvaal y Pilbara.">
+
+    <meta name="keywords" content="Vaalbara, historia de la Tierra, supercontinentes, geología, cratón de Kaapvaal, cratón de Pilbara, eón Arcaico, evolución terrestre">
+
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Memoria del Mundo">
+
+    <!-- Open Graph: vista previa al compartir -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Vaalbara: uno de los primeros supercontinentes">
+    <meta property="og:description" content="Explora la hipótesis de Vaalbara y las evidencias que relacionan antiguos bloques continentales de África y Australia.">
+    <meta property="og:image" content="../images/vaalbara.jpg">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Memoria del Mundo">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --sand: #C6A66B;
+            --sand-dark: #8A6A3F;
+            --sand-light: #E1C995;
+            --sand-soft: #F7F0DF;
+
+            --clay: #9A6842;
+            --clay-dark: #70472C;
+
+            --stone: #8B8172;
+            --stone-light: #C9C0B0;
+
+            --text: #2B241B;
+            --text-light: #665D51;
+
+            --white: #FFFDF7;
+            --cream: #FBF6EA;
+
+            --border: #E1D4B9;
+
+            --shadow: 0 20px 50px rgba(120,90,45,.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* =========================
+           TOPBAR
+        ========================= */
+
+        .topbar {
+            background: rgba(255,253,247,.97);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 5px 20px rgba(120,90,45,.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+        }
+
+        .site-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--clay-dark);
+            text-decoration: none;
+        }
+
+        .site-logo:hover {
+            color: var(--sand-dark);
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        .page-header {
+            text-align: center;
+            padding: 45px 20px 15px;
+        }
+
+        .page-number {
+            color: var(--sand-dark);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.3;
+            color: var(--clay-dark);
+            margin-bottom: 12px;
+        }
+
+        .page-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--text-light);
+        }
+
+        /* =========================
+           CONTENIDO PRINCIPAL
+        ========================= */
+
+        main {
+            width: 100%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 30px 25px 65px;
+            flex: 1;
+        }
+
+        .history-section {
+            background: var(--white);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            padding: 35px;
+        }
+
+        .history-layout {
+            display: grid;
+            grid-template-columns: 130px minmax(0, 1fr) 130px;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            align-items: stretch;
+            gap: 35px;
+            min-width: 0;
+        }
+
+        /* =========================
+           IMAGEN
+        ========================= */
+
+        .history-image {
+            width: 100%;
+            height: 100%;
+            min-height: 430px;
+            overflow: hidden;
+            background: var(--sand-soft);
+            border: 1px solid var(--border);
+        }
+
+        .history-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 430px;
+            object-fit: cover;
+        }
+
+        /* =========================
+           TEXTO
+        ========================= */
+
+        .history-text {
+            align-self: center;
+            padding: 15px 5px;
+        }
+
+        .era-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sand-dark);
+            margin-bottom: 12px;
+        }
+
+        .history-text h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(25px, 2.5vw, 34px);
+            line-height: 1.4;
+            color: var(--clay-dark);
+            margin-bottom: 22px;
+        }
+
+        .history-text h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 19px;
+            line-height: 1.5;
+            color: var(--clay-dark);
+            margin: 28px 0 12px;
+        }
+
+        .history-text p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .history-text strong {
+            color: var(--text);
+        }
+
+        .history-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        .page-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 10px;
+            background: var(--white);
+            color: var(--clay-dark);
+            border: 1px solid var(--sand);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            text-align: center;
+            transition: background .25s, color .25s, transform .25s;
+        }
+
+        .nav-button:hover {
+            background: var(--clay-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .nav-button .arrow {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .mobile-navigation {
+            display: none;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--clay-dark);
+            color: var(--sand-soft);
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: auto;
+        }
+
+        footer h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 12px;
+            opacity: .85;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1050px) {
+
+            .history-section {
+                padding: 25px;
+            }
+
+            .history-layout {
+                grid-template-columns: 95px minmax(0, 1fr) 95px;
+                gap: 15px;
+            }
+
+            .history-content {
+                gap: 22px;
+            }
+
+            .history-image,
+            .history-image img {
+                min-height: 390px;
+            }
+
+            .nav-button {
+                font-size: 11px;
+            }
+        }
+
+        /* =========================
+           CELULARES
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .nav-container {
+                padding: 15px 18px;
+            }
+
+            .site-logo {
+                font-size: 17px;
+            }
+
+            .page-header {
+                padding: 35px 20px 10px;
+            }
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .page-subtitle {
+                font-size: 21px;
+            }
+
+            main {
+                padding: 20px 15px 40px;
+            }
+
+            .history-section {
+                padding: 20px;
+            }
+
+            .history-layout {
+                display: block;
+            }
+
+            .history-content {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .history-image {
+                width: 100%;
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 4 / 3;
+            }
+
+            .history-image img {
+                width: 100%;
+                height: 100%;
+                min-height: 0;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
+
+            .history-text {
+                padding: 0;
+            }
+
+            .history-text h2 {
+                font-size: 26px;
+                margin-bottom: 18px;
+            }
+
+            .history-text h3 {
+                font-size: 18px;
+                margin-top: 24px;
+            }
+
+            .history-text p {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+
+            .desktop-navigation {
+                display: none;
+            }
+
+            .mobile-navigation {
+                display: flex;
+                gap: 12px;
+                margin-top: 30px;
+            }
+
+            .mobile-navigation .nav-button {
+                flex: 1;
+                min-width: 0;
+                min-height: 48px;
+            }
+
+            footer {
+                padding: 30px 18px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .history-section {
+                padding: 15px;
+            }
+
+            .page-header h1 {
+                font-size: 26px;
+            }
+
+            .mobile-navigation {
+                gap: 8px;
+            }
+
+            .mobile-navigation .nav-button {
+                padding: 10px 5px;
+                font-size: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         TOPBAR
+    ========================= -->
+
+    <header class="topbar">
+        <div class="nav-container">
+            <a class="site-logo" href="../index.html">
+                Memoria del Mundo
+            </a>
+        </div>
+    </header>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <section class="page-header">
+
+        <p class="page-number">
+            Historia de la Tierra · 02
+        </p>
+
+        <h1>Vaalbara</h1>
+
+        <p class="page-subtitle">
+            Hace aproximadamente 3.600–2.700 millones de años
+        </p>
+
+    </section>
+
+    <!-- =========================
+         CONTENIDO
+    ========================= -->
+
+    <main>
+
+        <section class="history-section">
+
+            <div class="history-layout">
+
+                <!-- ANTERIOR: ESCRITORIO -->
+
+                <nav class="page-navigation desktop-navigation"
+                     aria-label="Página anterior">
+
+                    <a class="nav-button" href="tierra-primitiva.html">
+                        <span class="arrow" aria-hidden="true">←</span>
+                        <span>Anterior</span>
+                    </a>
+
+                </nav>
+
+                <!-- IMAGEN Y TEXTO -->
+
+                <div class="history-content">
+
+                    <!-- IMAGEN PENDIENTE -->
+
+                    <figure class="history-image">
+
+                        <img
+                            src="../images/vaalbara.jpg"
+                            alt="Reconstrucción hipotética del antiguo supercontinente Vaalbara, que habría reunido los cratones de Kaapvaal y Pilbara."
+                            loading="eager"
+                        >
+
+                    </figure>
+
+                    <!-- INFORMACIÓN HISTÓRICA -->
+
+                    <article class="history-text">
+
+                        <span class="era-label">
+                            El eón Arcaico
+                        </span>
+
+                        <h2>Una de las primeras tierras antiguas</h2>
+
+                        <p>
+                            Durante el <strong>eón Arcaico</strong>, cuando
+                            la Tierra todavía se encontraba en sus primeras
+                            etapas de evolución geológica, comenzaron a
+                            desarrollarse y estabilizarse algunos de los
+                            bloques más antiguos de corteza continental.
+                        </p>
+
+                        <p>
+                            Entre las hipótesis científicas sobre la
+                            organización de aquellas tierras se encuentra
+                            <strong>Vaalbara</strong>, un posible
+                            supercontinente que habría existido hace
+                            aproximadamente entre 3.600 y 2.700 millones
+                            de años.
+                        </p>
+
+                        <p>
+                            Su nombre combina las terminaciones de dos
+                            regiones geológicas actuales: Kaapvaal, en el
+                            sur de África, y Pilbara, en Australia
+                            occidental. Sus antiguas rocas conservan
+                            semejanzas que han llevado a investigar si
+                            ambas regiones estuvieron conectadas.
+                        </p>
+
+                        <h3>Dos bloques de corteza antigua</h3>
+
+                        <p>
+                            El <strong>cratón de Kaapvaal</strong>, situado
+                            en el sur de África, y el
+                            <strong>cratón de Pilbara</strong>, ubicado
+                            en Australia occidental, contienen algunas
+                            de las rocas continentales más antiguas
+                            que se conservan en la actualidad.
+                        </p>
+
+                        <p>
+                            Los geólogos comparan sus estructuras,
+                            secuencias de rocas, edades y registros
+                            paleomagnéticos. Estas investigaciones
+                            permiten evaluar si ambos bloques compartieron
+                            una historia geológica y pudieron encontrarse
+                            próximos entre sí en el pasado remoto.
+                        </p>
+
+                        <h3>¿Existió realmente Vaalbara?</h3>
+
+                        <p>
+                            La hipótesis de Vaalbara cuenta con argumentos
+                            científicos a favor, incluidos estudios que
+                            interpretan las semejanzas entre ambos
+                            cratones como evidencia de una antigua
+                            conexión.
+                        </p>
+
+                        <p>
+                            Sin embargo, <strong>su existencia como un
+                            único supercontinente no está definitivamente
+                            establecida</strong>. Otros investigadores
+                            señalan que ciertas semejanzas geológicas
+                            también podrían explicarse mediante procesos
+                            que afectaron regiones diferentes de la Tierra.
+                            Las limitaciones de los datos antiguos dificultan
+                            reconstruir con certeza su posición y evolución.
+                        </p>
+
+                        <p>
+                            Si Vaalbara llegó a constituir una masa
+                            continental unificada, su historia se remonta
+                            a una época muy anterior a supercontinentes
+                            posteriores como Pangea. Su estudio permite
+                            explorar cómo se formaron, evolucionaron
+                            y reorganizaron los primeros bloques de
+                            corteza terrestre.
+                        </p>
+
+                    </article>
+
+                </div>
+
+                <!-- SIGUIENTE: ESCRITORIO -->
+
+                <nav class="page-navigation desktop-navigation"
+                     aria-label="Página siguiente">
+
+                    <a class="nav-button" href="tierra-etapa-3.html">
+                        <span>Siguiente</span>
+                        <span class="arrow" aria-hidden="true">→</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <!-- NAVEGACIÓN MÓVIL -->
+
+            <nav class="page-navigation mobile-navigation"
+                 aria-label="Navegación entre etapas">
+
+                <a class="nav-button" href="tierra-primitiva.html">
+                    <span class="arrow" aria-hidden="true">←</span>
+                    <span>Anterior</span>
+                </a>
+
+                <a class="nav-button" href="tierra-etapa-3.html">
+                    <span>Siguiente</span>
+                    <span class="arrow" aria-hidden="true">→</span>
+                </a>
+
+            </nav>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>Memoria del Mundo</h3>
+
+        <p>
+            Un recorrido por la historia de nuestro planeta.
+        </p>
+
+    </footer>
+
+</body>
+</html>
