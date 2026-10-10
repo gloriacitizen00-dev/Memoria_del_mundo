@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rodinia | Historia de la Tierra</title>
+
+  <meta name="description" content="Explora Rodinia, el antiguo supercontinente que reunió gran parte de las masas continentales de la Tierra hace aproximadamente mil millones de años. Descubre su formación, evolución y fragmentación.">
+
+  <meta name="keywords" content="Rodinia, supercontinente Rodinia, historia de la Tierra, geología, paleogeografía, Neoproterozoico, Proterozoico, tectónica de placas, evolución continental">
+
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Rodinia | Historia de la Tierra">
+  <meta property="og:description" content="Conoce la historia de Rodinia, un supercontinente antiguo que transformó la geografía terrestre antes de la diversificación de la vida animal.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../images/rodinia.jpg">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--clay);
+    }
+
+    main {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 65px 4%;
+    }
+
+    .history-layout {
+      width: 100%;
+      max-width: 1400px;
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-link {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 10px;
+      color: var(--sand-dark);
+      text-align: center;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: color .25s ease, transform .25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--clay);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--sand-light);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--sand-dark);
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: background .25s ease,
+                  color .25s ease,
+                  border-color .25s ease;
+    }
+
+    .nav-link:hover .nav-arrow {
+      background: var(--sand-dark);
+      color: var(--white);
+      border-color: var(--sand-dark);
+    }
+
+    .history-content {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .history-image {
+      min-width: 0;
+      min-height: 620px;
+      position: relative;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--sand-dark);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+    }
+
+    .history-text {
+      min-width: 0;
+      padding: 50px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--clay);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      color: var(--sand-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 3vw, 3.1rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      margin-bottom: 28px;
+      color: var(--stone);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .history-text p {
+      margin-bottom: 18px;
+      color: var(--text-light);
+      font-size: .88rem;
+      line-height: 1.9;
+    }
+
+    .history-text h2 {
+      margin: 12px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .history-text ul {
+      margin: 0 0 18px 20px;
+      color: var(--text-light);
+      font-size: .86rem;
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+    }
+
+    .history-text strong {
+      color: var(--clay-dark);
+      font-weight: 600;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    footer {
+      padding: 25px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--stone);
+      text-align: center;
+      font-size: .7rem;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding: 45px 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-text {
+        padding: 35px 27px;
+      }
+
+      .history-image,
+      .history-image img,
+      .image-placeholder {
+        min-height: 680px;
+      }
+
+      .nav-link {
+        font-size: .62rem;
+        padding: 12px 4px;
+      }
+
+      .nav-arrow {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        display: block;
+        padding: 28px 5% 40px;
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 4 / 3;
+      }
+
+      .history-image img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        inset: 0;
+        object-fit: cover;
+      }
+
+      .image-placeholder {
+        width: 100%;
+        min-height: 0;
+        height: 100%;
+        aspect-ratio: 4 / 3;
+      }
+
+      .history-text {
+        padding: 30px 24px;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+      }
+
+      .subtitle {
+        margin-bottom: 22px;
+        font-size: 1.25rem;
+      }
+
+      .history-text p {
+        font-size: .86rem;
+      }
+
+      .mobile-nav {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .mobile-nav .nav-link {
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        background: var(--white);
+        font-size: .64rem;
+      }
+
+      .mobile-nav .nav-arrow {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+        line-height: 1.7;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .history-text {
+        padding: 25px 18px;
+      }
+
+      .mobile-nav {
+        gap: 8px;
+      }
+
+      .mobile-nav .nav-link {
+        padding: 8px 5px;
+        gap: 7px;
+        font-size: .58rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <div class="history-layout">
+
+      <nav class="side-nav" aria-label="Etapa anterior">
+        <a class="nav-link" href="columbia.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span>Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/rodinia.jpg"
+            alt="Reconstrucción paleogeográfica del supercontinente Rodinia"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          >
+
+          <div class="image-placeholder" style="display:none;">
+            Imagen de Rodinia
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <div class="eyebrow">Historia geológica de la Tierra</div>
+
+          <h1>Rodinia</h1>
+
+          <div class="subtitle">
+            Un supercontinente en el mundo antiguo
+          </div>
+
+          <p>
+            Hace aproximadamente entre <strong>1.100 y 900 millones de años</strong>,
+            grandes bloques de corteza continental se reunieron para formar Rodinia,
+            uno de los supercontinentes más importantes de la historia geológica.
+            Su nombre procede de una palabra rusa relacionada con la idea de
+            origen o tierra natal.
+          </p>
+
+          <p>
+            Rodinia existió durante una parte del Proterozoico, mucho antes de que
+            los continentes adquirieran su distribución actual. Aunque los geólogos
+            consideran que un supercontinente de esta época llegó a formarse,
+            todavía investigan cómo estaban colocados exactamente sus bloques
+            y qué regiones participaron en su configuración.
+          </p>
+
+          <h2>La unión de los continentes</h2>
+
+          <p>
+            Rodinia se formó mediante procesos tectónicos que reunieron antiguos
+            bloques continentales a lo largo de cientos de millones de años.
+            Las colisiones deformaron las rocas y produjeron grandes cinturones
+            montañosos, cuyos restos pueden reconocerse hoy en distintas partes
+            del mundo.
+          </p>
+
+          <p>
+            Muchas reconstrucciones sitúan a Laurentia, un antiguo núcleo
+            continental que hoy forma gran parte de Norteamérica, cerca de una
+            posición central. Alrededor de él se habrían unido otros bloques,
+            algunos de los cuales hoy forman partes de Sudamérica, África,
+            Australia, la Antártida, India y Asia.
+          </p>
+
+          <p>
+            Sin embargo, no existe una única reconstrucción aceptada en todos
+            sus detalles. Las posiciones relativas de varios bloques continentales
+            continúan siendo discutidas a partir de las evidencias geológicas
+            y paleomagnéticas.
+          </p>
+
+          <h2>¿Cómo estudian los científicos a Rodinia?</h2>
+
+          <p>
+            No es posible observar directamente un mapa de aquel mundo.
+            Su historia se reconstruye mediante evidencias conservadas en las rocas:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Rocas antiguas:</strong> permiten comparar edades y procesos
+              geológicos en regiones hoy separadas.
+            </li>
+            <li>
+              <strong>Cinturones montañosos:</strong> conservan señales de colisiones
+              continentales ocurridas hace cientos de millones de años.
+            </li>
+            <li>
+              <strong>Paleomagnetismo:</strong> ayuda a estimar las antiguas latitudes
+              y orientaciones de los bloques continentales.
+            </li>
+            <li>
+              <strong>Registros de rifting:</strong> muestran dónde la corteza comenzó
+              a estirarse y separarse antes de la apertura de nuevos océanos.
+            </li>
+          </ul>
+
+          <h2>La fragmentación de Rodinia</h2>
+
+          <p>
+            Con el tiempo, la actividad tectónica y el ascenso de material caliente
+            del manto contribuyeron a debilitar y estirar partes de la corteza.
+            En distintas regiones comenzaron a abrirse fracturas y zonas de rift,
+            precursoras de nuevos márgenes continentales y cuencas oceánicas.
+          </p>
+
+          <p>
+            La fragmentación empezó en algunas zonas hace aproximadamente
+            <strong>825 a 750 millones de años</strong>, aunque la separación
+            de los diferentes bloques continuó durante mucho más tiempo.
+            No fue un acontecimiento único ni simultáneo en todo el planeta.
+          </p>
+
+          <h2>Rodinia y los cambios de la vida</h2>
+
+          <p>
+            Durante el Neoproterozoico, la Tierra experimentó transformaciones
+            ambientales importantes. En este intervalo ocurrieron episodios de
+            glaciación extensa y cambios en los océanos y la atmósfera.
+            Algunos de estos acontecimientos coincidieron con la fragmentación
+            de Rodinia, pero las relaciones causales siguen siendo objeto de estudio.
+          </p>
+
+          <p>
+            Estos cambios forman parte del contexto en el que evolucionaron
+            los organismos eucariotas y, posteriormente, aparecieron formas
+            de vida multicelular más complejas. Rodinia ayuda a situar esos
+            procesos dentro de una historia planetaria mucho más amplia.
+          </p>
+
+          <h2>¿Por qué es importante?</h2>
+
+          <p>
+            Rodinia permite comprender cómo se ensamblan y fragmentan los
+            supercontinentes, cómo se transforma la corteza terrestre y cómo
+            la geografía influye en los océanos y el clima. Su historia también
+            sirve para estudiar la transición hacia las configuraciones
+            continentales que precedieron a Gondwana y, mucho después,
+            a Pangea.
+          </p>
+
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Etapa siguiente">
+        <a class="nav-link" href="pannotia.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span>Siguiente</span>
+        </a>
+      </nav>
+
+      <nav class="mobile-nav" aria-label="Navegación entre etapas">
+        <a class="nav-link" href="columbia.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span>Anterior</span>
+        </a>
+
+        <a class="nav-link" href="pannotia.html">
+          <span>Siguiente</span>
+          <span class="nav-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Historia de la Tierra · Un recorrido por el pasado de nuestro planeta
+  </footer>
+
+</body>
+</html>
