@@ -63,7 +63,7 @@ Memoria del Mundo se desarrolla como una iniciativa digital independiente, con e
 
 El proyecto continúa en desarrollo. Sus contenidos y herramientas podrán ampliarse a medida que avance su construcción.
 
-## 👩‍💻 Autora y creadora
+## Autora y creadora
 
 **Gloria Martínez**  
 Creadora y desarrolladora de Memoria del Mundo™.
