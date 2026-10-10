@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nuevos océanos y continentes | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Explora la transformación de la Tierra entre hace 145 y 100 millones de años: la apertura de nuevos océanos, la separación de África y América del Sur y la evolución de los continentes durante el Cretácico.">
+  <meta name="keywords" content="nuevos océanos, continentes, historia de la Tierra, Cretácico, 145 millones de años, 100 millones de años, deriva continental, tectónica de placas, apertura del Atlántico, Gondwana, América del Sur, África">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Nuevos océanos y continentes | Historia de la Tierra">
+  <meta property="og:description" content="La separación de las masas continentales y la apertura de nuevos océanos durante el Cretácico.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 253, 247, .96);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--sand-dark);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 55px 4% 75px;
+    }
+
+    .eyebrow {
+      color: var(--sand-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .page-heading {
+      margin: 0 auto 38px;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.5;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--clay-dark);
+      text-align: center;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--sand-soft);
+      border-color: var(--sand);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      color: var(--sand-dark);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .history-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 18px;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 720px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .history-image img.image-missing {
+      display: none;
+    }
+
+    .image-fallback {
+      display: none;
+      width: 100%;
+      min-height: 480px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+    }
+
+    .image-fallback.visible {
+      display: flex;
+    }
+
+    .history-text {
+      padding: clamp(28px, 4vw, 55px);
+      align-self: center;
+    }
+
+    .period {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      border-radius: 30px;
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .history-text p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: .91rem;
+      line-height: 1.95;
+    }
+
+    .history-text h3 {
+      margin: 26px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .history-text ul {
+      margin: 0 0 20px 20px;
+      color: var(--text-light);
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .context-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+      color: var(--text-light);
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      padding: 27px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-light);
+      text-align: center;
+      font-size: .75rem;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding-right: 3%;
+        padding-left: 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-image {
+        min-height: 450px;
+      }
+
+      .history-image img {
+        min-height: 410px;
+      }
+
+      .image-fallback {
+        min-height: 410px;
+      }
+
+      .nav-label {
+        font-size: .6rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        padding: 35px 5% 45px;
+      }
+
+      .page-heading {
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        min-height: 230px;
+      }
+
+      .history-text {
+        padding: 25px 22px 28px;
+      }
+
+      .history-text p {
+        font-size: .88rem;
+      }
+
+      .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .mobile-nav .nav-link {
+        flex-direction: row;
+        flex: 1;
+        gap: 8px;
+        padding: 12px 10px;
+      }
+
+      .mobile-nav .nav-arrow {
+        font-size: 1.3rem;
+      }
+
+      .mobile-nav .nav-label {
+        font-size: .64rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Historia de la Tierra</p>
+      <h1>Nuevos océanos y continentes</h1>
+      <p class="subtitle">
+        La transformación del mapa terrestre durante el Cretácico
+      </p>
+    </section>
+
+    <section class="history-layout" aria-label="Nuevos océanos y continentes">
+
+      <nav class="side-nav" aria-label="Página anterior">
+        <a class="nav-link" href="pangea.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span class="nav-label">Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/nuevos-oceanos-continentes.jpg"
+            alt="Reconstrucción paleogeográfica de los continentes y océanos durante el Cretácico"
+            onerror="this.classList.add('image-missing'); this.nextElementSibling.classList.add('visible');"
+          >
+          <div class="image-fallback" aria-hidden="true">
+            Espacio reservado para la reconstrucción de los continentes durante el Cretácico
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <span class="period">
+            Hace 145–100 millones de años
+          </span>
+
+          <h2>Un planeta en transformación</h2>
+
+          <p>
+            Después de la fragmentación inicial de Pangea, los bloques
+            continentales continuaron desplazándose y separándose.
+            Entre hace 145 y 100 millones de años, durante el Cretácico
+            temprano y parte del Cretácico medio, la expansión de las
+            fracturas continentales y la formación de nueva corteza
+            oceánica modificaron profundamente la distribución de las
+            tierras y los mares.
+          </p>
+
+          <p>
+            Los continentes no se separaron todos a la vez. Las fracturas
+            se extendieron de forma progresiva y desigual, mientras
+            algunos bloques permanecían unidos y otros comenzaban a
+            desarrollar cuencas oceánicas entre ellos.
+          </p>
+
+          <h3>El nacimiento del Atlántico sur</h3>
+
+          <p>
+            Una de las transformaciones más importantes fue la separación
+            progresiva de América del Sur y África. El proceso comenzó
+            en el sector meridional y avanzó hacia el norte. Al abrirse
+            el fondo oceánico, se formó nueva corteza entre ambos bloques
+            y el océano Atlántico sur empezó a ensancharse.
+          </p>
+
+          <p>
+            Hacia el final del intervalo estudiado, la separación entre
+            las regiones ecuatoriales de América del Sur y África también
+            avanzaba. La apertura de esa conexión fue gradual: las
+            distintas regiones no quedaron separadas ni comunicadas
+            por aguas profundas exactamente en el mismo momento.
+          </p>
+
+          <h3>La fragmentación de Gondwana</h3>
+
+          <p>
+            Gondwana también experimentó importantes cambios. América
+            del Sur y África siguieron un proceso de separación,
+            mientras que India, Madagascar, Australia y la Antártida
+            evolucionaban dentro de una compleja reorganización
+            de los bloques continentales del hemisferio sur.
+          </p>
+
+          <ul>
+            <li>
+              <strong>América del Sur y África:</strong> comenzaron
+              a separarse y dieron paso a la expansión del Atlántico sur.
+            </li>
+            <li>
+              <strong>India y Madagascar:</strong> su relación tectónica
+              cambió durante la fragmentación de los bloques orientales
+              de Gondwana.
+            </li>
+            <li>
+              <strong>Antártida y Australia:</strong> formaban parte
+              de una región continental meridional cuya separación
+              definitiva ocurrió mucho después.
+            </li>
+          </ul>
+
+          <h3>Nuevos espacios oceánicos</h3>
+
+          <p>
+            La separación de las placas no consistía simplemente en
+            abrir grietas llenas de agua. Cuando la corteza continental
+            se estiraba y adelgazaba, podía fracturarse; con el tiempo,
+            la expansión del fondo oceánico creaba nueva corteza y
+            permitía que las cuencas marinas se ensancharan.
+          </p>
+
+          <p>
+            Durante este periodo también continuó la evolución de
+            distintas regiones del Atlántico norte y de las cuencas
+            oceánicas vinculadas a la separación de los bloques
+            continentales. Cada cuenca tenía su propia historia
+            tectónica y un ritmo de apertura diferente.
+          </p>
+
+          <h3>Un mundo de mares en expansión</h3>
+
+          <p>
+            A medida que se abrían nuevos espacios oceánicos, el agua
+            marina inundaba regiones bajas de los continentes. Durante
+            partes del Cretácico, el nivel del mar fue elevado y amplias
+            zonas quedaron cubiertas por mares poco profundos. Estos
+            ambientes favorecieron la acumulación de sedimentos y la
+            formación de rocas que hoy conservan información sobre
+            los antiguos océanos.
+          </p>
+
+          <p>
+            Los movimientos de las placas, la actividad volcánica,
+            los cambios del nivel del mar y la circulación oceánica
+            contribuyeron a transformar los paisajes y los ecosistemas
+            del planeta.
+          </p>
+
+          <h3>Las pistas que dejaron los continentes</h3>
+
+          <p>
+            La geología moderna reconstruye estos procesos mediante
+            el estudio de las rocas, las estructuras de las costas,
+            las anomalías magnéticas del fondo oceánico y los sedimentos.
+            Las formas complementarias de algunos márgenes continentales,
+            junto con otras evidencias geológicas, permiten reconstruir
+            cómo estaban conectadas las tierras en el pasado.
+          </p>
+
+          <div class="context-note">
+            <strong>Importancia histórica:</strong>
+            entre hace 145 y 100 millones de años, la separación
+            continental avanzó de manera desigual. La apertura del
+            Atlántico sur y la fragmentación de Gondwana fueron
+            procesos fundamentales en la evolución de la geografía
+            terrestre.
+          </div>
+
+        
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Página siguiente">
+        <a class="nav-link" href="paleogeno.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span class="nav-label">Siguiente</span>
+        </a>
+      </nav>
+
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegación entre páginas">
+      <a class="nav-link" href="pangea.html">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">Anterior</span>
+      </a>
+
+      <a class="nav-link" href="paleogeno.html">
+        <span class="nav-label">Siguiente</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Atlas de la Historia de la Tierra
+  </footer>
+</body>
+</html>
