@@ -1,1 +1,400 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Historia de la Tierra | Memoria del Mundo™</title>
+
+  <meta
+    name="description"
+    content="Un recorrido por la historia geológica de la Tierra: desde su formación hasta los continentes que conocemos hoy."
+  >
+
+  <meta name="theme-color" content="#FBF6EA">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+      --text: #2B241B;
+      --text-light: #665D51;
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+      --shadow: 0 20px 50px rgba(120, 90, 45, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    /* Encabezado mínimo */
+
+    .site-header {
+      width: 100%;
+      padding: 24px 6%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-link {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: "Cinzel", serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .brand-link:hover {
+      color: var(--sand-dark);
+    }
+
+    /* Contenido principal */
+
+    main {
+      flex: 1;
+      width: 100%;
+    }
+
+    .intro {
+      width: min(100% - 40px, 1100px);
+      margin: 0 auto;
+      padding: 72px 0 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: var(--clay);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      color: var(--clay-dark);
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .intro-text {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--text-light);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+      line-height: 1.65;
+    }
+
+    /* Mapamundi */
+
+    .map-section {
+      width: min(100% - 40px, 1200px);
+      margin: 0 auto;
+    }
+
+    .map-frame {
+      overflow: hidden;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .world-map {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .map-credit {
+      padding: 12px 4px 2px;
+      color: var(--stone);
+      font-size: 0.68rem;
+      line-height: 1.7;
+      text-align: right;
+    }
+
+    .map-credit a {
+      color: var(--clay-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Botón de inicio */
+
+    .journey-start {
+      padding: 52px 20px 76px;
+      text-align: center;
+    }
+
+    .journey-start p {
+      margin-bottom: 24px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .start-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 54px;
+      padding: 15px 28px;
+      border: 1px solid var(--clay-dark);
+      border-radius: 2px;
+      background: var(--clay-dark);
+      color: var(--white);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-decoration: none;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .start-button:hover {
+      transform: translateY(-2px);
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+    }
+
+    .start-button:focus-visible,
+    .brand-link:focus-visible,
+    .map-credit a:focus-visible {
+      outline: 3px solid var(--sand);
+      outline-offset: 4px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 24px 20px;
+      border-top: 1px solid var(--border);
+      color: var(--stone);
+      font-size: 0.7rem;
+      text-align: center;
+    }
+
+    .site-footer p + p {
+      margin-top: 4px;
+    }
+
+    /* Tabletas */
+
+    @media (max-width: 900px) {
+      .intro {
+        padding-top: 58px;
+        padding-bottom: 42px;
+      }
+
+      .journey-start {
+        padding-top: 42px;
+        padding-bottom: 58px;
+      }
+    }
+
+    /* Teléfonos */
+
+    @media (max-width: 600px) {
+      .site-header {
+        padding: 18px 20px;
+      }
+
+      .brand-link {
+        font-size: 0.78rem;
+      }
+
+      .intro {
+        width: min(100% - 36px, 1100px);
+        padding-top: 44px;
+        padding-bottom: 34px;
+      }
+
+      .eyebrow {
+        font-size: 0.64rem;
+        letter-spacing: 0.15em;
+      }
+
+      h1 {
+        margin-bottom: 16px;
+        font-size: clamp(2rem, 9vw, 2.8rem);
+      }
+
+      .intro-text {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+
+      .map-section {
+        width: calc(100% - 28px);
+      }
+
+      .map-frame {
+        padding: 6px;
+      }
+
+      .map-credit {
+        padding: 10px 2px 2px;
+        font-size: 0.62rem;
+        text-align: left;
+      }
+
+      .journey-start {
+        padding: 38px 18px 48px;
+      }
+
+      .journey-start p {
+        font-size: 0.82rem;
+      }
+
+      .start-button {
+        width: 100%;
+        max-width: 340px;
+        padding: 15px 18px;
+        font-size: 0.72rem;
+      }
+
+      .site-footer {
+        padding: 20px 16px;
+        font-size: 0.65rem;
+      }
+    }
+
+    /* Accesibilidad: reducir animaciones si el usuario lo prefiere */
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a
+      class="brand-link"
+      href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/"
+      aria-label="Volver a Memoria del Mundo"
+    >
+      Memoria del Mundo™
+    </a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Un atlas de la historia geológica</p>
+
+      <h1 id="page-title">Historia de la Tierra</h1>
+
+      <p class="intro-text">
+        Un recorrido por la formación de nuestro planeta y las
+        transformaciones que dieron forma a sus continentes, desde
+        la Tierra primitiva hasta el mundo que conocemos hoy.
+      </p>
+    </section>
+
+    <section class="map-section" aria-label="Mapamundi actual">
+      <figure class="map-frame">
+        <!--
+          Guarda el mapamundi descargado con el nombre
+          mapamundi.jpg y colócalo junto a este index.html.
+        -->
+        <img
+          class="world-map"
+          src="mapamundi.jpg"
+          alt="Mapamundi actual con los continentes y océanos de la Tierra"
+          fetchpriority="high"
+        >
+
+        <figcaption class="map-credit">
+          Mapa: Tom Patterson · Proyección Equal Earth.
+          Fuente:
+          <a
+            href="https://commons.wikimedia.org/w/index.php?curid=111119157"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Wikimedia Commons
+          </a>.
+          Dominio público.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="journey-start">
+      <p>
+        Sigue la transformación del planeta a través del tiempo.
+      </p>
+
+      <!-- Enlazaremos este botón con la primera etapa cuando creemos esa página. -->
+      <a class="start-button" href="hadeano.html">
+        Comenzar el recorrido
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Historia de la Tierra · Memoria del Mundo™</p>
+    <p>Un proyecto educativo de Gloria Martínez.</p>
+  </footer>
+
+</body>
+</html>
