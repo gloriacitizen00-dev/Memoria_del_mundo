@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Paleógeno | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Descubre el Paleógeno, entre hace 66 y 23 millones de años: la evolución de los mamíferos, los cambios climáticos y la transformación de los continentes después de la extinción del Cretácico.">
+  <meta name="keywords" content="Paleógeno, Paleoceno, Eoceno, Oligoceno, historia de la Tierra, evolución de los mamíferos, extinción de los dinosaurios, deriva continental, clima prehistórico, Cenozoico">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="El Paleógeno | Historia de la Tierra">
+  <meta property="og:description" content="La evolución de la vida y la transformación de la Tierra entre hace 66 y 23 millones de años.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 253, 247, .96);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--sand-dark);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 55px 4% 75px;
+    }
+
+    .eyebrow {
+      color: var(--sand-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .page-heading {
+      margin: 0 auto 38px;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.5;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--clay-dark);
+      text-align: center;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--sand-soft);
+      border-color: var(--sand);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      color: var(--sand-dark);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .history-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 18px;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 720px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .history-image img.image-missing {
+      display: none;
+    }
+
+    .image-fallback {
+      display: none;
+      width: 100%;
+      min-height: 480px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+    }
+
+    .image-fallback.visible {
+      display: flex;
+    }
+
+    .history-text {
+      padding: clamp(28px, 4vw, 55px);
+      align-self: center;
+    }
+
+    .period {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      border-radius: 30px;
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .history-text p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: .91rem;
+      line-height: 1.95;
+    }
+
+    .history-text h3 {
+      margin: 26px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .history-text ul {
+      margin: 0 0 20px 20px;
+      color: var(--text-light);
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .context-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+      color: var(--text-light);
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      padding: 27px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-light);
+      text-align: center;
+      font-size: .75rem;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding-right: 3%;
+        padding-left: 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-image {
+        min-height: 450px;
+      }
+
+      .history-image img {
+        min-height: 410px;
+      }
+
+      .image-fallback {
+        min-height: 410px;
+      }
+
+      .nav-label {
+        font-size: .6rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        padding: 35px 5% 45px;
+      }
+
+      .page-heading {
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        min-height: 230px;
+      }
+
+      .history-text {
+        padding: 25px 22px 28px;
+      }
+
+      .history-text p {
+        font-size: .88rem;
+      }
+
+      .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .mobile-nav .nav-link {
+        flex-direction: row;
+        flex: 1;
+        gap: 8px;
+        padding: 12px 10px;
+      }
+
+      .mobile-nav .nav-arrow {
+        font-size: 1.3rem;
+      }
+
+      .mobile-nav .nav-label {
+        font-size: .64rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Historia de la Tierra</p>
+      <h1>El Paleógeno</h1>
+      <p class="subtitle">
+        La evolución de los mamíferos y la transformación del planeta
+      </p>
+    </section>
+
+    <section class="history-layout" aria-label="Historia del Paleógeno">
+
+      <nav class="side-nav" aria-label="Página anterior">
+        <a class="nav-link" href="nuevos-oceanos-continentes.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span class="nav-label">Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/paleogeno.jpg"
+            alt="Reconstrucción de un paisaje del Paleógeno con vegetación y mamíferos primitivos"
+            onerror="this.classList.add('image-missing'); this.nextElementSibling.classList.add('visible');"
+          >
+          <div class="image-fallback" aria-hidden="true">
+            Espacio reservado para una reconstrucción del Paleógeno
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <span class="period">
+            Hace 66–23 millones de años
+          </span>
+
+          <h2>Un mundo después de la extinción</h2>
+
+          <p>
+            Hace aproximadamente 66 millones de años, una extinción
+            masiva puso fin al Cretácico y acabó con los dinosaurios
+            no avianos y numerosos otros organismos. Comenzó entonces
+            el Paleógeno, primer periodo de la era Cenozoica.
+          </p>
+
+          <p>
+            Los ecosistemas experimentaron una profunda reorganización.
+            Muchos grupos de mamíferos y aves se diversificaron y
+            ocuparon ambientes que habían cambiado tras la extinción.
+            Al mismo tiempo, las plantas continuaron evolucionando y
+            las placas tectónicas modificaron lentamente la geografía
+            de la Tierra.
+          </p>
+
+          <h3>El Paleoceno: la recuperación de la vida</h3>
+
+          <p>
+            Entre hace 66 y 56 millones de años, los ecosistemas se
+            recuperaron gradualmente de la extinción del final del
+            Cretácico. Los mamíferos aumentaron su diversidad y
+            aparecieron numerosas formas de herbívoros y carnívoros.
+            Muchos todavía eran relativamente pequeños, aunque algunos
+            grupos desarrollaron tamaños mayores.
+          </p>
+
+          <p>
+            Las aves también se diversificaron, mientras los reptiles,
+            los insectos y las plantas continuaron formando parte
+            esencial de los ecosistemas terrestres y acuáticos.
+          </p>
+
+          <h3>El Eoceno: un planeta cálido</h3>
+
+          <p>
+            Entre hace 56 y 33,9 millones de años, la Tierra atravesó
+            una etapa especialmente cálida. Durante el inicio del
+            Eoceno se produjo un episodio de calentamiento global
+            intenso conocido como el Máximo Térmico del Paleoceno-Eoceno.
+            Posteriormente, el clima comenzó una tendencia general
+            hacia condiciones más frías.
+          </p>
+
+          <p>
+            Durante el Eoceno evolucionaron numerosos grupos de
+            mamíferos relacionados con los actuales. Los primeros
+            cetáceos surgieron de antepasados terrestres y se adaptaron
+            progresivamente a la vida acuática. También existían
+            antepasados de caballos, primates, murciélagos y otros
+            mamíferos modernos.
+          </p>
+
+          <h3>El Oligoceno: enfriamiento y nuevos paisajes</h3>
+
+          <p>
+            Entre hace 33,9 y 23 millones de años, el clima global
+            continuó enfriándose. Alrededor de hace 34 millones de
+            años, en la transición entre el Eoceno y el Oligoceno,
+            se expandieron grandes capas de hielo sobre la Antártida.
+          </p>
+
+          <p>
+            Las variaciones climáticas modificaron la distribución
+            de bosques y otros ambientes. Algunos mamíferos desarrollaron
+            adaptaciones para vivir en condiciones más estacionales,
+            y diferentes grupos continuaron diversificándose.
+          </p>
+
+          <h3>Los continentes siguen cambiando</h3>
+
+          <p>
+            Durante el Paleógeno, los continentes continuaron su
+            desplazamiento. India colisionó progresivamente con Asia,
+            contribuyendo a la elevación de la región del Himalaya
+            y de la meseta tibetana. África se acercó a Eurasia,
+            mientras que Australia siguió separándose de la Antártida.
+          </p>
+
+          <p>
+            América del Sur y la Antártida también experimentaron
+            cambios en sus conexiones y en los pasos oceánicos que
+            las rodeaban. Estas transformaciones influyeron en la
+            circulación marina y en la evolución de los ecosistemas.
+          </p>
+
+          <h3>La vida se aproxima al mundo moderno</h3>
+
+          <p>
+            A lo largo del Paleógeno se establecieron numerosos grupos
+            de mamíferos y aves que formarían parte de los ecosistemas
+            posteriores. Sin embargo, la fauna y la flora todavía
+            diferían considerablemente de las actuales, y muchos
+            paisajes estaban dominados por bosques en regiones que
+            hoy tienen climas distintos.
+          </p>
+
+          <p>
+            El final del Paleógeno no significó que la Tierra hubiera
+            terminado de adquirir su forma moderna. Los continentes
+            continuaron desplazándose y el clima siguió cambiando
+            durante el Neógeno y el Cuaternario.
+          </p>
+
+          <div class="context-note">
+            <strong>Importancia histórica:</strong>
+            el Paleógeno marca una etapa decisiva en la reorganización
+            de la vida después de la extinción del Cretácico. La
+            diversificación de los mamíferos, el enfriamiento climático
+            y los movimientos continentales prepararon el escenario
+            para los ecosistemas posteriores.
+          </div>
+
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Página siguiente">
+        <a class="nav-link" href="neogeno.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span class="nav-label">Siguiente</span>
+        </a>
+      </nav>
+
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegación entre páginas">
+      <a class="nav-link" href="nuevos-oceanos-continentes.html">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">Anterior</span>
+      </a>
+
+      <a class="nav-link" href="neogeno.html">
+        <span class="nav-label">Siguiente</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Atlas de la Historia de la Tierra
+  </footer>
+</body>
+</html>
