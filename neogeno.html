@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Neógeno | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Explora el Neógeno, entre hace 23 y 2,58 millones de años: expansión de las praderas, evolución de los mamíferos, formación del istmo de Panamá y aparición de los primeros homininos.">
+  <meta name="keywords" content="Neógeno, Mioceno, Plioceno, historia de la Tierra, evolución humana, primeros homininos, deriva continental, istmo de Panamá, mamíferos, cambio climático">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="El Neógeno | Historia de la Tierra">
+  <meta property="og:description" content="La evolución de los continentes, las praderas y los primeros homininos durante el Neógeno.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 253, 247, .96);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--sand-dark);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 55px 4% 75px;
+    }
+
+    .eyebrow {
+      color: var(--sand-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .page-heading {
+      margin: 0 auto 38px;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.5;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--clay-dark);
+      text-align: center;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--sand-soft);
+      border-color: var(--sand);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      color: var(--sand-dark);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .history-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 18px;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 720px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .history-image img.image-missing {
+      display: none;
+    }
+
+    .image-fallback {
+      display: none;
+      width: 100%;
+      min-height: 480px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+    }
+
+    .image-fallback.visible {
+      display: flex;
+    }
+
+    .history-text {
+      padding: clamp(28px, 4vw, 55px);
+      align-self: center;
+    }
+
+    .period {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      border-radius: 30px;
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .history-text p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: .91rem;
+      line-height: 1.95;
+    }
+
+    .history-text h3 {
+      margin: 26px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .history-text ul {
+      margin: 0 0 20px 20px;
+      color: var(--text-light);
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .context-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+      color: var(--text-light);
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      padding: 27px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-light);
+      text-align: center;
+      font-size: .75rem;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding-right: 3%;
+        padding-left: 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-image {
+        min-height: 450px;
+      }
+
+      .history-image img {
+        min-height: 410px;
+      }
+
+      .image-fallback {
+        min-height: 410px;
+      }
+
+      .nav-label {
+        font-size: .6rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        padding: 35px 5% 45px;
+      }
+
+      .page-heading {
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        min-height: 230px;
+      }
+
+      .history-text {
+        padding: 25px 22px 28px;
+      }
+
+      .history-text p {
+        font-size: .88rem;
+      }
+
+      .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .mobile-nav .nav-link {
+        flex-direction: row;
+        flex: 1;
+        gap: 8px;
+        padding: 12px 10px;
+      }
+
+      .mobile-nav .nav-arrow {
+        font-size: 1.3rem;
+      }
+
+      .mobile-nav .nav-label {
+        font-size: .64rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Historia de la Tierra</p>
+      <h1>El Neógeno</h1>
+      <p class="subtitle">
+        Continentes modernos, praderas y evolución de los homininos
+      </p>
+    </section>
+
+    <section class="history-layout" aria-label="Historia del Neógeno">
+
+      <nav class="side-nav" aria-label="Página anterior">
+        <a class="nav-link" href="paleogeno.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span class="nav-label">Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/neogeno.jpg"
+            alt="Reconstrucción de un paisaje del Neógeno con praderas y mamíferos prehistóricos"
+            onerror="this.classList.add('image-missing'); this.nextElementSibling.classList.add('visible');"
+          >
+          <div class="image-fallback" aria-hidden="true">
+            Espacio reservado para una reconstrucción del Neógeno
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <span class="period">
+            Hace 23–2,58 millones de años
+          </span>
+
+          <h2>El mundo comienza a parecerse al actual</h2>
+
+          <p>
+            Hace aproximadamente 23 millones de años comenzó el Neógeno,
+            el segundo periodo de la era Cenozoica. Los continentes
+            continuaron desplazándose y muchas regiones adquirieron
+            características geográficas más parecidas a las actuales.
+            Al mismo tiempo, los ecosistemas respondieron a los cambios
+            del clima, del relieve y de la circulación oceánica.
+          </p>
+
+          <p>
+            El Neógeno se divide en dos épocas: el Mioceno y el Plioceno.
+            Durante ambas evolucionaron numerosos mamíferos y aves,
+            se extendieron las praderas en muchas regiones y aparecieron
+            los primeros homininos conocidos.
+          </p>
+
+          <h3>El Mioceno: montañas y praderas</h3>
+
+          <p>
+            Entre hace 23 y 5,33 millones de años, continuó la elevación
+            de grandes cordilleras. La colisión de India con Asia siguió
+            contribuyendo al levantamiento del Himalaya, mientras otros
+            movimientos tectónicos modificaban las montañas de Europa,
+            África y las Américas.
+          </p>
+
+          <p>
+            Durante el Mioceno, el clima pasó por distintas fases.
+            Después de intervalos relativamente cálidos, se produjo
+            una tendencia al enfriamiento y a una mayor estacionalidad
+            en diversas regiones. Las praderas se expandieron en muchas
+            áreas y cambiaron las condiciones de vida de los animales.
+          </p>
+
+          <p>
+            Evolucionaron caballos, camellos, antílopes y numerosos
+            mamíferos herbívoros. También se diversificaron distintos
+            grupos de primates. Los bosques continuaron existiendo,
+            pero su distribución cambió según las condiciones
+            ambientales de cada región.
+          </p>
+
+          <h3>Los primeros homininos</h3>
+
+          <p>
+            Durante el Mioceno aparecieron los primeros homininos,
+            integrantes de la rama evolutiva relacionada con los seres
+            humanos después de su separación de la rama de los
+            chimpancés. Los fósiles de este periodo muestran que
+            la evolución de los primates fue diversa y no siguió
+            una única línea recta.
+          </p>
+
+          <p>
+            Los homininos antiguos presentaban distintas adaptaciones.
+            Algunas especies muestran indicios de locomoción bípeda,
+            aunque sus características variaban y todavía no eran
+            seres humanos modernos.
+          </p>
+
+          <h3>El Plioceno: continentes conectados</h3>
+
+          <p>
+            Entre hace 5,33 y 2,58 millones de años, los continentes
+            ya ocupaban posiciones cercanas a las actuales. Las
+            montañas continuaron elevándose y la erosión transformó
+            numerosos paisajes. El clima tendió a ser más fresco y
+            seco que durante buena parte del Mioceno.
+          </p>
+
+          <p>
+            Uno de los cambios geográficos más importantes fue la
+            formación del istmo de Panamá. La conexión terrestre entre
+            América del Norte y América del Sur permitió que animales
+            de ambos continentes se desplazaran entre ellos, en un
+            proceso conocido como el Gran Intercambio Biótico Americano.
+            Su establecimiento fue gradual y tuvo consecuencias para
+            los ecosistemas y la circulación oceánica.
+          </p>
+
+          <h3>El clima y los cambios ambientales</h3>
+
+          <p>
+            A lo largo del Neógeno, los cambios en la temperatura,
+            las precipitaciones y la circulación oceánica influyeron
+            en la distribución de bosques, praderas y zonas áridas.
+            La expansión de los ambientes abiertos favoreció la
+            evolución de animales adaptados a alimentarse de hierbas
+            y desplazarse por espacios extensos.
+          </p>
+
+          <p>
+            Hacia el final del Plioceno, el enfriamiento global se
+            intensificó y aumentaron las condiciones que precedieron
+            a los ciclos glaciales del Cuaternario. La Tierra se
+            acercaba a una etapa marcada por importantes fluctuaciones
+            climáticas.
+          </p>
+
+          <h3>Un paso más en la historia de la vida</h3>
+
+          <p>
+            El Neógeno fue fundamental para la evolución de los
+            ecosistemas modernos y para la historia temprana de
+            nuestro linaje. Sin embargo, Homo sapiens todavía no
+            había aparecido. Su historia pertenece a una etapa
+            posterior, dentro del Cuaternario.
+          </p>
+
+          <div class="context-note">
+            <strong>Importancia histórica:</strong>
+            durante el Neógeno, la geografía terrestre se aproximó
+            a su configuración moderna, las praderas se extendieron
+            y los primeros homininos aparecieron. Los cambios
+            ambientales de esta etapa prepararon el escenario
+            para las glaciaciones del Cuaternario.
+          </div>
+
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Página siguiente">
+        <a class="nav-link" href="cuaternario.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span class="nav-label">Siguiente</span>
+        </a>
+      </nav>
+
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegación entre páginas">
+      <a class="nav-link" href="paleogeno.html">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">Anterior</span>
+      </a>
+
+      <a class="nav-link" href="cuaternario.html">
+        <span class="nav-label">Siguiente</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Atlas de la Historia de la Tierra
+  </footer>
+</body>
+</html>
