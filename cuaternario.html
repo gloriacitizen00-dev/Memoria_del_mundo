@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El Cuaternario | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Descubre el Cuaternario, desde hace 2,58 millones de años hasta la actualidad: glaciaciones, evolución humana, expansión de Homo sapiens y desarrollo de las primeras civilizaciones.">
+  <meta name="keywords" content="Cuaternario, Pleistoceno, Holoceno, historia de la Tierra, glaciaciones, evolución humana, Homo sapiens, cambio climático, agricultura, civilizaciones humanas">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="El Cuaternario | Historia de la Tierra">
+  <meta property="og:description" content="Las glaciaciones, la evolución humana y el desarrollo de las sociedades durante el periodo geológico más reciente.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 253, 247, .96);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--sand-dark);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 55px 4% 75px;
+    }
+
+    .eyebrow {
+      color: var(--sand-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .page-heading {
+      margin: 0 auto 38px;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.5;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--clay-dark);
+      text-align: center;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--sand-soft);
+      border-color: var(--sand);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      color: var(--sand-dark);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .history-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 18px;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 720px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .history-image img.image-missing {
+      display: none;
+    }
+
+    .image-fallback {
+      display: none;
+      width: 100%;
+      min-height: 480px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+    }
+
+    .image-fallback.visible {
+      display: flex;
+    }
+
+    .history-text {
+      padding: clamp(28px, 4vw, 55px);
+      align-self: center;
+    }
+
+    .period {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      border-radius: 30px;
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .history-text p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: .91rem;
+      line-height: 1.95;
+    }
+
+    .history-text h3 {
+      margin: 26px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .history-text ul {
+      margin: 0 0 20px 20px;
+      color: var(--text-light);
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .context-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+      color: var(--text-light);
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      padding: 27px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-light);
+      text-align: center;
+      font-size: .75rem;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding-right: 3%;
+        padding-left: 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-image {
+        min-height: 450px;
+      }
+
+      .history-image img {
+        min-height: 410px;
+      }
+
+      .image-fallback {
+        min-height: 410px;
+      }
+
+      .nav-label {
+        font-size: .6rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        padding: 35px 5% 45px;
+      }
+
+      .page-heading {
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        min-height: 230px;
+      }
+
+      .history-text {
+        padding: 25px 22px 28px;
+      }
+
+      .history-text p {
+        font-size: .88rem;
+      }
+
+      .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .mobile-nav .nav-link {
+        flex-direction: row;
+        flex: 1;
+        gap: 8px;
+        padding: 12px 10px;
+      }
+
+      .mobile-nav .nav-arrow {
+        font-size: 1.3rem;
+      }
+
+      .mobile-nav .nav-label {
+        font-size: .64rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Historia de la Tierra</p>
+      <h1>El Cuaternario</h1>
+      <p class="subtitle">
+        Glaciaciones, evolución humana y transformación de los paisajes
+      </p>
+    </section>
+
+    <section class="history-layout" aria-label="Historia del Cuaternario">
+
+      <nav class="side-nav" aria-label="Página anterior">
+        <a class="nav-link" href="neogeno.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span class="nav-label">Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/cuaternario.jpg"
+            alt="Reconstrucción de un paisaje del Pleistoceno con glaciares y fauna prehistórica"
+            onerror="this.classList.add('image-missing'); this.nextElementSibling.classList.add('visible');"
+          >
+          <div class="image-fallback" aria-hidden="true">
+            Espacio reservado para una reconstrucción del Cuaternario
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <span class="period">
+            Hace 2,58 millones de años–actualidad
+          </span>
+
+          <h2>La etapa más reciente de la historia terrestre</h2>
+
+          <p>
+            El Cuaternario es el periodo geológico más reciente y
+            comprende los últimos 2,58 millones de años. Durante
+            esta etapa, el clima terrestre experimentó grandes
+            fluctuaciones, los glaciares avanzaron y retrocedieron,
+            y numerosos ecosistemas cambiaron de distribución.
+          </p>
+
+          <p>
+            Los continentes ya estaban cerca de sus posiciones
+            actuales, pero los niveles del mar, las costas y los
+            paisajes fueron muy diferentes en distintos momentos.
+            También fue durante el Cuaternario cuando evolucionó
+            y se expandió nuestra propia especie.
+          </p>
+
+          <h3>El Pleistoceno: una Tierra de glaciaciones</h3>
+
+          <p>
+            El Pleistoceno comenzó hace 2,58 millones de años y
+            terminó hace aproximadamente 11.700 años. Se caracterizó
+            por ciclos glaciales e interglaciales: durante las fases
+            frías se expandían grandes capas de hielo en América del
+            Norte, el norte de Europa y otras regiones, mientras
+            que durante las fases cálidas el hielo retrocedía.
+          </p>
+
+          <p>
+            Estas variaciones modificaron los paisajes, los ríos,
+            la vegetación y los hábitats de los animales. En las
+            épocas glaciales, una mayor cantidad de agua quedaba
+            almacenada en los hielos continentales, por lo que el
+            nivel global del mar descendía. En las fases más cálidas,
+            el deshielo contribuía a elevarlo nuevamente.
+          </p>
+
+          <h3>La fauna de la Edad de Hielo</h3>
+
+          <p>
+            En distintas regiones vivieron mamuts, mastodontes,
+            rinocerontes lanudos, grandes felinos, perezosos gigantes
+            y otros animales hoy extintos. No todas estas especies
+            coexistieron en los mismos lugares ni durante todo el
+            Pleistoceno: su distribución dependía del clima y de
+            los ecosistemas regionales.
+          </p>
+
+          <p>
+            Hacia el final del Pleistoceno desaparecieron muchas
+            especies de grandes animales. Las causas variaron entre
+            regiones y siguen siendo objeto de investigación;
+            entre los factores estudiados se encuentran los cambios
+            climáticos, las transformaciones de los hábitats y
+            la actividad humana.
+          </p>
+
+          <h3>La evolución y expansión humana</h3>
+
+          <p>
+            El género Homo evolucionó durante el Pleistoceno.
+            Diferentes especies humanas habitaron África, Asia
+            y Europa, desarrollando herramientas, estrategias
+            de supervivencia y formas de adaptación a ambientes
+            diversos.
+          </p>
+
+          <p>
+            Homo sapiens apareció en África hace aproximadamente
+            300.000 años y, posteriormente, se expandió hacia
+            otras regiones del mundo. Durante sus desplazamientos,
+            las poblaciones humanas se adaptaron a distintos
+            climas y paisajes, y en algunas regiones entraron
+            en contacto con otros grupos humanos.
+          </p>
+
+          <h3>El Holoceno: los últimos 11.700 años</h3>
+
+          <p>
+            El Holoceno comenzó hace unos 11.700 años, después
+            del final de la última gran fase glacial. Aunque el
+            clima ha seguido variando, esta época se caracteriza
+            por condiciones relativamente más cálidas y estables
+            que permitieron la expansión de muchos ecosistemas
+            actuales.
+          </p>
+
+          <p>
+            En diferentes regiones, las comunidades humanas
+            desarrollaron la agricultura y la ganadería, establecieron
+            asentamientos permanentes y construyeron redes de
+            intercambio. Con el tiempo surgieron ciudades, Estados
+            y civilizaciones con formas diversas de organización
+            política, económica y cultural.
+          </p>
+
+          <h3>Los paisajes que conocemos</h3>
+
+          <p>
+            El deshielo elevó el nivel del mar y transformó las
+            costas. Algunas antiguas conexiones terrestres quedaron
+            sumergidas, mientras ríos, lagos y ecosistemas cambiaron
+            junto con las condiciones climáticas.
+          </p>
+
+          <p>
+            La actividad humana también ha transformado los ambientes
+            mediante la agricultura, la urbanización, la construcción
+            de infraestructuras y la modificación de los bosques.
+            En tiempos recientes, las emisiones humanas de gases de
+            efecto invernadero se han convertido en una causa principal
+            del calentamiento global observado.
+          </p>
+
+          <h3>Una historia que continúa</h3>
+
+          <p>
+            El Cuaternario conecta la evolución geológica con la
+            historia humana. Las glaciaciones, los cambios en el
+            nivel del mar y la evolución de los ecosistemas explican
+            parte de la distribución actual de las especies y de
+            los paisajes en los que surgieron las sociedades humanas.
+          </p>
+
+          <div class="context-note">
+            <strong>Importancia histórica:</strong>
+            el Cuaternario reúne los cambios climáticos recientes,
+            la evolución y expansión de Homo sapiens y el desarrollo
+            de las sociedades humanas. Su historia permite comprender
+            cómo se configuró el mundo en el que vivimos.
+          </div>
+
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Página siguiente">
+        <a class="nav-link" href="tierra-actual.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span class="nav-label">Siguiente</span>
+        </a>
+      </nav>
+
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegación entre páginas">
+      <a class="nav-link" href="neogeno.html">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">Anterior</span>
+      </a>
+
+      <a class="nav-link" href="tierra-actual.html">
+        <span class="nav-label">Siguiente</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Atlas de la Historia de la Tierra
+  </footer>
+</body>
+</html>
