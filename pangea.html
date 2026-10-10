@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pangea | Historia de la Tierra — Memoria del Mundo</title>
+
+  <meta name="description" content="Descubre Pangea, el supercontinente que reunió gran parte de las tierras emergidas hace millones de años, su formación, sus regiones y su fragmentación.">
+  <meta name="keywords" content="Pangea, Pangaea, historia de la Tierra, supercontinente, deriva continental, tectónica de placas, Gondwana, Laurasia, Panthalassa, océano Tetis, geología">
+  <meta name="author" content="Memoria del Mundo">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Pangea | Historia de la Tierra">
+  <meta property="og:description" content="La formación y fragmentación del gran supercontinente Pangea.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="icon" type="image/jpeg" href="../favicon.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sand: #C6A66B;
+      --sand-dark: #8A6A3F;
+      --sand-light: #E1C995;
+      --sand-soft: #F7F0DF;
+
+      --clay: #9A6842;
+      --clay-dark: #70472C;
+
+      --stone: #8B8172;
+      --stone-light: #C9C0B0;
+
+      --text: #2B241B;
+      --text-light: #665D51;
+
+      --white: #FFFDF7;
+      --cream: #FBF6EA;
+      --border: #E1D4B9;
+
+      --shadow: 0 20px 50px rgba(120, 90, 45, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      width: 100%;
+      padding: 22px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 253, 247, .96);
+    }
+
+    .brand {
+      display: inline-block;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: color .25s ease;
+    }
+
+    .brand:hover {
+      color: var(--sand-dark);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 55px 4% 75px;
+    }
+
+    .eyebrow {
+      color: var(--sand-dark);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .page-heading {
+      margin: 0 auto 38px;
+      max-width: 950px;
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      font-weight: 500;
+      letter-spacing: .035em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      line-height: 1.5;
+    }
+
+    .history-layout {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr) 130px;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .side-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px 8px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+      color: var(--clay-dark);
+      text-align: center;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--sand-soft);
+      border-color: var(--sand);
+      transform: translateY(-3px);
+    }
+
+    .nav-arrow {
+      color: var(--sand-dark);
+      font-size: 1.7rem;
+      line-height: 1;
+    }
+
+    .nav-label {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .history-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .history-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+      padding: 18px;
+      background: var(--sand-soft);
+    }
+
+    .history-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      max-height: 720px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .history-image img.image-missing {
+      display: none;
+    }
+
+    .image-fallback {
+      display: none;
+      width: 100%;
+      min-height: 480px;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      color: var(--text-light);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+    }
+
+    .image-fallback.visible {
+      display: flex;
+    }
+
+    .history-text {
+      padding: clamp(28px, 4vw, 55px);
+      align-self: center;
+    }
+
+    .period {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid var(--sand-light);
+      border-radius: 30px;
+      background: var(--sand-soft);
+      color: var(--clay-dark);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .history-text p {
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: .91rem;
+      line-height: 1.95;
+    }
+
+    .history-text h3 {
+      margin: 26px 0 10px;
+      color: var(--clay-dark);
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .history-text ul {
+      margin: 0 0 20px 20px;
+      color: var(--text-light);
+    }
+
+    .history-text li {
+      margin-bottom: 9px;
+      padding-left: 4px;
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    .context-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--sand);
+      background: var(--sand-soft);
+      color: var(--text-light);
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      padding: 27px 6%;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-light);
+      text-align: center;
+      font-size: .75rem;
+      letter-spacing: .04em;
+    }
+
+    @media (max-width: 1050px) {
+      main {
+        padding-right: 3%;
+        padding-left: 3%;
+      }
+
+      .history-layout {
+        grid-template-columns: 75px minmax(0, 1fr) 75px;
+        gap: 12px;
+      }
+
+      .history-image {
+        min-height: 450px;
+      }
+
+      .history-image img {
+        min-height: 410px;
+      }
+
+      .image-fallback {
+        min-height: 410px;
+      }
+
+      .nav-label {
+        font-size: .6rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        padding: 18px 5%;
+      }
+
+      .brand {
+        font-size: .98rem;
+      }
+
+      main {
+        padding: 35px 5% 45px;
+      }
+
+      .page-heading {
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+      }
+
+      .history-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .side-nav {
+        display: none;
+      }
+
+      .history-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 14px;
+      }
+
+      .history-image {
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+      }
+
+      .history-image img {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+
+      .image-fallback {
+        min-height: 230px;
+      }
+
+      .history-text {
+        padding: 25px 22px 28px;
+      }
+
+      .history-text p {
+        font-size: .88rem;
+      }
+
+      .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .mobile-nav .nav-link {
+        flex-direction: row;
+        flex: 1;
+        gap: 8px;
+        padding: 12px 10px;
+      }
+
+      .mobile-nav .nav-arrow {
+        font-size: 1.3rem;
+      }
+
+      .mobile-nav .nav-label {
+        font-size: .64rem;
+      }
+
+      footer {
+        padding: 22px 5%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Memoria del Mundo</a>
+  </header>
+
+  <main>
+    <section class="page-heading">
+      <p class="eyebrow">Historia de la Tierra</p>
+      <h1>Pangea</h1>
+      <p class="subtitle">
+        El mundo reunido en un solo supercontinente
+      </p>
+    </section>
+
+    <section class="history-layout" aria-label="Historia de Pangea">
+
+      <nav class="side-nav" aria-label="Página anterior">
+        <a class="nav-link" href="gondwana.html">
+          <span class="nav-arrow" aria-hidden="true">←</span>
+          <span class="nav-label">Anterior</span>
+        </a>
+      </nav>
+
+      <article class="history-content">
+
+        <div class="history-image">
+          <img
+            src="../images/pangea.jpg"
+            alt="Reconstrucción paleogeográfica del supercontinente Pangea rodeado por el océano Panthalassa"
+            onerror="this.classList.add('image-missing'); this.nextElementSibling.classList.add('visible');"
+          >
+          <div class="image-fallback" aria-hidden="true">
+            Espacio reservado para la reconstrucción de Pangea
+          </div>
+        </div>
+
+        <div class="history-text">
+
+          <span class="period">
+            Paleozoico tardío – Mesozoico
+          </span>
+
+          <h2>La unión de los continentes</h2>
+
+          <p>
+            Hace aproximadamente 335 millones de años comenzó la
+            formación de Pangea, un supercontinente que llegó a reunir
+            casi todas las grandes masas continentales de la Tierra.
+            Su ensamblaje fue el resultado de millones de años de
+            movimientos tectónicos, colisiones y formación de cadenas
+            montañosas.
+          </p>
+
+          <p>
+            Hacia hace unos 300 millones de años, durante el
+            Carbonífero tardío y el Pérmico temprano, la unión de
+            Gondwana con otros bloques continentales había dado lugar
+            a una extensa masa terrestre. Pangea alcanzó su configuración
+            característica durante el Pérmico y continuó existiendo
+            durante buena parte del Triásico.
+          </p>
+
+          <h3>Las grandes regiones continentales</h3>
+
+          <p>
+            En las reconstrucciones geológicas, Pangea suele dividirse
+            en dos grandes conjuntos:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Laurasia:</strong> agrupaba las tierras que
+              posteriormente formarían gran parte de América del Norte,
+              Europa y Asia.
+            </li>
+            <li>
+              <strong>Gondwana:</strong> comprendía los bloques que
+              hoy forman América del Sur, África, la Antártida,
+              Australia, India y otras regiones.
+            </li>
+          </ul>
+
+          <p>
+            Estas denominaciones describen grandes conjuntos continentales
+            dentro de la historia tectónica. No significa que todos sus
+            bloques se separaran al mismo tiempo ni que los continentes
+            actuales surgieran de una única división instantánea.
+          </p>
+
+          <h3>Los océanos de Pangea</h3>
+
+          <p>
+            El océano Panthalassa rodeaba gran parte del supercontinente
+            y ocupaba una enorme extensión del planeta. En el sector
+            oriental se encontraba el océano Tetis, una región marina
+            importante en la evolución posterior de las tierras que
+            hoy corresponden al Mediterráneo y a partes de Asia.
+          </p>
+
+          <p>
+            La enorme extensión de Pangea también influyó en el clima.
+            Las regiones interiores estaban muy alejadas de la influencia
+            moderadora del mar, lo que favorecía condiciones áridas y
+            grandes contrastes térmicos. Sin embargo, el clima variaba
+            según la latitud, el relieve y la época geológica.
+          </p>
+
+          <h3>La vida en un mundo unido</h3>
+
+          <p>
+            Durante la existencia de Pangea vivieron diversos grupos de
+            reptiles, anfibios y otros vertebrados terrestres. Las plantas
+            formaban extensos ecosistemas y, con el tiempo, aparecieron
+            los primeros dinosaurios y mamíferos durante el Triásico.
+          </p>
+
+          <p>
+            La distribución de fósiles y de determinadas formaciones
+            rocosas en continentes que hoy están separados constituye
+            una de las evidencias que ayudan a reconstruir la antigua
+            conexión entre esas tierras.
+          </p>
+
+          <h3>El comienzo de la fragmentación</h3>
+
+          <p>
+            Pangea no permaneció unida para siempre. Hacia el final
+            del Triásico y durante el Jurásico comenzaron a desarrollarse
+            fracturas y zonas de extensión en la corteza terrestre.
+            Los bloques continentales empezaron a separarse gradualmente,
+            y la expansión del fondo oceánico contribuyó a abrir nuevos
+            mares.
+          </p>
+
+          <p>
+            La apertura del océano Atlántico fue uno de los resultados
+            de este proceso. La fragmentación continuó durante millones
+            de años y dio lugar a configuraciones continentales cada vez
+            más parecidas a las actuales.
+          </p>
+
+          <div class="context-note">
+            <strong>Importancia histórica:</strong>
+            Pangea es uno de los supercontinentes mejor documentados
+            de la historia geológica. Su formación y ruptura ayudan
+            a explicar la distribución de continentes, fósiles,
+            cadenas montañosas y cuencas oceánicas.
+          </div>
+
+        </div>
+      </article>
+
+      <nav class="side-nav" aria-label="Página siguiente">
+        <a class="nav-link" href="fragmentacion-pangea.html">
+          <span class="nav-arrow" aria-hidden="true">→</span>
+          <span class="nav-label">Siguiente</span>
+        </a>
+      </nav>
+
+    </section>
+
+    <nav class="mobile-nav" aria-label="Navegación entre páginas">
+      <a class="nav-link" href="gondwana.html">
+        <span class="nav-arrow" aria-hidden="true">←</span>
+        <span class="nav-label">Anterior</span>
+      </a>
+
+      <a class="nav-link" href="nuevos-oceanos-continentes.html">
+        <span class="nav-label">Siguiente</span>
+        <span class="nav-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    Memoria del Mundo · Atlas de la Historia de la Tierra
+  </footer>
+</body>
+</html>
