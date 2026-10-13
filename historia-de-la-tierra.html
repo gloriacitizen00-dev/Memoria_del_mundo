@@ -444,28 +444,24 @@
 
   <nav class="header-navigation" aria-label="Navegación geológica">
 
-    <div class="dropdown" id="geologyDropdown">
+<div class="dropdown" id="geologyDropdown">
+  <button
+    class="dropdown-button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="geologyMenu"
+    onclick="const menu = document.getElementById('geologyDropdown'); const isOpen = menu.classList.toggle('open'); this.setAttribute('aria-expanded', isOpen);"
+  >
+    Atlas geológico mundial
+    <span aria-hidden="true">▾</span>
+  </button>
 
-      <button
-        class="dropdown-button"
-        type="button"
-        aria-expanded="false"
-        aria-controls="geologyMenu"
-        onclick="
-          const menu = document.getElementById('geologyDropdown');
-          const isOpen = menu.classList.toggle('open');
-          this.setAttribute('aria-expanded', isOpen);
-        "
-      >
-        Atlas geológico mundial
-        <span aria-hidden="true">▾</span>
-      </button>
-
-      <div class="dropdown-menu" id="geologyMenu">
-        <a href="atlas-geologico-mundial.html">
-          Placas tectónicas
-        </a>
-      </div>
+  <div class="dropdown-menu" id="geologyMenu">
+    <a href="atlas-geologico-mundial.html">
+      Placas tectónicas
+    </a>
+  </div>
+</div>
 
     </div>
 
