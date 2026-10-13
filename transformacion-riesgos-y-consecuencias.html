@@ -1,0 +1,1110 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+  <title>Un planeta en transformación: riesgos y consecuencias | Memoria del Mundo™</title>
+
+  <meta
+    name="description"
+    content="Análisis mundial de los riesgos tectónicos, terremotos, tsunamis, volcanes, deslizamientos y posibles consecuencias de una crisis geológica global."
+  >
+
+  <style>
+    :root {
+      --background: #f5f0e7;
+      --surface: #fffdf8;
+      --text: #352b25;
+      --muted: #74675c;
+      --accent: #8a6246;
+      --border: #d9cbbb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Montserrat", Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      padding: 18px 6%;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .site-name {
+      color: var(--text);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.15rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .header-navigation,
+    .dropdown {
+      position: relative;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: none;
+      width: min(360px, 88vw);
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      box-shadow: 0 8px 24px rgba(53, 43, 37, 0.12);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 3px;
+      color: var(--text);
+      font-size: 0.87rem;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus {
+      background: var(--background);
+    }
+
+    main {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      padding-bottom: 55px;
+    }
+
+    .hero {
+      padding: 38px 0 22px;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .hero h1 {
+      margin: 28px 0 12px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .intro,
+    .content-section,
+    .register-section,
+    .conclusion {
+      margin-top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+
+    .timeline-item {
+      margin-top: 24px;
+      padding-left: 18px;
+      border-left: 3px solid var(--border);
+    }
+
+    .fact {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: var(--background);
+      border-left: 4px solid var(--accent);
+      border-radius: 3px;
+    }
+
+    .fact p {
+      margin-bottom: 0;
+    }
+
+    .section-image {
+      display: block;
+      width: 100%;
+      max-height: 390px;
+      margin: 22px 0;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .register-section {
+      scroll-margin-top: 20px;
+    }
+
+    .register-intro,
+    .source-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .register-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 20px 0;
+      padding: 14px;
+      background: var(--background);
+      border-radius: 4px;
+      font-size: 0.88rem;
+    }
+
+    .refresh-button {
+      padding: 10px 15px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .refresh-button:hover {
+      background: #eee3d5;
+    }
+
+    .refresh-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eee5d8;
+      font-weight: 700;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .magnitude {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .event-link {
+      font-weight: 600;
+      text-underline-offset: 3px;
+    }
+
+    .status-message {
+      padding: 16px;
+      background: var(--background);
+      border-radius: 4px;
+      color: var(--muted);
+    }
+
+    .source-list li {
+      margin-bottom: 10px;
+    }
+
+    .conclusion {
+      border-left: 4px solid var(--accent);
+    }
+
+    footer {
+      padding: 25px 6%;
+      background: #e9dfd1;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 15px 5%;
+      }
+
+      .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .header-navigation,
+      .dropdown {
+        width: 100%;
+      }
+
+      .menu-button {
+        width: 100%;
+      }
+
+      .dropdown-menu {
+        right: auto;
+        left: 0;
+        width: 100%;
+      }
+
+      main {
+        width: 92%;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero img {
+        max-height: 300px;
+      }
+
+      .intro,
+      .content-section,
+      .register-section,
+      .conclusion {
+        padding: 20px;
+      }
+
+      table {
+        min-width: 650px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
+
+      <a
+        class="site-name"
+        href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/"
+      >
+        Memoria del Mundo™
+      </a>
+
+      <nav class="header-navigation" aria-label="Navegación geológica">
+        <div class="dropdown" id="geologyDropdown">
+
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="geologyMenu"
+            onclick="const menu = document.getElementById('geologyDropdown'); const isOpen = menu.classList.toggle('open'); this.setAttribute('aria-expanded', isOpen);"
+          >
+            Atlas geológico mundial
+            <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-menu" id="geologyMenu">
+
+            <a href="01-mapa-tectonico-mundial.html">
+              01. El mapa tectónico mundial
+            </a>
+
+            <a href="02-como-se-conectan-las-placas.html">
+              02. Límites de placas
+            </a>
+
+            <a href="03-placas-tectonicas-y-volcanes.html">
+              03. Placas tectónicas y volcanes
+            </a>
+
+            <a href="04-oceano-y-movimiento-de-las-placas.html">
+              04. El océano y el movimiento de las placas
+            </a>
+
+            <a href="05-de-los-supercontinentes-a-los-continentes-actuales.html">
+              05. De los supercontinentes a los continentes actuales
+            </a>
+
+            <a href="06-terremotos-la-tierra-en-movimiento.html">
+              06. Terremotos: la Tierra en movimiento
+            </a>
+
+            <a href="07-un-planeta-en-transformacion-riesgos-y-consecuencias.html">
+              07. Un planeta en transformación: riesgos y consecuencias
+            </a>
+
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <img
+        src="imagen/grietas.PNG"
+        alt="Vista de la Tierra que representa la dinámica geológica global"
+      >
+
+      <h1>Un planeta en transformación: riesgos y consecuencias</h1>
+
+      <p>
+        La Tierra es un sistema dinámico. Las placas tectónicas se desplazan,
+        las fallas liberan energía, los volcanes transforman el paisaje y
+        los océanos responden a procesos que se desarrollan bajo su superficie.
+        ¿Qué ocurre cuando estos procesos representan una amenaza para la vida
+        y las sociedades humanas?
+      </p>
+
+    </section>
+
+    <section class="intro">
+
+      <h2>La Tierra como sistema geológico mundial</h2>
+
+      <p>
+        Los terremotos, las erupciones volcánicas, los tsunamis y los
+        deslizamientos no son fenómenos aislados de la dinámica del planeta.
+        Muchos están relacionados con el movimiento de las placas tectónicas,
+        aunque cada uno responde a mecanismos físicos particulares.
+      </p>
+
+      <p>
+        Para comprender sus consecuencias debemos estudiar la distribución
+        mundial de las placas, las fallas activas, las zonas de subducción,
+        las dorsales oceánicas y las regiones donde la corteza se está
+        extendiendo o deformando.
+      </p>
+
+      <p>
+        Este análisis no parte de la idea de que una catástrofe mundial
+        sea inminente. Su propósito es examinar qué puede ocurrir según
+        los mecanismos geológicos conocidos, qué riesgos pueden encadenarse
+        y qué hipótesis necesitan evidencia adicional.
+      </p>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>1. Las grandes regiones de actividad tectónica</h2>
+
+      <div class="timeline-item">
+        <h3>El Cinturón de Fuego del Pacífico</h3>
+
+        <p>
+          Alrededor del océano Pacífico se encuentran numerosas zonas de
+          subducción y límites de placas. Japón, Indonesia, Nueva Zelanda,
+          Alaska y la costa occidental de América forman parte de un amplio
+          conjunto de regiones con elevada actividad sísmica y volcánica.
+        </p>
+
+        <p>
+          Las características del peligro varían de una región a otra.
+          Algunas zonas pueden producir terremotos submarinos capaces de
+          generar tsunamis; otras presentan riesgos relacionados con fallas
+          continentales, volcanes o deslizamientos.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>El cinturón alpino-himalayo</h3>
+
+        <p>
+          Desde el Mediterráneo y Turquía hasta Irán, el Himalaya y sectores
+          de Asia meridional, la convergencia entre placas y bloques
+          continentales ha producido grandes cordilleras y sistemas de fallas.
+        </p>
+
+        <p>
+          Los terremotos de estas regiones pueden afectar zonas densamente
+          pobladas y terrenos montañosos susceptibles a deslizamientos.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Las dorsales oceánicas</h3>
+
+        <p>
+          En las dorsales, las placas se separan y se forma nueva corteza
+          oceánica. Allí ocurren terremotos, actividad volcánica y procesos
+          hidrotermales. Gran parte de esta actividad sucede bajo el océano,
+          lejos de las poblaciones.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Los rifts continentales</h3>
+
+        <p>
+          En regiones como el Rift de África Oriental, la corteza se extiende
+          y se fractura. Estos procesos pueden producir sismos, volcanismo
+          y cambios graduales en la estructura del continente.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Las fallas dentro de las placas</h3>
+
+        <p>
+          No todos los terremotos ocurren en los límites principales.
+          Algunas fallas se encuentran en el interior de las placas y pueden
+          reactivarse bajo las fuerzas que actúan sobre la litosfera.
+          La distancia respecto de un límite tectónico no elimina el riesgo.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>2. Cuando un fenómeno desencadena otros riesgos</h2>
+
+      <p>
+        Un peligro geológico puede generar consecuencias secundarias.
+        Estas cadenas de acontecimientos son importantes para evaluar
+        el impacto real de un desastre.
+      </p>
+
+      <div class="timeline-item">
+        <h3>Terremotos y deslizamientos</h3>
+
+        <p>
+          La sacudida puede desestabilizar laderas, provocar desprendimientos
+          de rocas y bloquear carreteras o cursos de agua. La intensidad
+          del movimiento, la geología local, la pendiente y las lluvias
+          influyen en el riesgo.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Terremotos submarinos y tsunamis</h3>
+
+        <p>
+          Algunos terremotos submarinos desplazan verticalmente el fondo
+          oceánico y generan tsunamis. Sin embargo, muchos terremotos
+          no producen tsunamis. El mecanismo de ruptura, su profundidad
+          y el desplazamiento del lecho marino son factores determinantes.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Erupciones volcánicas y efectos secundarios</h3>
+
+        <p>
+          Las erupciones pueden producir caída de ceniza, gases, corrientes
+          piroclásticas y lahares. Las grandes erupciones explosivas pueden
+          afectar temporalmente el clima, pero no toda erupción tiene
+          consecuencias climáticas globales.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Infraestructura y redes internacionales</h3>
+
+        <p>
+          El daño a puertos, carreteras, cables, redes eléctricas y centros
+          de producción puede interrumpir el suministro de bienes esenciales.
+          Un evento regional puede tener repercusiones en otros países
+          cuando afecta redes comerciales o logísticas importantes.
+        </p>
+      </div>
+
+      <div class="fact">
+        <strong>Un desastre no depende solo de la magnitud</strong>
+
+        <p>
+          La magnitud de un terremoto describe su tamaño, pero sus
+          consecuencias también dependen de la profundidad, la distancia
+          a los asentamientos, las condiciones del terreno, la calidad
+          de las construcciones y la capacidad de respuesta.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>3. ¿Podrían varios grandes desastres producir una crisis mundial?</h2>
+
+      <p>
+        Sí, es posible que una combinación de desastres regionales tenga
+        consecuencias internacionales. Un terremoto que afecte un importante
+        puerto, una erupción que interrumpa rutas aéreas o un tsunami que
+        destruya infraestructura costera puede repercutir en cadenas
+        de suministro de muchos países.
+      </p>
+
+      <p>
+        Una crisis de esta clase no requiere que todas las placas tectónicas
+        se activen al mismo tiempo. Puede surgir de la combinación de
+        daños físicos, interrupciones económicas, dificultades logísticas
+        y una respuesta insuficiente.
+      </p>
+
+      <p>
+        Sin embargo, no debemos suponer que terremotos ocurridos en
+        continentes distintos están conectados causalmente. Para establecer
+        una relación se necesita evidencia geofísica, temporal y espacial
+        específica. La coincidencia de varios eventos no basta para
+        demostrar la existencia de un único proceso global.
+      </p>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>4. ¿Puede la Tierra desprenderse o partirse?</h2>
+
+      <h3>La separación de los continentes</h3>
+
+      <p>
+        Los continentes pueden separarse cuando las fuerzas tectónicas
+        extienden y fracturan la litosfera. Este proceso puede crear nuevas
+        cuencas oceánicas y reorganizar la geografía mundial a lo largo
+        de millones de años.
+      </p>
+
+      <h3>Una transformación geológica extrema</h3>
+
+      <p>
+        Una actividad tectónica intensa puede modificar paisajes, levantar
+        cordilleras, abrir cuencas y causar grandes pérdidas humanas.
+        También existen escenarios de grandes erupciones y terremotos
+        que pueden afectar regiones muy extensas. Su probabilidad y sus
+        consecuencias deben evaluarse por separado.
+      </p>
+
+      <h3>La desintegración física del planeta</h3>
+
+      <p>
+        No existe evidencia de que la Tierra esté próxima a romperse en
+        fragmentos por la actividad tectónica. Los terremotos son rupturas
+        localizadas de rocas y desplazamientos de fallas; no constituyen
+        un mecanismo conocido de desintegración del planeta.
+      </p>
+
+      <div class="fact">
+        <strong>Distinción científica</strong>
+
+        <p>
+          La corteza puede fracturarse y los continentes pueden separarse.
+          Eso es diferente de que el planeta entero se desprenda o se
+          desintegre. Para sostener una hipótesis de esta última clase
+          se necesitaría un mecanismo físico y evidencia que actualmente
+          no tenemos.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>5. ¿Qué podemos concluir de la actividad reciente?</h2>
+
+      <p>
+        Los registros sísmicos permiten estudiar la distribución, la
+        magnitud, la profundidad y la frecuencia de los terremotos.
+        Para determinar si una región presenta una variación significativa,
+        los científicos comparan las observaciones con los catálogos
+        históricos, teniendo en cuenta la cobertura instrumental y las
+        limitaciones de los datos.
+      </p>
+
+      <p>
+        Un aumento temporal de terremotos registrados no demuestra,
+        por sí solo, que se aproxima una catástrofe mundial. Los terremotos
+        pueden formar secuencias locales, réplicas o enjambres sísmicos,
+        pero una conexión entre regiones lejanas requiere evidencia
+        específica.
+      </p>
+
+      <p>
+        La ciencia puede estimar el peligro en determinadas zonas y
+        desarrollar sistemas de alerta para ciertos fenómenos. No puede
+        predecir con certeza la fecha, la ubicación y la magnitud del
+        próximo gran terremoto.
+      </p>
+
+    </section>
+
+    <section class="register-section" id="registro-mundial">
+
+      <h2>6. Registro mundial de terremotos recientes</h2>
+
+      <p class="register-intro">
+        Esta tabla consulta el catálogo global del Servicio Geológico
+        de Estados Unidos (USGS). Muestra hasta 30 eventos de magnitud
+        4,5 o superior registrados durante los últimos siete días.
+        El umbral permite concentrarse en eventos de mayor magnitud,
+        pero no incluye todos los terremotos del planeta.
+      </p>
+
+      <div class="register-meta">
+
+        <div>
+          <strong>Fuente:</strong>
+          <a
+            href="https://earthquake.usgs.gov/earthquakes/map/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            USGS — Earthquake Map
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="refresh-button"
+          id="refreshEarthquakes"
+        >
+          Actualizar registro
+        </button>
+
+      </div>
+
+      <p
+        class="status-message"
+        id="earthquakeStatus"
+        role="status"
+        aria-live="polite"
+      >
+        Cargando los datos sísmicos mundiales...
+      </p>
+
+      <div class="table-wrapper">
+
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Fecha y hora (UTC)</th>
+              <th scope="col">Magnitud</th>
+              <th scope="col">Profundidad</th>
+              <th scope="col">Ubicación</th>
+              <th scope="col">Fuente</th>
+            </tr>
+          </thead>
+
+          <tbody id="earthquakeTableBody">
+            <tr>
+              <td colspan="5">
+                Consultando el catálogo oficial...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <p class="source-note">
+        Las fechas se muestran en tiempo universal coordinado (UTC)
+        para facilitar la comparación internacional. Los datos pueden
+        revisarse cuando llegan nuevas mediciones. Consulta la ficha
+        oficial de cada evento para obtener sus detalles.
+      </p>
+
+      <p class="source-note">
+        Este registro es una herramienta de observación, no un sistema
+        de predicción de terremotos. Los eventos que aparecen en la tabla
+        no deben interpretarse automáticamente como parte de una secuencia
+        mundial conectada.
+      </p>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>7. Fuentes oficiales para el seguimiento mundial</h2>
+
+      <ul class="source-list">
+
+        <li>
+          <strong>USGS:</strong>
+          <a
+            href="https://earthquake.usgs.gov/earthquakes/map/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mapa mundial de terremotos
+          </a>
+          y
+          <a
+            href="https://earthquake.usgs.gov/earthquakes/feed/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            feeds de datos sísmicos
+          </a>.
+        </li>
+
+        <li>
+          <strong>EMSC:</strong>
+          <a
+            href="https://www.emsc-csem.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Centro Sismológico Euromediterráneo
+          </a>,
+          con información sobre eventos sísmicos internacionales.
+        </li>
+
+        <li>
+          <strong>NOAA Tsunami Warning Centers:</strong>
+          <a
+            href="https://www.tsunami.gov/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            avisos y seguimiento de tsunamis
+          </a>.
+        </li>
+
+        <li>
+          <strong>Global Volcanism Program:</strong>
+          <a
+            href="https://volcano.si.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            información científica sobre volcanes del mundo
+          </a>.
+        </li>
+
+      </ul>
+
+      <p class="source-note">
+        Los organismos nacionales también pueden proporcionar información
+        más detallada de sus territorios. Sus datos complementan los
+        catálogos mundiales y deben identificarse con su fuente y fecha.
+      </p>
+
+    </section>
+
+    <section class="conclusion">
+
+      <h2>Veredicto: un planeta activo, no un planeta a punto de romperse</h2>
+
+      <p>
+        La Tierra cambia continuamente. Las placas se desplazan, las fallas
+        liberan tensión, los océanos se abren y se cierran, y los volcanes
+        transforman la superficie. Estos procesos pueden producir catástrofes
+        regionales y repercusiones internacionales.
+      </p>
+
+      <p>
+        Pero los terremotos registrados en distintas partes del mundo
+        no prueban que el planeta esté entrando en una fase de desintegración.
+        Para sostener esa conclusión sería necesario demostrar un mecanismo
+        global que explique las observaciones, y no existe evidencia
+        científica suficiente para hacerlo.
+      </p>
+
+      <p>
+        El análisis debe continuar con datos verificables, comparaciones
+        históricas y modelos geológicos. La gravedad de un escenario
+        no sustituye a la evidencia de que ese escenario esté ocurriendo.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <a href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/">
+        Memoria del Mundo™
+      </a>
+      Un proyecto educativo de Gloria Martínez.
+    </p>
+
+    <p>
+      Fuentes de seguimiento: USGS, EMSC, NOAA y Smithsonian Global Volcanism Program.
+    </p>
+
+  </footer>
+
+  <script>
+    const earthquakeFeed =
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson";
+
+    const tableBody =
+      document.getElementById("earthquakeTableBody");
+
+    const statusMessage =
+      document.getElementById("earthquakeStatus");
+
+    const refreshButton =
+      document.getElementById("refreshEarthquakes");
+
+    function formatUTC(timestamp) {
+      return new Intl.DateTimeFormat("es", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "UTC"
+      }).format(new Date(timestamp)) + " UTC";
+    }
+
+    function createCell(value, className = "") {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+
+      if (className) {
+        cell.className = className;
+      }
+
+      return cell;
+    }
+
+    function createEventLink(url) {
+      const cell = document.createElement("td");
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.textContent = "Ver evento";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "event-link";
+
+      cell.appendChild(link);
+      return cell;
+    }
+
+    async function loadEarthquakes() {
+      refreshButton.disabled = true;
+
+      statusMessage.textContent =
+        "Consultando los datos más recientes del catálogo mundial...";
+
+      try {
+        const response = await fetch(earthquakeFeed, {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("Error al consultar el catálogo.");
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data.features)) {
+          throw new Error("El catálogo no devolvió datos válidos.");
+        }
+
+        const events = data.features
+          .filter(event =>
+            event.properties &&
+            event.geometry &&
+            Array.isArray(event.geometry.coordinates)
+          )
+          .sort((a, b) =>
+            b.properties.time - a.properties.time
+          )
+          .slice(0, 30);
+
+        tableBody.replaceChildren();
+
+        if (events.length === 0) {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+
+          cell.colSpan = 5;
+          cell.textContent =
+            "No hay eventos que mostrar en este momento.";
+
+          row.appendChild(cell);
+          tableBody.appendChild(row);
+        }
+
+        events.forEach(event => {
+          const properties = event.properties;
+          const coordinates = event.geometry.coordinates;
+
+          const magnitude =
+            typeof properties.mag === "number"
+              ? properties.mag.toFixed(1)
+              : "No disponible";
+
+          const depth =
+            typeof coordinates[2] === "number"
+              ? coordinates[2].toFixed(1) + " km"
+              : "No disponible";
+
+          const location =
+            properties.place || "Ubicación no especificada";
+
+          const row = document.createElement("tr");
+
+          row.appendChild(
+            createCell(formatUTC(properties.time))
+          );
+
+          row.appendChild(
+            createCell(magnitude, "magnitude")
+          );
+
+          row.appendChild(
+            createCell(depth)
+          );
+
+          row.appendChild(
+            createCell(location)
+          );
+
+          row.appendChild(
+            createEventLink(properties.url)
+          );
+
+          tableBody.appendChild(row);
+        });
+
+        const generatedAt =
+          data.metadata && data.metadata.generated
+            ? formatUTC(data.metadata.generated)
+            : "No disponible";
+
+        statusMessage.textContent =
+          "Consulta completada. Eventos mostrados: " +
+          events.length +
+          ". Última generación del feed: " +
+          generatedAt +
+          ".";
+
+      } catch (error) {
+        tableBody.replaceChildren();
+
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+
+        cell.colSpan = 5;
+        cell.textContent =
+          "No fue posible cargar los datos automáticamente. " +
+          "Consulta el catálogo oficial del USGS mediante el enlace superior.";
+
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+
+        statusMessage.textContent =
+          "No se pudo actualizar el registro. Comprueba tu conexión " +
+          "o consulta directamente el catálogo oficial.";
+
+      } finally {
+        refreshButton.disabled = false;
+      }
+    }
+
+    refreshButton.addEventListener(
+      "click",
+      loadEarthquakes
+    );
+
+    loadEarthquakes();
+  </script>
+
+</body>
+</html>
