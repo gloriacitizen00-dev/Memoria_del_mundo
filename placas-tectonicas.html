@@ -1,1 +1,619 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>El mapa tectónico mundial | Memoria del Mundo</title>
+
+    <meta name="description" content="Explora las placas tectónicas de la Tierra, sus límites y su estructura en el Atlas Geológico Mundial de Memoria del Mundo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --background: #f4eee3;
+            --paper: #fbf8f1;
+            --sand: #e6d6bd;
+            --clay: #a66d50;
+            --brown: #604b3e;
+            --text: #39332e;
+            --muted: #756b60;
+            --line: #d9c8b1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .site-name {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(17px, 2.5vw, 25px);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: var(--brown);
+            text-decoration: none;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid var(--clay);
+            border-radius: 2px;
+            color: var(--brown);
+            background: transparent;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+
+        .menu-button:hover {
+            background: var(--clay);
+            color: white;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            width: 86%;
+            margin: 0 auto;
+            padding: 55px 0 75px;
+        }
+
+        .page-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 35px;
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--clay);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            color: var(--brown);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(27px, 4vw, 42px);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .page-intro p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* IMAGEN PRINCIPAL */
+
+        .main-image {
+            margin: 0 0 50px;
+        }
+
+        .main-image img {
+            display: block;
+            width: 100%;
+            max-height: 540px;
+            object-fit: cover;
+            border: 1px solid var(--line);
+        }
+
+        .main-image figcaption {
+            padding-top: 10px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        /* SECCIONES */
+
+        .content-section {
+            padding: 32px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-number {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--clay);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            color: var(--brown);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(27px, 3vw, 34px);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin: 24px 0 8px;
+            color: var(--brown);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .plate-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .plate-item {
+            padding: 15px;
+            background: var(--paper);
+            border-left: 3px solid var(--clay);
+        }
+
+        .plate-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--brown);
+            font-size: 13px;
+        }
+
+        .plate-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .info-note {
+            margin: 22px 0 5px;
+            padding: 18px 22px;
+            background: var(--sand);
+            border-left: 3px solid var(--clay);
+        }
+
+        .info-note strong {
+            color: var(--brown);
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 7%;
+            background: var(--brown);
+            color: var(--paper);
+            text-align: center;
+        }
+
+        .footer-name {
+            margin-bottom: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            letter-spacing: 1.5px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #e4d7c7;
+            font-size: 12px;
+        }
+
+        .footer-link {
+            color: var(--paper);
+            font-size: 12px;
+            text-decoration: none;
+            border-bottom: 1px solid #b99a7e;
+        }
+
+        .footer-link:hover {
+            color: #e4c6a5;
+        }
+
+        .copyright {
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid #80695a;
+            font-size: 11px;
+        }
+
+        /* ADAPTACIÓN A TABLETAS Y MÓVILES */
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .header-content {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .site-name {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+            }
+
+            .menu-button {
+                padding: 9px 12px;
+                font-size: 11px;
+            }
+
+            main {
+                width: 90%;
+                padding: 38px 0 50px;
+            }
+
+            .page-intro {
+                margin-bottom: 28px;
+            }
+
+            .page-intro p {
+                font-size: 14px;
+            }
+
+            .main-image {
+                margin-bottom: 35px;
+            }
+
+            .main-image img {
+                max-height: 350px;
+                object-fit: contain;
+            }
+
+            .plate-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .content-section {
+                padding: 26px 0;
+            }
+
+            footer {
+                padding: 26px 5%;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .header-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .plate-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+        <div class="header-content">
+
+            <a href="index.html" class="site-name">
+                Memoria del Mundo
+            </a>
+
+            <a href="index.html" class="menu-button">
+                Menú principal
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <div class="page-intro">
+
+            <span class="eyebrow">Atlas geológico mundial · 01</span>
+
+            <h1>El mapa tectónico mundial</h1>
+
+            <p>
+                La superficie terrestre está dividida en grandes bloques
+                rocosos que se desplazan lentamente. Su movimiento transforma
+                los continentes, modifica los océanos y participa en la
+                formación de montañas y otras estructuras geológicas.
+            </p>
+
+        </div>
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <figure class="main-image">
+
+            <img
+                src="images/mapa-tectonico-mundial.jpg"
+                alt="Mapa mundial de las principales placas tectónicas y sus límites"
+                loading="eager"
+            >
+
+            <figcaption>
+                Distribución de las placas tectónicas de la Tierra.
+            </figcaption>
+
+        </figure>
+
+
+        <!-- SECCIÓN 1 -->
+
+        <section class="content-section">
+
+            <span class="section-number">01 / DISTRIBUCIÓN MUNDIAL</span>
+
+            <h2>Las placas tectónicas del mundo</h2>
+
+            <p>
+                Las placas tectónicas son grandes fragmentos rígidos de la
+                litosfera, la capa externa de la Tierra formada por la corteza
+                y la parte superior rígida del manto. Estas placas se desplazan
+                sobre materiales más calientes y deformables del manto.
+            </p>
+
+            <p>
+                La superficie terrestre contiene varias placas principales
+                y numerosas placas menores. Cada una ocupa una región
+                determinada y mantiene contacto con otras a lo largo de
+                sus límites.
+            </p>
+
+            <div class="plate-list">
+
+                <div class="plate-item">
+                    <strong>Placa Pacífica</strong>
+                    <span>Ocupa gran parte del océano Pacífico.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Norteamericana</strong>
+                    <span>Abarca gran parte de América del Norte.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Sudamericana</strong>
+                    <span>Incluye Sudamérica y parte del fondo atlántico.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Euroasiática</strong>
+                    <span>Se extiende por gran parte de Europa y Asia.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Africana</strong>
+                    <span>Comprende África y parte del fondo oceánico circundante.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Antártica</strong>
+                    <span>Se encuentra bajo la Antártida y zonas oceánicas vecinas.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Indoaustraliana</strong>
+                    <span>Nombre usado para una placa conjunta en algunos modelos; otros distinguen las placas India y Australiana.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa de Nazca</strong>
+                    <span>Se desplaza bajo el borde occidental de Sudamérica.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa de Cocos</strong>
+                    <span>Está situada frente a América Central.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa del Caribe</strong>
+                    <span>Se encuentra entre América del Norte y América del Sur.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Placa Filipina</strong>
+                    <span>Se localiza en el Pacífico occidental, cerca de Filipinas.</span>
+                </div>
+
+                <div class="plate-item">
+                    <strong>Otras placas menores</strong>
+                    <span>Incluyen las placas Arábiga, de Scotia, Juan de Fuca y otras.</span>
+                </div>
+
+            </div>
+
+            <div class="info-note">
+                <strong>Un dato importante:</strong>
+                las placas no son exclusivamente continentales.
+                Algunas contienen corteza continental y oceánica,
+                mientras que otras son principalmente oceánicas.
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN 2 -->
+
+        <section class="content-section">
+
+            <span class="section-number">02 / INTERACCIÓN</span>
+
+            <h2>Los límites de las placas</h2>
+
+            <p>
+                Las placas tectónicas están conectadas entre sí formando
+                una estructura global. Sus bordes son zonas de interacción
+                donde las placas se separan, se aproximan o se deslizan
+                lateralmente unas respecto a otras.
+            </p>
+
+            <h3>Límites divergentes</h3>
+
+            <p>
+                Se producen cuando dos placas se separan. El material del
+                manto puede ascender y formar nueva corteza, como ocurre
+                en las dorsales oceánicas.
+            </p>
+
+            <h3>Límites convergentes</h3>
+
+            <p>
+                Aparecen cuando dos placas se aproximan. Una puede hundirse
+                bajo la otra, proceso llamado subducción, o ambas pueden
+                deformarse y elevar montañas cuando colisionan.
+            </p>
+
+            <h3>Límites transformantes</h3>
+
+            <p>
+                Se forman cuando dos placas se deslizan horizontalmente
+                una junto a la otra. Este movimiento puede producir
+                terremotos, como sucede en la falla de San Andrés,
+                en California.
+            </p>
+
+            <div class="info-note">
+                <strong>¿Por qué importa?</strong>
+                La interacción entre placas ayuda a explicar la distribución
+                de muchos terremotos, volcanes, cordilleras y fosas oceánicas.
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN 3 -->
+
+        <section class="content-section">
+
+            <span class="section-number">03 / ESTRUCTURA TERRESTRE</span>
+
+            <h2>¿De qué están hechas las placas?</h2>
+
+            <p>
+                Para comprender las placas tectónicas es necesario distinguir
+                la corteza terrestre de la litosfera. La corteza es la capa
+                rocosa más externa; la litosfera incluye esa corteza y la
+                parte superior rígida del manto.
+            </p>
+
+            <h3>Corteza continental</h3>
+
+            <p>
+                Forma los continentes y suele ser más gruesa y menos densa
+                que la corteza oceánica. Su composición es variada y muchas
+                de sus rocas tienen una larga historia geológica.
+            </p>
+
+            <h3>Corteza oceánica</h3>
+
+            <p>
+                Forma gran parte del fondo de los océanos. Generalmente
+                es más delgada y densa que la corteza continental, y se
+                renueva principalmente en las dorsales oceánicas.
+            </p>
+
+            <h3>El manto superior rígido</h3>
+
+            <p>
+                La parte superior rígida del manto está unida a la corteza
+                y forma parte de la litosfera. Por debajo se encuentra
+                la astenosfera, una región más deformable sobre la que
+                se desplazan las placas a lo largo del tiempo geológico.
+            </p>
+
+            <div class="info-note">
+                <strong>Concepto clave:</strong>
+                una placa tectónica es un fragmento de litosfera, no
+                simplemente un continente. Por eso, sus límites no
+                siempre coinciden con las costas.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-name">
+            Memoria del Mundo
+        </div>
+
+        <p>
+            Un atlas para explorar la historia de la Tierra
+            y comprender los procesos que la transforman.
+        </p>
+
+        <a href="index.html" class="footer-link">
+            Volver al menú principal
+        </a>
+
+        <div class="copyright">
+            © 2026 Memoria del Mundo. Proyecto educativo.
+        </div>
+
+    </footer>
+
+</body>
+</html>
