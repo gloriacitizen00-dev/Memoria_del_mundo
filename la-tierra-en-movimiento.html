@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+  <title>Terremotos: la Tierra en movimiento | Memoria del Mundo™</title>
+
+  <meta
+    name="description"
+    content="Descubre cómo se producen los terremotos, cómo funcionan las fallas y cómo se relaciona la actividad sísmica con las placas tectónicas. Consulta un registro actualizado de terremotos recientes."
+  >
+
+  <style>
+    :root {
+      --background: #f5f0e7;
+      --surface: #fffdf8;
+      --text: #352b25;
+      --muted: #74675c;
+      --accent: #8a6246;
+      --border: #d9cbbb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: "Montserrat", Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      padding: 18px 6%;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .site-name {
+      color: var(--text);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.15rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .header-navigation {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      display: none;
+      width: min(350px, 88vw);
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      box-shadow: 0 8px 24px rgba(53, 43, 37, 0.12);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 3px;
+      color: var(--text);
+      font-size: 0.87rem;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus {
+      background: var(--background);
+    }
+
+    main {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+      padding-bottom: 55px;
+    }
+
+    .hero {
+      padding: 38px 0 22px;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .hero h1 {
+      margin: 28px 0 12px;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .intro,
+    .content-section,
+    .earthquake-section,
+    .conclusion {
+      margin-top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+
+    .timeline-item {
+      margin-top: 24px;
+      padding-left: 18px;
+      border-left: 3px solid var(--border);
+    }
+
+    .fact {
+      margin-top: 24px;
+      padding: 18px 20px;
+      background: var(--background);
+      border-left: 4px solid var(--accent);
+      border-radius: 3px;
+    }
+
+    .fact p {
+      margin-bottom: 0;
+    }
+
+    .earthquake-section {
+      scroll-margin-top: 20px;
+    }
+
+    .register-intro {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .register-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 20px 0;
+      padding: 14px;
+      background: var(--background);
+      border-radius: 4px;
+      font-size: 0.88rem;
+    }
+
+    .refresh-button {
+      padding: 10px 15px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .refresh-button:hover {
+      background: #eee3d5;
+    }
+
+    .refresh-button:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eee5d8;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: #faf5ed;
+    }
+
+    .magnitude {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .event-link {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .status-message {
+      padding: 16px;
+      background: var(--background);
+      border-radius: 4px;
+      color: var(--muted);
+    }
+
+    .source-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .conclusion {
+      border-left: 4px solid var(--accent);
+    }
+
+    footer {
+      padding: 25px 6%;
+      background: #e9dfd1;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        padding: 15px 5%;
+      }
+
+      .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .header-navigation,
+      .dropdown {
+        width: 100%;
+      }
+
+      .menu-button {
+        width: 100%;
+      }
+
+      .dropdown-menu {
+        right: auto;
+        left: 0;
+        width: 100%;
+      }
+
+      main {
+        width: 92%;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero img {
+        max-height: 300px;
+      }
+
+      .intro,
+      .content-section,
+      .earthquake-section,
+      .conclusion {
+        padding: 20px;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      table {
+        min-width: 650px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="header-content">
+
+      <a
+        class="site-name"
+        href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/"
+      >
+        Memoria del Mundo™
+      </a>
+
+      <nav class="header-navigation" aria-label="Navegación geológica">
+
+        <div class="dropdown" id="geologyDropdown">
+
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="geologyMenu"
+            onclick="const menu = document.getElementById('geologyDropdown'); const isOpen = menu.classList.toggle('open'); this.setAttribute('aria-expanded', isOpen);"
+          >
+            Atlas geológico mundial
+            <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="dropdown-menu" id="geologyMenu">
+
+            <a href="01-mapa-tectonico-mundial.html">
+              01. El mapa tectónico mundial
+            </a>
+
+            <a href="02-como-se-conectan-las-placas.html">
+              02. Límites de placas
+            </a>
+
+            <a href="03-placas-tectonicas-y-volcanes.html">
+              03. Placas tectónicas y volcanes
+            </a>
+
+            <a href="04-oceano-y-movimiento-de-las-placas.html">
+              04. El océano y el movimiento de las placas
+            </a>
+
+            <a href="05-de-los-supercontinentes-a-los-continentes-actuales.html">
+              05. De los supercontinentes a los continentes actuales
+            </a>
+
+            <a href="06-terremotos-la-tierra-en-movimiento.html">
+              06. Terremotos: la Tierra en movimiento
+            </a>
+
+          </div>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <img
+        src="imagen/tierra-movimiento.PNG"
+        alt="Representación de una falla geológica y el movimiento de la corteza terrestre"
+      >
+
+      <h1>Terremotos: la Tierra en movimiento</h1>
+
+      <p>
+        Bajo nuestros pies, las rocas están sometidas a fuerzas que pueden
+        acumularse durante años, décadas o siglos. Cuando parte de esa tensión
+        se libera de manera repentina, la energía se propaga por la Tierra
+        en forma de ondas sísmicas.
+      </p>
+
+    </section>
+
+    <section class="intro">
+
+      <h2>¿Qué es un terremoto?</h2>
+
+      <p>
+        Un terremoto es la vibración del suelo producida por la liberación
+        repentina de energía en el interior de la Tierra. Muchos terremotos
+        se originan cuando las rocas se desplazan a lo largo de una falla,
+        una fractura de la corteza en la que existe movimiento relativo
+        entre sus lados.
+      </p>
+
+      <p>
+        La mayoría de los terremotos naturales están relacionados con
+        procesos tectónicos. También pueden producirse sismos por actividad
+        volcánica, colapsos subterráneos y determinadas actividades humanas.
+      </p>
+
+      <p>
+        Un terremoto no tiene que ocurrir exactamente en el límite entre
+        dos placas: también puede producirse dentro de una placa, cuando
+        las fuerzas tectónicas reactivan una falla existente.
+      </p>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>1. Cómo se acumula la tensión en las fallas</h2>
+
+      <div class="timeline-item">
+
+        <h3>El movimiento de las placas</h3>
+
+        <p>
+          Las placas tectónicas se desplazan continuamente, aunque por lo
+          general lo hacen a velocidades de unos pocos centímetros al año.
+          Cuando sus movimientos ejercen fuerzas sobre las rocas, estas
+          pueden deformarse lentamente.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>La fricción impide el deslizamiento</h3>
+
+        <p>
+          Las superficies de una falla no siempre se deslizan libremente.
+          La fricción y las irregularidades de las rocas pueden mantener
+          bloqueados sus lados, incluso mientras las fuerzas tectónicas
+          siguen actuando.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>La deformación aumenta</h3>
+
+        <p>
+          Mientras la falla permanece bloqueada, las rocas cercanas acumulan
+          deformación elástica. La tensión puede aumentar hasta que las
+          condiciones permiten que la falla se deslice.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>La ruptura libera energía</h3>
+
+        <p>
+          Cuando la resistencia de la falla deja de mantener el bloqueo,
+          una zona de la roca se rompe o se desliza y la ruptura puede
+          propagarse. Parte de la energía liberada viaja como ondas sísmicas
+          y produce el movimiento que sentimos en la superficie.
+        </p>
+
+      </div>
+
+      <div class="fact">
+
+        <strong>El modelo del rebote elástico</strong>
+
+        <p>
+          Este modelo explica cómo las rocas pueden deformarse mientras
+          una falla está bloqueada y recuperar parcialmente su forma
+          al producirse el deslizamiento. No todas las fallas se comportan
+          de manera idéntica: algunas también presentan deslizamiento lento
+          y otros procesos que modifican la acumulación de tensión.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>2. Dónde se producen los terremotos</h2>
+
+      <div class="timeline-item">
+
+        <h3>Límites convergentes</h3>
+
+        <p>
+          Dos placas se acercan. En algunas zonas, una placa se hunde
+          bajo otra mediante un proceso llamado subducción. Estas regiones
+          pueden generar terremotos desde poca profundidad hasta cientos
+          de kilómetros dentro de la placa que desciende.
+        </p>
+
+        <p>
+          Las zonas de subducción pueden producir algunos de los terremotos
+          más grandes registrados en el planeta.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>Límites divergentes</h3>
+
+        <p>
+          Dos placas se separan y el material del manto contribuye a formar
+          nueva corteza, especialmente en las dorsales oceánicas. La extensión
+          y las fracturas de la corteza producen principalmente terremotos
+          superficiales.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>Límites transformantes</h3>
+
+        <p>
+          Dos placas se desplazan lateralmente una respecto de la otra.
+          La fricción puede bloquear segmentos de la falla y permitir
+          que acumulen tensión antes de deslizarse.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <h3>Terremotos dentro de las placas</h3>
+
+        <p>
+          Algunas fallas se encuentran lejos de los límites actuales de
+          las placas. Las fuerzas transmitidas a través de la litosfera
+          pueden reactivar estas estructuras y producir terremotos
+          intraplaca.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>3. El foco, el epicentro y las ondas sísmicas</h2>
+
+      <p>
+        El punto del interior terrestre donde comienza la ruptura se
+        denomina hipocentro o foco sísmico. El epicentro es el punto
+        de la superficie situado directamente sobre él.
+      </p>
+
+      <p>
+        Desde la zona de ruptura, la energía se propaga mediante ondas
+        sísmicas. Las ondas internas viajan por el interior del planeta;
+        las ondas superficiales se desplazan a lo largo de la superficie
+        y pueden contribuir significativamente a los daños.
+      </p>
+
+      <p>
+        La profundidad del foco, la magnitud, la distancia a las poblaciones,
+        las características del suelo y la calidad de las construcciones
+        influyen en cómo se percibe un terremoto y en sus posibles efectos.
+      </p>
+
+      <div class="fact">
+
+        <strong>Magnitud e intensidad no son lo mismo</strong>
+
+        <p>
+          La magnitud caracteriza el tamaño del terremoto a partir de
+          mediciones instrumentales. La intensidad describe los efectos
+          y el nivel de sacudida en un lugar determinado. Un mismo terremoto
+          puede tener una magnitud y producir intensidades diferentes
+          según la localidad.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="content-section">
+
+      <h2>4. ¿Se pueden predecir los terremotos?</h2>
+
+      <p>
+        La ciencia puede identificar fallas activas, estudiar la frecuencia
+        de los terremotos y estimar probabilidades de ocurrencia a largo
+        plazo en determinadas regiones. Sin embargo, no es posible predecir
+        de forma fiable el día, la hora, el lugar exacto y la magnitud
+        de un terremoto específico.
+      </p>
+
+      <p>
+        Los sistemas de alerta temprana tampoco predicen el terremoto:
+        detectan un evento que ya comenzó y pueden emitir avisos antes
+        de que llegue la sacudida más intensa a ciertas zonas.
+      </p>
+
+    </section>
+
+    <section class="earthquake-section" id="registro-sismico">
+
+      <h2>5. Registro mundial de terremotos recientes</h2>
+
+      <p class="register-intro">
+        Consulta los eventos sísmicos registrados en los últimos siete días.
+        La lista se obtiene automáticamente del catálogo del Servicio
+        Geológico de Estados Unidos (USGS) y presenta hasta 30 eventos
+        de magnitud 2,5 o superior.
+      </p>
+
+      <div class="register-meta">
+
+        <div>
+          <strong>Fuente:</strong>
+          <a
+            href="https://earthquake.usgs.gov/earthquakes/map/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Catálogo oficial del USGS
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="refresh-button"
+          id="refreshEarthquakes"
+        >
+          Actualizar registro
+        </button>
+
+      </div>
+
+      <p
+        class="status-message"
+        id="earthquakeStatus"
+        role="status"
+        aria-live="polite"
+      >
+        Cargando los datos sísmicos más recientes...
+      </p>
+
+      <div class="table-wrapper">
+
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Fecha y hora (Costa Rica)</th>
+              <th scope="col">Magnitud</th>
+              <th scope="col">Profundidad</th>
+              <th scope="col">Ubicación</th>
+              <th scope="col">Fuente oficial</th>
+            </tr>
+          </thead>
+
+          <tbody id="earthquakeTableBody">
+            <tr>
+              <td colspan="5">
+                Consultando el catálogo sísmico...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <p class="source-note">
+        Los horarios se muestran en la zona horaria de Costa Rica.
+        La magnitud, la profundidad y la ubicación pueden ser revisadas
+        por las redes sismológicas a medida que se dispone de nuevas
+        mediciones. Consulta el enlace de cada evento para ver sus
+        detalles y actualizaciones.
+      </p>
+
+      <p class="source-note">
+        Este registro es mundial y no constituye una lista exhaustiva
+        de todos los sismos. El umbral de magnitud y la cobertura del
+        catálogo determinan qué eventos aparecen.
+      </p>
+
+    </section>
+
+    <section class="conclusion">
+
+      <h2>Una Tierra que nunca permanece inmóvil</h2>
+
+      <p>
+        Los terremotos son una expresión de la dinámica interna del planeta.
+        Estudiarlos permite comprender cómo se deforman las rocas, cómo
+        interactúan las placas y cómo cambia la superficie terrestre.
+      </p>
+
+      <p>
+        La observación sísmica, la investigación geológica y la preparación
+        de las comunidades son herramientas esenciales para reducir
+        los riesgos asociados a estos fenómenos.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>
+      <a href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/">
+        Memoria del Mundo™
+      </a>
+      Un proyecto educativo de Gloria Martínez.
+    </p>
+
+    <p>
+      Datos sísmicos: USGS Earthquake Hazards Program.
+    </p>
+
+  </footer>
+
+  <script>
+    const earthquakeFeed =
+      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojson";
+
+    const tableBody =
+      document.getElementById("earthquakeTableBody");
+
+    const statusMessage =
+      document.getElementById("earthquakeStatus");
+
+    const refreshButton =
+      document.getElementById("refreshEarthquakes");
+
+    function formatDate(timestamp) {
+      return new Intl.DateTimeFormat("es-CR", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "America/Costa_Rica"
+      }).format(new Date(timestamp));
+    }
+
+    function createCell(value, className = "") {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+
+      if (className) {
+        cell.className = className;
+      }
+
+      return cell;
+    }
+
+    function createEventLink(url) {
+      const cell = document.createElement("td");
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.textContent = "Ver evento";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "event-link";
+
+      cell.appendChild(link);
+
+      return cell;
+    }
+
+    async function loadEarthquakes() {
+      refreshButton.disabled = true;
+      statusMessage.textContent =
+        "Actualizando datos desde el catálogo del USGS...";
+
+      try {
+        const response = await fetch(earthquakeFeed, {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("No se pudo consultar el catálogo.");
+        }
+
+        const data = await response.json();
+
+        if (!data.features || !Array.isArray(data.features)) {
+          throw new Error("El catálogo no devolvió una lista válida.");
+        }
+
+        const events = data.features
+          .filter(event =>
+            event.properties &&
+            event.geometry &&
+            event.geometry.coordinates
+          )
+          .sort((a, b) =>
+            b.properties.time - a.properties.time
+          )
+          .slice(0, 30);
+
+        tableBody.replaceChildren();
+
+        if (events.length === 0) {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+
+          cell.colSpan = 5;
+          cell.textContent =
+            "No se encontraron eventos para mostrar.";
+
+          row.appendChild(cell);
+          tableBody.appendChild(row);
+        }
+
+        events.forEach(event => {
+          const properties = event.properties;
+          const coordinates = event.geometry.coordinates;
+
+          const magnitude =
+            typeof properties.mag === "number"
+              ? properties.mag.toFixed(1)
+              : "No disponible";
+
+          const depth =
+            typeof coordinates[2] === "number"
+              ? coordinates[2].toFixed(1) + " km"
+              : "No disponible";
+
+          const location =
+            properties.place || "Ubicación no especificada";
+
+          const row = document.createElement("tr");
+
+          row.appendChild(
+            createCell(formatDate(properties.time))
+          );
+
+          row.appendChild(
+            createCell(magnitude, "magnitude")
+          );
+
+          row.appendChild(
+            createCell(depth)
+          );
+
+          row.appendChild(
+            createCell(location)
+          );
+
+          row.appendChild(
+            createEventLink(properties.url)
+          );
+
+          tableBody.appendChild(row);
+        });
+
+        const generatedAt =
+          data.metadata && data.metadata.generated
+            ? formatDate(data.metadata.generated)
+            : formatDate(Date.now());
+
+        statusMessage.textContent =
+          "Registro actualizado. Eventos mostrados: " +
+          events.length +
+          ". Última actualización del feed: " +
+          generatedAt +
+          ". Los horarios de los eventos se presentan en hora de Costa Rica.";
+
+      } catch (error) {
+        tableBody.replaceChildren();
+
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+
+        cell.colSpan = 5;
+        cell.textContent =
+          "No fue posible cargar los datos automáticamente. " +
+          "Puedes consultar los terremotos recientes directamente " +
+          "en el catálogo oficial del USGS.";
+
+        row.appendChild(cell);
+        tableBody.appendChild(row);
+
+        statusMessage.textContent =
+          "No se pudo actualizar el registro. Comprueba tu conexión " +
+          "o visita el catálogo oficial.";
+
+      } finally {
+        refreshButton.disabled = false;
+      }
+    }
+
+    refreshButton.addEventListener(
+      "click",
+      loadEarthquakes
+    );
+
+    loadEarthquakes();
+  </script>
+
+</body>
+</html>
