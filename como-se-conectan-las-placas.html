@@ -1,0 +1,601 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cómo se conectan las placas | Memoria del Mundo</title>
+
+    <meta name="description" content="Descubre cómo interactúan las placas tectónicas, sus tres tipos de límites y los procesos geológicos que producen.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --background: #f4eee3;
+            --paper: #fbf8f1;
+            --sand: #e6d6bd;
+            --clay: #a66d50;
+            --brown: #604b3e;
+            --text: #39332e;
+            --muted: #756b60;
+            --line: #d9c8b1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .site-name {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(17px, 2.5vw, 25px);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: var(--brown);
+            text-decoration: none;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid var(--clay);
+            border-radius: 2px;
+            color: var(--brown);
+            background: transparent;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+
+        .menu-button:hover {
+            background: var(--clay);
+            color: white;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            max-width: 1100px;
+            width: 86%;
+            margin: 0 auto;
+            padding: 55px 0 75px;
+        }
+
+        .page-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 35px;
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--clay);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            color: var(--brown);
+            font-family: 'Cinzel', serif;
+            font-size: clamp(27px, 4vw, 42px);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .page-intro p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* IMAGEN PRINCIPAL */
+
+        .main-image {
+            margin: 0 0 50px;
+        }
+
+        .main-image img {
+            display: block;
+            width: 100%;
+            max-height: 540px;
+            object-fit: cover;
+            border: 1px solid var(--line);
+        }
+
+        .main-image figcaption {
+            padding-top: 10px;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        /* SECCIONES */
+
+        .content-section {
+            padding: 32px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-number {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--clay);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            color: var(--brown);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(27px, 3vw, 34px);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin: 24px 0 8px;
+            color: var(--brown);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 23px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* TARJETAS INFORMATIVAS */
+
+        .boundary-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+        }
+
+        .boundary-item {
+            padding: 20px 17px;
+            background: var(--paper);
+            border-top: 3px solid var(--clay);
+        }
+
+        .boundary-item h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .boundary-item p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .example {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .info-note {
+            margin: 22px 0 5px;
+            padding: 18px 22px;
+            background: var(--sand);
+            border-left: 3px solid var(--clay);
+        }
+
+        .info-note strong {
+            color: var(--brown);
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 7%;
+            background: var(--brown);
+            color: var(--paper);
+            text-align: center;
+        }
+
+        .footer-name {
+            margin-bottom: 8px;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            letter-spacing: 1.5px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #e4d7c7;
+            font-size: 12px;
+        }
+
+        .footer-link {
+            color: var(--paper);
+            font-size: 12px;
+            text-decoration: none;
+            border-bottom: 1px solid #b99a7e;
+        }
+
+        .footer-link:hover {
+            color: #e4c6a5;
+        }
+
+        .copyright {
+            margin-top: 18px;
+            padding-top: 15px;
+            border-top: 1px solid #80695a;
+            font-size: 11px;
+        }
+
+        /* TABLETAS Y MÓVILES */
+
+        @media (max-width: 700px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            .header-content {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .site-name {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+            }
+
+            .menu-button {
+                padding: 9px 12px;
+                font-size: 11px;
+            }
+
+            main {
+                width: 90%;
+                padding: 38px 0 50px;
+            }
+
+            .page-intro {
+                margin-bottom: 28px;
+            }
+
+            .page-intro p {
+                font-size: 14px;
+            }
+
+            .main-image {
+                margin-bottom: 35px;
+            }
+
+            .main-image img {
+                max-height: 350px;
+                object-fit: contain;
+            }
+
+            .boundary-list {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .content-section {
+                padding: 26px 0;
+            }
+
+            footer {
+                padding: 26px 5%;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .header-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+        <div class="header-content">
+
+            <a href="index.html" class="site-name">
+                Memoria del Mundo
+            </a>
+
+            <a href="index.html" class="menu-button">
+                Menú principal
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+        <div class="page-intro">
+
+            <span class="eyebrow">Atlas geológico mundial · 02</span>
+
+            <h1>Cómo se conectan las placas</h1>
+
+            <p>
+                Las placas tectónicas forman una estructura global en
+                constante movimiento. En sus límites, la litosfera se
+                separa, colisiona o se desliza, dando origen a algunos
+                de los procesos geológicos más importantes del planeta.
+            </p>
+
+        </div>
+
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <figure class="main-image">
+
+            <img
+                src="images/limites-placas-tectonicas.jpg"
+                alt="Diagrama científico de los límites divergentes, convergentes y transformantes de las placas tectónicas"
+                loading="eager"
+            >
+
+            <figcaption>
+                Los tres tipos principales de límites entre placas tectónicas.
+            </figcaption>
+
+        </figure>
+
+
+        <!-- SECCIÓN 1 -->
+
+        <section class="content-section">
+
+            <span class="section-number">01 / LOS LÍMITES</span>
+
+            <h2>Tres formas de interactuar</h2>
+
+            <p>
+                Las placas no están unidas de manera inmóvil. Sus bordes
+                son zonas donde se concentra buena parte de la actividad
+                sísmica y volcánica. Según la dirección de su movimiento,
+                los límites se clasifican en tres tipos principales.
+            </p>
+
+            <div class="boundary-list">
+
+                <article class="boundary-item">
+
+                    <h3>Divergentes</h3>
+
+                    <p>
+                        Dos placas se separan. El material caliente del
+                        manto asciende y puede solidificarse, formando
+                        nueva corteza.
+                    </p>
+
+                    <div class="example">
+                        <strong>Ejemplo:</strong> la dorsal mesoatlántica,
+                        que atraviesa el océano Atlántico.
+                    </div>
+
+                </article>
+
+                <article class="boundary-item">
+
+                    <h3>Convergentes</h3>
+
+                    <p>
+                        Dos placas se aproximan. Una puede hundirse bajo
+                        la otra, o ambas pueden colisionar y elevar
+                        grandes cordilleras.
+                    </p>
+
+                    <div class="example">
+                        <strong>Ejemplo:</strong> los Andes, relacionados
+                        con la subducción de la placa de Nazca.
+                    </div>
+
+                </article>
+
+                <article class="boundary-item">
+
+                    <h3>Transformantes</h3>
+
+                    <p>
+                        Dos placas se deslizan lateralmente. La fricción
+                        puede acumular tensión que se libera en forma
+                        de terremotos.
+                    </p>
+
+                    <div class="example">
+                        <strong>Ejemplo:</strong> la falla de San Andrés,
+                        en California.
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="info-note">
+                <strong>Concepto clave:</strong>
+                en los límites divergentes se forma corteza, en muchas
+                zonas convergentes se destruye corteza oceánica por
+                subducción y en los transformantes las placas se deslizan
+                lateralmente.
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN 2 -->
+
+        <section class="content-section">
+
+            <span class="section-number">02 / SUBDUCCIÓN Y COLISIÓN</span>
+
+            <h2>¿Qué sucede cuando las placas chocan?</h2>
+
+            <p>
+                No todas las colisiones entre placas producen el mismo
+                resultado. El proceso depende de su composición, densidad
+                y dirección de movimiento.
+            </p>
+
+            <h3>Cuando una placa se hunde</h3>
+
+            <p>
+                En la subducción, una placa, generalmente oceánica,
+                desciende por debajo de otra y se introduce en el manto.
+                Este proceso puede generar terremotos, fosas oceánicas
+                y volcanes.
+            </p>
+
+            <h3>Cuando dos continentes colisionan</h3>
+
+            <p>
+                Si dos masas continentales convergen, ninguna se hunde
+                fácilmente por completo debido a su flotabilidad.
+                La corteza se comprime, se pliega y puede elevar
+                enormes montañas.
+            </p>
+
+            <div class="info-note">
+                <strong>Ejemplo:</strong>
+                el Himalaya se formó principalmente por la colisión
+                entre las placas India y Euroasiática.
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN 3 -->
+
+        <section class="content-section">
+
+            <span class="section-number">03 / MOVIMIENTO Y CONSECUENCIAS</span>
+
+            <h2>Una superficie en transformación</h2>
+
+            <p>
+                El movimiento de las placas suele ser de unos pocos
+                centímetros por año. Aunque parezca lento, a lo largo
+                de millones de años puede modificar la posición de
+                los continentes, abrir océanos y formar cordilleras.
+            </p>
+
+            <h3>Terremotos</h3>
+
+            <p>
+                La tensión acumulada en las rocas puede liberarse
+                repentinamente cuando una falla se desplaza,
+                produciendo ondas sísmicas.
+            </p>
+
+            <h3>Volcanes</h3>
+
+            <p>
+                En las zonas de subducción y en muchos límites
+                divergentes, el magma puede ascender hasta la
+                superficie y alimentar volcanes.
+            </p>
+
+            <h3>Montañas y océanos</h3>
+
+            <p>
+                La colisión de placas puede elevar cordilleras,
+                mientras que su separación puede crear nuevas
+                cuencas oceánicas a lo largo del tiempo geológico.
+            </p>
+
+            <div class="info-note">
+                <strong>Para recordar:</strong>
+                los límites de las placas son zonas dinámicas.
+                Comprenderlos permite explicar cómo se transforma
+                la superficie terrestre y por qué ciertos fenómenos
+                geológicos se concentran en regiones específicas.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-name">
+            Memoria del Mundo
+        </div>
+
+        <p>
+            Un atlas para explorar la historia de la Tierra
+            y comprender los procesos que la transforman.
+        </p>
+
+        <a href="index.html" class="footer-link">
+            Volver al menú principal
+        </a>
+
+        <div class="copyright">
+            © 2026 Memoria del Mundo.
+              Un proyecto educativo de Gloria Martínez.
+        </div>
+
+    </footer>
+
+</body>
+</html>
