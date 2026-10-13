@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El océano y el movimiento de las placas | Memoria del Mundo</title>
+
+  <meta name="description" content="Explora cómo se forma, se transforma y evoluciona el fondo oceánico mediante el movimiento de las placas tectónicas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: #f4eee3;
+      --paper: #fbf8f1;
+      --sand: #e6d6bd;
+      --clay: #a66d50;
+      --brown: #604b3e;
+      --text: #39332e;
+      --muted: #756b60;
+      --line: #d9c8b1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      padding: 22px 7%;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .site-name {
+      color: var(--brown);
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .menu-button {
+      display: inline-block;
+      border: 1px solid var(--clay);
+      color: var(--brown);
+      padding: 9px 18px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-button:hover {
+      background: var(--clay);
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 24px 70px;
+    }
+
+    .hero {
+      margin-bottom: 45px;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .hero-caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      text-align: right;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--clay);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: var(--brown);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 12px 0 20px;
+    }
+
+    .intro p {
+      color: var(--muted);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+
+    .content-section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 32px 36px;
+      margin-bottom: 24px;
+    }
+
+    .section-number {
+      color: var(--clay);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: var(--brown);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.25rem, 3vw, 1.7rem);
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 8px 0 18px;
+    }
+
+    .content-section p {
+      margin-bottom: 15px;
+      font-size: 0.94rem;
+    }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .fact {
+      background: var(--background);
+      border-left: 3px solid var(--clay);
+      padding: 16px 20px;
+      margin-top: 20px;
+    }
+
+    .fact strong {
+      color: var(--brown);
+    }
+
+    .conclusion {
+      background: var(--sand);
+      padding: 30px;
+      margin-top: 38px;
+      text-align: center;
+    }
+
+    .conclusion h2 {
+      margin-top: 0;
+    }
+
+    .conclusion p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      background: var(--brown);
+      color: var(--paper);
+      padding: 35px 7%;
+      text-align: center;
+    }
+
+    footer h2 {
+      color: var(--paper);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: var(--paper);
+    }
+
+    .copyright {
+      margin-top: 18px;
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      .header-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .site-name {
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 28px 16px 45px;
+      }
+
+      .hero img {
+        max-height: 280px;
+      }
+
+      .intro {
+        margin-bottom: 32px;
+      }
+
+      .intro p {
+        font-size: 1.2rem;
+      }
+
+      .content-section {
+        padding: 23px 20px;
+      }
+
+      .content-section p {
+        font-size: 0.88rem;
+      }
+
+      .conclusion {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <a class="site-name" href="index.html">Memoria del Mundo</a>
+
+      <a class="menu-button" href="index.html">
+        Menú principal
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img
+        src="imagen/oceano-placas.PNG"
+        alt="Representación del fondo oceánico y del movimiento de las placas tectónicas"
+      >
+
+      <p class="hero-caption">
+        El fondo oceánico es una superficie geológica en constante transformación.
+      </p>
+    </section>
+
+    <section class="intro">
+      <span class="eyebrow">Atlas geológico mundial · 04</span>
+
+      <h1>El océano y el movimiento de las placas</h1>
+
+      <p>
+        Bajo la superficie de los océanos existe un relieve dinámico.
+        Las placas tectónicas crean nueva corteza, desplazan el fondo
+        marino y reciclan parte de sus materiales en el interior de la Tierra.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <span class="section-number">01 · FORMACIÓN</span>
+
+      <h2>La expansión del fondo oceánico</h2>
+
+      <p>
+        En las dorsales oceánicas, dos placas se separan y el material
+        caliente del interior terrestre asciende. Al enfriarse, este
+        material forma nueva corteza oceánica, compuesta principalmente
+        por rocas basálticas.
+      </p>
+
+      <p>
+        A medida que se genera nueva corteza, el fondo marino se desplaza
+        hacia ambos lados de la dorsal. Este proceso se conoce como
+        <strong>expansión del fondo oceánico</strong> y constituye una
+        de las evidencias fundamentales de la tectónica de placas.
+      </p>
+
+      <div class="fact">
+        <p>
+          <strong>Ejemplo:</strong> la dorsal mesoatlántica recorre el
+          océano Atlántico y contribuye a separar las placas que sostienen
+          América de las que sostienen Europa y África.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-number">02 · EVIDENCIA</span>
+
+      <h2>La edad del fondo marino</h2>
+
+      <p>
+        La edad de las rocas del fondo oceánico permite estudiar cómo
+        se han desplazado las placas a lo largo del tiempo. En general,
+        las rocas más jóvenes se encuentran cerca de las dorsales,
+        donde se forma nueva corteza.
+      </p>
+
+      <p>
+        Al alejarse de la dorsal, la corteza suele ser progresivamente
+        más antigua. Este patrón, junto con las bandas magnéticas
+        registradas en las rocas, aporta evidencia de la expansión
+        del fondo oceánico.
+      </p>
+
+      <div class="fact">
+        <p>
+          <strong>Dato geológico:</strong> gran parte del fondo oceánico
+          actual tiene menos de 200 millones de años, mientras que
+          algunos continentes conservan rocas de más de 3.000 millones
+          de años.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-number">03 · RECICLAJE</span>
+
+      <h2>La desaparición de la corteza oceánica</h2>
+
+      <p>
+        La corteza oceánica no permanece intacta para siempre.
+        En determinadas zonas, una placa oceánica se hunde bajo otra
+        placa y desciende hacia el manto terrestre. Este proceso
+        recibe el nombre de <strong>subducción</strong>.
+      </p>
+
+      <p>
+        Durante su descenso, la placa libera agua y otros materiales
+        que favorecen la formación de magma en el manto situado encima.
+        La subducción está relacionada con la formación de fosas
+        oceánicas, terremotos y numerosos sistemas volcánicos.
+      </p>
+
+      <div class="fact">
+        <p>
+          <strong>Ejemplo:</strong> en el océano Pacífico, numerosas
+          zonas de subducción forman parte del sistema conocido como
+          cinturón de fuego del Pacífico.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-number">04 · EVOLUCIÓN</span>
+
+      <h2>Los océanos a través del tiempo</h2>
+
+      <p>
+        La posición de los continentes y el tamaño de los océanos cambian
+        a lo largo de millones de años. Cuando las placas se separan,
+        pueden abrirse nuevas cuencas oceánicas. Cuando convergen,
+        algunos océanos se reducen y pueden llegar a desaparecer.
+      </p>
+
+      <p>
+        En el pasado, los continentes formaron grandes masas terrestres,
+        como Pangea. Su fragmentación dio lugar a la configuración
+        de océanos y continentes que conocemos hoy, aunque el planeta
+        continúa cambiando.
+      </p>
+
+      <p>
+        El océano Atlántico es un ejemplo de una cuenca que se ha
+        expandido desde la fragmentación de Pangea. En otras regiones,
+        como partes del océano Pacífico, la subducción consume corteza
+        oceánica y modifica progresivamente la extensión de la cuenca.
+      </p>
+    </section>
+
+    <section class="conclusion">
+      <h2>Un fondo marino en transformación</h2>
+
+      <p>
+        Los océanos no son estructuras inmóviles. La formación de
+        corteza en las dorsales, su desplazamiento y su reciclaje
+        mediante la subducción forman parte de un sistema geológico
+        que modifica la superficie terrestre durante millones de años.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>Memoria del Mundo</h2>
+
+    <p>
+      Un atlas para explorar la historia de la Tierra,
+      sus civilizaciones y su patrimonio.
+    </p>
+
+    <p>
+      <a href="index.html">Volver al menú principal</a>
+    </p>
+
+    <p class="copyright">
+      © 2026 Memoria del Mundo.
+      Un proyecto educativo de Gloria Martínez.
+      
+    </p>
+  </footer>
+
+</body>
+</html>
