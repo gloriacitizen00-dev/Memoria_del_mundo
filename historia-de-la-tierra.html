@@ -432,6 +432,7 @@
 
 <body>
 
+
 <header class="site-header">
 
   <a
@@ -444,43 +445,45 @@
 
   <nav class="header-navigation" aria-label="Navegación geológica">
 
-<div class="dropdown" id="geologyDropdown">
-  <button
-    class="dropdown-button"
-    type="button"
-    aria-expanded="false"
-    aria-controls="geologyMenu"
-    onclick="const menu = document.getElementById('geologyDropdown'); const isOpen = menu.classList.toggle('open'); this.setAttribute('aria-expanded', isOpen);"
-  >
-    Atlas geológico mundial
-    <span aria-hidden="true">▾</span>
-  </button>
+    <div class="dropdown" id="geologyDropdown">
 
-  <div class="dropdown-menu" id="geologyMenu">
-    <a href="placas-tectonicas.html">
-      Placas tectónicas
-    </a>
-  </div>
+      <button
+        class="dropdown-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="geologyMenu"
+        onclick="const menu = document.getElementById('geologyDropdown'); const isOpen = menu.classList.toggle('open'); this.setAttribute('aria-expanded', isOpen);"
+      >
+        Atlas geológico mundial
+        <span aria-hidden="true">▾</span>
+      </button>
 
-    <div class="dropdown-menu" id="geologyMenu">
-    <a href="como-se-conectan-las-placas.html">
-      Límites tectónicos
-    </a>
-  </div>
+      <div class="dropdown-menu" id="geologyMenu">
 
-    <div class="dropdown-menu" id="geologyMenu">
-    <a href="placas-tectonicas-y-volcanes.html">
-      Placas y Volcanes
-    </a>
-  </div>
-  
-</div>
+        <a href="01-mapa-tectonico-mundial.html">
+          01. El mapa tectónico mundial
+        </a>
+
+        <a href="02-como-se-conectan-las-placas.html">
+          02. Límites de placas
+        </a>
+
+        <a href="03-placas-tectonicas-y-volcanes.html">
+          03. Placas tectónicas y volcanes
+        </a>
+
+        <a href="04-oceano-y-movimiento-de-las-placas.html">
+          04. El océano y el movimiento de las placas
+        </a>
+
+      </div>
 
     </div>
 
   </nav>
 
 </header>
+
 
   <main>
     <section class="intro" aria-labelledby="page-title">
