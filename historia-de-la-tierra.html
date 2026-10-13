@@ -324,20 +324,154 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+/* Menú del atlas geológico */
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--clay-dark);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus-visible {
+  background: var(--sand-soft);
+  color: var(--clay-dark);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 100;
+  display: none;
+  min-width: 230px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  background: var(--sand-soft);
+  color: var(--clay-dark);
+}
+
+.dropdown-button:focus-visible,
+.dropdown-menu a:focus-visible {
+  outline: 2px solid var(--sand-dark);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 18px 20px;
+  }
+
+  .header-navigation {
+    width: 100%;
+  }
+
+  .dropdown-button {
+    font-size: 0.7rem;
+  }
+
+  .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+}
+
   </style>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <a
-      class="brand-link"
-      href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/"
-      aria-label="Volver a Memoria del Mundo"
-    >
-      Memoria del Mundo™
-    </a>
-  </header>
+<header class="site-header">
+
+  <a
+    class="brand-link"
+    href="https://gloriacitizen00-dev.github.io/Memoria_del_mundo/"
+    aria-label="Volver a Memoria del Mundo"
+  >
+    Memoria del Mundo™
+  </a>
+
+  <nav class="header-navigation" aria-label="Navegación geológica">
+
+    <div class="dropdown" id="geologyDropdown">
+
+      <button
+        class="dropdown-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="geologyMenu"
+        onclick="
+          const menu = document.getElementById('geologyDropdown');
+          const isOpen = menu.classList.toggle('open');
+          this.setAttribute('aria-expanded', isOpen);
+        "
+      >
+        Placas tectónicas
+        <span aria-hidden="true">▾</span>
+      </button>
+
+      <div class="dropdown-menu" id="geologyMenu">
+        <a href="atlas-geologico-mundial.html">
+          Atlas geológico mundial
+        </a>
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
 
   <main>
     <section class="intro" aria-labelledby="page-title">
